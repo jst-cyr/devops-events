@@ -84,7 +84,10 @@ Produce four outputs:
 
 2. **Update candidates JSON file** at `data/events-updates.json` (do not automatically modify `data/events.json` unless explicitly asked):
     - Write only matched existing records that have differences.
-    - Include field-level old vs new values for review.
+      - For each update entry, include only:
+         - the key used to match the existing record,
+         - the event name,
+         - field-level changed data (`old` vs `new`).
     - Use this exact file shape:
 
 ```json
@@ -94,9 +97,11 @@ Produce four outputs:
    "source_run_date": "<YYYY-MM-DD>",
    "records": [
       {
-         "match_key": "<event_url|id|name+start_date+country>",
-         "existing_id": "<id from data/events.json>",
-         "proposed_record": {},
+         "match": {
+            "key_type": "<event_url|id|name+start_date+country>",
+            "key_value": "<exact value used for matching>"
+         },
+         "name": "<event name>",
          "changes": {
             "<field_path>": {
                "old": "<old value>",
@@ -132,6 +137,7 @@ Where `records` contains normalized `EventRecord` items.
 - Ensure every event falls in the 56-day window.
 - Ensure excluded geographies are not present.
 - Ensure `data/events-updates.json` is valid JSON.
+- Ensure each `data/events-updates.json` record contains only `match`, `name`, and `changes`.
 - Ensure `data/events-candidates.json` is valid JSON.
 - Ensure no unchanged existing records appear in `data/events-updates.json`.
 - Ensure no unchanged existing records appear in candidates.
