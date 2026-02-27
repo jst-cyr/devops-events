@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DevOps Events Dashboard",
   description: "CFPs and upcoming DevOps events in the next 4 weeks",
+  icons: {
+    icon: "/calendar.svg",
+    shortcut: "/calendar.svg",
+    apple: "/calendar.svg",
+  },
 };
 
 export default function RootLayout({
