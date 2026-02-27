@@ -147,6 +147,8 @@ If an event appears adjacent but not clearly aligned, default to exclude and cou
 - Exclude events in Middle East countries (for example: Saudi Arabia, Iraq, Iran, Israel, etc.).
 - Exclude events in Romania.
 - Exclude events in Mexico.
+- Exclude events in all Central American countries (Belize, Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua, Panama).
+- Exclude events in all South American countries (Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Guyana, Paraguay, Peru, Suriname, Uruguay, Venezuela).
 - Prioritize events in: United States, Canada, Australia, Ireland, Japan, United Kingdom, and mainland Europe.
 
 ### Data model and normalization
