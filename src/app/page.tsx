@@ -11,5 +11,5 @@ export default async function Home() {
     getDashboardFeed({ kind: "events", limit: INITIAL_PAGE_SIZE }),
   ]);
 
-  return <EventsDashboard initialCfps={initialCfps} initialEvents={initialEvents} showSlackTools={false} />;
+  return <EventsDashboard initialCfps={initialCfps} initialEvents={initialEvents} />;
 }

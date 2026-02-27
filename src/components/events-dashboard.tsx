@@ -142,19 +142,13 @@ export function EventsDashboard({
   apiPath = "/api/events",
   title = "DevOps Events Dashboard",
   subtitle = "Showing upcoming CFPs and events. Load more to view the next page.",
-  showSlackTools = true,
 }: {
   initialCfps: DashboardFeedResponse;
   initialEvents: DashboardFeedResponse;
   apiPath?: string;
   title?: string;
   subtitle?: string;
-  showSlackTools?: boolean;
 }) {
-  const [slackPost, setSlackPost] = useState<string>("");
-  const [slackLoading, setSlackLoading] = useState(false);
-  const [slackError, setSlackError] = useState<string | null>(null);
-  const [slackCopied, setSlackCopied] = useState(false);
   const [cfpState, setCfpState] = useState<FeedState>({
     ...initialCfps,
     loading: false,
@@ -196,77 +190,14 @@ export function EventsDashboard({
     }
   };
 
-  const handleGenerateSlackPost = async () => {
-    setSlackLoading(true);
-    setSlackError(null);
-    setSlackCopied(false);
-
-    try {
-      const response = await fetch("/api/slack-announcement", {
-        cache: "no-store",
-      });
-
-      if (!response.ok) {
-        throw new Error("Unable to generate Slack announcement.");
-      }
-
-      const payload = (await response.json()) as { message: string };
-      setSlackPost(payload.message);
-    } catch (error) {
-      setSlackError(error instanceof Error ? error.message : "Unable to generate Slack announcement.");
-    } finally {
-      setSlackLoading(false);
-    }
-  };
-
-  const handleCopySlackPost = async () => {
-    if (!slackPost) {
-      return;
-    }
-
-    try {
-      await navigator.clipboard.writeText(slackPost);
-      setSlackCopied(true);
-    } catch {
-      setSlackError("Could not copy to clipboard. Please copy manually from the text box.");
-    }
-  };
-
   return (
     <div className="mx-auto w-full max-w-6xl p-4 sm:p-6 lg:p-8">
       <header className="mb-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>
-          {showSlackTools ? (
-            <Button onClick={handleGenerateSlackPost} disabled={slackLoading} className="w-full sm:w-auto">
-              {slackLoading ? "Generating..." : "Generate Slack Post"}
-            </Button>
-          ) : null}
         </div>
         <p className="text-muted-foreground mt-2 text-sm sm:text-base">{subtitle}</p>
       </header>
-
-      {showSlackTools && slackPost ? (
-        <Card className="mb-6">
-          <CardHeader>
-            <CardTitle>Slack announcement draft</CardTitle>
-            <CardDescription>Generated from upcoming CFPs and events.</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <textarea
-              className="bg-background min-h-56 w-full rounded-md border p-3 text-sm"
-              readOnly
-              value={slackPost}
-            />
-            <div className="flex flex-wrap items-center gap-3">
-              <Button variant="secondary" onClick={handleCopySlackPost}>Copy text</Button>
-              {slackCopied ? <p className="text-sm text-muted-foreground">Copied.</p> : null}
-            </div>
-          </CardContent>
-        </Card>
-      ) : null}
-
-      {showSlackTools && slackError ? <p className="mb-4 text-sm text-destructive">{slackError}</p> : null}
 
       <div className="space-y-6">
         <FeedSection

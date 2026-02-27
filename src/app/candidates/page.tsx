@@ -18,7 +18,6 @@ export default async function CandidatesPage() {
       apiPath="/api/candidates"
       title="Candidate Review Dashboard"
       subtitle="Review candidate CFPs and events, then click through to event and CFP pages."
-      showSlackTools={false}
     />
   );
 }
