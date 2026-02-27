@@ -12,7 +12,7 @@ Your mission is to discover **upcoming events in the next 56 days** from the fol
 
 ### Sources to analyze
 
-- https://dev.events/
+- https://dev.events/ (discovery/index only; do not treat dev.events event detail pages as canonical event sources)
 - https://adatosystems.com/cfp-tracker/
 - https://devopsdays.org/events
 - https://www.usenix.org/conference/srecon
@@ -22,6 +22,17 @@ Your mission is to discover **upcoming events in the next 56 days** from the fol
 - https://www.carahsoft.com/red-hat/events
 - https://cfgmgmtcamp.org/
 - https://www.developerweek.com/
+
+### Dev.events canonical extraction rule (required)
+
+When using `https://dev.events/`:
+
+1. Use dev.events only to discover candidate events in the date window.
+2. For each discovered event, open the entry and extract the outbound official/native event URL (for example: "Visit website", "Official site", or equivalent external link).
+3. Crawl the native event URL and extract event data from the native site.
+4. Set `event_url` to the native event URL (never a dev.events conference detail URL).
+5. If no native URL is available, or the native URL cannot be fetched/parsed, do not include that item in candidates/updates; instead write an issue record to `data/events-issues.json`.
+6. Add a brief `notes` value if URL canonicalization required redirect or inference.
 
 ### Time window
 
@@ -55,6 +66,7 @@ Also include general software/developer events **only if** they are broad and li
 
 - Conform records to the `EventRecord` shape documented in `docs/data-model.md`.
 - Use absolute `https://` URLs.
+- Ensure `event_url` is the canonical/native event-host URL.
 - Normalize dates to `YYYY-MM-DD`.
 - Ensure `end_date >= start_date`.
 - For online-only events, set `delivery: "online"`, `location.is_online: true`, `location.city: null`, `location.country: "Online"`, `location.country_code: "XX"` when applicable.
@@ -74,13 +86,13 @@ Also include general software/developer events **only if** they are broad and li
 
 ### Output requirements
 
-Produce four outputs:
+Produce five outputs:
 
 1. **Summary report** in markdown with:
    - Sources visited
    - Date window used
-   - Counts: scanned, relevant, skipped, duplicates, updates, new candidates
-   - Exclusion reasons counts (geo excluded, topic mismatch, out of range, insufficient data)
+   - Counts: scanned, relevant, skipped, duplicates, updates, new candidates, issues
+   - Exclusion reasons counts (geo excluded, topic mismatch, out of range, insufficient data, crawl/parse failure)
 
 2. **Update candidates JSON file** at `data/events-updates.json` (do not automatically modify `data/events.json` unless explicitly asked):
     - Write only matched existing records that have differences.
@@ -131,14 +143,43 @@ Produce four outputs:
 
 Where `records` contains normalized `EventRecord` items.
 
+5. **Issues JSON file** at `data/events-issues.json`:
+    - Write every item attempted but not fully extracted/reconciled.
+    - Include discovery failures, canonical URL resolution failures, fetch failures, parse failures, blocked/captcha/timeout cases.
+    - Use this exact file shape:
+
+```json
+{
+   "generated_at": "<ISO-8601 UTC timestamp>",
+   "window_days": 56,
+   "source_run_date": "<YYYY-MM-DD>",
+   "records": [
+      {
+         "source": "<source domain>",
+         "discovered_name": "<best-known event title or null>",
+         "discovered_url": "<URL where item was discovered>",
+         "attempted_url": "<URL attempted for canonical extraction/fetch>",
+         "stage": "<discover|canonicalize|fetch|parse|normalize|reconcile>",
+         "reason": "<missing_canonical_url|http_error|timeout|blocked|captcha|parse_error|ambiguous_date|ambiguous_location|other>",
+         "http_status": "<number or null>",
+         "in_window": "<true|false|null>",
+         "notes": "<brief deterministic detail>"
+      }
+   ]
+}
+```
+
 ### Quality checks before finalizing
 
 - Ensure every included event has a valid `name`, `event_url`, `start_date`, `end_date`, `delivery`, and `location`.
 - Ensure every event falls in the 56-day window.
 - Ensure excluded geographies are not present.
+- Ensure dev.events-discovered records do not use dev.events detail URLs for `event_url`.
 - Ensure `data/events-updates.json` is valid JSON.
 - Ensure each `data/events-updates.json` record contains only `match`, `name`, and `changes`.
 - Ensure `data/events-candidates.json` is valid JSON.
+- Ensure `data/events-issues.json` is valid JSON.
+- Ensure every failed attempt is represented in `data/events-issues.json`.
 - Ensure no unchanged existing records appear in `data/events-updates.json`.
 - Ensure no unchanged existing records appear in candidates.
 
@@ -152,4 +193,5 @@ Now execute this workflow and provide:
 1) the markdown summary,
 2) the created/updated `data/events-updates.json`,
 3) a concise markdown list of updates,
-4) the created/updated `data/events-candidates.json`.
+4) the created/updated `data/events-candidates.json`,
+5) the created/updated `data/events-issues.json`.
