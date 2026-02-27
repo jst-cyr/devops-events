@@ -17,3 +17,45 @@ This pulls from several data sources:
 
 - Data model for events/CFPs: [docs/data-model.md](docs/data-model.md)
 - Sample dataset from 2026-02-20 weekly post: [data/sample-events-2026-02-20.json](data/sample-events-2026-02-20.json)
+
+## Data
+
+- Canonical events data file: [data/events.json](data/events.json)
+
+## Web App (Next.js)
+
+This repository now includes a Next.js application at the repository root.
+
+### Stack
+
+- TypeScript
+- Next.js 16 (App Router)
+- React 19
+- shadcn/ui (latest CLI)
+- Tailwind CSS v4
+- pnpm
+
+### Quick start
+
+1. Install dependencies:
+
+	```bash
+	pnpm install
+	```
+
+2. Start development server:
+
+	```bash
+	pnpm dev
+	```
+
+3. Build for production:
+
+	```bash
+	pnpm build
+	```
+
+### Notes
+
+- `shadcn` was initialized with base color `slate` and CSS variables enabled.
+- The current shadcn CLI no longer exposes a `style` flag; configuration is stored in `components.json`.
