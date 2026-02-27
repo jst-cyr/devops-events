@@ -1,0 +1,673 @@
+{
+  "post_edition": "2026-02-20",
+  "source_message": "Tech Events Around the World (Feb 20th edition)",
+  "records": [
+    {
+      "id": "platformcon-2026",
+      "name": "PlatformCon 2026",
+      "event_url": "https://platformcon.com/",
+      "start_date": "2026-06-22",
+      "end_date": "2026-06-26",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": ["platform", "devops"],
+      "source": "sessionize",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/platformcon-2026/",
+        "cfp_open_date": "2025-12-17",
+        "cfp_close_date": "2026-02-22",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "closed"
+      },
+      "notes": "CFP in post applies to virtual program.",
+      "status": "upcoming"
+    },
+    {
+      "id": "devopsdays-austin-2026",
+      "name": "DevOpsDays Austin",
+      "event_url": "https://devopsdays.org/events/2026-austin/welcome/",
+      "start_date": "2026-05-05",
+      "end_date": "2026-05-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["devops"],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Austin",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopsdays-austin-2026/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-02-26",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "closed"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "devopsdays-nashville-2026",
+      "name": "DevOpsDays Nashville",
+      "event_url": "https://devopsdays.org/events/2026-nashville/welcome/",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["devops", "ai"],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Murfreesboro",
+        "region": "Tennessee",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/devopsdaysnashville2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-02-27",
+        "cfp_timezone": "UTC",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "City inferred from CFP page; post labels event as Nashville.",
+      "status": "upcoming"
+    },
+    {
+      "id": "ieee-cloud-summit-2026",
+      "name": "IEEE Cloud Summit 2026",
+      "event_url": "https://www.ieeecloudsummit.org/",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-26",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": ["cloud", "devops", "devsecops", "ai"],
+      "source": "sessionize",
+      "location": {
+        "city": "Washington",
+        "region": "District of Columbia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Washington Marriott Capitol Hill"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/ieeecloudsummit26",
+        "cfp_open_date": "2025-11-01",
+        "cfp_close_date": "2026-02-28",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "closing_soon"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "containerdays-hamburg-2026",
+      "name": "Container Days Hamburg 2026",
+      "event_url": "https://www.containerdays.io/",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["containers", "kubernetes", "devops", "cloud-native"],
+      "source": "sessionize",
+      "location": {
+        "city": "Hamburg",
+        "region": "Hamburg",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Schuppen52"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/containerdays-hamburg-2026",
+        "cfp_open_date": "2025-11-01",
+        "cfp_close_date": "2026-02-28",
+        "cfp_timezone": "Europe/Berlin",
+        "cfp_status": "closing_soon"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "devopsdays-tokyo-2026",
+      "name": "DevOpsDays Tokyo 2026",
+      "event_url": "https://www.devopsdaystokyo.org/",
+      "start_date": "2026-04-14",
+      "end_date": "2026-04-16",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": ["devops"],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Tokyo",
+        "region": "Tokyo",
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": "Tokyo Venue launch"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://confengine.com/conferences/devopsdays-tokyo-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-01",
+        "cfp_timezone": "Asia/Tokyo",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Event page indicates onsite event with online streaming available.",
+      "status": "upcoming"
+    },
+    {
+      "id": "cncf-meetup-platform-effect-kolkata-2026",
+      "name": "CNCF Meetup - The Platform Effect",
+      "event_url": "https://community.cncf.io/events/details/cncf-cloud-native-kolkata-presents-the-platform-effect/",
+      "start_date": "2026-02-21",
+      "end_date": "2026-02-21",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": ["cncf", "platform", "cloud-native"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Kolkata",
+        "region": null,
+        "country": "India",
+        "country_code": "IN",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "confoo-2026",
+      "name": "ConFoo 2026",
+      "event_url": "https://confoo.ca/en/2026",
+      "start_date": "2026-02-25",
+      "end_date": "2026-02-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["software", "devops"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Montreal",
+        "region": "Quebec",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "automate-with-confidence-ansible-2026-02-25",
+      "name": "Automate with Confidence: Remediation with Red Hat Ansible",
+      "event_url": "https://www.carahsoft.com/learn/event/76108-automate-with-confidence-remediation-with-red-hat-ansible",
+      "start_date": "2026-02-25",
+      "end_date": "2026-02-25",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": ["ansible", "automation", "devops"],
+      "source": "carahsoft.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "cloud-native-birmingham-online-2026-02-26",
+      "name": "Cloud Native Birmingham",
+      "event_url": "https://community.cncf.io/events/details/cncf-cloud-native-birmingham-presents-cloud-native-birmingham-online-meetup-kicking-off-2026-together/",
+      "start_date": "2026-02-26",
+      "end_date": "2026-02-26",
+      "delivery": "online",
+      "event_type": "meetup",
+      "tags": ["cncf", "cloud-native"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "sreday-nyc-2026-q1",
+      "name": "SREDay",
+      "event_url": "https://sreday.com/2026-nyc-q1/",
+      "start_date": "2026-02-26",
+      "end_date": "2026-02-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["sre", "devops"],
+      "source": "sreday.com",
+      "location": {
+        "city": "New York City",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Q1 NYC edition.",
+      "status": "upcoming"
+    },
+    {
+      "id": "devops-not-dead-nyc-2026-q1",
+      "name": "DevOps Not Dead",
+      "event_url": "https://devopsnotdead.com/2026-nyc-q1/",
+      "start_date": "2026-02-27",
+      "end_date": "2026-02-27",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": ["devops", "sre"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "New York City",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Q1 NYC edition.",
+      "status": "upcoming"
+    },
+    {
+      "id": "seccon-14-2026",
+      "name": "SECCON 14",
+      "event_url": "https://www.seccon.jp/14/ep260228.html",
+      "start_date": "2026-02-28",
+      "end_date": "2026-03-01",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["security", "devsecops"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Tokyo",
+        "region": "Tokyo",
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "devops-fwdays-2026",
+      "name": "DevOps fwdays",
+      "event_url": "https://fwdays.com/en/event/devops-fwdays-2026",
+      "start_date": "2026-02-28",
+      "end_date": "2026-02-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["devops"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Kyiv",
+        "region": null,
+        "country": "Ukraine",
+        "country_code": "UA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "ndc-security-oslo-2026",
+      "name": "NDC Security Oslo 2026",
+      "event_url": "https://ndcsecurity.com/",
+      "start_date": "2026-03-02",
+      "end_date": "2026-03-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["security", "devsecops"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Oslo",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "sunseccon-2026",
+      "name": "SunSecCon",
+      "event_url": "https://dev.events/conferences/sun-sec-con-2026-5lvorag9",
+      "start_date": "2026-03-05",
+      "end_date": "2026-03-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["security", "devsecops"],
+      "source": "dev.events",
+      "location": {
+        "city": "Pasadena",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "scale-23x-2026",
+      "name": "SCaLE",
+      "event_url": "https://www.socallinuxexpo.org/scale/23x",
+      "start_date": "2026-03-05",
+      "end_date": "2026-03-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["linux", "opensource", "devops"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Pasadena",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "devopsdays-los-angeles-2026",
+      "name": "DevOpsDays LA",
+      "event_url": "https://devopsdays.org/events/2026-los-angeles/welcome/",
+      "start_date": "2026-03-06",
+      "end_date": "2026-03-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["devops"],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Pasadena",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "women-techmakers-belfast-2026",
+      "name": "Women Techmakers Belfast",
+      "event_url": "https://www.womentechmakersbelfast.com/",
+      "start_date": "2026-03-07",
+      "end_date": "2026-03-07",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": ["community", "technology"],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Belfast",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "grand-rapids-red-hat-user-group-2026-03-10",
+      "name": "Grand Rapids Red Hat User Group",
+      "event_url": "https://reg.experiences.redhat.com/flow/redhat/3459702/redhatfieldeventspreregnoappform/page/landingregistrationpage?extIdCarryOver=true&sc_cid=RHCTG0180000382538",
+      "start_date": "2026-03-10",
+      "end_date": "2026-03-10",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": ["redhat", "devops"],
+      "source": "redhat.com",
+      "location": {
+        "city": "Grand Rapids",
+        "region": "Michigan",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "red-hat-tech-day-toronto-2026-03-11",
+      "name": "Red Hat Tech Day",
+      "event_url": "https://reg.experiences.redhat.com/flow/redhat/3405950/fieldeventsregapproveform/page/landingregistrationpage?extIdCarryOver=true&sc_cid=RHCTG0180000382538",
+      "start_date": "2026-03-11",
+      "end_date": "2026-03-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["redhat", "devops"],
+      "source": "redhat.com",
+      "location": {
+        "city": "Toronto",
+        "region": "Ontario",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "detroit-red-hat-user-group-2026-03-11",
+      "name": "Detroit Red Hat User Group",
+      "event_url": "https://reg.experiences.redhat.com/flow/redhat/3451500/redhatfieldeventspreregnoappform/page/landingregistrationpage?extIdCarryOver=true&sc_cid=RHCTG0180000382538",
+      "start_date": "2026-03-11",
+      "end_date": "2026-03-11",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": ["redhat", "devops"],
+      "source": "redhat.com",
+      "location": {
+        "city": "Royal Oak",
+        "region": "Michigan",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "sreday-london-2026-q1",
+      "name": "SREDay",
+      "event_url": "https://sreday.com/2026-london-q1/",
+      "start_date": "2026-03-12",
+      "end_date": "2026-03-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["sre", "devops"],
+      "source": "sreday.com",
+      "location": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Q1 London edition.",
+      "status": "upcoming"
+    }
+  ]
+}
