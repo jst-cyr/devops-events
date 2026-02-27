@@ -41,9 +41,9 @@ async function loadModuleWithData(records: EventRecord[]) {
     readFile,
   }))
 
-  const module = await import("./events-data")
+  const eventsDataModule = await import("./events-data")
   return {
-    getDashboardFeed: module.getDashboardFeed,
+    getDashboardFeed: eventsDataModule.getDashboardFeed,
     readFile,
   }
 }
