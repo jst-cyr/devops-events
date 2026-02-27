@@ -120,4 +120,26 @@ describe("/api/events route", () => {
     const payload = await blocked.json()
     expect(payload.error).toBe("Rate limit exceeded")
   })
+
+  it("accepts requests using x-real-ip when x-forwarded-for is missing", async () => {
+    const { route, getDashboardFeed } = await loadRouteWithMock()
+
+    getDashboardFeed.mockResolvedValue({
+      kind: "events",
+      items: [],
+      cursor: 0,
+      nextCursor: null,
+      hasMore: false,
+      total: 0,
+    })
+
+    const response = await route.GET(
+      createRequest("http://localhost:3000/api/events", {
+        "x-real-ip": "192.0.2.14",
+      }) as never,
+    )
+
+    expect(response.status).toBe(200)
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", cursor: 0, limit: 6 })
+  })
 })
