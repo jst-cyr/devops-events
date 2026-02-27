@@ -69,10 +69,10 @@ describe("buildSlackAnnouncement", () => {
       events: [eventItem],
     });
 
-    expect(message).toContain(":people_hugging: Tech Events Around the World (Feb 27th edition)");
-    expect(message).toContain("CFP opportunities closing soon:");
+    expect(message).toContain(":people_hugging: *Tech Events Around the World (Feb 27th edition)*");
+    expect(message).toContain("*CFP opportunities closing soon:*");
     expect(message).toContain(":us: DevOpsDays Austin (Austin, Texas, United States). CFP due 2026-03-10: https://example.com/cfp");
-    expect(message).toContain("Events happening soon:");
+    expect(message).toContain("*Events happening soon:*");
     expect(message).toContain(":flag-ca: ConFoo (Montreal, Quebec, Canada). 2026-03-02 to 2026-03-03: https://example.com/confoo");
   });
 

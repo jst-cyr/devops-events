@@ -80,7 +80,7 @@ export function buildSlackAnnouncement(options: {
   cfps: EventListItem[];
   events: EventListItem[];
 }): string {
-  const heading = `:people_hugging: Tech Events Around the World (${formatEditionDate(options.now)} edition)`;
+  const heading = `:people_hugging: *Tech Events Around the World (${formatEditionDate(options.now)} edition)*`;
   const intro = `This week's update highlights CFP deadlines and events in the next ${FOUR_WEEKS_DAYS} days where Puppet/DevOps/DevSecOps might be in the conversation.`;
 
   const cfpLines = options.cfps.length
@@ -95,10 +95,10 @@ export function buildSlackAnnouncement(options: {
     heading,
     intro,
     "",
-    "CFP opportunities closing soon:",
+    "*CFP opportunities closing soon:*",
     ...cfpLines,
     "",
-    "Events happening soon:",
+    "*Events happening soon:*",
     ...eventLines,
   ].join("\n");
 }
