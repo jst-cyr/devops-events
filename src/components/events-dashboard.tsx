@@ -102,7 +102,7 @@ function FeedSection({
       </CardHeader>
       <CardContent className="space-y-4">
         {state.items.length === 0 ? (
-          <p className="text-muted-foreground text-sm">No matching items in the next 4 weeks.</p>
+          <p className="text-muted-foreground text-sm">No matching upcoming items.</p>
         ) : (
           <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {state.items.map((item) => (
@@ -141,7 +141,7 @@ export function EventsDashboard({
   initialEvents,
   apiPath = "/api/events",
   title = "DevOps Events Dashboard",
-  subtitle = "Initial view shows the next 4 weeks. Load more shows later dates.",
+  subtitle = "Showing upcoming CFPs and events. Load more to view the next page.",
   showSlackTools = true,
 }: {
   initialCfps: DashboardFeedResponse;
@@ -250,7 +250,7 @@ export function EventsDashboard({
         <Card className="mb-6">
           <CardHeader>
             <CardTitle>Slack announcement draft</CardTitle>
-            <CardDescription>Generated for the next 4 weeks of CFPs and events.</CardDescription>
+            <CardDescription>Generated from upcoming CFPs and events.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             <textarea
@@ -271,14 +271,14 @@ export function EventsDashboard({
       <div className="space-y-6">
         <FeedSection
           title="CFPs"
-          description="Showing CFPs closing in the next 4 weeks first"
+          description="Showing upcoming CFP deadlines"
           kind="cfp"
           state={cfpState}
           onLoadMore={handleLoadMore}
         />
         <FeedSection
           title="Upcoming Events"
-          description="Showing upcoming events in the next 4 weeks first"
+          description="Showing upcoming events"
           kind="events"
           state={eventState}
           onLoadMore={handleLoadMore}

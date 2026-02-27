@@ -74,7 +74,7 @@ describe("/api/events route", () => {
       createRequest("http://localhost:3000/api/events?kind=invalid&cursor=-4&limit=0") as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "events", cursor: 0, limit: 6 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "events", cursor: 0, limit: 30 })
   })
 
   it("returns 405 for write methods", async () => {
@@ -140,6 +140,6 @@ describe("/api/events route", () => {
     )
 
     expect(response.status).toBe(200)
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "events", cursor: 0, limit: 6 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "events", cursor: 0, limit: 30 })
   })
 })
