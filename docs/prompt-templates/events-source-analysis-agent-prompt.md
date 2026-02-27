@@ -97,7 +97,15 @@ When using iframe fallback, enforce all of the following:
 
 ### CFP extraction and follow-through (required)
 
-When a source provides a CFP link, CTA, or indicator (for example: `Call for Presenters`, `CFP`, `Apply to speak`, `Submit talk`):
+Treat the following as equivalent CFP signals:
+
+- `CFP` (Call for Papers)
+- `CFS` (Call for Speakers)
+- `CFP/CFS` mixed labels
+- `Call for Proposals`, `Call for Participation`, `Speaker Applications`
+- CTAs such as `Apply to speak`, `Submit talk`, `Propose a talk`, `Speak at ...`, `Become a speaker`
+
+When a source provides any CFP/CFS link, CTA, or indicator:
 
 1. Follow the CFP URL to the actual CFP page/form (do not stop at listing-page snippets).
 2. Extract `cfp.cfp_url` and `cfp.cfp_close_date` when available.
@@ -105,6 +113,7 @@ When a source provides a CFP link, CTA, or indicator (for example: `Call for Pre
 4. Set `cfp.cfp_status` deterministically from extracted data (`upcoming|open|closing_soon|closed|unknown`).
 5. If a CFP exists but close date cannot be determined, keep `cfp.has_cfp = true`, set `cfp.cfp_close_date = null`, `cfp.cfp_status = "unknown"`, and add deterministic notes.
 6. Do not infer CFP close dates from event date; only use explicit CFP-page evidence.
+7. Prefer canonical submission destinations (for example PaperCall/Sessionize/ConfEngine/Google Forms) over aggregator snippets when extracting close deadlines.
 
 ### Relevance criteria
 
@@ -245,6 +254,7 @@ Where `records` contains normalized `EventRecord` items.
 - Ensure excluded geographies are not present.
 - Ensure dev.events-discovered records do not use dev.events detail URLs for `event_url`.
 - Ensure CFP links were followed-through when present and that `cfp.cfp_close_date` is captured when explicitly available on the CFP page.
+- Ensure CFP/CFS synonym labels are treated equivalently during discovery and extraction.
 - Ensure `data/events-updates.json` is valid JSON.
 - Ensure each `data/events-updates.json` record contains only `match`, `name`, and `changes`.
 - Ensure `data/events-candidates.json` is valid JSON.
