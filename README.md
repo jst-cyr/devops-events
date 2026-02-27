@@ -63,10 +63,10 @@ This repository now includes a Next.js application at the repository root.
 ## Dashboard behavior
 
 - The home page (`/`) shows two sections:
-	- CFPs ending in the next month
-	- Events happening in the next month
-- Default time window is a rolling 30 days from the current day.
-- Initial results are rendered server-side and statically generated with ISR.
+	- CFPs ending in the next 4 weeks
+	- Events happening in the next 4 weeks
+- Default time window is a rolling 28 days (4 weeks) from the current day.
+- Initial results are rendered server-side and statically generated with ISR, with daily revalidation.
 - The “Load more” buttons append additional items client-side without reloading the page.
 - The layout is responsive for mobile and desktop.
 

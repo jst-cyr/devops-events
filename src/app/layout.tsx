@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DevOps Events Dashboard",
-  description: "CFPs and upcoming DevOps events in the next month",
+  description: "CFPs and upcoming DevOps events in the next 4 weeks",
 };
 
 export default function RootLayout({

@@ -3,8 +3,8 @@ import path from "node:path";
 
 import {
   DEFAULT_PAGE_SIZE,
+  FOUR_WEEKS_DAYS,
   MAX_PAGE_SIZE,
-  NEXT_MONTH_DAYS,
   type DashboardFeedResponse,
   type DashboardKind,
   type EventListItem,
@@ -88,7 +88,7 @@ async function getAllRecords(): Promise<EventRecord[]> {
 
 function buildWindow(now: Date): { start: Date; end: Date } {
   const start = startOfUtcDay(now);
-  const end = addDays(start, NEXT_MONTH_DAYS);
+  const end = addDays(start, FOUR_WEEKS_DAYS);
   return { start, end };
 }
 

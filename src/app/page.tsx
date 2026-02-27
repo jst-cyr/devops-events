@@ -1,7 +1,7 @@
 import { EventsDashboard } from "@/components/events-dashboard";
 import { getDashboardFeed } from "@/lib/events-data";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export default async function Home() {
   const [initialCfps, initialEvents] = await Promise.all([
