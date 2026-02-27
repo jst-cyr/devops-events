@@ -34,6 +34,52 @@ When using `https://dev.events/`:
 5. If no native URL is available, or the native URL cannot be fetched/parsed, do not include that item in candidates/updates; instead write an issue record to `data/events-issues.json`.
 6. Add a brief `notes` value if URL canonicalization required redirect or inference.
 
+#### Dev.events iframe fallback (required)
+
+If a dev.events detail page does not expose an explicit outbound "Visit site"/"Official site" link:
+
+1. Inspect the page DOM for an embedded event website iframe such as:
+
+```html
+<iframe title="embedded event's website" src="https://example.com"></iframe>
+```
+
+2. Extract the iframe `src` URL and treat it as the candidate native origin URL.
+3. Normalize to an absolute `https://` canonical URL (remove tracking query params when safe and deterministic).
+4. Crawl that native URL and extract event data from the native site.
+5. Set `event_url` to that native iframe-origin URL (never the dev.events detail URL).
+6. Add a `notes` entry like `Canonical URL extracted from dev.events embedded iframe src.`
+7. If iframe `src` is missing, malformed, non-https, or cannot be fetched, write an issue record with stage `canonicalize` or `fetch` and include deterministic failure notes.
+
+#### Dev.events canonicalization order (required)
+
+Apply these methods in order and stop on first valid canonical URL:
+
+1. Direct HTTP redirect target from dev.events detail URL.
+2. Explicit outbound event link in detail content (`Visit website`, `Official site`, `conference website`).
+3. Embedded iframe `src` extracted from rendered DOM.
+4. Raw HTML source scan for iframe `src` when rendered extraction misses iframe nodes.
+5. If none succeed, write an issue (`missing_canonical_url`) and do not create candidate/update.
+
+#### Dev.events DOM fallback protocol (required)
+
+When using iframe fallback, enforce all of the following:
+
+- Extract iframe `src` from rendered DOM first; if unavailable, inspect raw page HTML and parse iframe tags directly.
+- Accept only absolute `https://` URLs.
+- Reject iframe `src` values that are:
+   - `javascript:`, `data:`, empty, or malformed,
+   - `dev.events` self-links,
+   - obvious non-event/tracker/ad/CDN assets.
+- Canonicalize deterministically:
+   - keep event path when required (do not collapse path-scoped event pages to origin-only),
+   - remove only clear tracking query parameters when safe.
+- Record provenance in `notes` using a deterministic phrase such as:
+   - `Canonical URL extracted via redirect.`
+   - `Canonical URL extracted via explicit outbound link.`
+   - `Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).`
+- If iframe-derived URL cannot be fetched/parsed, do not fall back to dev.events detail URL; write an issue record instead.
+
 ### Time window
 
 - Use today as day 0.
@@ -182,6 +228,8 @@ Where `records` contains normalized `EventRecord` items.
 - Ensure every failed attempt is represented in `data/events-issues.json`.
 - Ensure no unchanged existing records appear in `data/events-updates.json`.
 - Ensure no unchanged existing records appear in candidates.
+- Ensure no dev.events detail URL is used as final `event_url` when canonicalization fails.
+- Ensure each dev.events-derived record has deterministic canonicalization provenance in `notes`.
 
 ### Execution constraints
 
@@ -194,8 +242,11 @@ Where `records` contains normalized `EventRecord` items.
 - Do **not** use `dev.events` `.ics` links for extraction; these may trigger file downloads and are not reliable in this environment.
 - For `dev.events`, canonicalization should use only:
    1) direct HTTP redirects from the detail page URL, or
-   2) explicit outbound links in detail-page content (for example, `Visit conference website`).
+   2) explicit outbound links in detail-page content (for example, `Visit conference website`), or
+   3) embedded iframe `src` origin URL when the detail page renders an embedded event website.
 - If a `dev.events` detail page exposes no outbound native URL beyond ads/promotions, log `missing_canonical_url` in `data/events-issues.json`.
+- For iframe-based extraction, treat the iframe `src` as canonical only when it is a clear event-host origin; otherwise log an issue with exact reason in `notes`.
+- If standard extractor output omits iframe nodes, parse raw HTML source and extract iframe `src` directly.
 - For `devopsdays` event pages, prefer `/welcome/` URLs for canonical `event_url`; extract date/location from `/welcome/` when available.
 - If a source is blocked by CSP or anti-bot redirects (for example, `redhat.com` events page), record a deterministic issue and continue with alternate source coverage.
 
