@@ -130,6 +130,16 @@ Include events likely related to one or more of:
 
 Also include general software/developer events **only if** they are broad and likely relevant to DevOps practitioners (not narrowly focused on a single language/framework/stack where our ICP is unlikely to attend).
 
+#### Explicit topical exclusions (required)
+
+Exclude events when their primary focus is outside infrastructure automation / platform engineering / DevOps operations, including:
+
+- Database-focused conferences (for example MySQL/PostgreSQL/MongoDB/data platform ecosystems), even if open source.
+- Open-source-only community events where the main scope is not infrastructure automation or DevOps practice.
+- Data/analytics events without clear DevOps/SRE/IaC operational relevance.
+
+If an event appears adjacent but not clearly aligned, default to exclude and count it under `topic mismatch` in the summary report.
+
 ### Geographic filtering
 
 - Exclude events in China.
@@ -255,6 +265,7 @@ Where `records` contains normalized `EventRecord` items.
 - Ensure dev.events-discovered records do not use dev.events detail URLs for `event_url`.
 - Ensure CFP links were followed-through when present and that `cfp.cfp_close_date` is captured when explicitly available on the CFP page.
 - Ensure CFP/CFS synonym labels are treated equivalently during discovery and extraction.
+- Ensure database-focused and open-source-only (non-DevOps-operations) events are excluded.
 - Ensure `data/events-updates.json` is valid JSON.
 - Ensure each `data/events-updates.json` record contains only `match`, `name`, and `changes`.
 - Ensure `data/events-candidates.json` is valid JSON.
