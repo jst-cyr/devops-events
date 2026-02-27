@@ -6,10 +6,11 @@ export const revalidate = 86400;
 const INITIAL_PAGE_SIZE = 30;
 
 export default async function Home() {
-  const [initialCfps, initialEvents] = await Promise.all([
+  const [initialCfps, initialEvents, initialPastEvents] = await Promise.all([
     getDashboardFeed({ kind: "cfp", limit: INITIAL_PAGE_SIZE }),
     getDashboardFeed({ kind: "events", limit: INITIAL_PAGE_SIZE }),
+    getDashboardFeed({ kind: "events", timeframe: "past", limit: INITIAL_PAGE_SIZE }),
   ]);
 
-  return <EventsDashboard initialCfps={initialCfps} initialEvents={initialEvents} />;
+  return <EventsDashboard initialCfps={initialCfps} initialEvents={initialEvents} initialPastEvents={initialPastEvents} />;
 }
