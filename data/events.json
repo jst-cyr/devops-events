@@ -2008,6 +2008,180 @@
       },
       "notes": "Sessionize links canonical event site as worldcongress.dev.",
       "status": "upcoming"
+    },
+    {
+      "id": "redhat-aiops-to-action-2026-03-17",
+      "name": "AIOps to Action: Automating the Future of IT Operations",
+      "event_url": "https://www.redhat.com/en/events/webinar/aiops-to-action-automating-the-future-of-it-operations",
+      "start_date": "2026-03-17",
+      "end_date": "2026-03-17",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "redhat",
+        "aiops",
+        "automation",
+        "operations",
+        "devops"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "status": "upcoming"
+    },
+    {
+      "id": "redhat-aiops-hybrid-edge-2026-03-18",
+      "name": "AIOps from hybrid to the edge",
+      "event_url": "https://www.redhat.com/en/events/webinar/aiops-from-hybrid-to-the-edge",
+      "start_date": "2026-03-18",
+      "end_date": "2026-03-18",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "redhat",
+        "aiops",
+        "hybrid",
+        "edge",
+        "devops"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "status": "upcoming"
+    },
+    {
+      "id": "redhat-masterclass-aiops-mirage-2026-03-31",
+      "name": "MasterClass The AIOps Mirage: Why Automation Must Come First",
+      "event_url": "https://www.redhat.com/en/events/webinar/masterclass-the-aiops-mirage-why-automation-must-come-first",
+      "start_date": "2026-03-31",
+      "end_date": "2026-03-31",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "redhat",
+        "aiops",
+        "automation",
+        "operations",
+        "devops"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "status": "upcoming"
+    },
+    {
+      "id": "redhat-rhel-in-cloud-2026-04-08",
+      "name": "Red Hat Enterprise Linux in the cloud",
+      "event_url": "https://www.redhat.com/en/events/webinar/red-hat-enterprise-linux-in-the-cloud",
+      "start_date": "2026-04-08",
+      "end_date": "2026-04-08",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "redhat",
+        "linux",
+        "cloud",
+        "devops"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "status": "upcoming"
+    },
+    {
+      "id": "redhat-platform-engineering-roadshow-2026-04-22",
+      "name": "Red Hat Platform Engineering roadshow: A hands-on workshop",
+      "event_url": "https://www.redhat.com/en/events/webinar/red-hat-platform-engineering-roadshow",
+      "start_date": "2026-04-22",
+      "end_date": "2026-04-22",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "redhat",
+        "platform",
+        "engineering",
+        "devops",
+        "automation"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "status": "upcoming"
     }
   ]
 }
