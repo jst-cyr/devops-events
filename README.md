@@ -12,3 +12,7 @@ This pulls from several data sources:
 - https://www.carahsoft.com/red-hat/events
 - https://cfgmgmtcamp.org/
 - https://www.developerweek.com/
+
+## Documentation
+
+- Data model for events/CFPs: [docs/data-model.md](docs/data-model.md)
