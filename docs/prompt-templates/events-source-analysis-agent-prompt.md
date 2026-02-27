@@ -189,6 +189,16 @@ Where `records` contains normalized `EventRecord` items.
 - If date or location is ambiguous, add a brief `notes` value explaining inference.
 - Prefer canonical event pages over aggregator snippets when both are available.
 
+### Run notes for next execution (2026-02-27)
+
+- Do **not** use `dev.events` `.ics` links for extraction; these may trigger file downloads and are not reliable in this environment.
+- For `dev.events`, canonicalization should use only:
+   1) direct HTTP redirects from the detail page URL, or
+   2) explicit outbound links in detail-page content (for example, `Visit conference website`).
+- If a `dev.events` detail page exposes no outbound native URL beyond ads/promotions, log `missing_canonical_url` in `data/events-issues.json`.
+- For `devopsdays` event pages, prefer `/welcome/` URLs for canonical `event_url`; extract date/location from `/welcome/` when available.
+- If a source is blocked by CSP or anti-bot redirects (for example, `redhat.com` events page), record a deterministic issue and continue with alternate source coverage.
+
 Now execute this workflow and provide:
 1) the markdown summary,
 2) the created/updated `data/events-updates.json`,
