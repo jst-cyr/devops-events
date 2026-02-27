@@ -1,5 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest"
 
+import { DEFAULT_PAGE_SIZE } from "@/lib/events-types"
+
 type GetDashboardFeed = typeof import("@/lib/events-data").getDashboardFeed
 
 function createRequest(url: string, headers?: Record<string, string>) {
@@ -70,7 +72,7 @@ describe("/api/candidates route", () => {
       createRequest("http://localhost:3000/api/candidates?kind=invalid&cursor=-4&limit=0") as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", cursor: 0, limit: 6 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", cursor: 0, limit: DEFAULT_PAGE_SIZE })
   })
 
   it("returns 405 for write methods", async () => {
