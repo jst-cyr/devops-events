@@ -10,7 +10,7 @@ function createRequest(url: string, headers?: Record<string, string>) {
 }
 
 async function loadRouteWithMock() {
-  const getDashboardFeed = vi.fn<Parameters<GetDashboardFeed>, ReturnType<GetDashboardFeed>>()
+  const getDashboardFeed = vi.fn<GetDashboardFeed>()
 
   vi.resetModules()
   vi.doMock("@/lib/events-data", () => ({
