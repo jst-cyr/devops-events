@@ -16,3 +16,4 @@ This pulls from several data sources:
 ## Documentation
 
 - Data model for events/CFPs: [docs/data-model.md](docs/data-model.md)
+- Sample dataset from 2026-02-20 weekly post: [data/sample-events-2026-02-20.json](data/sample-events-2026-02-20.json)
