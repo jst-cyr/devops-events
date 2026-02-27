@@ -302,6 +302,25 @@ Use this fallback sequence:
 6. Only create a Red Hat issue if both listing-page fallback and JSON-endpoint fallback fail.
 7. When fallback succeeds, do not keep a stale Red Hat blocked issue.
 
+### Source-specific fallback: adatosystems.com CFP tracker (required)
+
+If `https://adatosystems.com/cfp-tracker/` is compressed/ambiguous or fails deterministic parsing, use the dated weekly CFP sublist post for the run date.
+
+Use this fallback sequence:
+
+1. Fetch the dated post in this form:
+   - `https://adatosystems.com/YYYY/MM/DD/call-for-papers-listings-for-M-D/`
+2. Extract bullet records containing:
+   - event name,
+   - city/country,
+   - event date range,
+   - `CFP close` date,
+   - event URL,
+   - CFP URL.
+3. Use the dated sublist as discovery input only; validate/canonicalize URLs where possible.
+4. Keep `adatosystems.com/cfp-tracker` as an issue if still non-deterministic, but continue the run using the dated sublist results.
+5. Include deterministic notes when a candidate was sourced from the dated fallback post.
+
 ### Run notes for next execution (2026-02-27)
 
 - Do **not** use `dev.events` `.ics` links for extraction; these may trigger file downloads and are not reliable in this environment.
@@ -318,6 +337,7 @@ Use this fallback sequence:
 - For `redhat.com/events`, prefer JSON fallback at `https://www.redhat.com/rhdc/jsonapi/solr_search/event?page=<n>` to avoid tracker-bounce false failures.
 - Treat CFP discovery as first-class: include records where CFP close date is in-window even if the event itself is later than 56 days.
 - For CFP CTAs (for example IaCConf `View the Call for Presenters`), follow through to the CFP destination page/form to extract the actual close deadline before classifying in/out of window.
+- If the AdatoSystems main CFP tracker is unreliable, use the dated sublist post for that run day and record this fallback in `notes`/issues.
 
 Now execute this workflow and provide:
 1) the markdown summary,
