@@ -59,3 +59,13 @@ This repository now includes a Next.js application at the repository root.
 
 - `shadcn` was initialized with base color `slate` and CSS variables enabled.
 - The current shadcn CLI no longer exposes a `style` flag; configuration is stored in `components.json`.
+
+## Docs Validation
+
+Validate this implementation against the official docs:
+
+- Tailwind CSS v4 + Next.js: https://tailwindcss.com/docs/installation/framework-guides/nextjs
+- shadcn/ui (Next.js + CLI): https://ui.shadcn.com/docs/installation/next and https://ui.shadcn.com/docs/cli
+- Next.js docs (latest): https://nextjs.org/docs
+- React versions: https://react.dev/versions
+- TypeScript docs/download: https://www.typescriptlang.org/docs/ and https://www.typescriptlang.org/download
