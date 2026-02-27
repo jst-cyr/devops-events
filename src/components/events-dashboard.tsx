@@ -177,21 +177,21 @@ export function EventsDashboard({
       <header className="mb-6">
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">DevOps Events Dashboard</h1>
         <p className="text-muted-foreground mt-2 text-sm sm:text-base">
-          CFP deadlines and upcoming events in the next 28 days.
+          Initial view shows the next 4 weeks. Load more shows later dates.
         </p>
       </header>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <FeedSection
           title="CFPs"
-          description="CFPs ending in the next 4 weeks"
+          description="Showing CFPs closing in the next 4 weeks first"
           kind="cfp"
           state={cfpState}
           onLoadMore={handleLoadMore}
         />
         <FeedSection
           title="Upcoming Events"
-          description="Events happening in the next 4 weeks"
+          description="Showing upcoming events in the next 4 weeks first"
           kind="events"
           state={eventState}
           onLoadMore={handleLoadMore}

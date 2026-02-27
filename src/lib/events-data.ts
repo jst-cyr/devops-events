@@ -3,7 +3,6 @@ import path from "node:path";
 
 import {
   DEFAULT_PAGE_SIZE,
-  FOUR_WEEKS_DAYS,
   MAX_PAGE_SIZE,
   type DashboardFeedResponse,
   type DashboardKind,
@@ -86,14 +85,12 @@ async function getAllRecords(): Promise<EventRecord[]> {
   return recordsCache;
 }
 
-function buildWindow(now: Date): { start: Date; end: Date } {
+function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
   const start = startOfUtcDay(now);
-  const end = addDays(start, FOUR_WEEKS_DAYS - 1);
-  return { start, end };
-}
-
-function getUpcomingEventRecords(records: EventRecord[], now: Date): EventRecord[] {
-  const { start, end } = buildWindow(now);
+  const end =
+    typeof windowDays === "number"
+      ? addDays(start, Math.max(1, windowDays) - 1)
+      : null;
 
   return records
     .filter((record) => {
@@ -101,13 +98,22 @@ function getUpcomingEventRecords(records: EventRecord[], now: Date): EventRecord
       if (!startDate) {
         return false;
       }
-      return startDate >= start && startDate <= end;
+
+      if (end) {
+        return startDate >= start && startDate <= end;
+      }
+
+      return startDate >= start;
     })
     .sort((left, right) => left.start_date.localeCompare(right.start_date));
 }
 
-function getUpcomingCfpRecords(records: EventRecord[], now: Date): EventRecord[] {
-  const { start, end } = buildWindow(now);
+function getUpcomingCfpRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
+  const start = startOfUtcDay(now);
+  const end =
+    typeof windowDays === "number"
+      ? addDays(start, Math.max(1, windowDays) - 1)
+      : null;
 
   return records
     .filter((record) => {
@@ -120,7 +126,11 @@ function getUpcomingCfpRecords(records: EventRecord[], now: Date): EventRecord[]
         return false;
       }
 
-      return closeDate >= start && closeDate <= end;
+      if (end) {
+        return closeDate >= start && closeDate <= end;
+      }
+
+      return closeDate >= start;
     })
     .sort((left, right) => {
       const leftDate = left.cfp?.cfp_close_date ?? "9999-12-31";
@@ -134,6 +144,7 @@ export async function getDashboardFeed(options: {
   now?: Date;
   cursor?: number;
   limit?: number;
+  windowDays?: number;
 }): Promise<DashboardFeedResponse> {
   const now = options.now ?? new Date();
   const cursor = normalizeCursor(options.cursor);
@@ -142,8 +153,8 @@ export async function getDashboardFeed(options: {
 
   const selected =
     options.kind === "cfp"
-      ? getUpcomingCfpRecords(records, now)
-      : getUpcomingEventRecords(records, now);
+      ? getUpcomingCfpRecords(records, now, options.windowDays)
+      : getUpcomingEventRecords(records, now, options.windowDays);
 
   const items = selected.slice(cursor, cursor + limit).map(mapEventItem);
   const nextCursor = cursor + items.length;

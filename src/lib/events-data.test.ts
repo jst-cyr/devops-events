@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest"
 
 import type { EventRecord } from "./events-types"
+import { FOUR_WEEKS_DAYS } from "./events-types"
 
 const NOW = new Date("2026-02-27T12:00:00Z")
 
@@ -54,7 +55,7 @@ afterEach(() => {
 })
 
 describe("getDashboardFeed", () => {
-  it("returns upcoming events in ascending date order inside the next 4 weeks", async () => {
+  it("returns upcoming events in ascending date order inside the requested 4-week window", async () => {
     const records = [
       createEvent({ id: "outside", start_date: "2026-03-27", end_date: "2026-03-27" }),
       createEvent({ id: "inside-late", start_date: "2026-03-26", end_date: "2026-03-26" }),
@@ -63,12 +64,31 @@ describe("getDashboardFeed", () => {
     ]
 
     const { getDashboardFeed } = await loadModuleWithData(records)
-    const result = await getDashboardFeed({ kind: "events", now: NOW, limit: 10 })
+    const result = await getDashboardFeed({
+      kind: "events",
+      now: NOW,
+      limit: 10,
+      windowDays: FOUR_WEEKS_DAYS,
+    })
 
     expect(result.items.map((item) => item.id)).toEqual(["inside-early", "inside-late"])
     expect(result.total).toBe(2)
     expect(result.hasMore).toBe(false)
     expect(result.nextCursor).toBeNull()
+  })
+
+  it("returns all future upcoming events by default when no window is provided", async () => {
+    const records = [
+      createEvent({ id: "in-window", start_date: "2026-03-10", end_date: "2026-03-10" }),
+      createEvent({ id: "beyond-4-weeks", start_date: "2026-04-15", end_date: "2026-04-15" }),
+      createEvent({ id: "past", start_date: "2026-02-26", end_date: "2026-02-26" }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+    const result = await getDashboardFeed({ kind: "events", now: NOW, limit: 10 })
+
+    expect(result.items.map((item) => item.id)).toEqual(["in-window", "beyond-4-weeks"])
+    expect(result.total).toBe(2)
   })
 
   it("returns CFP records filtered by cfp_close_date and has_cfp", async () => {
@@ -109,7 +129,7 @@ describe("getDashboardFeed", () => {
     ]
 
     const { getDashboardFeed } = await loadModuleWithData(records)
-    const result = await getDashboardFeed({ kind: "cfp", now: NOW })
+    const result = await getDashboardFeed({ kind: "cfp", now: NOW, windowDays: FOUR_WEEKS_DAYS })
 
     expect(result.items.map((item) => item.id)).toEqual(["cfp-in-window"])
     expect(result.total).toBe(1)
