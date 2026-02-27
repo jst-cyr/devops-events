@@ -1,0 +1,147 @@
+import { afterEach, describe, expect, it, vi } from "vitest"
+
+import type { EventRecord } from "./events-types"
+
+const NOW = new Date("2026-02-27T12:00:00Z")
+
+function createEvent(overrides: Partial<EventRecord>): EventRecord {
+  return {
+    id: "event-id",
+    name: "Event",
+    event_url: "https://example.com/event",
+    start_date: "2026-03-01",
+    end_date: "2026-03-01",
+    delivery: "online",
+    source: "test",
+    location: {
+      city: null,
+      region: null,
+      country: "Online",
+      country_code: "XX",
+      is_online: true,
+      venue: "Online",
+    },
+    cfp: {
+      has_cfp: false,
+      cfp_url: null,
+      cfp_open_date: null,
+      cfp_close_date: null,
+      cfp_timezone: null,
+      cfp_status: "unknown",
+    },
+    ...overrides,
+  }
+}
+
+async function loadModuleWithData(records: EventRecord[]) {
+  const readFile = vi.fn().mockResolvedValue(JSON.stringify({ records }))
+
+  vi.resetModules()
+  vi.doMock("node:fs/promises", () => ({
+    readFile,
+  }))
+
+  const module = await import("./events-data")
+  return {
+    getDashboardFeed: module.getDashboardFeed,
+    readFile,
+  }
+}
+
+afterEach(() => {
+  vi.resetModules()
+  vi.unmock("node:fs/promises")
+})
+
+describe("getDashboardFeed", () => {
+  it("returns upcoming events in ascending date order inside the next 4 weeks", async () => {
+    const records = [
+      createEvent({ id: "outside", start_date: "2026-03-27", end_date: "2026-03-27" }),
+      createEvent({ id: "inside-late", start_date: "2026-03-26", end_date: "2026-03-26" }),
+      createEvent({ id: "inside-early", start_date: "2026-02-27", end_date: "2026-02-27" }),
+      createEvent({ id: "past", start_date: "2026-02-26", end_date: "2026-02-26" }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+    const result = await getDashboardFeed({ kind: "events", now: NOW, limit: 10 })
+
+    expect(result.items.map((item) => item.id)).toEqual(["inside-early", "inside-late"])
+    expect(result.total).toBe(2)
+    expect(result.hasMore).toBe(false)
+    expect(result.nextCursor).toBeNull()
+  })
+
+  it("returns CFP records filtered by cfp_close_date and has_cfp", async () => {
+    const records = [
+      createEvent({
+        id: "cfp-in-window",
+        cfp: {
+          has_cfp: true,
+          cfp_url: "https://example.com/cfp",
+          cfp_open_date: null,
+          cfp_close_date: "2026-03-20",
+          cfp_timezone: "UTC",
+          cfp_status: "open",
+        },
+      }),
+      createEvent({
+        id: "cfp-outside-window",
+        cfp: {
+          has_cfp: true,
+          cfp_url: "https://example.com/cfp2",
+          cfp_open_date: null,
+          cfp_close_date: "2026-03-30",
+          cfp_timezone: "UTC",
+          cfp_status: "open",
+        },
+      }),
+      createEvent({
+        id: "cfp-disabled",
+        cfp: {
+          has_cfp: false,
+          cfp_url: null,
+          cfp_open_date: null,
+          cfp_close_date: "2026-03-10",
+          cfp_timezone: null,
+          cfp_status: "unknown",
+        },
+      }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+    const result = await getDashboardFeed({ kind: "cfp", now: NOW })
+
+    expect(result.items.map((item) => item.id)).toEqual(["cfp-in-window"])
+    expect(result.total).toBe(1)
+  })
+
+  it("supports cursor pagination with stable nextCursor and hasMore", async () => {
+    const records = [
+      createEvent({ id: "event-1", start_date: "2026-02-27" }),
+      createEvent({ id: "event-2", start_date: "2026-02-28" }),
+      createEvent({ id: "event-3", start_date: "2026-03-01" }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+    const page1 = await getDashboardFeed({ kind: "events", now: NOW, limit: 2, cursor: 0 })
+    const page2 = await getDashboardFeed({ kind: "events", now: NOW, limit: 2, cursor: page1.nextCursor ?? 0 })
+
+    expect(page1.items.map((item) => item.id)).toEqual(["event-1", "event-2"])
+    expect(page1.hasMore).toBe(true)
+    expect(page1.nextCursor).toBe(2)
+
+    expect(page2.items.map((item) => item.id)).toEqual(["event-3"])
+    expect(page2.hasMore).toBe(false)
+    expect(page2.nextCursor).toBeNull()
+  })
+
+  it("reads events file once per module instance via cache", async () => {
+    const records = [createEvent({ id: "event-1", start_date: "2026-02-27" })]
+
+    const { getDashboardFeed, readFile } = await loadModuleWithData(records)
+    await getDashboardFeed({ kind: "events", now: NOW })
+    await getDashboardFeed({ kind: "cfp", now: NOW })
+
+    expect(readFile).toHaveBeenCalledTimes(1)
+  })
+})

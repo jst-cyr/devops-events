@@ -88,7 +88,7 @@ async function getAllRecords(): Promise<EventRecord[]> {
 
 function buildWindow(now: Date): { start: Date; end: Date } {
   const start = startOfUtcDay(now);
-  const end = addDays(start, FOUR_WEEKS_DAYS);
+  const end = addDays(start, FOUR_WEEKS_DAYS - 1);
   return { start, end };
 }
 
