@@ -44,7 +44,7 @@ function formatLocation(item: EventListItem): string {
 
 function EventItem({ item, kind }: { item: EventListItem; kind: DashboardKind }) {
   return (
-    <li className="rounded-lg border p-4">
+    <li className="h-full rounded-lg border p-4">
       <div className="flex flex-wrap items-center gap-2">
         <Badge variant="secondary">{item.delivery.replace("_", " ")}</Badge>
         {kind === "cfp" && item.cfp.cfp_close_date ? (
@@ -104,7 +104,7 @@ function FeedSection({
         {state.items.length === 0 ? (
           <p className="text-muted-foreground text-sm">No matching items in the next 4 weeks.</p>
         ) : (
-          <ul className="space-y-3">
+          <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {state.items.map((item) => (
               <EventItem key={item.id} item={item} kind={kind} />
             ))}
@@ -268,7 +268,7 @@ export function EventsDashboard({
 
       {showSlackTools && slackError ? <p className="mb-4 text-sm text-destructive">{slackError}</p> : null}
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="space-y-6">
         <FeedSection
           title="CFPs"
           description="Showing CFPs closing in the next 4 weeks first"
