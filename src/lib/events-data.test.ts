@@ -213,4 +213,52 @@ describe("getDashboardFeed", () => {
     expect(fromEvents.items.map((item) => item.id)).toEqual(["events-source"])
     expect(readFile).toHaveBeenCalledTimes(2)
   })
+
+  it("returns empty set for missing candidates file and does not cache fallback", async () => {
+    const readFile = vi.fn().mockImplementation(async (filePath: string) => {
+      if (filePath.endsWith("events-candidates.json")) {
+        const err = new Error("missing") as Error & { code?: string }
+        err.code = "ENOENT"
+        throw err
+      }
+
+      return JSON.stringify({
+        records: [createEvent({ id: "events-source", start_date: "2026-03-10" })],
+      })
+    })
+
+    vi.resetModules()
+    vi.doMock("node:fs/promises", () => ({
+      readFile,
+    }))
+
+    const eventsDataModule = await import("./events-data")
+
+    const candidatesFirst = await eventsDataModule.getDashboardFeed({
+      kind: "events",
+      source: "candidates",
+      now: NOW,
+    })
+    const candidatesSecond = await eventsDataModule.getDashboardFeed({
+      kind: "events",
+      source: "candidates",
+      now: NOW,
+    })
+
+    const fromEvents = await eventsDataModule.getDashboardFeed({
+      kind: "events",
+      source: "events",
+      now: NOW,
+    })
+    await eventsDataModule.getDashboardFeed({
+      kind: "events",
+      source: "events",
+      now: NOW,
+    })
+
+    expect(candidatesFirst.items).toEqual([])
+    expect(candidatesSecond.items).toEqual([])
+    expect(fromEvents.items.map((item) => item.id)).toEqual(["events-source"])
+    expect(readFile).toHaveBeenCalledTimes(3)
+  })
 })

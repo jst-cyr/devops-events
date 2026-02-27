@@ -89,10 +89,28 @@ async function getAllRecords(source: DashboardDataSource): Promise<EventRecord[]
     return recordsCache[source];
   }
 
-  const fileContents = await readFile(getFilePath(source), "utf-8");
-  const parsed = JSON.parse(fileContents) as EventsFile;
-  recordsCache[source] = parsed.records ?? [];
-  return recordsCache[source];
+  try {
+    const fileContents = await readFile(getFilePath(source), "utf-8");
+
+    if (!fileContents.trim()) {
+      return [];
+    }
+
+    const parsed = JSON.parse(fileContents) as EventsFile;
+    recordsCache[source] = parsed.records ?? [];
+    return recordsCache[source];
+  } catch (error) {
+    const code =
+      typeof error === "object" && error !== null && "code" in error
+        ? String((error as { code?: unknown }).code)
+        : null;
+
+    if (code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
 }
 
 function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
