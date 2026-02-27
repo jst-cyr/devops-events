@@ -57,14 +57,26 @@ function EventItem({ item, kind }: { item: EventListItem; kind: DashboardKind })
         {item.end_date !== item.start_date ? ` - ${formatDate(item.end_date)}` : ""}
       </p>
       <p className="text-muted-foreground text-sm">{formatLocation(item)}</p>
-      <Link
-        href={item.event_url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-primary mt-3 inline-block text-sm font-medium hover:underline"
-      >
-        Open event
-      </Link>
+      <div className="mt-3 flex flex-wrap gap-4">
+        <Link
+          href={item.event_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary inline-block text-sm font-medium hover:underline"
+        >
+          Open event
+        </Link>
+        {kind === "cfp" && item.cfp.cfp_url ? (
+          <Link
+            href={item.cfp.cfp_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary inline-block text-sm font-medium hover:underline"
+          >
+            Open CFP
+          </Link>
+        ) : null}
+      </div>
     </li>
   );
 }
