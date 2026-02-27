@@ -440,13 +440,13 @@
     {
       "id": "sunseccon-2026",
       "name": "SunSecCon",
-      "event_url": "https://dev.events/conferences/sun-sec-con-2026-5lvorag9",
+      "event_url": "https://www.sunseccon.org/2026/",
       "start_date": "2026-03-05",
       "end_date": "2026-03-06",
       "delivery": "in_person",
       "event_type": "conference",
       "tags": ["security", "devsecops"],
-      "source": "dev.events",
+      "source": "www.sunseccon.org",
       "location": {
         "city": "Pasadena",
         "region": "California",
@@ -463,7 +463,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
+      "notes": "Canonical URL resolved from dev.events detail redirect to official event site.",
       "status": "upcoming"
     },
     {
