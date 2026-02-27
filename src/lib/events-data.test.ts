@@ -112,6 +112,21 @@ describe("getDashboardFeed", () => {
     expect(result.total).toBe(2)
   })
 
+  it("returns past events when timeframe is past with most recent first", async () => {
+    const records = [
+      createEvent({ id: "past-older", start_date: "2026-01-15", end_date: "2026-01-15" }),
+      createEvent({ id: "past-recent", start_date: "2026-02-26", end_date: "2026-02-26" }),
+      createEvent({ id: "today", start_date: "2026-02-27", end_date: "2026-02-27" }),
+      createEvent({ id: "future", start_date: "2026-03-01", end_date: "2026-03-01" }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+    const result = await getDashboardFeed({ kind: "events", now: NOW, timeframe: "past", limit: 10 })
+
+    expect(result.items.map((item) => item.id)).toEqual(["past-recent", "past-older"])
+    expect(result.total).toBe(2)
+  })
+
   it("returns CFP records filtered by cfp_close_date and has_cfp", async () => {
     const records = [
       createEvent({

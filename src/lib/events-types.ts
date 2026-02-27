@@ -3,6 +3,7 @@ export const MAX_PAGE_SIZE = 30;
 export const FOUR_WEEKS_DAYS = 28;
 
 export type DashboardKind = "cfp" | "events";
+export type DashboardTimeframe = "upcoming" | "past";
 
 export type EventRecord = {
   id: string;

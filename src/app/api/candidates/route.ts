@@ -5,6 +5,7 @@ import {
   DEFAULT_PAGE_SIZE,
   MAX_PAGE_SIZE,
   type DashboardKind,
+  type DashboardTimeframe,
 } from "@/lib/events-types";
 
 type RateLimitState = {
@@ -51,6 +52,10 @@ function parseKind(kind: string | null): DashboardKind {
   return kind === "cfp" ? "cfp" : "events";
 }
 
+function parseTimeframe(timeframe: string | null): DashboardTimeframe {
+  return timeframe === "past" ? "past" : "upcoming";
+}
+
 function parseCursor(cursor: string | null): number {
   const parsed = Number.parseInt(cursor ?? "0", 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
@@ -83,10 +88,11 @@ export async function GET(request: NextRequest) {
 
   const url = new URL(request.url);
   const kind = parseKind(url.searchParams.get("kind"));
+  const timeframe = parseTimeframe(url.searchParams.get("timeframe"));
   const cursor = parseCursor(url.searchParams.get("cursor"));
   const limit = parseLimit(url.searchParams.get("limit"));
 
-  const feed = await getDashboardFeed({ kind, source: "candidates", cursor, limit });
+  const feed = await getDashboardFeed({ kind, source: "candidates", timeframe, cursor, limit });
 
   return NextResponse.json(feed, {
     headers: {

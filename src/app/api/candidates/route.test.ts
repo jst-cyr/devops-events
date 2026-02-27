@@ -51,7 +51,7 @@ describe("/api/candidates route", () => {
       }) as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "cfp", source: "candidates", cursor: 3, limit: 8 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "cfp", source: "candidates", timeframe: "upcoming", cursor: 3, limit: 8 })
     expect(response.status).toBe(200)
     expect(response.headers.get("Cache-Control")).toBe("public, s-maxage=86400")
   })
@@ -72,7 +72,26 @@ describe("/api/candidates route", () => {
       createRequest("http://localhost:3000/api/candidates?kind=invalid&cursor=-4&limit=0") as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", cursor: 0, limit: DEFAULT_PAGE_SIZE })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "upcoming", cursor: 0, limit: DEFAULT_PAGE_SIZE })
+  })
+
+  it("parses and forwards past timeframe for event queries", async () => {
+    const { route, getDashboardFeed } = await loadRouteWithMock()
+
+    getDashboardFeed.mockResolvedValue({
+      kind: "events",
+      items: [],
+      cursor: 0,
+      nextCursor: null,
+      hasMore: false,
+      total: 0,
+    })
+
+    await route.GET(
+      createRequest("http://localhost:3000/api/candidates?kind=events&timeframe=past&cursor=2&limit=5") as never,
+    )
+
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "past", cursor: 2, limit: 5 })
   })
 
   it("returns 405 for write methods", async () => {

@@ -18,6 +18,7 @@ import {
   DEFAULT_PAGE_SIZE,
   type DashboardFeedResponse,
   type DashboardKind,
+  type DashboardTimeframe,
   type EventListItem,
 } from "@/lib/events-types";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -92,14 +93,22 @@ function formatLocation(item: EventListItem): string {
   return locationParts.join(", ");
 }
 
-function EventItem({ item, kind }: { item: EventListItem; kind: DashboardKind }) {
+function EventItem({
+  item,
+  kind,
+  showCfpCloseDate,
+}: {
+  item: EventListItem;
+  kind: DashboardKind;
+  showCfpCloseDate?: boolean;
+}) {
   return (
     <li className="h-full rounded-lg border p-4">
       <div className="flex items-center gap-2">
         <DeliveryIcon item={item} />
         <h3 className="text-base font-semibold">{item.name}</h3>
       </div>
-      {kind === "cfp" && item.cfp.cfp_close_date ? (
+      {(kind === "cfp" || showCfpCloseDate) && item.cfp.cfp_close_date ? (
         <div className="mt-2">
           <Badge variant="outline">CFP closes {formatDate(item.cfp.cfp_close_date)}</Badge>
         </div>
@@ -138,12 +147,14 @@ function FeedSection({
   description,
   kind,
   state,
+  showCfpCloseDate,
   onLoadMore,
 }: {
   title: string;
   description: string;
   kind: DashboardKind;
   state: FeedState;
+  showCfpCloseDate?: boolean;
   onLoadMore: (kind: DashboardKind) => void;
 }) {
   return (
@@ -154,11 +165,11 @@ function FeedSection({
       </CardHeader>
       <CardContent className="space-y-4">
         {state.items.length === 0 ? (
-          <p className="text-muted-foreground text-sm">No matching upcoming items.</p>
+          <p className="text-muted-foreground text-sm">No matching items.</p>
         ) : (
           <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {state.items.map((item) => (
-              <EventItem key={item.id} item={item} kind={kind} />
+              <EventItem key={item.id} item={item} kind={kind} showCfpCloseDate={showCfpCloseDate} />
             ))}
           </ul>
         )}
@@ -177,8 +188,8 @@ function FeedSection({
   );
 }
 
-async function loadMoreFeed(kind: DashboardKind, cursor: number, apiPath: string) {
-  const response = await fetch(`${apiPath}?kind=${kind}&cursor=${cursor}&limit=${DEFAULT_PAGE_SIZE}`);
+async function loadMoreFeed(kind: DashboardKind, cursor: number, apiPath: string, timeframe: DashboardTimeframe = "upcoming") {
+  const response = await fetch(`${apiPath}?kind=${kind}&timeframe=${timeframe}&cursor=${cursor}&limit=${DEFAULT_PAGE_SIZE}`);
 
   if (!response.ok) {
     throw new Error(response.status === 429 ? "Rate limit reached. Please wait and retry." : "Unable to load more events.");
@@ -191,12 +202,14 @@ async function loadMoreFeed(kind: DashboardKind, cursor: number, apiPath: string
 export function EventsDashboard({
   initialCfps,
   initialEvents,
+  initialPastEvents,
   apiPath = "/api/events",
   title = "DevOps Events Dashboard",
   subtitle = "Showing upcoming CFPs and events. Load more to view the next page.",
 }: {
   initialCfps: DashboardFeedResponse;
   initialEvents: DashboardFeedResponse;
+  initialPastEvents?: DashboardFeedResponse;
   apiPath?: string;
   title?: string;
   subtitle?: string;
@@ -211,34 +224,102 @@ export function EventsDashboard({
     loading: false,
     error: null,
   });
+  const [pastEventState, setPastEventState] = useState<FeedState | null>(
+    initialPastEvents
+      ? {
+          ...initialPastEvents,
+          loading: false,
+          error: null,
+        }
+      : null,
+  );
 
-  const handleLoadMore = async (kind: DashboardKind) => {
-    const updateState = kind === "cfp" ? setCfpState : setEventState;
-    const currentState = kind === "cfp" ? cfpState : eventState;
+  const handleLoadMore = async (kind: DashboardKind, timeframe: DashboardTimeframe = "upcoming") => {
+    const currentState =
+      kind === "cfp"
+        ? cfpState
+        : timeframe === "past"
+          ? pastEventState
+          : eventState;
+
+    if (!currentState) {
+      return;
+    }
 
     if (!currentState.hasMore || currentState.nextCursor === null || currentState.loading) {
       return;
     }
 
-    updateState((previous) => ({ ...previous, loading: true, error: null }));
+    if (kind === "cfp") {
+      setCfpState((previous) => ({ ...previous, loading: true, error: null }));
+    } else if (timeframe === "past") {
+      setPastEventState((previous) => (previous ? { ...previous, loading: true, error: null } : previous));
+    } else {
+      setEventState((previous) => ({ ...previous, loading: true, error: null }));
+    }
 
     try {
-      const next = await loadMoreFeed(kind, currentState.nextCursor, apiPath);
-      updateState((previous) => ({
-        ...previous,
-        items: [...previous.items, ...next.items],
-        nextCursor: next.nextCursor,
-        hasMore: next.hasMore,
-        total: next.total,
-        loading: false,
-        error: null,
-      }));
+      const next = await loadMoreFeed(kind, currentState.nextCursor, apiPath, timeframe);
+
+      if (kind === "cfp") {
+        setCfpState((previous) => ({
+          ...previous,
+          items: [...previous.items, ...next.items],
+          nextCursor: next.nextCursor,
+          hasMore: next.hasMore,
+          total: next.total,
+          loading: false,
+          error: null,
+        }));
+      } else if (timeframe === "past") {
+        setPastEventState((previous) =>
+          previous
+            ? {
+                ...previous,
+                items: [...previous.items, ...next.items],
+                nextCursor: next.nextCursor,
+                hasMore: next.hasMore,
+                total: next.total,
+                loading: false,
+                error: null,
+              }
+            : previous,
+        );
+      } else {
+        setEventState((previous) => ({
+          ...previous,
+          items: [...previous.items, ...next.items],
+          nextCursor: next.nextCursor,
+          hasMore: next.hasMore,
+          total: next.total,
+          loading: false,
+          error: null,
+        }));
+      }
     } catch (error) {
-      updateState((previous) => ({
-        ...previous,
-        loading: false,
-        error: error instanceof Error ? error.message : "Unable to load more events.",
-      }));
+      if (kind === "cfp") {
+        setCfpState((previous) => ({
+          ...previous,
+          loading: false,
+          error: error instanceof Error ? error.message : "Unable to load more events.",
+        }));
+      } else if (timeframe === "past") {
+        setPastEventState((previous) =>
+          previous
+            ? {
+                ...previous,
+                loading: false,
+                error: error instanceof Error ? error.message : "Unable to load more events.",
+              }
+            : previous,
+        );
+      } else {
+        setEventState((previous) => ({
+          ...previous,
+          loading: false,
+          error: error instanceof Error ? error.message : "Unable to load more events.",
+        }));
+      }
     }
   };
 
@@ -258,15 +339,25 @@ export function EventsDashboard({
           description="Showing upcoming CFP deadlines"
           kind="cfp"
           state={cfpState}
-          onLoadMore={handleLoadMore}
+          onLoadMore={(kind) => handleLoadMore(kind, "upcoming")}
         />
         <FeedSection
           title="Upcoming Events"
           description="Showing upcoming events"
           kind="events"
           state={eventState}
-          onLoadMore={handleLoadMore}
+          onLoadMore={(kind) => handleLoadMore(kind, "upcoming")}
         />
+        {pastEventState ? (
+          <FeedSection
+            title="Past Events"
+            description="Showing past events for review"
+            kind="events"
+            state={pastEventState}
+            showCfpCloseDate
+            onLoadMore={(kind) => handleLoadMore(kind, "past")}
+          />
+        ) : null}
       </div>
     </div>
   );

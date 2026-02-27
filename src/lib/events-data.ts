@@ -6,6 +6,7 @@ import {
   MAX_PAGE_SIZE,
   type DashboardFeedResponse,
   type DashboardKind,
+  type DashboardTimeframe,
   type EventListItem,
   type EventRecord,
 } from "@/lib/events-types";
@@ -136,6 +137,29 @@ function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?:
     .sort((left, right) => left.start_date.localeCompare(right.start_date));
 }
 
+function getPastEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
+  const start = startOfUtcDay(now);
+  const earliest =
+    typeof windowDays === "number"
+      ? addDays(start, -Math.max(1, windowDays))
+      : null;
+
+  return records
+    .filter((record) => {
+      const startDate = parseDate(record.start_date);
+      if (!startDate) {
+        return false;
+      }
+
+      if (earliest) {
+        return startDate < start && startDate >= earliest;
+      }
+
+      return startDate < start;
+    })
+    .sort((left, right) => right.start_date.localeCompare(left.start_date));
+}
+
 function getUpcomingCfpRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
   const start = startOfUtcDay(now);
   const end =
@@ -167,15 +191,48 @@ function getUpcomingCfpRecords(records: EventRecord[], now: Date, windowDays?: n
     });
 }
 
+function getPastCfpRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
+  const start = startOfUtcDay(now);
+  const earliest =
+    typeof windowDays === "number"
+      ? addDays(start, -Math.max(1, windowDays))
+      : null;
+
+  return records
+    .filter((record) => {
+      if (!record.cfp?.has_cfp || !record.cfp.cfp_close_date) {
+        return false;
+      }
+
+      const closeDate = parseDate(record.cfp.cfp_close_date);
+      if (!closeDate) {
+        return false;
+      }
+
+      if (earliest) {
+        return closeDate < start && closeDate >= earliest;
+      }
+
+      return closeDate < start;
+    })
+    .sort((left, right) => {
+      const leftDate = left.cfp?.cfp_close_date ?? "0000-01-01";
+      const rightDate = right.cfp?.cfp_close_date ?? "0000-01-01";
+      return rightDate.localeCompare(leftDate);
+    });
+}
+
 export async function getDashboardFeed(options: {
   kind: DashboardKind;
   source?: DashboardDataSource;
+  timeframe?: DashboardTimeframe;
   now?: Date;
   cursor?: number;
   limit?: number;
   windowDays?: number;
 }): Promise<DashboardFeedResponse> {
   const source = options.source ?? "events";
+  const timeframe = options.timeframe ?? "upcoming";
   const now = options.now ?? new Date();
   const cursor = normalizeCursor(options.cursor);
   const limit = normalizeLimit(options.limit);
@@ -183,8 +240,12 @@ export async function getDashboardFeed(options: {
 
   const selected =
     options.kind === "cfp"
-      ? getUpcomingCfpRecords(records, now, options.windowDays)
-      : getUpcomingEventRecords(records, now, options.windowDays);
+      ? timeframe === "past"
+        ? getPastCfpRecords(records, now, options.windowDays)
+        : getUpcomingCfpRecords(records, now, options.windowDays)
+      : timeframe === "past"
+        ? getPastEventRecords(records, now, options.windowDays)
+        : getUpcomingEventRecords(records, now, options.windowDays);
 
   const items = selected.slice(cursor, cursor + limit).map(mapEventItem);
   const nextCursor = cursor + items.length;
