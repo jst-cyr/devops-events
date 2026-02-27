@@ -237,6 +237,19 @@ Where `records` contains normalized `EventRecord` items.
 - If date or location is ambiguous, add a brief `notes` value explaining inference.
 - Prefer canonical event pages over aggregator snippets when both are available.
 
+### Source-specific fallback: iacconf.com (required)
+
+If `https://www.iacconf.com/events` fails in the primary extractor (for example CSP or parser failure), do **not** stop at that failure.
+
+Use this fallback sequence:
+
+1. Fetch raw HTML with a standard browser-like user agent.
+2. Extract event metadata from embedded Next.js payload (`__NEXT_DATA__`) or equivalent inline JSON state.
+3. From extracted event objects, collect `title`, `date`, and canonical event link fields.
+4. For in-window events, crawl the linked canonical event page (for example Luma) to confirm date/location/delivery.
+5. Only then create candidates/updates. If no in-window events are found after fallback, do not create an issue.
+6. Create an issue only if both primary extraction and fallback extraction fail, with deterministic notes indicating both attempts.
+
 ### Run notes for next execution (2026-02-27)
 
 - Do **not** use `dev.events` `.ics` links for extraction; these may trigger file downloads and are not reliable in this environment.
@@ -249,6 +262,7 @@ Where `records` contains normalized `EventRecord` items.
 - If standard extractor output omits iframe nodes, parse raw HTML source and extract iframe `src` directly.
 - For `devopsdays` event pages, prefer `/welcome/` URLs for canonical `event_url`; extract date/location from `/welcome/` when available.
 - If a source is blocked by CSP or anti-bot redirects (for example, `redhat.com` events page), record a deterministic issue and continue with alternate source coverage.
+- For `iacconf.com`, treat extractor-level CSP/parse failure as recoverable: retry via raw HTML + `__NEXT_DATA__` parsing before logging an issue.
 
 Now execute this workflow and provide:
 1) the markdown summary,
