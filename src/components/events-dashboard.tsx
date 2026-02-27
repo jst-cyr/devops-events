@@ -18,6 +18,7 @@ import {
   type DashboardKind,
   type EventListItem,
 } from "@/lib/events-types";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 type FeedState = DashboardFeedResponse & {
   loading: boolean;
@@ -195,6 +196,7 @@ export function EventsDashboard({
       <header className="mb-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>
+          <ThemeToggle />
         </div>
         <p className="text-muted-foreground mt-2 text-sm sm:text-base">{subtitle}</p>
       </header>
