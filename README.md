@@ -17,6 +17,7 @@ This pulls from several data sources:
 
 - Data model for events/CFPs: [docs/data-model.md](docs/data-model.md)
 - Dashboard behavior and architecture: [docs/dashboard-behavior-and-architecture.md](docs/dashboard-behavior-and-architecture.md)
+- Agent prompt template for source analysis: [docs/prompt-templates/events-source-analysis-agent-prompt.md](docs/prompt-templates/events-source-analysis-agent-prompt.md)
 - Sample dataset from 2026-02-20 weekly post: [data/sample-events-2026-02-20.json](data/sample-events-2026-02-20.json)
 
 ## Data
