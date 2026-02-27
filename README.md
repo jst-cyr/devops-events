@@ -60,6 +60,53 @@ This repository now includes a Next.js application at the repository root.
 - `shadcn` was initialized with base color `slate` and CSS variables enabled.
 - The current shadcn CLI no longer exposes a `style` flag; configuration is stored in `components.json`.
 
+## Dashboard behavior
+
+- The home page (`/`) shows two sections:
+	- CFPs ending in the next month
+	- Events happening in the next month
+- Default time window is a rolling 30 days from the current day.
+- Initial results are rendered server-side and statically generated with ISR.
+- The “Load more” buttons append additional items client-side without reloading the page.
+- The layout is responsive for mobile and desktop.
+
+## Architecture
+
+- Server-side data layer: `src/lib/events-data.ts`
+	- Wraps access to `data/events.json`
+	- Encapsulates filtering, sorting, and pagination logic
+	- Keeps app code independent from raw JSON shape for future database migration
+- Shared types/constants: `src/lib/events-types.ts`
+- Read-only API route: `src/app/api/events/route.ts`
+	- Reuses the same server-side data layer (DRY)
+	- Supports cursor pagination for both feeds
+	- Exposes no write operations (`POST`, `PUT`, `PATCH`, `DELETE` return `405`)
+	- Applies basic per-IP rate limiting
+
+## API
+
+`GET /api/events`
+
+Query params:
+
+- `kind`: `cfp` | `events` (default: `events`)
+- `cursor`: number offset for pagination (default: `0`)
+- `limit`: page size (default: `6`, max: `20`)
+
+Example:
+
+```bash
+curl "http://localhost:3000/api/events?kind=cfp&cursor=0&limit=6"
+```
+
+Response fields:
+
+- `items`: current page records
+- `cursor`: current offset
+- `nextCursor`: next offset or `null`
+- `hasMore`: whether another page is available
+- `total`: total matching records in the current window
+
 ## Docs Validation
 
 Validate this implementation against the official docs:
