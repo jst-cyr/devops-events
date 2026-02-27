@@ -95,13 +95,15 @@ function formatLocation(item: EventListItem): string {
 function EventItem({ item, kind }: { item: EventListItem; kind: DashboardKind }) {
   return (
     <li className="h-full rounded-lg border p-4">
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex items-center gap-2">
         <DeliveryIcon item={item} />
-        {kind === "cfp" && item.cfp.cfp_close_date ? (
-          <Badge variant="outline">CFP closes {formatDate(item.cfp.cfp_close_date)}</Badge>
-        ) : null}
+        <h3 className="text-base font-semibold">{item.name}</h3>
       </div>
-      <h3 className="mt-3 text-base font-semibold">{item.name}</h3>
+      {kind === "cfp" && item.cfp.cfp_close_date ? (
+        <div className="mt-2">
+          <Badge variant="outline">CFP closes {formatDate(item.cfp.cfp_close_date)}</Badge>
+        </div>
+      ) : null}
       <p className="text-muted-foreground mt-1 text-sm">
         {formatDate(item.start_date)}
         {item.end_date !== item.start_date ? ` - ${formatDate(item.end_date)}` : ""}
