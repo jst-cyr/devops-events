@@ -1,5 +1,7 @@
 "use client";
 
+import * as Flags from "country-flag-icons/react/3x2";
+import { Globe } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -25,6 +27,53 @@ type FeedState = DashboardFeedResponse & {
   error: string | null;
 };
 
+function getFlagComponent(countryCode: string) {
+  const normalizedCountryCode = countryCode.trim().toUpperCase();
+
+  if (!normalizedCountryCode || !(normalizedCountryCode in Flags)) {
+    return null;
+  }
+
+  return Flags[normalizedCountryCode as keyof typeof Flags];
+}
+
+function DeliveryIcon({ item }: { item: EventListItem }) {
+  const normalizedCountryCode = item.location.country_code.trim().toUpperCase();
+  const countryLabel = item.location.country || normalizedCountryCode;
+  const FlagIcon = getFlagComponent(normalizedCountryCode);
+
+  if (item.delivery === "online") {
+    return (
+      <span className="inline-flex items-center" role="img" aria-label="Online event">
+        <Globe className="h-4 w-4" aria-hidden="true" />
+      </span>
+    );
+  }
+
+  if (item.delivery === "in_person") {
+    if (FlagIcon) {
+      return (
+        <span className="inline-flex items-center" role="img" aria-label={`In-person event in ${countryLabel}`}>
+          <FlagIcon className="h-4 w-6 rounded-[2px]" aria-hidden="true" />
+        </span>
+      );
+    }
+
+    return (
+      <span className="inline-flex items-center" role="img" aria-label="In-person event">
+        <Globe className="h-4 w-4" aria-hidden="true" />
+      </span>
+    );
+  }
+
+  return (
+    <span className="inline-flex items-center gap-1" role="img" aria-label={`Hybrid event in ${countryLabel}`}>
+      {FlagIcon ? <FlagIcon className="h-4 w-6 rounded-[2px]" aria-hidden="true" /> : <Globe className="h-4 w-4" aria-hidden="true" />}
+      <Globe className="h-4 w-4" aria-hidden="true" />
+    </span>
+  );
+}
+
 function formatDate(value: string): string {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
@@ -47,7 +96,7 @@ function EventItem({ item, kind }: { item: EventListItem; kind: DashboardKind })
   return (
     <li className="h-full rounded-lg border p-4">
       <div className="flex flex-wrap items-center gap-2">
-        <Badge variant="secondary">{item.delivery.replace("_", " ")}</Badge>
+        <DeliveryIcon item={item} />
         {kind === "cfp" && item.cfp.cfp_close_date ? (
           <Badge variant="outline">CFP closes {formatDate(item.cfp.cfp_close_date)}</Badge>
         ) : null}
