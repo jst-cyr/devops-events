@@ -86,7 +86,7 @@ export async function GET(request: NextRequest) {
   const cursor = parseCursor(url.searchParams.get("cursor"));
   const limit = parseLimit(url.searchParams.get("limit"));
 
-  const feed = await getDashboardFeed({ kind, source: "events", cursor, limit });
+  const feed = await getDashboardFeed({ kind, source: "candidates", cursor, limit });
 
   return NextResponse.json(feed, {
     headers: {

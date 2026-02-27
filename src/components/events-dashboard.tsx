@@ -125,8 +125,8 @@ function FeedSection({
   );
 }
 
-async function loadMoreFeed(kind: DashboardKind, cursor: number) {
-  const response = await fetch(`/api/events?kind=${kind}&cursor=${cursor}&limit=${DEFAULT_PAGE_SIZE}`);
+async function loadMoreFeed(kind: DashboardKind, cursor: number, apiPath: string) {
+  const response = await fetch(`${apiPath}?kind=${kind}&cursor=${cursor}&limit=${DEFAULT_PAGE_SIZE}`);
 
   if (!response.ok) {
     throw new Error(response.status === 429 ? "Rate limit reached. Please wait and retry." : "Unable to load more events.");
@@ -139,9 +139,17 @@ async function loadMoreFeed(kind: DashboardKind, cursor: number) {
 export function EventsDashboard({
   initialCfps,
   initialEvents,
+  apiPath = "/api/events",
+  title = "DevOps Events Dashboard",
+  subtitle = "Initial view shows the next 4 weeks. Load more shows later dates.",
+  showSlackTools = true,
 }: {
   initialCfps: DashboardFeedResponse;
   initialEvents: DashboardFeedResponse;
+  apiPath?: string;
+  title?: string;
+  subtitle?: string;
+  showSlackTools?: boolean;
 }) {
   const [slackPost, setSlackPost] = useState<string>("");
   const [slackLoading, setSlackLoading] = useState(false);
@@ -169,7 +177,7 @@ export function EventsDashboard({
     updateState((previous) => ({ ...previous, loading: true, error: null }));
 
     try {
-      const next = await loadMoreFeed(kind, currentState.nextCursor);
+      const next = await loadMoreFeed(kind, currentState.nextCursor, apiPath);
       updateState((previous) => ({
         ...previous,
         items: [...previous.items, ...next.items],
@@ -228,17 +236,17 @@ export function EventsDashboard({
     <div className="mx-auto w-full max-w-6xl p-4 sm:p-6 lg:p-8">
       <header className="mb-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">DevOps Events Dashboard</h1>
-          <Button onClick={handleGenerateSlackPost} disabled={slackLoading} className="w-full sm:w-auto">
-            {slackLoading ? "Generating..." : "Generate Slack Post"}
-          </Button>
+          <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h1>
+          {showSlackTools ? (
+            <Button onClick={handleGenerateSlackPost} disabled={slackLoading} className="w-full sm:w-auto">
+              {slackLoading ? "Generating..." : "Generate Slack Post"}
+            </Button>
+          ) : null}
         </div>
-        <p className="text-muted-foreground mt-2 text-sm sm:text-base">
-          Initial view shows the next 4 weeks. Load more shows later dates.
-        </p>
+        <p className="text-muted-foreground mt-2 text-sm sm:text-base">{subtitle}</p>
       </header>
 
-      {slackPost ? (
+      {showSlackTools && slackPost ? (
         <Card className="mb-6">
           <CardHeader>
             <CardTitle>Slack announcement draft</CardTitle>
@@ -258,7 +266,7 @@ export function EventsDashboard({
         </Card>
       ) : null}
 
-      {slackError ? <p className="mb-4 text-sm text-destructive">{slackError}</p> : null}
+      {showSlackTools && slackError ? <p className="mb-4 text-sm text-destructive">{slackError}</p> : null}
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <FeedSection

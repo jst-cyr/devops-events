@@ -49,6 +49,27 @@ async function loadModuleWithData(records: EventRecord[]) {
   }
 }
 
+async function loadModuleWithSourceData(eventsRecords: EventRecord[], candidateRecords: EventRecord[]) {
+  const readFile = vi.fn().mockImplementation(async (filePath: string) => {
+    if (filePath.endsWith("events-candidates.json")) {
+      return JSON.stringify({ records: candidateRecords })
+    }
+
+    return JSON.stringify({ records: eventsRecords })
+  })
+
+  vi.resetModules()
+  vi.doMock("node:fs/promises", () => ({
+    readFile,
+  }))
+
+  const eventsDataModule = await import("./events-data")
+  return {
+    getDashboardFeed: eventsDataModule.getDashboardFeed,
+    readFile,
+  }
+}
+
 afterEach(() => {
   vi.resetModules()
   vi.unmock("node:fs/promises")
@@ -163,5 +184,33 @@ describe("getDashboardFeed", () => {
     await getDashboardFeed({ kind: "cfp", now: NOW })
 
     expect(readFile).toHaveBeenCalledTimes(1)
+  })
+
+  it("supports separate candidates source with independent file cache", async () => {
+    const eventsRecords = [createEvent({ id: "events-source", start_date: "2026-03-10" })]
+    const candidateRecords = [
+      createEvent({
+        id: "candidate-source",
+        start_date: "2026-03-11",
+        cfp: {
+          has_cfp: true,
+          cfp_url: "https://example.com/candidate-cfp",
+          cfp_open_date: null,
+          cfp_close_date: "2026-03-12",
+          cfp_timezone: "UTC",
+          cfp_status: "open",
+        },
+      }),
+    ]
+
+    const { getDashboardFeed, readFile } = await loadModuleWithSourceData(eventsRecords, candidateRecords)
+
+    const fromCandidates = await getDashboardFeed({ kind: "events", source: "candidates", now: NOW })
+    const fromEvents = await getDashboardFeed({ kind: "events", source: "events", now: NOW })
+    await getDashboardFeed({ kind: "cfp", source: "candidates", now: NOW })
+
+    expect(fromCandidates.items.map((item) => item.id)).toEqual(["candidate-source"])
+    expect(fromEvents.items.map((item) => item.id)).toEqual(["events-source"])
+    expect(readFile).toHaveBeenCalledTimes(2)
   })
 })

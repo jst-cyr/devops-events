@@ -14,9 +14,15 @@ type EventsFile = {
   records: EventRecord[];
 };
 
-const EVENTS_FILE_PATH = path.join(process.cwd(), "data", "events.json");
+export type DashboardDataSource = "events" | "candidates";
 
-let recordsCache: EventRecord[] | null = null;
+const EVENTS_FILE_PATH = path.join(process.cwd(), "data", "events.json");
+const CANDIDATES_FILE_PATH = path.join(process.cwd(), "data", "events-candidates.json");
+
+const recordsCache: Record<DashboardDataSource, EventRecord[] | null> = {
+  events: null,
+  candidates: null,
+};
 
 function parseDate(date: string | null | undefined): Date | null {
   if (!date) {
@@ -74,15 +80,19 @@ function mapEventItem(record: EventRecord): EventListItem {
   };
 }
 
-async function getAllRecords(): Promise<EventRecord[]> {
-  if (recordsCache) {
-    return recordsCache;
+function getFilePath(source: DashboardDataSource): string {
+  return source === "candidates" ? CANDIDATES_FILE_PATH : EVENTS_FILE_PATH;
+}
+
+async function getAllRecords(source: DashboardDataSource): Promise<EventRecord[]> {
+  if (recordsCache[source]) {
+    return recordsCache[source];
   }
 
-  const fileContents = await readFile(EVENTS_FILE_PATH, "utf-8");
+  const fileContents = await readFile(getFilePath(source), "utf-8");
   const parsed = JSON.parse(fileContents) as EventsFile;
-  recordsCache = parsed.records ?? [];
-  return recordsCache;
+  recordsCache[source] = parsed.records ?? [];
+  return recordsCache[source];
 }
 
 function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
@@ -141,15 +151,17 @@ function getUpcomingCfpRecords(records: EventRecord[], now: Date, windowDays?: n
 
 export async function getDashboardFeed(options: {
   kind: DashboardKind;
+  source?: DashboardDataSource;
   now?: Date;
   cursor?: number;
   limit?: number;
   windowDays?: number;
 }): Promise<DashboardFeedResponse> {
+  const source = options.source ?? "events";
   const now = options.now ?? new Date();
   const cursor = normalizeCursor(options.cursor);
   const limit = normalizeLimit(options.limit);
-  const records = await getAllRecords();
+  const records = await getAllRecords(source);
 
   const selected =
     options.kind === "cfp"
