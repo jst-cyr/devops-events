@@ -8,7 +8,12 @@ Use this prompt in the agent window to discover upcoming events and reconcile th
 
 You are a data-curation agent for the `devops-events` repository.
 
-Your mission is to discover **upcoming events in the next 56 days** from the following sources, then reconcile those findings with `data/events.json`.
+Your mission is to discover:
+
+1. **Upcoming events in the next 56 days**, and
+2. **Upcoming/active CFP opportunities whose CFP deadline is in the next 56 days** (even if the event date is outside that 56-day event window),
+
+from the following sources, then reconcile those findings with `data/events.json`.
 
 ### Sources to analyze
 
@@ -80,11 +85,26 @@ When using iframe fallback, enforce all of the following:
    - `Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).`
 - If iframe-derived URL cannot be fetched/parsed, do not fall back to dev.events detail URL; write an issue record instead.
 
-### Time window
+### Time windows (dual-window rule)
 
 - Use today as day 0.
-- Collect events with `start_date` between today and today + 56 days (inclusive).
-- If event pages require pagination, load-more, month navigation, or per-event detail pages, follow those paths to gather complete data in that window.
+- Event window: collect events with `start_date` between today and today + 56 days (inclusive).
+- CFP window: collect records where `cfp.has_cfp = true` and `cfp.cfp_close_date` is between today and today + 56 days (inclusive), even when `start_date` is outside the event window.
+- Include a record when **either** condition matches:
+   - `start_date` in event window, or
+   - `cfp.cfp_close_date` in CFP window.
+- If event pages require pagination, load-more, month navigation, or per-event detail pages, follow those paths to gather complete data for both windows.
+
+### CFP extraction and follow-through (required)
+
+When a source provides a CFP link, CTA, or indicator (for example: `Call for Presenters`, `CFP`, `Apply to speak`, `Submit talk`):
+
+1. Follow the CFP URL to the actual CFP page/form (do not stop at listing-page snippets).
+2. Extract `cfp.cfp_url` and `cfp.cfp_close_date` when available.
+3. If a CFP deadline includes time/timezone, normalize date to `YYYY-MM-DD` and store timezone in `cfp.cfp_timezone` when determinable.
+4. Set `cfp.cfp_status` deterministically from extracted data (`upcoming|open|closing_soon|closed|unknown`).
+5. If a CFP exists but close date cannot be determined, keep `cfp.has_cfp = true`, set `cfp.cfp_close_date = null`, `cfp.cfp_status = "unknown"`, and add deterministic notes.
+6. Do not infer CFP close dates from event date; only use explicit CFP-page evidence.
 
 ### Relevance criteria
 
@@ -138,6 +158,7 @@ Produce five outputs:
    - Sources visited
    - Date window used
    - Counts: scanned, relevant, skipped, duplicates, updates, new candidates, issues
+   - CFP-specific counts: cfp_seen, cfp_with_deadline, cfp_in_window, cfp_only_inclusions (event out-of-window but CFP in-window)
    - Exclusion reasons counts (geo excluded, topic mismatch, out of range, insufficient data, crawl/parse failure)
 
 2. **Update candidates JSON file** at `data/events-updates.json` (do not automatically modify `data/events.json` unless explicitly asked):
@@ -218,9 +239,12 @@ Where `records` contains normalized `EventRecord` items.
 ### Quality checks before finalizing
 
 - Ensure every included event has a valid `name`, `event_url`, `start_date`, `end_date`, `delivery`, and `location`.
-- Ensure every event falls in the 56-day window.
+- Ensure every included record satisfies at least one inclusion condition:
+   - `start_date` in the 56-day event window, or
+   - `cfp.has_cfp = true` and `cfp.cfp_close_date` in the 56-day CFP window.
 - Ensure excluded geographies are not present.
 - Ensure dev.events-discovered records do not use dev.events detail URLs for `event_url`.
+- Ensure CFP links were followed-through when present and that `cfp.cfp_close_date` is captured when explicitly available on the CFP page.
 - Ensure `data/events-updates.json` is valid JSON.
 - Ensure each `data/events-updates.json` record contains only `match`, `name`, and `changes`.
 - Ensure `data/events-candidates.json` is valid JSON.
@@ -250,6 +274,24 @@ Use this fallback sequence:
 5. Only then create candidates/updates. If no in-window events are found after fallback, do not create an issue.
 6. Create an issue only if both primary extraction and fallback extraction fail, with deterministic notes indicating both attempts.
 
+### Source-specific fallback: redhat.com events (required)
+
+If `https://www.redhat.com/en/events` is redirected by the extractor to tracking endpoints (for example DoubleClick), treat this as an extractor-path artifact, not an immediate source failure.
+
+Use this fallback sequence:
+
+1. Fetch events listing pages directly with pagination:
+   - `https://www.redhat.com/en/events` (page 0 equivalent)
+   - `https://www.redhat.com/en/events?page=1`
+   - `https://www.redhat.com/en/events?page=2`
+2. Parse embedded page settings and use the configured JSON listing endpoint when present:
+   - `https://www.redhat.com/rhdc/jsonapi/solr_search/event`
+3. Paginate the JSON endpoint with `?page=0..N` until `docs` is empty.
+4. For each doc, extract canonical event URL (`url`), `title`, `start_date`, `end_date`, and delivery signal (`event_type`/`online_event_type`).
+5. Filter by the 56-day window and relevance/geo rules before reconciliation.
+6. Only create a Red Hat issue if both listing-page fallback and JSON-endpoint fallback fail.
+7. When fallback succeeds, do not keep a stale Red Hat blocked issue.
+
 ### Run notes for next execution (2026-02-27)
 
 - Do **not** use `dev.events` `.ics` links for extraction; these may trigger file downloads and are not reliable in this environment.
@@ -263,6 +305,9 @@ Use this fallback sequence:
 - For `devopsdays` event pages, prefer `/welcome/` URLs for canonical `event_url`; extract date/location from `/welcome/` when available.
 - If a source is blocked by CSP or anti-bot redirects (for example, `redhat.com` events page), record a deterministic issue and continue with alternate source coverage.
 - For `iacconf.com`, treat extractor-level CSP/parse failure as recoverable: retry via raw HTML + `__NEXT_DATA__` parsing before logging an issue.
+- For `redhat.com/events`, prefer JSON fallback at `https://www.redhat.com/rhdc/jsonapi/solr_search/event?page=<n>` to avoid tracker-bounce false failures.
+- Treat CFP discovery as first-class: include records where CFP close date is in-window even if the event itself is later than 56 days.
+- For CFP CTAs (for example IaCConf `View the Call for Presenters`), follow through to the CFP destination page/form to extract the actual close deadline before classifying in/out of window.
 
 Now execute this workflow and provide:
 1) the markdown summary,
