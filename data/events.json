@@ -1479,6 +1479,535 @@
       },
       "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
       "status": "upcoming"
+    },
+    {
+      "id": "techmang26-2026",
+      "name": "#TechMang26",
+      "event_url": "https://hackersmang.org/techmang26",
+      "start_date": "2026-01-31",
+      "end_date": "2026-01-31",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "devops",
+        "mcp",
+        "community"
+      ],
+      "source": "hackersmang.org",
+      "location": {
+        "city": "Mangaluru",
+        "region": "Karnataka",
+        "country": "India",
+        "country_code": "IN",
+        "is_online": false,
+        "venue": "Wrkwrk Triangle"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Recovered from event page; schedule and resources indicate event completed.",
+      "status": "past"
+    },
+    {
+      "id": "women-in-product-pdx-2026-02-02",
+      "name": "Women In Product PDX: Feb 2 meetup",
+      "event_url": "https://www.meetup.com/women-in-product-wip/events/313011146/",
+      "start_date": "2026-02-02",
+      "end_date": "2026-02-02",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "product",
+        "community",
+        "technology"
+      ],
+      "source": "meetup.com",
+      "location": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "ENSO Winery"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "past"
+    },
+    {
+      "id": "config-management-camp-ghent-2026",
+      "name": "Config Management Camp 2026",
+      "event_url": "https://cfgmgmtcamp.org/ghent2026/",
+      "start_date": "2026-02-02",
+      "end_date": "2026-02-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "configuration-management",
+        "open-source"
+      ],
+      "source": "cfgmgmtcamp.org",
+      "location": {
+        "city": "Ghent",
+        "region": null,
+        "country": "Belgium",
+        "country_code": "BE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "past"
+    },
+    {
+      "id": "ruby-for-good-ghent-2026",
+      "name": "Ruby for Good in Ghent",
+      "event_url": "https://ti.to/codeforgood/rubyinghent",
+      "start_date": "2026-02-02",
+      "end_date": "2026-02-04",
+      "delivery": "in_person",
+      "event_type": "workshop",
+      "tags": [
+        "ruby",
+        "open-source",
+        "community"
+      ],
+      "source": "ti.to",
+      "location": {
+        "city": "Ghent",
+        "region": null,
+        "country": "Belgium",
+        "country_code": "BE",
+        "is_online": false,
+        "venue": "Jam Ghent"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Event page links to https://rubyinghent.org for broader event context.",
+      "status": "past"
+    },
+    {
+      "id": "cloud-native-days-france-2026",
+      "name": "Cloud NativeDays France 2026",
+      "event_url": "https://www.cloudnativedays.fr/",
+      "start_date": "2026-02-03",
+      "end_date": "2026-02-03",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "devops",
+        "kubernetes",
+        "open-source"
+      ],
+      "source": "cloudnativedays.fr",
+      "location": {
+        "city": "Paris",
+        "region": null,
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "CENTQUATRE-PARIS"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "past"
+    },
+    {
+      "id": "minug-grand-rapids-networking-user-group-2026",
+      "name": "(MI)NUG Grand Rapids Networking User Group",
+      "event_url": "https://www.usnua.com/minug-grand-rapids-winter-event-2026",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-04",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "infrastructure",
+        "community"
+      ],
+      "source": "slack_weekly_post",
+      "location": {
+        "city": "Grand Rapids",
+        "region": "Michigan",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "URL currently returns HTTP 404; record details retained from historical Slack post.",
+      "status": "past"
+    },
+    {
+      "id": "sf-ai-engineers-feb-2026",
+      "name": "SF AI Engineers: February w/ Tesla, Distributional, & Eventual Presenting",
+      "event_url": "https://www.meetup.com/san-francisco-ai-engineers/events/312250987/",
+      "start_date": "2026-02-04",
+      "end_date": "2026-02-04",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "ai",
+        "engineering",
+        "community"
+      ],
+      "source": "meetup.com",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "House of AI"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "past"
+    },
+    {
+      "id": "agentcon-oslo-2026",
+      "name": "AgentCon Oslo",
+      "event_url": "https://globalai.community/chapters/oslo/events/agentcon-oslo",
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "agents",
+        "mcp"
+      ],
+      "source": "globalai.community",
+      "location": {
+        "city": "Oslo",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": "Gyldendal forlag"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "status": "past"
+    },
+    {
+      "id": "enterprise-tech-summit-riyadh-2026",
+      "name": "Enterprise Tech Summit",
+      "event_url": "https://digitransformationsummit.com/ksa/",
+      "start_date": "2026-02-11",
+      "end_date": "2026-02-11",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "enterprise",
+        "ai",
+        "digital-transformation"
+      ],
+      "source": "digitransformationsummit.com",
+      "location": {
+        "city": "Riyadh",
+        "region": null,
+        "country": "Saudi Arabia",
+        "country_code": "SA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Site branding is 'Enterprise Tech Summit powered by Digital Transformation Summit'.",
+      "status": "past"
+    },
+    {
+      "id": "containerdays-london-2026",
+      "name": "ContainerDays London 2026",
+      "event_url": "https://www.containerdays.io/containerdays-london-2026/",
+      "start_date": "2026-02-11",
+      "end_date": "2026-02-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "containers",
+        "devops",
+        "platform"
+      ],
+      "source": "containerdays.io",
+      "location": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Site notes this edition was co-located with MCPconference.",
+      "status": "past"
+    },
+    {
+      "id": "devops-not-dead-london-2026-q1",
+      "name": "DevOps Not Dead - London 2026 Q1",
+      "event_url": "https://devopsnotdead.com/2026-london-q1",
+      "start_date": "2026-03-13",
+      "end_date": "2026-03-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "sre",
+        "community"
+      ],
+      "source": "papercall.io",
+      "location": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "Everyman Canary Wharf"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/devopsnotdead-2026-london-q1",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-02-09",
+        "cfp_timezone": "UTC",
+        "cfp_status": "closed"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "securing-ai-real-world-2026",
+      "name": "Securing AI in the Real World",
+      "event_url": "https://www.modernsecurity.io/",
+      "start_date": "2026-04-25",
+      "end_date": "2026-04-25",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "security",
+        "appsec"
+      ],
+      "source": "papercall.io",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/ai-security-msec",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-01-31",
+        "cfp_timezone": "UTC",
+        "cfp_status": "closed"
+      },
+      "notes": "Papercall CFP page includes event date and links to organizer site.",
+      "status": "upcoming"
+    },
+    {
+      "id": "open-source-summit-north-america-2026",
+      "name": "Open Source Summit North America 2026",
+      "event_url": "https://events.linuxfoundation.org/open-source-summit-north-america/",
+      "start_date": "2026-05-18",
+      "end_date": "2026-05-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "open-source",
+        "cloud-native",
+        "devops"
+      ],
+      "source": "sessionize",
+      "location": {
+        "city": "Minneapolis",
+        "region": "Minnesota",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/open-source-summit-north-america-2026/",
+        "cfp_open_date": "2026-01-06",
+        "cfp_close_date": "2026-02-16",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "closed"
+      },
+      "notes": "CFP close date follows original Slack post wording; Sessionize close marker appears as 2026-02-17 in some local timezone views.",
+      "status": "upcoming"
+    },
+    {
+      "id": "devopsdays-geneva-2026",
+      "name": "DevOpsDays Geneva",
+      "event_url": "https://devopsdays.org/events/2026-geneva/welcome/",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Geneva",
+        "region": null,
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": "Campus de Battelle"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://devopsdays-geneva.ch/forms/InputFormSpkrsDodGe.php?who=pb0cb47956025e73c797e5e17f16fc38466e34f5ae",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-02-16",
+        "cfp_timezone": "Europe/Zurich",
+        "cfp_status": "closed"
+      },
+      "notes": "CFP form indicates closed; canonical event details sourced from devopsdays.org event page.",
+      "status": "upcoming"
+    },
+    {
+      "id": "ndc-copenhagen-2026",
+      "name": "NDC Copenhagen 2026",
+      "event_url": "https://ndccopenhagen.com/",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "software",
+        "devops",
+        "cloud-native"
+      ],
+      "source": "ndccopenhagen.com",
+      "location": {
+        "city": "Copenhagen",
+        "region": null,
+        "country": "Denmark",
+        "country_code": "DK",
+        "is_online": false,
+        "venue": "Øksnehallen"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://ndccopenhagen.com/call-for-papers",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-02-01",
+        "cfp_timezone": "Europe/Copenhagen",
+        "cfp_status": "closed"
+      },
+      "notes": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "wearedevelopers-world-congress-europe-2026",
+      "name": "WeAreDevelopers World Congress 2026 - Europe",
+      "event_url": "https://worldcongress.dev/",
+      "start_date": "2026-07-08",
+      "end_date": "2026-07-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "software",
+        "ai",
+        "devops"
+      ],
+      "source": "sessionize",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Messe Berlin (Entrance South / CityCube Berlin)"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/wearedevelopers-world-congress-2026-europe/",
+        "cfp_open_date": "2025-09-30",
+        "cfp_close_date": "2026-02-19",
+        "cfp_timezone": "Europe/Berlin",
+        "cfp_status": "closed"
+      },
+      "notes": "Sessionize links canonical event site as worldcongress.dev.",
+      "status": "upcoming"
     }
   ]
 }
