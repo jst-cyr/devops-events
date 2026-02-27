@@ -146,6 +146,7 @@ If an event appears adjacent but not clearly aligned, default to exclude and cou
 - Exclude all events in Africa.
 - Exclude events in Middle East countries (for example: Saudi Arabia, Iraq, Iran, Israel, etc.).
 - Exclude events in Romania.
+- Exclude events in Mexico.
 - Prioritize events in: United States, Canada, Australia, Ireland, Japan, United Kingdom, and mainland Europe.
 
 ### Data model and normalization
