@@ -19,6 +19,7 @@ export type DashboardDataSource = "events" | "candidates";
 
 const EVENTS_FILE_PATH = path.join(process.cwd(), "data", "events.json");
 const CANDIDATES_FILE_PATH = path.join(process.cwd(), "data", "events-candidates.json");
+const POOR_FIT_TAG = "poor fit";
 
 const recordsCache: Record<DashboardDataSource, EventRecord[] | null> = {
   events: null,
@@ -112,6 +113,12 @@ async function getAllRecords(source: DashboardDataSource): Promise<EventRecord[]
 
     throw error;
   }
+}
+
+function isPoorFit(record: EventRecord): boolean {
+  return (
+    record.tags?.some((tag) => tag.trim().toLowerCase() === POOR_FIT_TAG) ?? false
+  );
 }
 
 function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
@@ -237,15 +244,16 @@ export async function getDashboardFeed(options: {
   const cursor = normalizeCursor(options.cursor);
   const limit = normalizeLimit(options.limit);
   const records = await getAllRecords(source);
+  const visibleRecords = records.filter((record) => !isPoorFit(record));
 
   const selected =
     options.kind === "cfp"
       ? timeframe === "past"
-        ? getPastCfpRecords(records, now, options.windowDays)
-        : getUpcomingCfpRecords(records, now, options.windowDays)
+        ? getPastCfpRecords(visibleRecords, now, options.windowDays)
+        : getUpcomingCfpRecords(visibleRecords, now, options.windowDays)
       : timeframe === "past"
-        ? getPastEventRecords(records, now, options.windowDays)
-        : getUpcomingEventRecords(records, now, options.windowDays);
+        ? getPastEventRecords(visibleRecords, now, options.windowDays)
+        : getUpcomingEventRecords(visibleRecords, now, options.windowDays);
 
   const items = selected.slice(cursor, cursor + limit).map(mapEventItem);
   const nextCursor = cursor + items.length;

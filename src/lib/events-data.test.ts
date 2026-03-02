@@ -171,6 +171,46 @@ describe("getDashboardFeed", () => {
     expect(result.total).toBe(1)
   })
 
+  it("excludes records tagged poor fit from both events and cfp feeds", async () => {
+    const records = [
+      createEvent({ id: "events-visible", start_date: "2026-03-02", tags: ["devops"] }),
+      createEvent({ id: "events-hidden", start_date: "2026-03-03", tags: ["poor fit"] }),
+      createEvent({
+        id: "cfp-visible",
+        start_date: "2026-03-04",
+        cfp: {
+          has_cfp: true,
+          cfp_url: "https://example.com/cfp-visible",
+          cfp_open_date: null,
+          cfp_close_date: "2026-03-10",
+          cfp_timezone: "UTC",
+          cfp_status: "open",
+        },
+      }),
+      createEvent({
+        id: "cfp-hidden",
+        start_date: "2026-03-05",
+        tags: ["poor fit"],
+        cfp: {
+          has_cfp: true,
+          cfp_url: "https://example.com/cfp-hidden",
+          cfp_open_date: null,
+          cfp_close_date: "2026-03-09",
+          cfp_timezone: "UTC",
+          cfp_status: "open",
+        },
+      }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+
+    const eventsResult = await getDashboardFeed({ kind: "events", now: NOW, windowDays: FOUR_WEEKS_DAYS })
+    const cfpResult = await getDashboardFeed({ kind: "cfp", now: NOW, windowDays: FOUR_WEEKS_DAYS })
+
+    expect(eventsResult.items.map((item) => item.id)).toEqual(["events-visible", "cfp-visible"])
+    expect(cfpResult.items.map((item) => item.id)).toEqual(["cfp-visible"])
+  })
+
   it("supports cursor pagination with stable nextCursor and hasMore", async () => {
     const records = [
       createEvent({ id: "event-1", start_date: "2026-02-27" }),
