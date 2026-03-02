@@ -30,7 +30,6 @@ A single event (conference, meetup, webinar, user group, etc.).
 - `tags` (array of strings): Topics like `devops`, `platform`, `security`, `cloud-native`, `puppet`.
 - `cfp` (object): CFP metadata if the event accepts talks.
 - `notes` (string): Freeform context (for example: "Q1 NYC edition").
-- `status` (enum): `upcoming` | `live` | `past` | `cancelled`.
 - `timezone` (string): IANA timezone (example: `America/New_York`).
 - `last_verified_at` (datetime, ISO 8601): Last date/time links and dates were checked.
 - `created_at` (datetime, ISO 8601).
@@ -100,7 +99,6 @@ Include only when CFP information exists.
     "cfp_status": "closed"
   },
   "notes": null,
-  "status": "upcoming",
   "timezone": "America/Chicago",
   "last_verified_at": "2026-02-27T00:00:00Z",
   "created_at": "2026-02-27T00:00:00Z",

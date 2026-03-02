@@ -32,7 +32,6 @@ export type EventRecord = {
     cfp_status: "upcoming" | "open" | "closing_soon" | "closed" | "unknown";
   };
   notes?: string | null;
-  status?: string;
 };
 
 export type EventListItem = {

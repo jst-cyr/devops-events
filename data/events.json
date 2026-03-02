@@ -31,8 +31,7 @@
         "cfp_timezone": "America/Los_Angeles",
         "cfp_status": "closed"
       },
-      "notes": "CFP in post applies to virtual program.",
-      "status": "upcoming"
+      "notes": "CFP in post applies to virtual program."
     },
     {
       "id": "devopsdays-austin-2026",
@@ -62,8 +61,7 @@
         "cfp_timezone": "America/Chicago",
         "cfp_status": "closed"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devopsdays-nashville-2026",
@@ -94,8 +92,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "closing_soon"
       },
-      "notes": "City inferred from CFP page; post labels event as Nashville.",
-      "status": "upcoming"
+      "notes": "City inferred from CFP page; post labels event as Nashville."
     },
     {
       "id": "ieee-cloud-summit-2026",
@@ -128,8 +125,7 @@
         "cfp_timezone": "America/New_York",
         "cfp_status": "closing_soon"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "containerdays-hamburg-2026",
@@ -162,8 +158,7 @@
         "cfp_timezone": "Europe/Berlin",
         "cfp_status": "closing_soon"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devopsdays-tokyo-2026",
@@ -193,8 +188,7 @@
         "cfp_timezone": "Asia/Tokyo",
         "cfp_status": "closing_soon"
       },
-      "notes": "Event page indicates onsite event with online streaming available.",
-      "status": "upcoming"
+      "notes": "Event page indicates onsite event with online streaming available."
     },
     {
       "id": "cncf-meetup-platform-effect-kolkata-2026",
@@ -226,8 +220,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "confoo-2026",
@@ -258,8 +251,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "automate-with-confidence-ansible-2026-02-25",
@@ -291,8 +283,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "cloud-native-birmingham-online-2026-02-26",
@@ -323,8 +314,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sreday-nyc-2026-q1",
@@ -355,8 +345,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Q1 NYC edition.",
-      "status": "upcoming"
+      "notes": "Q1 NYC edition."
     },
     {
       "id": "devops-not-dead-nyc-2026-q1",
@@ -387,8 +376,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Q1 NYC edition.",
-      "status": "upcoming"
+      "notes": "Q1 NYC edition."
     },
     {
       "id": "seccon-14-2026",
@@ -419,8 +407,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devops-fwdays-2026",
@@ -450,8 +437,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "ndc-security-oslo-2026",
@@ -482,8 +468,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sunseccon-2026",
@@ -514,8 +499,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Canonical URL resolved from dev.events detail redirect to official event site.",
-      "status": "upcoming"
+      "notes": "Canonical URL resolved from dev.events detail redirect to official event site."
     },
     {
       "id": "scale-23x-2026",
@@ -547,8 +531,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devopsdays-los-angeles-2026",
@@ -578,8 +561,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "women-techmakers-belfast-2026",
@@ -610,8 +592,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "grand-rapids-red-hat-user-group-2026-03-10",
@@ -642,8 +623,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "red-hat-tech-day-toronto-2026-03-11",
@@ -674,8 +654,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "detroit-red-hat-user-group-2026-03-11",
@@ -706,8 +685,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sreday-london-2026-q1",
@@ -738,8 +716,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Q1 London edition.",
-      "status": "upcoming"
+      "notes": "Q1 London edition."
     },
     {
       "id": "agentcon-tokyo-2026",
@@ -771,8 +748,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src.",
-      "status": "upcoming"
+      "notes": "Canonical URL extracted from dev.events embedded iframe src."
     },
     {
       "id": "kubefest-2026",
@@ -805,8 +781,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src.",
-      "status": "upcoming"
+      "notes": "Canonical URL extracted from dev.events embedded iframe src."
     },
     {
       "id": "advancing-it-automation-ssa-2026-03-03",
@@ -839,8 +814,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Listed as Virtual Event on source page.",
-      "status": "upcoming"
+      "notes": "Listed as Virtual Event on source page."
     },
     {
       "id": "red-hat-ansible-security-compliance-automation-2026-03-03",
@@ -874,8 +848,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Listed as Virtual Event on source page.",
-      "status": "upcoming"
+      "notes": "Listed as Virtual Event on source page."
     },
     {
       "id": "redhat-taming-cve-flood-2026-03-03",
@@ -908,8 +881,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event."
     },
     {
       "id": "redhat-from-drift-to-control-2026-03-03",
@@ -942,8 +914,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event."
     },
     {
       "id": "red-hat-cis-benchmarks-ansible-2026-03-04",
@@ -977,8 +948,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Listed as Virtual Event on source page.",
-      "status": "upcoming"
+      "notes": "Listed as Virtual Event on source page."
     },
     {
       "id": "developerweek-global-2026",
@@ -1011,8 +981,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Homepage explicitly lists VIRTUAL DeveloperWeek Global on March 4, 2026.",
-      "status": "upcoming"
+      "notes": "Homepage explicitly lists VIRTUAL DeveloperWeek Global on March 4, 2026."
     },
     {
       "id": "beyond-traditional-virtualization-red-hat-2026-03-05",
@@ -1045,8 +1014,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Source event block includes Virtual Event icon.",
-      "status": "upcoming"
+      "notes": "Source event block includes Virtual Event icon."
     },
     {
       "id": "redhat-modernize-standardize-azure-2026-03-05",
@@ -1080,8 +1048,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event."
     },
     {
       "id": "redhat-path-to-efficient-hybrid-it-operations-2026-03-10",
@@ -1114,8 +1081,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event."
     },
     {
       "id": "iacconf-connect-amsterdam-2026",
@@ -1147,8 +1113,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Extracted from iacconf.com Next.js page payload and verified on Luma event page.",
-      "status": "upcoming"
+      "notes": "Extracted from iacconf.com Next.js page payload and verified on Luma event page."
     },
     {
       "id": "srecon26-americas",
@@ -1181,8 +1146,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sreday-san-francisco-2026-q2",
@@ -1214,8 +1178,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall.",
-      "status": "upcoming"
+      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall."
     },
     {
       "id": "devopsdays-atlanta-2026",
@@ -1245,8 +1208,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Detail page confirms April 21-22, 2026 and venue in Atlanta.",
-      "status": "upcoming"
+      "notes": "Detail page confirms April 21-22, 2026 and venue in Atlanta."
     },
     {
       "id": "sreday-seattle-2026-q2",
@@ -1278,8 +1240,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall.",
-      "status": "upcoming"
+      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall."
     },
     {
       "id": "iacconf-2026",
@@ -1312,8 +1273,7 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP page states 'Submission Deadline: Friday April 7, 2026'.",
-      "status": "upcoming"
+      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP page states 'Submission Deadline: Friday April 7, 2026'."
     },
     {
       "id": "sreday-austin-2026-q2",
@@ -1345,8 +1305,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall.",
-      "status": "upcoming"
+      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall."
     },
     {
       "id": "sreday-munich-2026-q2",
@@ -1378,8 +1337,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall.",
-      "status": "upcoming"
+      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall."
     },
     {
       "id": "ai-devcon-london-2026",
@@ -1411,8 +1369,7 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
-      "status": "upcoming"
+      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
     },
     {
       "id": "ai-agent-conference-2026",
@@ -1444,8 +1401,7 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
-      "status": "upcoming"
+      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
     },
     {
       "id": "o11y-con-2026",
@@ -1477,8 +1433,7 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
-      "status": "upcoming"
+      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
     },
     {
       "id": "techmang26-2026",
@@ -1511,8 +1466,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from event page; schedule and resources indicate event completed.",
-      "status": "past"
+      "notes": "Recovered from event page; schedule and resources indicate event completed."
     },
     {
       "id": "women-in-product-pdx-2026-02-02",
@@ -1544,8 +1498,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "past"
+      "notes": null
     },
     {
       "id": "config-management-camp-ghent-2026",
@@ -1577,8 +1530,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "past"
+      "notes": null
     },
     {
       "id": "ruby-for-good-ghent-2026",
@@ -1610,8 +1562,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Event page links to https://rubyinghent.org for broader event context.",
-      "status": "past"
+      "notes": "Event page links to https://rubyinghent.org for broader event context."
     },
     {
       "id": "cloud-native-days-france-2026",
@@ -1644,8 +1595,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "past"
+      "notes": null
     },
     {
       "id": "minug-grand-rapids-networking-user-group-2026",
@@ -1677,8 +1627,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "URL currently returns HTTP 404; record details retained from historical Slack post.",
-      "status": "past"
+      "notes": "URL currently returns HTTP 404; record details retained from historical Slack post."
     },
     {
       "id": "sf-ai-engineers-feb-2026",
@@ -1710,8 +1659,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "past"
+      "notes": null
     },
     {
       "id": "agentcon-oslo-2026",
@@ -1743,8 +1691,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "past"
+      "notes": null
     },
     {
       "id": "enterprise-tech-summit-riyadh-2026",
@@ -1776,8 +1723,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Site branding is 'Enterprise Tech Summit powered by Digital Transformation Summit'.",
-      "status": "past"
+      "notes": "Site branding is 'Enterprise Tech Summit powered by Digital Transformation Summit'."
     },
     {
       "id": "containerdays-london-2026",
@@ -1810,8 +1756,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Site notes this edition was co-located with MCPconference.",
-      "status": "past"
+      "notes": "Site notes this edition was co-located with MCPconference."
     },
     {
       "id": "devops-not-dead-london-2026-q1",
@@ -1843,8 +1788,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "closed"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "securing-ai-real-world-2026",
@@ -1876,8 +1820,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "closed"
       },
-      "notes": "Papercall CFP page includes event date and links to organizer site.",
-      "status": "upcoming"
+      "notes": "Papercall CFP page includes event date and links to organizer site."
     },
     {
       "id": "open-source-summit-north-america-2026",
@@ -1909,8 +1852,7 @@
         "cfp_timezone": "America/Chicago",
         "cfp_status": "closed"
       },
-      "notes": "CFP close date follows original Slack post wording; Sessionize close marker appears as 2026-02-17 in some local timezone views.",
-      "status": "upcoming"
+      "notes": "CFP close date follows original Slack post wording; Sessionize close marker appears as 2026-02-17 in some local timezone views."
     },
     {
       "id": "devopsdays-geneva-2026",
@@ -1940,8 +1882,7 @@
         "cfp_timezone": "Europe/Zurich",
         "cfp_status": "closed"
       },
-      "notes": "CFP form indicates closed; canonical event details sourced from devopsdays.org event page.",
-      "status": "upcoming"
+      "notes": "CFP form indicates closed; canonical event details sourced from devopsdays.org event page."
     },
     {
       "id": "ndc-copenhagen-2026",
@@ -1973,8 +1914,7 @@
         "cfp_timezone": "Europe/Copenhagen",
         "cfp_status": "closed"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "wearedevelopers-world-congress-europe-2026",
@@ -2006,8 +1946,7 @@
         "cfp_timezone": "Europe/Berlin",
         "cfp_status": "closed"
       },
-      "notes": "Sessionize links canonical event site as worldcongress.dev.",
-      "status": "upcoming"
+      "notes": "Sessionize links canonical event site as worldcongress.dev."
     },
     {
       "id": "redhat-aiops-to-action-2026-03-17",
@@ -2041,8 +1980,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
     },
     {
       "id": "redhat-aiops-hybrid-edge-2026-03-18",
@@ -2076,8 +2014,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
     },
     {
       "id": "redhat-masterclass-aiops-mirage-2026-03-31",
@@ -2111,8 +2048,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
     },
     {
       "id": "redhat-rhel-in-cloud-2026-04-08",
@@ -2145,8 +2081,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
     },
     {
       "id": "redhat-platform-engineering-roadshow-2026-04-22",
@@ -2180,8 +2115,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
-      "status": "upcoming"
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
     }
   ]
 }

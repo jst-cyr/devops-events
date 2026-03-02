@@ -10,7 +10,10 @@
       "end_date": "2026-06-26",
       "delivery": "online",
       "event_type": "conference",
-      "tags": ["platform", "devops"],
+      "tags": [
+        "platform",
+        "devops"
+      ],
       "source": "sessionize",
       "location": {
         "city": null,
@@ -28,8 +31,7 @@
         "cfp_timezone": "America/Los_Angeles",
         "cfp_status": "closed"
       },
-      "notes": "CFP in post applies to virtual program.",
-      "status": "upcoming"
+      "notes": "CFP in post applies to virtual program."
     },
     {
       "id": "devopsdays-austin-2026",
@@ -39,7 +41,9 @@
       "end_date": "2026-05-06",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["devops"],
+      "tags": [
+        "devops"
+      ],
       "source": "devopsdays.org",
       "location": {
         "city": "Austin",
@@ -57,8 +61,7 @@
         "cfp_timezone": "America/Chicago",
         "cfp_status": "closed"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devopsdays-nashville-2026",
@@ -68,7 +71,10 @@
       "end_date": "2026-05-15",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["devops", "ai"],
+      "tags": [
+        "devops",
+        "ai"
+      ],
       "source": "devopsdays.org",
       "location": {
         "city": "Murfreesboro",
@@ -86,8 +92,7 @@
         "cfp_timezone": "UTC",
         "cfp_status": "closing_soon"
       },
-      "notes": "City inferred from CFP page; post labels event as Nashville.",
-      "status": "upcoming"
+      "notes": "City inferred from CFP page; post labels event as Nashville."
     },
     {
       "id": "ieee-cloud-summit-2026",
@@ -97,7 +102,12 @@
       "end_date": "2026-06-26",
       "delivery": "in_person",
       "event_type": "summit",
-      "tags": ["cloud", "devops", "devsecops", "ai"],
+      "tags": [
+        "cloud",
+        "devops",
+        "devsecops",
+        "ai"
+      ],
       "source": "sessionize",
       "location": {
         "city": "Washington",
@@ -115,8 +125,7 @@
         "cfp_timezone": "America/New_York",
         "cfp_status": "closing_soon"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "containerdays-hamburg-2026",
@@ -126,7 +135,12 @@
       "end_date": "2026-09-04",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["containers", "kubernetes", "devops", "cloud-native"],
+      "tags": [
+        "containers",
+        "kubernetes",
+        "devops",
+        "cloud-native"
+      ],
       "source": "sessionize",
       "location": {
         "city": "Hamburg",
@@ -144,8 +158,7 @@
         "cfp_timezone": "Europe/Berlin",
         "cfp_status": "closing_soon"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devopsdays-tokyo-2026",
@@ -155,7 +168,9 @@
       "end_date": "2026-04-16",
       "delivery": "hybrid",
       "event_type": "conference",
-      "tags": ["devops"],
+      "tags": [
+        "devops"
+      ],
       "source": "devopsdays.org",
       "location": {
         "city": "Tokyo",
@@ -173,8 +188,7 @@
         "cfp_timezone": "Asia/Tokyo",
         "cfp_status": "closing_soon"
       },
-      "notes": "Event page indicates onsite event with online streaming available.",
-      "status": "upcoming"
+      "notes": "Event page indicates onsite event with online streaming available."
     },
     {
       "id": "cncf-meetup-platform-effect-kolkata-2026",
@@ -184,7 +198,11 @@
       "end_date": "2026-02-21",
       "delivery": "in_person",
       "event_type": "meetup",
-      "tags": ["cncf", "platform", "cloud-native"],
+      "tags": [
+        "cncf",
+        "platform",
+        "cloud-native"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Kolkata",
@@ -202,8 +220,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "confoo-2026",
@@ -213,7 +230,10 @@
       "end_date": "2026-02-27",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["software", "devops"],
+      "tags": [
+        "software",
+        "devops"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Montreal",
@@ -231,8 +251,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "automate-with-confidence-ansible-2026-02-25",
@@ -242,7 +261,11 @@
       "end_date": "2026-02-25",
       "delivery": "online",
       "event_type": "webinar",
-      "tags": ["ansible", "automation", "devops"],
+      "tags": [
+        "ansible",
+        "automation",
+        "devops"
+      ],
       "source": "carahsoft.com",
       "location": {
         "city": null,
@@ -260,8 +283,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "cloud-native-birmingham-online-2026-02-26",
@@ -271,7 +293,10 @@
       "end_date": "2026-02-26",
       "delivery": "online",
       "event_type": "meetup",
-      "tags": ["cncf", "cloud-native"],
+      "tags": [
+        "cncf",
+        "cloud-native"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": null,
@@ -289,8 +314,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sreday-nyc-2026-q1",
@@ -300,7 +324,10 @@
       "end_date": "2026-02-26",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["sre", "devops"],
+      "tags": [
+        "sre",
+        "devops"
+      ],
       "source": "sreday.com",
       "location": {
         "city": "New York City",
@@ -318,8 +345,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Q1 NYC edition.",
-      "status": "upcoming"
+      "notes": "Q1 NYC edition."
     },
     {
       "id": "devops-not-dead-nyc-2026-q1",
@@ -329,7 +355,10 @@
       "end_date": "2026-02-27",
       "delivery": "in_person",
       "event_type": "meetup",
-      "tags": ["devops", "sre"],
+      "tags": [
+        "devops",
+        "sre"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "New York City",
@@ -347,8 +376,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Q1 NYC edition.",
-      "status": "upcoming"
+      "notes": "Q1 NYC edition."
     },
     {
       "id": "seccon-14-2026",
@@ -358,7 +386,10 @@
       "end_date": "2026-03-01",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["security", "devsecops"],
+      "tags": [
+        "security",
+        "devsecops"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Tokyo",
@@ -376,8 +407,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devops-fwdays-2026",
@@ -387,7 +417,9 @@
       "end_date": "2026-02-28",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["devops"],
+      "tags": [
+        "devops"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Kyiv",
@@ -405,8 +437,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "ndc-security-oslo-2026",
@@ -416,7 +447,10 @@
       "end_date": "2026-03-05",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["security", "devsecops"],
+      "tags": [
+        "security",
+        "devsecops"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Oslo",
@@ -434,8 +468,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sunseccon-2026",
@@ -445,7 +478,10 @@
       "end_date": "2026-03-06",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["security", "devsecops"],
+      "tags": [
+        "security",
+        "devsecops"
+      ],
       "source": "dev.events",
       "location": {
         "city": "Pasadena",
@@ -463,8 +499,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "scale-23x-2026",
@@ -474,7 +509,11 @@
       "end_date": "2026-03-08",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["linux", "opensource", "devops"],
+      "tags": [
+        "linux",
+        "opensource",
+        "devops"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Pasadena",
@@ -492,8 +531,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "devopsdays-los-angeles-2026",
@@ -503,7 +541,9 @@
       "end_date": "2026-03-06",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["devops"],
+      "tags": [
+        "devops"
+      ],
       "source": "devopsdays.org",
       "location": {
         "city": "Pasadena",
@@ -521,8 +561,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "women-techmakers-belfast-2026",
@@ -532,7 +571,10 @@
       "end_date": "2026-03-07",
       "delivery": "in_person",
       "event_type": "meetup",
-      "tags": ["community", "technology"],
+      "tags": [
+        "community",
+        "technology"
+      ],
       "source": "slack_weekly_post",
       "location": {
         "city": "Belfast",
@@ -550,8 +592,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "grand-rapids-red-hat-user-group-2026-03-10",
@@ -561,7 +602,10 @@
       "end_date": "2026-03-10",
       "delivery": "in_person",
       "event_type": "user_group",
-      "tags": ["redhat", "devops"],
+      "tags": [
+        "redhat",
+        "devops"
+      ],
       "source": "redhat.com",
       "location": {
         "city": "Grand Rapids",
@@ -579,8 +623,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "red-hat-tech-day-toronto-2026-03-11",
@@ -590,7 +633,10 @@
       "end_date": "2026-03-11",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["redhat", "devops"],
+      "tags": [
+        "redhat",
+        "devops"
+      ],
       "source": "redhat.com",
       "location": {
         "city": "Toronto",
@@ -608,8 +654,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "detroit-red-hat-user-group-2026-03-11",
@@ -619,7 +664,10 @@
       "end_date": "2026-03-11",
       "delivery": "in_person",
       "event_type": "user_group",
-      "tags": ["redhat", "devops"],
+      "tags": [
+        "redhat",
+        "devops"
+      ],
       "source": "redhat.com",
       "location": {
         "city": "Royal Oak",
@@ -637,8 +685,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null,
-      "status": "upcoming"
+      "notes": null
     },
     {
       "id": "sreday-london-2026-q1",
@@ -648,7 +695,10 @@
       "end_date": "2026-03-12",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["sre", "devops"],
+      "tags": [
+        "sre",
+        "devops"
+      ],
       "source": "sreday.com",
       "location": {
         "city": "London",
@@ -666,8 +716,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Q1 London edition.",
-      "status": "upcoming"
+      "notes": "Q1 London edition."
     }
   ]
 }
