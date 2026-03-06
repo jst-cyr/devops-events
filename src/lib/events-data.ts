@@ -129,22 +129,31 @@ function filterRecordsByCountry(records: EventRecord[], country?: string): Event
   return records.filter((record) => record.location.country === country);
 }
 
-export async function getAvailableCountries(source: DashboardDataSource = "events"): Promise<string[]> {
+export async function getAvailableLocations(source: DashboardDataSource = "events"): Promise<string[]> {
   const records = await getAllRecords(source);
 
-  const countries = new Set<string>();
+  const locations = new Set<string>();
   for (const record of records) {
-    if (isPoorFit(record) || record.location.is_online) {
+    if (isPoorFit(record)) {
       continue;
     }
 
-    const country = record.location.country?.trim();
-    if (country) {
-      countries.add(country);
+    const location = record.location.country?.trim();
+    if (location) {
+      locations.add(location);
     }
   }
 
-  return [...countries].sort((a, b) => a.localeCompare(b));
+  return [...locations].sort((a, b) => {
+    if (a === "Online") {
+      return -1;
+    }
+    if (b === "Online") {
+      return 1;
+    }
+
+    return a.localeCompare(b);
+  });
 }
 
 function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {

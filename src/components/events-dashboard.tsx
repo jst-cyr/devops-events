@@ -421,17 +421,17 @@ export function EventsDashboard({
         {countryOptions && countryOptions.length > 0 ? (
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
             <label htmlFor="country-filter" className="text-sm font-medium">
-              Filter by country
+              Filter by location
             </label>
             <Select
               value={selectedCountry || "all"}
               onValueChange={(value) => void handleCountryChange(value === "all" ? "" : value)}
             >
               <SelectTrigger id="country-filter" className="sm:w-72">
-                <SelectValue placeholder="All countries" />
+                <SelectValue placeholder="All locations" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All countries</SelectItem>
+                <SelectItem value="all">All locations</SelectItem>
                 {(countryOptions ?? []).map((country) => (
                   <SelectItem key={country} value={country}>
                     {country}
