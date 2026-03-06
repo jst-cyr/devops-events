@@ -121,6 +121,32 @@ function isPoorFit(record: EventRecord): boolean {
   );
 }
 
+function filterRecordsByCountry(records: EventRecord[], country?: string): EventRecord[] {
+  if (!country) {
+    return records;
+  }
+
+  return records.filter((record) => record.location.country === country);
+}
+
+export async function getAvailableCountries(source: DashboardDataSource = "events"): Promise<string[]> {
+  const records = await getAllRecords(source);
+
+  const countries = new Set<string>();
+  for (const record of records) {
+    if (isPoorFit(record) || record.location.is_online) {
+      continue;
+    }
+
+    const country = record.location.country?.trim();
+    if (country) {
+      countries.add(country);
+    }
+  }
+
+  return [...countries].sort((a, b) => a.localeCompare(b));
+}
+
 function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
   const start = startOfUtcDay(now);
   const end =
@@ -237,6 +263,7 @@ export async function getDashboardFeed(options: {
   cursor?: number;
   limit?: number;
   windowDays?: number;
+  country?: string;
 }): Promise<DashboardFeedResponse> {
   const source = options.source ?? "events";
   const timeframe = options.timeframe ?? "upcoming";
@@ -244,7 +271,10 @@ export async function getDashboardFeed(options: {
   const cursor = normalizeCursor(options.cursor);
   const limit = normalizeLimit(options.limit);
   const records = await getAllRecords(source);
-  const visibleRecords = records.filter((record) => !isPoorFit(record));
+  const visibleRecords = filterRecordsByCountry(
+    records.filter((record) => !isPoorFit(record)),
+    options.country,
+  );
 
   const selected =
     options.kind === "cfp"

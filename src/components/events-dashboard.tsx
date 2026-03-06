@@ -22,6 +22,7 @@ import {
   type EventListItem,
 } from "@/lib/events-types";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Select } from "@/components/ui/select";
 
 type FeedState = DashboardFeedResponse & {
   loading: boolean;
@@ -188,8 +189,25 @@ function FeedSection({
   );
 }
 
-async function loadMoreFeed(kind: DashboardKind, cursor: number, apiPath: string, timeframe: DashboardTimeframe = "upcoming") {
-  const response = await fetch(`${apiPath}?kind=${kind}&timeframe=${timeframe}&cursor=${cursor}&limit=${DEFAULT_PAGE_SIZE}`);
+async function fetchFeedPage(options: {
+  kind: DashboardKind;
+  cursor: number;
+  apiPath: string;
+  timeframe?: DashboardTimeframe;
+  country?: string;
+}) {
+  const params = new URLSearchParams({
+    kind: options.kind,
+    timeframe: options.timeframe ?? "upcoming",
+    cursor: String(options.cursor),
+    limit: String(DEFAULT_PAGE_SIZE),
+  });
+
+  if (options.country) {
+    params.set("country", options.country);
+  }
+
+  const response = await fetch(`${options.apiPath}?${params.toString()}`);
 
   if (!response.ok) {
     throw new Error(response.status === 429 ? "Rate limit reached. Please wait and retry." : "Unable to load more events.");
@@ -206,6 +224,7 @@ export function EventsDashboard({
   apiPath = "/api/events",
   title = "DevOps Events Dashboard",
   subtitle = "Showing upcoming CFPs and events. Load more to view the next page.",
+  countryOptions,
 }: {
   initialCfps: DashboardFeedResponse;
   initialEvents: DashboardFeedResponse;
@@ -213,7 +232,9 @@ export function EventsDashboard({
   apiPath?: string;
   title?: string;
   subtitle?: string;
+  countryOptions?: string[];
 }) {
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [cfpState, setCfpState] = useState<FeedState>({
     ...initialCfps,
     loading: false,
@@ -233,6 +254,59 @@ export function EventsDashboard({
         }
       : null,
   );
+
+  const resetToInitialFeeds = () => {
+    setCfpState({ ...initialCfps, loading: false, error: null });
+    setEventState({ ...initialEvents, loading: false, error: null });
+    setPastEventState(
+      initialPastEvents
+        ? {
+            ...initialPastEvents,
+            loading: false,
+            error: null,
+          }
+        : null,
+    );
+  };
+
+  const loadFilteredFeeds = async (country: string) => {
+    setCfpState((previous) => ({ ...previous, loading: true, error: null }));
+    setEventState((previous) => ({ ...previous, loading: true, error: null }));
+    setPastEventState((previous) => (previous ? { ...previous, loading: true, error: null } : previous));
+
+    try {
+      const [cfpFeed, eventFeed, pastFeed] = await Promise.all([
+        fetchFeedPage({ kind: "cfp", cursor: 0, apiPath, timeframe: "upcoming", country }),
+        fetchFeedPage({ kind: "events", cursor: 0, apiPath, timeframe: "upcoming", country }),
+        pastEventState
+          ? fetchFeedPage({ kind: "events", cursor: 0, apiPath, timeframe: "past", country })
+          : Promise.resolve<DashboardFeedResponse | null>(null),
+      ]);
+
+      setCfpState({ ...cfpFeed, loading: false, error: null });
+      setEventState({ ...eventFeed, loading: false, error: null });
+
+      if (pastEventState && pastFeed) {
+        setPastEventState({ ...pastFeed, loading: false, error: null });
+      }
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unable to apply country filter.";
+      setCfpState((previous) => ({ ...previous, loading: false, error: message }));
+      setEventState((previous) => ({ ...previous, loading: false, error: message }));
+      setPastEventState((previous) => (previous ? { ...previous, loading: false, error: message } : previous));
+    }
+  };
+
+  const handleCountryChange = async (country: string) => {
+    setSelectedCountry(country);
+
+    if (!country) {
+      resetToInitialFeeds();
+      return;
+    }
+
+    await loadFilteredFeeds(country);
+  };
 
   const handleLoadMore = async (kind: DashboardKind, timeframe: DashboardTimeframe = "upcoming") => {
     const currentState =
@@ -259,7 +333,13 @@ export function EventsDashboard({
     }
 
     try {
-      const next = await loadMoreFeed(kind, currentState.nextCursor, apiPath, timeframe);
+      const next = await fetchFeedPage({
+        kind,
+        cursor: currentState.nextCursor,
+        apiPath,
+        timeframe,
+        country: selectedCountry || undefined,
+      });
 
       if (kind === "cfp") {
         setCfpState((previous) => ({
@@ -331,6 +411,27 @@ export function EventsDashboard({
           <ThemeToggle />
         </div>
         <p className="text-muted-foreground mt-2 text-sm sm:text-base">{subtitle}</p>
+
+        {countryOptions && countryOptions.length > 0 ? (
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+            <label htmlFor="country-filter" className="text-sm font-medium">
+              Filter by country
+            </label>
+            <Select
+              id="country-filter"
+              value={selectedCountry}
+              onChange={(event) => void handleCountryChange(event.target.value)}
+              className="sm:w-72"
+            >
+              <option value="">All countries</option>
+              {(countryOptions ?? []).map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </Select>
+          </div>
+        ) : null}
       </header>
 
       <div className="space-y-6">

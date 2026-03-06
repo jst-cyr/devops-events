@@ -5,6 +5,7 @@ import {
   DEFAULT_PAGE_SIZE,
   MAX_PAGE_SIZE,
   type DashboardKind,
+  type DashboardTimeframe,
 } from "@/lib/events-types";
 
 type RateLimitState = {
@@ -66,6 +67,19 @@ function parseLimit(limit: string | null): number {
   return Math.min(parsed, MAX_PAGE_SIZE);
 }
 
+function parseTimeframe(timeframe: string | null): DashboardTimeframe {
+  return timeframe === "past" ? "past" : "upcoming";
+}
+
+function parseCountry(country: string | null): string | undefined {
+  if (!country) {
+    return undefined;
+  }
+
+  const normalized = country.trim();
+  return normalized.length > 0 ? normalized : undefined;
+}
+
 export async function GET(request: NextRequest) {
   const clientIp = getClientIp(request);
   const isAllowed = checkRateLimit(clientIp);
@@ -83,10 +97,19 @@ export async function GET(request: NextRequest) {
 
   const url = new URL(request.url);
   const kind = parseKind(url.searchParams.get("kind"));
+  const timeframe = parseTimeframe(url.searchParams.get("timeframe"));
   const cursor = parseCursor(url.searchParams.get("cursor"));
   const limit = parseLimit(url.searchParams.get("limit"));
+  const country = parseCountry(url.searchParams.get("country"));
 
-  const feed = await getDashboardFeed({ kind, source: "events", cursor, limit });
+  const feed = await getDashboardFeed({
+    kind,
+    source: "events",
+    timeframe,
+    cursor,
+    limit,
+    country,
+  });
 
   return NextResponse.json(feed, {
     headers: {

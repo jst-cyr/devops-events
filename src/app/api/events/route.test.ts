@@ -49,7 +49,14 @@ describe("/api/events route", () => {
       }) as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "cfp", source: "events", cursor: 6, limit: 8 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({
+      kind: "cfp",
+      source: "events",
+      timeframe: "upcoming",
+      cursor: 6,
+      limit: 8,
+      country: undefined,
+    })
     expect(response.status).toBe(200)
     expect(response.headers.get("Cache-Control")).toBe("public, s-maxage=86400")
 
@@ -74,7 +81,14 @@ describe("/api/events route", () => {
       createRequest("http://localhost:3000/api/events?kind=invalid&cursor=-4&limit=0") as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "events", cursor: 0, limit: 30 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({
+      kind: "events",
+      source: "events",
+      timeframe: "upcoming",
+      cursor: 0,
+      limit: 30,
+      country: undefined,
+    })
   })
 
   it("returns 405 for write methods", async () => {
@@ -140,6 +154,13 @@ describe("/api/events route", () => {
     )
 
     expect(response.status).toBe(200)
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "events", cursor: 0, limit: 30 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({
+      kind: "events",
+      source: "events",
+      timeframe: "upcoming",
+      cursor: 0,
+      limit: 30,
+      country: undefined,
+    })
   })
 })
