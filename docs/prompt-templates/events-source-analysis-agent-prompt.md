@@ -175,7 +175,7 @@ If an event appears adjacent but not clearly aligned, default to exclude and cou
 
 ### Output requirements
 
-Produce five outputs:
+Produce six outputs:
 
 1. **Summary report** in markdown with:
    - Sources visited
@@ -259,6 +259,33 @@ Where `records` contains normalized `EventRecord` items.
 }
 ```
 
+6. **Prioritized CFP candidates JSON file** at `data/cfp-candidates.json`:
+   - Build from CFP tracker reconciliation results for records in the 56-day CFP window that are missing from both:
+      - `data/events.json`
+      - `data/events-candidates.json`
+   - Scope this file to the prioritized DevOps-relevant subset using this include filter across name/event_url/cfp_url (case-insensitive):
+      - `devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays`
+   - Sort by `cfp_close_date` ascending, then `name` ascending.
+   - Add `rank` starting at 1.
+   - Add `days_until_cfp_close` based on run date.
+   - Add `priority_tier`:
+      - `p0_urgent` for `days_until_cfp_close <= 14`
+      - `p1_high` for `days_until_cfp_close <= 28`
+      - `p2_medium` otherwise
+   - Use this exact file shape:
+
+```json
+{
+  "generated_at": "<ISO-8601 timestamp>",
+  "source_report": "data/adatosystems-cfp-validation-<YYYY-MM-DD>.json",
+  "window_start": "<YYYY-MM-DD>",
+  "window_end": "<YYYY-MM-DD>",
+  "prioritization": "Sorted by cfp_close_date asc, then name; tiers by days until close (<=14 p0, <=28 p1, else p2).",
+  "total_candidates": 0,
+  "candidates": []
+}
+```
+
 ### Quality checks before finalizing
 
 - Ensure every included event has a valid `name`, `event_url`, `start_date`, `end_date`, `delivery`, and `location`.
@@ -274,11 +301,13 @@ Where `records` contains normalized `EventRecord` items.
 - Ensure each `data/events-updates.json` record contains only `match`, `name`, and `changes`.
 - Ensure `data/events-candidates.json` is valid JSON.
 - Ensure `data/events-issues.json` is valid JSON.
+- Ensure `data/cfp-candidates.json` is valid JSON.
 - Ensure every failed attempt is represented in `data/events-issues.json`.
 - Ensure no unchanged existing records appear in `data/events-updates.json`.
 - Ensure no unchanged existing records appear in candidates.
 - Ensure no dev.events detail URL is used as final `event_url` when canonicalization fails.
 - Ensure each dev.events-derived record has deterministic canonicalization provenance in `notes`.
+- Ensure `data/cfp-candidates.json` is ordered by `cfp_close_date` then `name`, with deterministic `rank`, `days_until_cfp_close`, and `priority_tier`.
 
 ### Execution constraints
 
@@ -336,6 +365,36 @@ Use this fallback sequence:
 4. Keep `adatosystems.com/cfp-tracker` as an issue if still non-deterministic, but continue the run using the dated sublist results.
 5. Include deterministic notes when a candidate was sourced from the dated fallback post.
 
+### Local CFP tracker snapshot and conversion (required)
+
+For repeatable weekly runs, always create and use a local HTML snapshot before CFP reconciliation.
+
+1. Download the tracker page to the `data/` folder with run-date naming:
+   - `data/adatosystems-cfp-tracker-<YYYY-MM-DD>.html`
+2. Preferred command (raw HTML):
+
+```powershell
+curl.exe -L "https://adatosystems.com/cfp-tracker/" -o "data/adatosystems-cfp-tracker-<YYYY-MM-DD>.html"
+```
+
+3. If the table is not fully present in raw HTML, use browser-rendered fallback and save:
+   - `data/adatosystems-cfp-tracker-<YYYY-MM-DD>-rendered.html`
+
+```powershell
+node -e "const { chromium } = require('playwright'); (async()=>{ const b=await chromium.launch({headless:true}); const p=await b.newPage(); await p.goto('https://adatosystems.com/cfp-tracker/', {waitUntil:'networkidle'}); const fs=require('fs'); fs.writeFileSync('data/adatosystems-cfp-tracker-<YYYY-MM-DD>-rendered.html', await p.content(), 'utf8'); await b.close(); })();"
+```
+
+4. Parse the local HTML table (`Event Name`, `City`, `Country`, `Event Start`, `Event End`, `CFP Close`, `Event URL`, `CFP URL`) and convert to JSON rows.
+5. Filter CFP rows to the 56-day CFP window (`today` to `today+56`, inclusive).
+6. Reconcile filtered rows against both `data/events.json` and `data/events-candidates.json` using URL-first matching (`event_url`, then `cfp_url`), with optional name-only indicator.
+7. Write validation report to:
+   - `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`
+8. Validation report must include:
+   - `window_start`, `window_end`
+   - totals: `considered_rows`, `covered_by_url`, `name_match_only`, `missing`
+   - arrays: `missing`, `name_match_only`
+9. Generate `data/cfp-candidates.json` from the `missing` array using the prioritization rules in Output #6.
+
 ### Run notes for next execution (2026-02-27)
 
 - Do **not** use `dev.events` `.ics` links for extraction; these may trigger file downloads and are not reliable in this environment.
@@ -359,4 +418,6 @@ Now execute this workflow and provide:
 2) the created/updated `data/events-updates.json`,
 3) a concise markdown list of updates,
 4) the created/updated `data/events-candidates.json`,
-5) the created/updated `data/events-issues.json`.
+5) the created/updated `data/events-issues.json`,
+6) the created/updated `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`,
+7) the created/updated `data/cfp-candidates.json`.
