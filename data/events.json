@@ -954,7 +954,7 @@
     {
       "id": "developerweek-global-2026",
       "name": "DeveloperWeek Global",
-      "event_url": "https://www.developerweek.com/",
+      "event_url": "https://www.developerweek.com/global/",
       "start_date": "2026-03-04",
       "end_date": "2026-03-04",
       "delivery": "online",
@@ -982,7 +982,7 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Homepage explicitly lists VIRTUAL DeveloperWeek Global on March 4, 2026."
+      "notes": "Online DeveloperWeek Global record now points to the dedicated global site URL."
     },
     {
       "id": "beyond-traditional-virtualization-red-hat-2026-03-05",
@@ -2117,6 +2117,164 @@
         "cfp_status": "unknown"
       },
       "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
+    },
+    {
+      "id": "devopsdays-zurich-2026",
+      "name": "DevOpsDays Zurich 2026",
+      "event_url": "https://www.devopsdays.ch/",
+      "start_date": "2026-05-06",
+      "end_date": "2026-05-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform",
+        "security"
+      ],
+      "source": "sessionize.com",
+      "location": {
+        "city": "Winterthur",
+        "region": null,
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": "Alte Kaserne"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/devopsdays-zurich-2026/",
+        "cfp_open_date": "2025-10-01",
+        "cfp_close_date": "2026-01-31",
+        "cfp_timezone": "Europe/Zurich",
+        "cfp_status": "closed"
+      },
+      "notes": "Added for historical coverage. Sessionize confirms event dates, location, and closed CFP window."
+    },
+    {
+      "id": "developerweek-2026-san-jose",
+      "name": "DeveloperWeek 2026",
+      "event_url": "https://www.developerweek.com/conference/",
+      "start_date": "2026-02-18",
+      "end_date": "2026-02-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform",
+        "ai",
+        "software"
+      ],
+      "source": "developerweek.com",
+      "location": {
+        "city": "San Jose",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "San Jose Convention Center"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Homepage agenda overview lists February 18-20, 2026 at San Jose Convention Center for the in-person conference."
+    },
+    {
+      "id": "devopsdays-copenhagen-2026",
+      "name": "DevOpsDays Copenhagen",
+      "event_url": "https://devopsdays.org/events/2026-copenhagen/welcome/",
+      "start_date": "2026-04-28",
+      "end_date": "2026-04-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Copenhagen",
+        "region": null,
+        "country": "Denmark",
+        "country_code": "DK",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/devopsdays-2026/",
+        "cfp_open_date": "2025-12-03",
+        "cfp_close_date": "2026-02-01",
+        "cfp_timezone": "Europe/Copenhagen",
+        "cfp_status": "closed"
+      },
+      "notes": "Official CFP is the Sessionize call; out-of-season and unconference application links were excluded."
+    },
+    {
+      "id": "devopsdays-raleigh-2026",
+      "name": "DevOpsDays Raleigh",
+      "event_url": "https://devopsdays.org/events/2026-raleigh/welcome/",
+      "start_date": "2026-04-30",
+      "end_date": "2026-05-01",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Raleigh",
+        "region": "North Carolina",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "McKimmon Conference and Training Center"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Event window inclusion from canonical welcome page dates and venue details."
+    },
+    {
+      "id": "lock-down-the-lab-vault-backed-openshift-security-2026-03-26",
+      "name": "Lock Down the Lab: Vault-Backed OpenShift Security",
+      "event_url": "https://www.carahsoft.com/learn/event/76732-lock-down-the-lab-vault-backed-openshift-security",
+      "start_date": "2026-03-26",
+      "end_date": "2026-03-26",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "security",
+        "openshift",
+        "kubernetes",
+        "devops"
+      ],
+      "source": "carahsoft.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Source page explicitly describes the session as a webinar."
     }
   ]
 }
