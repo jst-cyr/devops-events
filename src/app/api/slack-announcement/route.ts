@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { getDashboardFeed } from "@/lib/events-data";
-import { FOUR_WEEKS_DAYS, MAX_PAGE_SIZE, type DashboardKind, type EventListItem } from "@/lib/events-types";
+import { MAX_PAGE_SIZE, TWO_WEEKS_DAYS, type DashboardKind, type EventListItem } from "@/lib/events-types";
 import { buildSlackAnnouncement } from "@/lib/slack-announcement";
 
 async function getAllWindowItems(kind: DashboardKind): Promise<EventListItem[]> {
@@ -14,7 +14,7 @@ async function getAllWindowItems(kind: DashboardKind): Promise<EventListItem[]> 
       kind,
       cursor,
       limit: MAX_PAGE_SIZE,
-      windowDays: FOUR_WEEKS_DAYS,
+      windowDays: TWO_WEEKS_DAYS,
     });
 
     items.push(...feed.items);

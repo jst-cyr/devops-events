@@ -70,6 +70,7 @@ describe("buildSlackAnnouncement", () => {
     });
 
     expect(message).toContain(":people_hugging: *Tech Events Around the World (Feb 27th edition)*");
+    expect(message).toContain("in the next 2 weeks");
     expect(message).toContain("*CFP opportunities closing soon:*");
     expect(message).toContain(":us: DevOpsDays Austin (Austin, Texas, United States). CFP due 2026-03-10: https://example.com/cfp");
     expect(message).toContain("*Events happening soon:*");
@@ -83,7 +84,7 @@ describe("buildSlackAnnouncement", () => {
       events: [],
     });
 
-    expect(message).toContain("_No CFP opportunities closing in the next 4 weeks._");
-    expect(message).toContain("_No events happening in the next 4 weeks._");
+    expect(message).toContain("_No CFP opportunities closing in the next 2 weeks._");
+    expect(message).toContain("_No events happening in the next 2 weeks._");
   });
 });
