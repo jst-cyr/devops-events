@@ -22,7 +22,13 @@ import {
   type EventListItem,
 } from "@/lib/events-types";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Select } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type FeedState = DashboardFeedResponse & {
   loading: boolean;
@@ -418,17 +424,20 @@ export function EventsDashboard({
               Filter by country
             </label>
             <Select
-              id="country-filter"
-              value={selectedCountry}
-              onChange={(event) => void handleCountryChange(event.target.value)}
-              className="sm:w-72"
+              value={selectedCountry || "all"}
+              onValueChange={(value) => void handleCountryChange(value === "all" ? "" : value)}
             >
-              <option value="">All countries</option>
-              {(countryOptions ?? []).map((country) => (
-                <option key={country} value={country}>
-                  {country}
-                </option>
-              ))}
+              <SelectTrigger id="country-filter" className="sm:w-72">
+                <SelectValue placeholder="All countries" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All countries</SelectItem>
+                {(countryOptions ?? []).map((country) => (
+                  <SelectItem key={country} value={country}>
+                    {country}
+                  </SelectItem>
+                ))}
+              </SelectContent>
             </Select>
           </div>
         ) : null}
