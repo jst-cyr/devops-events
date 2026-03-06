@@ -2455,6 +2455,40 @@
         "cfp_status": "open"
       },
       "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+    },
+    {
+      "id": "devbcn-2026",
+      "name": "DevBcn 2026",
+      "event_url": "https://www.devbcn.com/",
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "cloud",
+        "kubernetes",
+        "ai",
+        "software"
+      ],
+      "source": "devbcn.com",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "World Trade Center Barcelona"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.devbcn.com/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2025-12-31",
+        "cfp_timezone": "Europe/Madrid",
+        "cfp_status": "closed"
+      },
+      "notes": "Homepage lists June 16-17, 2026 at World Trade Center Barcelona; speaker call deadline shown as December 31, 2025."
     }
   ]
 }
