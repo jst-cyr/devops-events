@@ -2275,6 +2275,186 @@
         "cfp_status": "unknown"
       },
       "notes": "Source page explicitly describes the session as a webinar."
+    },
+    {
+      "id": "devopsdays-amsterdam-2026",
+      "name": "DevOpsDays Amsterdam",
+      "event_url": "https://devopsdays.org/events/2026-amsterdam/welcome/",
+      "start_date": "2026-06-19",
+      "end_date": "2026-06-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopsdays-2026/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-29",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+    },
+    {
+      "id": "cloud-native-summit-munich-2026",
+      "name": "Cloud Native Summit Munich",
+      "event_url": "https://cloudnativesummit.de/",
+      "start_date": "2026-06-29",
+      "end_date": "2026-06-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Munich",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-summit-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-31",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+    },
+    {
+      "id": "devopsdays-kansas-city-2026",
+      "name": "DevOpsDays Kansas City",
+      "event_url": "https://devopsdays.org/events/2026-kansas-city/welcome/",
+      "start_date": "2026-05-28",
+      "end_date": "2026-05-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Kansas City",
+        "region": "MO",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/communitydayskc-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-31",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+    },
+    {
+      "id": "sreday-barcelona-2026",
+      "name": "SREDay Barcelona",
+      "event_url": "https://sreday.com/2026-barcelona-q2/",
+      "start_date": "2026-05-08",
+      "end_date": "2026-05-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Barcelona",
+        "region": null,
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-barcelona-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-24",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+    },
+    {
+      "id": "devopsdays-graz-2026",
+      "name": "DevOpsDays Graz",
+      "event_url": "https://pretalx.com/redirect/?url=https%3A//www.devopsdays.at/%3AOi4vzuMvkiLLtgW2DFA7RArD_Mjn9YooECWmNMy5mtw",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Graz",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-30",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+    },
+    {
+      "id": "sreday-nyc-q2-2026",
+      "name": "SREDay NYC Q2",
+      "event_url": "https://sreday.com/2026-nyc-q2/",
+      "start_date": "2026-06-06",
+      "end_date": "2026-06-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "New York City",
+        "region": "NY",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/sreday-2026-nyc-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-01",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
     }
   ]
 }
