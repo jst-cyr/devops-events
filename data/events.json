@@ -1176,8 +1176,8 @@
         "cfp_url": "https://www.papercall.io/sreday-2026-san-francisco-q2",
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-16",
-        "cfp_timezone": "UTC",
-        "cfp_status": "open"
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "closing_soon"
       },
       "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall."
     },
@@ -1231,15 +1231,15 @@
         "country": "United States",
         "country_code": "US",
         "is_online": false,
-        "venue": null
+        "venue": "2033 6th Ave W suite 800"
       },
       "cfp": {
         "has_cfp": true,
         "cfp_url": "https://www.papercall.io/sreday-2026-seattle-q2",
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-16",
-        "cfp_timezone": "UTC",
-        "cfp_status": "open"
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "closing_soon"
       },
       "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall."
     },
