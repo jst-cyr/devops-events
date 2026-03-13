@@ -2489,6 +2489,163 @@
         "cfp_status": "closed"
       },
       "notes": "Homepage lists June 16-17, 2026 at World Trade Center Barcelona; speaker call deadline shown as December 31, 2025."
+    },
+    {
+      "id": "kcd-new-york-2026",
+      "name": "KCD New York",
+      "event_url": "https://kcdnewyork.com/",
+      "start_date": "2026-06-10",
+      "end_date": "2026-06-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "New York City",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-new-york-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-17",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Added from curated CFP candidates list."
+    },
+    {
+      "id": "austrian-platform-engineering-community-2026",
+      "name": "Austrian Platform Engineering Community",
+      "event_url": "https://www.brz.gv.at/wie-wir-arbeiten/Kontakt-aufnehmen/veranstaltungen/20260507-austrian-plattform-engineering-community-2026.html",
+      "start_date": "2026-05-07",
+      "end_date": "2026-05-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform",
+        "devops",
+        "cloud-native"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/austrian-plattform-engineering-community/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-22",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Added from curated CFP candidates list."
+    },
+    {
+      "id": "conf42-cloud-native-2026",
+      "name": "Conf42 Cloud Native",
+      "event_url": "https://www.conf42.com/cloud2026",
+      "start_date": "2026-04-23",
+      "end_date": "2026-04-23",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/conf42-cloud-native-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-23",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Added from curated CFP candidates list."
+    },
+    {
+      "id": "swiss-cloud-native-day-2026",
+      "name": "Swiss Cloud Native Day",
+      "event_url": "https://cloudnativeday.ch/",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Bern",
+        "region": null,
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/swiss-cloud-native-day-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-30",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Added from curated CFP candidates list."
+    },
+    {
+      "id": "devopsdays-berlin-2026",
+      "name": "DevOpsDays Berlin",
+      "event_url": "https://devopsdays.org/events/2026-berlin/welcome/",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.devopsdays.berlin/devopsdays-berlin-2026/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-03",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Added from curated CFP candidates list."
     }
   ]
 }
