@@ -2367,7 +2367,7 @@
       "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
     },
     {
-      "id": "sreday-barcelona-2026",
+      "id": "sreday-barcelona-2026-q2",
       "name": "SREDay Barcelona",
       "event_url": "https://sreday.com/2026-barcelona-q2/",
       "start_date": "2026-05-08",
@@ -2375,23 +2375,25 @@
       "delivery": "in_person",
       "event_type": "conference",
       "tags": [
-        "sre"
+        "sre",
+        "devops",
+        "cloud"
       ],
       "source": "adatosystems.com",
       "location": {
         "city": "Barcelona",
-        "region": null,
+        "region": "Catalunya",
         "country": "Spain",
         "country_code": "ES",
         "is_online": false,
-        "venue": null
+        "venue": "Dynatrace SLU, Lab Barcelona"
       },
       "cfp": {
         "has_cfp": true,
         "cfp_url": "https://cfp.ninja/e/sreday-2026-barcelona-q2",
         "cfp_open_date": null,
         "cfp_close_date": "2026-04-24",
-        "cfp_timezone": null,
+        "cfp_timezone": "Europe/Madrid",
         "cfp_status": "open"
       },
       "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
