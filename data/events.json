@@ -2849,6 +2849,46 @@
         "cost_level": "free",
         "notes": "No ticket page found; pricing unavailable; assumed free until confirmed"
       }
+    },
+    {
+      "id": "redhat-ai-roadshow-bellevue-2026-04-01",
+      "name": "Red Hat AI roadshow",
+      "event_url": "https://reg.experiences.redhat.com/flow/redhat/3496200/redhatfieldeventspreregnoappform/page/landingregistrationpage",
+      "start_date": "2026-04-01",
+      "end_date": "2026-04-01",
+      "delivery": "in_person",
+      "event_type": "workshop",
+      "tags": [
+        "ai",
+        "redhat",
+        "devops",
+        "cloud"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "Bellevue",
+        "region": "Washington",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Seattle Bellevue Marriott"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Red Hat roadshow events are free to attend with registration."
+      },
+      "notes": "Half-day experience (9 AM - 3 PM PT) covering AI-enabled applications on hybrid cloud with hands-on lab. Recovered from Red Hat events JSON endpoint."
     }
   ]
 }
