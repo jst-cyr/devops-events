@@ -2810,8 +2810,9 @@
       "cost": {
         "is_free": true,
         "lowest_price": null,
+        "price_currency": null,
         "cost_level": "free",
-        "notes": "Tickets listed as 'Available Soon'; pricing unavailable; assumed free until confirmed"
+        "notes": "Tickets listed as Available Soon; likely paid event but pricing unavailable. Assumed free until confirmed."
       }
     },
     {
@@ -2844,10 +2845,11 @@
       },
       "notes": "Added from curated CFP candidates list.",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "No ticket page found; pricing unavailable; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 209,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Early Bird EUR 209, General Admission EUR 249 (incl. 19% VAT)"
       }
     },
     {
@@ -2954,10 +2956,11 @@
         "venue": "The Convention Centre Dublin"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Registration not yet open; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 950,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Based on SREcon25 EMEA rates: Early Bird USD 950, Standard USD 1100, Late USD 1300. Registration not yet open for 2026."
       },
       "cfp": {
         "has_cfp": true,
@@ -3030,10 +3033,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 180,
+        "price_currency": "CHF",
+        "cost_level": "standard",
+        "notes": "Regular CHF 180, Corporate CHF 250. Workshops CHF 400 each."
       },
       "cfp": {
         "has_cfp": true,
@@ -3069,8 +3073,9 @@
       "cost": {
         "is_free": true,
         "lowest_price": null,
+        "price_currency": null,
         "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "notes": "KCD events are typically free. Bevy platform requires login for ticket; no pricing visible. Assumed free."
       },
       "cfp": {
         "has_cfp": true,
@@ -3103,10 +3108,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 599,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Early Bird USD 599 (closed), Regular USD 999, Group USD 599"
       },
       "cfp": {
         "has_cfp": true,
@@ -3140,10 +3146,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "GBP",
+        "cost_level": "budget",
+        "notes": "Student/Job Seeker GBP 49, Self-funding GBP 149, Early Bird GBP 299 (ended), GA GBP 399"
       },
       "cfp": {
         "has_cfp": true,
@@ -3176,10 +3183,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 128,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Regular EUR 160, Corporate EUR 260. Early Bird -20% until March 31 (Regular EUR 128, Corporate EUR 208)"
       },
       "cfp": {
         "has_cfp": true,
@@ -3212,10 +3220,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 599,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Early Bird EUR 599, Pre-Sale EUR 799, Regular EUR 999, Late Bird EUR 1199, Group EUR 599"
       },
       "cfp": {
         "has_cfp": true,
@@ -3248,10 +3257,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 300,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "2-Day Entry Ticket USD 300"
       },
       "cfp": {
         "has_cfp": true,
@@ -3285,10 +3295,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Student/Job Seeker USD 49, Self-funding USD 99, Early Bird USD 199 (ended), GA USD 299"
       },
       "cfp": {
         "has_cfp": true,
@@ -3323,8 +3334,9 @@
       "cost": {
         "is_free": true,
         "lowest_price": null,
+        "price_currency": null,
         "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "notes": "Registration page exists but not yet set up. DevOpsDays are typically paid. Assumed free until confirmed."
       },
       "cfp": {
         "has_cfp": true,
@@ -3361,8 +3373,9 @@
       "cost": {
         "is_free": true,
         "lowest_price": null,
+        "price_currency": null,
         "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "notes": "Free online conference - confirmed"
       },
       "cfp": {
         "has_cfp": true,
@@ -3396,10 +3409,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not confirmed; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Student/Job Seeker USD 49, Self-funding USD 99, Early Bird USD 199, GA USD 199"
       },
       "cfp": {
         "has_cfp": true,
