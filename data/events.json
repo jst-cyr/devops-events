@@ -3140,7 +3140,7 @@
       "location": {
         "city": "London",
         "region": null,
-        "country": "UK",
+        "country": "United Kingdom",
         "country_code": "GB",
         "is_online": false,
         "venue": null
@@ -3326,7 +3326,7 @@
       "location": {
         "city": "London",
         "region": null,
-        "country": "UK",
+        "country": "United Kingdom",
         "country_code": "GB",
         "is_online": false,
         "venue": null
