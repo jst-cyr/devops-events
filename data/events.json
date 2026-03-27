@@ -2889,6 +2889,125 @@
         "notes": "Red Hat roadshow events are free to attend with registration."
       },
       "notes": "Half-day experience (9 AM - 3 PM PT) covering AI-enabled applications on hybrid cloud with hands-on lab. Recovered from Red Hat events JSON endpoint."
+    },
+    {
+      "id": "sreday-cologne-2026-q2",
+      "name": "SREday Cologne 2026 Q2",
+      "event_url": "https://sreday.com/2026-cologne-q2/",
+      "start_date": "2026-06-11",
+      "end_date": "2026-06-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "site-reliability",
+        "devops",
+        "cloud-native",
+        "platform"
+      ],
+      "source": "sreday.com",
+      "location": {
+        "city": "Cologne",
+        "region": "Nordrhein-Westfalen",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "ilert GmbH"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "cost_level": "free",
+        "notes": "Free to attend with registration via Luma"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-cologne-q2",
+        "cfp_open_date": "2026-02-21",
+        "cfp_close_date": "2026-05-28",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "In-person only; no remote presentations. Outside 56-day event window but CFP is open."
+    },
+    {
+      "id": "srecon26-emea",
+      "name": "SREcon26 Europe/Middle East/Africa",
+      "event_url": "https://www.usenix.org/conference/srecon26emea",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "site-reliability",
+        "systems",
+        "devops"
+      ],
+      "source": "usenix.org",
+      "location": {
+        "city": "Dublin",
+        "region": null,
+        "country": "Ireland",
+        "country_code": "IE",
+        "is_online": false,
+        "venue": "The Convention Centre Dublin"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Registration not yet open; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://srecon26emea.usenix.hotcrp.com/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-27",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "CFP closes May 27 (just outside 56-day window). In-person presentations only."
+    },
+    {
+      "id": "tech-on-tap-san-diego-2026",
+      "name": "Tech on Tap - San Diego",
+      "event_url": "https://www.carahsoft.com/learn/event/76128-tech-on-tap---san-diego",
+      "start_date": "2026-04-16",
+      "end_date": "2026-04-16",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "networking",
+        "devops",
+        "automation",
+        "redhat",
+        "ansible"
+      ],
+      "source": "carahsoft.com",
+      "location": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Stone Brewing - Liberty Station"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "cost_level": "free",
+        "notes": "Free networking event with registration"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Afternoon networking event hosted by F5, Red Hat, Splunk, WWT & Carahsoft. Covers F5/Red Hat Ansible/Splunk Closed-Loop Automation for U.S. Navy."
     }
   ]
 }
