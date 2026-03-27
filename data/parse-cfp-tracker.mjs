@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 const html = readFileSync("data/adatosystems-cfp-tracker-2026-03-27.html", "utf8");
 
-const tableMatch = html.match(/<table[^>]*id="tablepress-1"[^>]*>([\s\S]*?)<\/table>/);
+const tableMatch = html.match(/<table[^>]*class="tablesorter"[^>]*>([\s\S]*?)<\/table>/);
 if (!tableMatch) { console.log("Table not found"); process.exit(1); }
 
 const tbody = tableMatch[1].match(/<tbody>([\s\S]*?)<\/tbody>/);
@@ -14,7 +14,7 @@ console.log("Total rows in table:", rows.length);
 const events = rows.map(row => {
   const cells = [...row[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(m => {
     const content = m[1].trim();
-    const linkMatch = content.match(/href="([^"]+)"/);
+    const linkMatch = content.match(/href="([^"]+)"/i);
     const textMatch = content.replace(/<[^>]+>/g, "").trim();
     return { text: textMatch, link: linkMatch ? linkMatch[1] : null };
   });
