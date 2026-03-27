@@ -44,7 +44,7 @@ describe("/api/events route", () => {
     })
 
     const response = await route.GET(
-      createRequest("http://localhost:3000/api/events?kind=cfp&cursor=6&limit=8", {
+      createRequest("http://localhost:3000/api/events?kind=cfp&cursor=6&limit=8&cost_level=budget", {
         "x-forwarded-for": "203.0.113.5",
       }) as never,
     )
@@ -56,6 +56,7 @@ describe("/api/events route", () => {
       cursor: 6,
       limit: 8,
       country: undefined,
+      costLevel: "budget",
     })
     expect(response.status).toBe(200)
     expect(response.headers.get("Cache-Control")).toBe("public, s-maxage=86400")
@@ -88,6 +89,7 @@ describe("/api/events route", () => {
       cursor: 0,
       limit: 30,
       country: undefined,
+      costLevel: undefined,
     })
   })
 
@@ -161,6 +163,34 @@ describe("/api/events route", () => {
       cursor: 0,
       limit: 30,
       country: undefined,
+      costLevel: undefined,
+    })
+  })
+
+  it("ignores invalid cost_level values", async () => {
+    const { route, getDashboardFeed } = await loadRouteWithMock()
+
+    getDashboardFeed.mockResolvedValue({
+      kind: "events",
+      items: [],
+      cursor: 0,
+      nextCursor: null,
+      hasMore: false,
+      total: 0,
+    })
+
+    await route.GET(
+      createRequest("http://localhost:3000/api/events?cost_level=unknown") as never,
+    )
+
+    expect(getDashboardFeed).toHaveBeenCalledWith({
+      kind: "events",
+      source: "events",
+      timeframe: "upcoming",
+      cursor: 0,
+      limit: 30,
+      country: undefined,
+      costLevel: undefined,
     })
   })
 })

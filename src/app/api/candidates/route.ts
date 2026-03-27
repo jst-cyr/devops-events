@@ -4,6 +4,7 @@ import { getDashboardFeed } from "@/lib/events-data";
 import {
   DEFAULT_PAGE_SIZE,
   MAX_PAGE_SIZE,
+  type CostLevel,
   type DashboardKind,
   type DashboardTimeframe,
 } from "@/lib/events-types";
@@ -71,6 +72,19 @@ function parseLimit(limit: string | null): number {
   return Math.min(parsed, MAX_PAGE_SIZE);
 }
 
+function parseCostLevel(costLevel: string | null): CostLevel | undefined {
+  if (!costLevel) {
+    return undefined;
+  }
+
+  const normalized = costLevel.trim().toLowerCase();
+  if (normalized === "free" || normalized === "budget" || normalized === "standard" || normalized === "premium") {
+    return normalized;
+  }
+
+  return undefined;
+}
+
 export async function GET(request: NextRequest) {
   const clientIp = getClientIp(request);
   const isAllowed = checkRateLimit(clientIp);
@@ -91,8 +105,9 @@ export async function GET(request: NextRequest) {
   const timeframe = parseTimeframe(url.searchParams.get("timeframe"));
   const cursor = parseCursor(url.searchParams.get("cursor"));
   const limit = parseLimit(url.searchParams.get("limit"));
+  const costLevel = parseCostLevel(url.searchParams.get("cost_level"));
 
-  const feed = await getDashboardFeed({ kind, source: "candidates", timeframe, cursor, limit });
+  const feed = await getDashboardFeed({ kind, source: "candidates", timeframe, cursor, limit, costLevel });
 
   return NextResponse.json(feed, {
     headers: {

@@ -4,6 +4,7 @@ import { getDashboardFeed } from "@/lib/events-data";
 import {
   DEFAULT_PAGE_SIZE,
   MAX_PAGE_SIZE,
+  type CostLevel,
   type DashboardKind,
   type DashboardTimeframe,
 } from "@/lib/events-types";
@@ -80,6 +81,19 @@ function parseCountry(country: string | null): string | undefined {
   return normalized.length > 0 ? normalized : undefined;
 }
 
+function parseCostLevel(costLevel: string | null): CostLevel | undefined {
+  if (!costLevel) {
+    return undefined;
+  }
+
+  const normalized = costLevel.trim().toLowerCase();
+  if (normalized === "free" || normalized === "budget" || normalized === "standard" || normalized === "premium") {
+    return normalized;
+  }
+
+  return undefined;
+}
+
 export async function GET(request: NextRequest) {
   const clientIp = getClientIp(request);
   const isAllowed = checkRateLimit(clientIp);
@@ -101,6 +115,7 @@ export async function GET(request: NextRequest) {
   const cursor = parseCursor(url.searchParams.get("cursor"));
   const limit = parseLimit(url.searchParams.get("limit"));
   const country = parseCountry(url.searchParams.get("country"));
+  const costLevel = parseCostLevel(url.searchParams.get("cost_level"));
 
   const feed = await getDashboardFeed({
     kind,
@@ -109,6 +124,7 @@ export async function GET(request: NextRequest) {
     cursor,
     limit,
     country,
+    costLevel,
   });
 
   return NextResponse.json(feed, {

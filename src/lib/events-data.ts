@@ -7,6 +7,7 @@ import {
   type DashboardFeedResponse,
   type DashboardKind,
   type DashboardTimeframe,
+  type CostLevel,
   type EventListItem,
   type EventRecord,
 } from "@/lib/events-types";
@@ -130,6 +131,27 @@ function filterRecordsByCountry(records: EventRecord[], country?: string): Event
   return records.filter((record) => record.location.country === country);
 }
 
+function resolveCostLevel(record: EventRecord): CostLevel | null {
+  if (record.cost?.is_free) {
+    return "free";
+  }
+
+  const value = record.cost?.cost_level;
+  if (value === "budget" || value === "standard" || value === "premium" || value === "free") {
+    return value;
+  }
+
+  return null;
+}
+
+function filterRecordsByCostLevel(records: EventRecord[], costLevel?: CostLevel): EventRecord[] {
+  if (!costLevel) {
+    return records;
+  }
+
+  return records.filter((record) => resolveCostLevel(record) === costLevel);
+}
+
 function filterByFreeEvents(records: EventRecord[]): EventRecord[] {
   return records.filter((record) => record.cost?.is_free === true);
 }
@@ -159,6 +181,25 @@ export async function getAvailableLocations(source: DashboardDataSource = "event
 
     return a.localeCompare(b);
   });
+}
+
+export async function getAvailableCostLevels(source: DashboardDataSource = "events"): Promise<CostLevel[]> {
+  const records = await getAllRecords(source);
+
+  const levels = new Set<CostLevel>();
+  for (const record of records) {
+    if (isPoorFit(record)) {
+      continue;
+    }
+
+    const level = resolveCostLevel(record);
+    if (level) {
+      levels.add(level);
+    }
+  }
+
+  const order: CostLevel[] = ["free", "budget", "standard", "premium"];
+  return order.filter((level) => levels.has(level));
 }
 
 function getUpcomingEventRecords(records: EventRecord[], now: Date, windowDays?: number): EventRecord[] {
@@ -278,6 +319,7 @@ export async function getDashboardFeed(options: {
   limit?: number;
   windowDays?: number;
   country?: string;
+  costLevel?: CostLevel;
 }): Promise<DashboardFeedResponse> {
   const source = options.source ?? "events";
   const timeframe = options.timeframe ?? "upcoming";
@@ -285,9 +327,12 @@ export async function getDashboardFeed(options: {
   const cursor = normalizeCursor(options.cursor);
   const limit = normalizeLimit(options.limit);
   const records = await getAllRecords(source);
-  const visibleRecords = filterRecordsByCountry(
-    records.filter((record) => !isPoorFit(record)),
-    options.country,
+  const visibleRecords = filterRecordsByCostLevel(
+    filterRecordsByCountry(
+      records.filter((record) => !isPoorFit(record)),
+      options.country,
+    ),
+    options.costLevel,
   );
 
   const selected =

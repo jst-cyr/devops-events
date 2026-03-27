@@ -231,6 +231,42 @@ describe("getDashboardFeed", () => {
     expect(page2.nextCursor).toBeNull()
   })
 
+  it("filters records by cost level with free derived from is_free", async () => {
+    const records = [
+      createEvent({
+        id: "free-derived",
+        start_date: "2026-03-01",
+        cost: {
+          is_free: true,
+        },
+      }),
+      createEvent({
+        id: "budget-level",
+        start_date: "2026-03-02",
+        cost: {
+          is_free: false,
+          cost_level: "budget",
+        },
+      }),
+      createEvent({
+        id: "standard-level",
+        start_date: "2026-03-03",
+        cost: {
+          is_free: false,
+          cost_level: "standard",
+        },
+      }),
+    ]
+
+    const { getDashboardFeed } = await loadModuleWithData(records)
+
+    const freeResult = await getDashboardFeed({ kind: "events", now: NOW, costLevel: "free" })
+    const budgetResult = await getDashboardFeed({ kind: "events", now: NOW, costLevel: "budget" })
+
+    expect(freeResult.items.map((item) => item.id)).toEqual(["free-derived"])
+    expect(budgetResult.items.map((item) => item.id)).toEqual(["budget-level"])
+  })
+
   it("reads events file once per module instance via cache", async () => {
     const records = [createEvent({ id: "event-1", start_date: "2026-02-27" })]
 

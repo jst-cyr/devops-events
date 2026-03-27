@@ -5,6 +5,7 @@ export const FOUR_WEEKS_DAYS = 28;
 
 export type DashboardKind = "cfp" | "events";
 export type DashboardTimeframe = "upcoming" | "past";
+export type CostLevel = "free" | "budget" | "standard" | "premium";
 
 export type EventRecord = {
   id: string;
@@ -36,7 +37,7 @@ export type EventRecord = {
     is_free: boolean;
     lowest_price?: number | null;
     price_currency?: string;
-    cost_level?: "free" | "budget" | "standard" | "premium";
+    cost_level?: CostLevel;
     notes?: string | null;
   };
   notes?: string | null;

@@ -46,12 +46,12 @@ describe("/api/candidates route", () => {
     })
 
     const response = await route.GET(
-      createRequest("http://localhost:3000/api/candidates?kind=cfp&cursor=3&limit=8", {
+      createRequest("http://localhost:3000/api/candidates?kind=cfp&cursor=3&limit=8&cost_level=free", {
         "x-forwarded-for": "203.0.113.6",
       }) as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "cfp", source: "candidates", timeframe: "upcoming", cursor: 3, limit: 8 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "cfp", source: "candidates", timeframe: "upcoming", cursor: 3, limit: 8, costLevel: "free" })
     expect(response.status).toBe(200)
     expect(response.headers.get("Cache-Control")).toBe("public, s-maxage=86400")
   })
@@ -72,7 +72,7 @@ describe("/api/candidates route", () => {
       createRequest("http://localhost:3000/api/candidates?kind=invalid&cursor=-4&limit=0") as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "upcoming", cursor: 0, limit: DEFAULT_PAGE_SIZE })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "upcoming", cursor: 0, limit: DEFAULT_PAGE_SIZE, costLevel: undefined })
   })
 
   it("parses and forwards past timeframe for event queries", async () => {
@@ -91,7 +91,26 @@ describe("/api/candidates route", () => {
       createRequest("http://localhost:3000/api/candidates?kind=events&timeframe=past&cursor=2&limit=5") as never,
     )
 
-    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "past", cursor: 2, limit: 5 })
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "past", cursor: 2, limit: 5, costLevel: undefined })
+  })
+
+  it("ignores invalid cost_level values", async () => {
+    const { route, getDashboardFeed } = await loadRouteWithMock()
+
+    getDashboardFeed.mockResolvedValue({
+      kind: "events",
+      items: [],
+      cursor: 0,
+      nextCursor: null,
+      hasMore: false,
+      total: 0,
+    })
+
+    await route.GET(
+      createRequest("http://localhost:3000/api/candidates?cost_level=unknown") as never,
+    )
+
+    expect(getDashboardFeed).toHaveBeenCalledWith({ kind: "events", source: "candidates", timeframe: "upcoming", cursor: 0, limit: DEFAULT_PAGE_SIZE, costLevel: undefined })
   })
 
   it("returns 405 for write methods", async () => {

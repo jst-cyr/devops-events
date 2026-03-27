@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card";
 import {
   DEFAULT_PAGE_SIZE,
+  type CostLevel,
   type DashboardFeedResponse,
   type DashboardKind,
   type DashboardTimeframe,
@@ -33,6 +34,13 @@ import {
 type FeedState = DashboardFeedResponse & {
   loading: boolean;
   error: string | null;
+};
+
+const COST_LEVEL_LABELS: Record<CostLevel, string> = {
+  free: "Free",
+  budget: "Budget",
+  standard: "Standard",
+  premium: "Premium",
 };
 
 function getFlagComponent(countryCode: string) {
@@ -252,6 +260,7 @@ async function fetchFeedPage(options: {
   apiPath: string;
   timeframe?: DashboardTimeframe;
   country?: string;
+  costLevel?: CostLevel;
 }) {
   const params = new URLSearchParams({
     kind: options.kind,
@@ -262,6 +271,10 @@ async function fetchFeedPage(options: {
 
   if (options.country) {
     params.set("country", options.country);
+  }
+
+  if (options.costLevel) {
+    params.set("cost_level", options.costLevel);
   }
 
   const response = await fetch(`${options.apiPath}?${params.toString()}`);
@@ -282,6 +295,7 @@ export function EventsDashboard({
   title = "DevOps Events Dashboard",
   subtitle = "Showing upcoming CFPs and events. Load more to view the next page.",
   countryOptions,
+  costLevelOptions,
 }: {
   initialCfps: DashboardFeedResponse;
   initialEvents: DashboardFeedResponse;
@@ -290,8 +304,10 @@ export function EventsDashboard({
   title?: string;
   subtitle?: string;
   countryOptions?: string[];
+  costLevelOptions?: CostLevel[];
 }) {
   const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedCostLevel, setSelectedCostLevel] = useState<CostLevel | "">("");
   const [cfpState, setCfpState] = useState<FeedState>({
     ...initialCfps,
     loading: false,
@@ -326,17 +342,17 @@ export function EventsDashboard({
     );
   };
 
-  const loadFilteredFeeds = async (country: string) => {
+  const loadFilteredFeeds = async (country: string, costLevel: CostLevel | "") => {
     setCfpState((previous) => ({ ...previous, loading: true, error: null }));
     setEventState((previous) => ({ ...previous, loading: true, error: null }));
     setPastEventState((previous) => (previous ? { ...previous, loading: true, error: null } : previous));
 
     try {
       const [cfpFeed, eventFeed, pastFeed] = await Promise.all([
-        fetchFeedPage({ kind: "cfp", cursor: 0, apiPath, timeframe: "upcoming", country }),
-        fetchFeedPage({ kind: "events", cursor: 0, apiPath, timeframe: "upcoming", country }),
+        fetchFeedPage({ kind: "cfp", cursor: 0, apiPath, timeframe: "upcoming", country, costLevel: costLevel || undefined }),
+        fetchFeedPage({ kind: "events", cursor: 0, apiPath, timeframe: "upcoming", country, costLevel: costLevel || undefined }),
         pastEventState
-          ? fetchFeedPage({ kind: "events", cursor: 0, apiPath, timeframe: "past", country })
+          ? fetchFeedPage({ kind: "events", cursor: 0, apiPath, timeframe: "past", country, costLevel: costLevel || undefined })
           : Promise.resolve<DashboardFeedResponse | null>(null),
       ]);
 
@@ -347,22 +363,31 @@ export function EventsDashboard({
         setPastEventState({ ...pastFeed, loading: false, error: null });
       }
     } catch (error) {
-      const message = error instanceof Error ? error.message : "Unable to apply country filter.";
+      const message = error instanceof Error ? error.message : "Unable to apply filters.";
       setCfpState((previous) => ({ ...previous, loading: false, error: message }));
       setEventState((previous) => ({ ...previous, loading: false, error: message }));
       setPastEventState((previous) => (previous ? { ...previous, loading: false, error: message } : previous));
     }
   };
 
-  const handleCountryChange = async (country: string) => {
+  const applyFilters = async (country: string, costLevel: CostLevel | "") => {
     setSelectedCountry(country);
+    setSelectedCostLevel(costLevel);
 
-    if (!country) {
+    if (!country && !costLevel) {
       resetToInitialFeeds();
       return;
     }
 
-    await loadFilteredFeeds(country);
+    await loadFilteredFeeds(country, costLevel);
+  };
+
+  const handleCountryChange = async (country: string) => {
+    await applyFilters(country, selectedCostLevel);
+  };
+
+  const handleCostLevelChange = async (costLevel: CostLevel | "") => {
+    await applyFilters(selectedCountry, costLevel);
   };
 
   const handleLoadMore = async (kind: DashboardKind, timeframe: DashboardTimeframe = "upcoming") => {
@@ -396,6 +421,7 @@ export function EventsDashboard({
         apiPath,
         timeframe,
         country: selectedCountry || undefined,
+        costLevel: selectedCostLevel || undefined,
       });
 
       if (kind === "cfp") {
@@ -469,27 +495,57 @@ export function EventsDashboard({
         </div>
         <p className="text-muted-foreground mt-2 text-sm sm:text-base">{subtitle}</p>
 
-        {countryOptions && countryOptions.length > 0 ? (
+        {(countryOptions && countryOptions.length > 0) || (costLevelOptions && costLevelOptions.length > 0) ? (
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
-            <label htmlFor="country-filter" className="text-sm font-medium">
-              Filter by location
-            </label>
-            <Select
-              value={selectedCountry || "all"}
-              onValueChange={(value) => void handleCountryChange(value === "all" ? "" : value)}
-            >
-              <SelectTrigger id="country-filter" className="sm:w-72">
-                <SelectValue placeholder="All locations" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All locations</SelectItem>
-                {(countryOptions ?? []).map((country) => (
-                  <SelectItem key={country} value={country}>
-                    {country}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            {countryOptions && countryOptions.length > 0 ? (
+              <>
+                <label htmlFor="country-filter" className="text-sm font-medium">
+                  Filter by location
+                </label>
+                <Select
+                  value={selectedCountry || "all"}
+                  onValueChange={(value) => void handleCountryChange(value === "all" ? "" : value)}
+                >
+                  <SelectTrigger id="country-filter" className="sm:w-72">
+                    <SelectValue placeholder="All locations" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All locations</SelectItem>
+                    {(countryOptions ?? []).map((country) => (
+                      <SelectItem key={country} value={country}>
+                        {country}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </>
+            ) : null}
+
+            {costLevelOptions && costLevelOptions.length > 0 ? (
+              <>
+                <label htmlFor="cost-level-filter" className="text-sm font-medium">
+                  Filter by cost
+                </label>
+                <Select
+                  value={selectedCostLevel || "all"}
+                  onValueChange={(value) =>
+                    void handleCostLevelChange(value === "all" ? "" : (value as CostLevel))
+                  }
+                >
+                  <SelectTrigger id="cost-level-filter" className="sm:w-56">
+                    <SelectValue placeholder="All cost levels" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All cost levels</SelectItem>
+                    {(costLevelOptions ?? []).map((costLevel) => (
+                      <SelectItem key={costLevel} value={costLevel}>
+                        {COST_LEVEL_LABELS[costLevel]}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </>
+            ) : null}
           </div>
         ) : null}
       </header>
