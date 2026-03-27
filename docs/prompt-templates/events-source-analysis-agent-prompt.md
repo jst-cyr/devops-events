@@ -194,6 +194,16 @@ When extracting event data from event pages, also extract and normalize cost inf
 4. For non-matches:
    - Classify as **new candidates**.
 
+#### Cost backfill for existing records (required)
+
+When reconciling matched existing records, treat a missing or absent `cost` field as a field difference that requires an update:
+
+1. For every existing record that falls within the event window or CFP window **and** does not already have a `cost` object, visit the record's `event_url` (and any linked registration/ticketing page) to extract cost information.
+2. If cost data is successfully extracted, emit an update candidate with `cost` as the changed field (`old: null`, `new: <extracted cost object>`).
+3. If the event page cannot be reached or pricing is indeterminate, emit an update with `cost.is_free = false`, `cost.lowest_price = null`, and `cost.notes` explaining why (e.g., "Pricing not published yet" or "Event page returned HTTP 404").
+4. Do not skip existing records solely because their non-cost fields are unchanged — a missing `cost` field alone is sufficient reason to generate an update candidate.
+5. Prioritize in-window records first, then CFP-window-only records, to maximize coverage within token/time budgets.
+
 ### Output requirements
 
 Produce six outputs:
@@ -211,6 +221,7 @@ Produce six outputs:
          - the key used to match the existing record,
          - the event name,
          - field-level changed data (`old` vs `new`).
+      - Field additions count as differences: when a field (e.g., `cost`) is absent on the existing record but extracted from the source, use `"old": null` and `"new": <extracted value>`.
     - Use this exact file shape:
 
 ```json
