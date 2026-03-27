@@ -82,7 +82,7 @@ export function buildSlackAnnouncement(options: {
 }): string {
   const noticeWeeks = Math.floor(TWO_WEEKS_DAYS / 7);
   const heading = `:people_hugging: *Tech Events Around the World (${formatEditionDate(options.now)} edition)*`;
-  const intro = `This week's update highlights CFP deadlines and events in the next ${noticeWeeks} weeks where Puppet/DevOps/DevSecOps might be in the conversation. Looking for more? Check out the new: https://devops-events.vercel.app/.`;
+  const intro = `This week's update highlights CFP deadlines and events in the next ${noticeWeeks} weeks where Puppet/DevOps/DevSecOps might be in the conversation. For upcoming events, only free events are shown. Looking for more, including bigger events that have a ticket price? Check out the new: https://devops-events.vercel.app/.`;
 
   const cfpLines = options.cfps.length
     ? options.cfps.map(formatCfpLine)
