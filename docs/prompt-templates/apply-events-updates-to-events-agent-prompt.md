@@ -52,6 +52,15 @@ If all changed fields for an update item conflict, skip the whole update item.
 - Validate updated records against `docs/data-model.md` required fields/rules.
 - Ensure dates remain valid (`end_date >= start_date`).
 - Ensure URL fields remain absolute `https://`.
+- **Cost field validation** (when cost updates are applied):
+  - If `cost.is_free = true`:
+    - `cost.lowest_price` must be `null`, `0`, or absent.
+    - `cost.cost_level` should be `"free"` if present.
+  - If `cost.is_free = false`:
+    - `cost.lowest_price` may be a positive number or `null` (if unknown).
+    - `cost.price_currency` should be present (ISO 4217 code).
+    - `cost.cost_level` should be one of `"budget" | "standard" | "premium"` if present.
+  - Report validation failures for cost field updates.
 
 ### Output requirements
 

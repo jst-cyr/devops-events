@@ -32,6 +32,13 @@ export type EventRecord = {
     cfp_timezone: string | null;
     cfp_status: "upcoming" | "open" | "closing_soon" | "closed" | "unknown";
   };
+  cost?: {
+    is_free: boolean;
+    lowest_price?: number | null;
+    price_currency?: string;
+    cost_level?: "free" | "budget" | "standard" | "premium";
+    notes?: string | null;
+  };
   notes?: string | null;
 };
 
@@ -45,6 +52,7 @@ export type EventListItem = {
   location: EventRecord["location"];
   event_type?: string;
   tags?: string[];
+  cost?: EventRecord["cost"];
   cfp: {
     has_cfp: boolean;
     cfp_url: string | null;

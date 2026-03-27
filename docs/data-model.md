@@ -28,6 +28,7 @@ A single event (conference, meetup, webinar, user group, etc.).
 
 - `event_type` (enum): `conference` | `meetup` | `webinar` | `workshop` | `user_group` | `summit` | `other`.
 - `tags` (array of strings): Topics like `devops`, `platform`, `security`, `cloud-native`, `puppet`.
+- `cost` (object): Cost/pricing metadata for the event.
 - `cfp` (object): CFP metadata if the event accepts talks.
 - `notes` (string): Freeform context (for example: "Q1 NYC edition").
 - `timezone` (string): IANA timezone (example: `America/New_York`).
@@ -61,6 +62,21 @@ Include only when CFP information exists.
 - `cfp_timezone` (string | null): Timezone for deadline interpretation.
 - `cfp_status` (enum): `upcoming` | `open` | `closing_soon` | `closed` | `unknown`.
 
+## Nested object: `cost`
+
+Include when event pricing information is available.
+
+### Fields
+
+- `is_free` (boolean): `true` if the event is free to attend.
+- `lowest_price` (number | null): Lowest ticket price available in the specified currency. Must be `null` or omitted if `is_free = true`.
+- `price_currency` (string): ISO 4217 currency code (example: `USD`, `EUR`, `GBP`). Defaults to `USD` if omitted. Omit if `is_free = true`.
+- `cost_level` (enum | null): Categorical cost indicator for UI display. Values: `free` | `budget` | `standard` | `premium`. Set to `free` if `is_free = true`; otherwise derived from `lowest_price` range or agent judgement.
+  - `budget`: lowest ticket under $100 (or regional equivalent)
+  - `standard`: lowest ticket $100–$500
+  - `premium`: lowest ticket $500+
+- `notes` (string | null): Additional pricing context (example: "Early bird pricing available", "Corporate rate only", "Scholarship available").
+
 ## Validation rules
 
 - `end_date` must be greater than or equal to `start_date`.
@@ -68,6 +84,16 @@ Include only when CFP information exists.
 - If `cfp.has_cfp = false`, all other `cfp_*` fields should be `null`.
 - URLs should be absolute `https://` links.
 - Dates should always use `YYYY-MM-DD`.
+- **Cost validation**:
+  - If `cost.is_free = true`:
+    - `cost.lowest_price` must be `null`, `0`, or omitted.
+    - `cost.price_currency` should be omitted.
+    - `cost.cost_level` must be `"free"` if present.
+  - If `cost.is_free = false`:
+    - `cost.lowest_price` must be a positive number (or agent may set to `null` if pricing is unavailable/unclear).
+    - `cost.price_currency` should be present (defaults to `USD` if omitted).
+    - `cost.cost_level` must be one of `"budget" | "standard" | "premium"` if present.
+  - If `cost` object is absent, treat as pricing unknown (not free).
 
 ## Recommended normalized JSON example
 
@@ -89,6 +115,13 @@ Include only when CFP information exists.
     "country_code": "US",
     "is_online": false,
     "venue": null
+  },
+  "cost": {
+    "is_free": false,
+    "lowest_price": 199,
+    "price_currency": "USD",
+    "cost_level": "budget",
+    "notes": "Early bird tickets available"
   },
   "cfp": {
     "has_cfp": true,
@@ -124,6 +157,10 @@ Include only when CFP information exists.
     "country_code": "XX",
     "is_online": true,
     "venue": "Online"
+  },
+  "cost": {
+    "is_free": true,
+    "cost_level": "free"
   }
 }
 ```

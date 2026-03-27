@@ -160,6 +160,27 @@ If an event appears adjacent but not clearly aligned, default to exclude and cou
 - Ensure `end_date >= start_date`.
 - For online-only events, set `delivery: "online"`, `location.is_online: true`, `location.city: null`, `location.country: "Online"`, `location.country_code: "XX"` when applicable.
 
+#### Cost extraction (required)
+
+When extracting event data from event pages, also extract and normalize cost information:
+
+- Look for pricing/ticket information on event landing pages, registration pages, or linked ticketing pages.
+- Set `cost.is_free = true` if the event explicitly states it is free to attend.
+- If paid, extract the **lowest ticket price available** (e.g., earliest bird discount, base tier, or standard admission):
+  - Set `cost.lowest_price` to the numeric price (integer or decimal).
+  - Set `cost.price_currency` to the ISO 4217 code (example: `USD`, `EUR`, `GBP`). Default to `USD` if currency not explicitly stated and context suggests US pricing.
+  - Determine `cost.cost_level` based on lowest price:
+    - `budget`: lowest ticket < $100 (or regional equivalent)
+    - `standard`: lowest ticket $100–$500
+    - `premium`: lowest ticket ≥ $500
+  - Optionally include `cost.notes` if relevant (example: "Early bird pricing expired", "Requires corporate sponsorship").
+- If pricing information is unavailable or unclear after checking the event page and any linked ticketing site:
+  - Set `cost.is_free = false` and `cost.lowest_price = null`.
+  - Add a note in `cost.notes` explaining why pricing could not be determined (example: "Pricing not published yet").
+- If event page explicitly states pricing will be announced later:
+  - Set `cost.is_free = false`, `cost.lowest_price = null`, `cost.cost_level = null`.
+  - Add `cost.notes`: "Pricing to be announced."
+
 ### Reconciliation rules against `data/events.json`
 
 1. Load existing records from `data/events.json` (`records` array).

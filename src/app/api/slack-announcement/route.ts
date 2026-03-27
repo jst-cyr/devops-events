@@ -26,15 +26,18 @@ async function getAllWindowItems(kind: DashboardKind): Promise<EventListItem[]> 
 }
 
 export async function GET() {
-  const [cfps, events] = await Promise.all([
+  const [cfps, allEvents] = await Promise.all([
     getAllWindowItems("cfp"),
     getAllWindowItems("events"),
   ]);
 
+  // Filter events to include only free events for Slack announcements
+  const freeEvents = allEvents.filter((event) => event.cost?.is_free === true);
+
   const message = buildSlackAnnouncement({
     now: new Date(),
     cfps,
-    events,
+    events: freeEvents,
   });
 
   return NextResponse.json(

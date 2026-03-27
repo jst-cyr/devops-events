@@ -43,6 +43,15 @@ If any match exists, skip that candidate and record the reason.
   - `location.city: null`
   - `location.country: "Online"`
   - `location.country_code: "XX"` (if unknown)
+- **Cost validation** (when cost object is present):
+  - If `cost.is_free = true`:
+    - `cost.lowest_price` must be `null`, `0`, or absent.
+    - `cost.cost_level` should be `"free"` if present.
+  - If `cost.is_free = false`:
+    - `cost.lowest_price` may be a positive number or `null` (if unknown).
+    - `cost.price_currency` should be present (ISO 4217 code, defaults to `USD`).
+    - `cost.cost_level` should be one of `"budget" | "standard" | "premium"` if present.
+  - If cost object is absent, treat as pricing unknown (not an error; cost is optional).
 
 ### Write behavior
 

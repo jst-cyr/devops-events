@@ -74,6 +74,7 @@ function mapEventItem(record: EventRecord): EventListItem {
     location: record.location,
     event_type: record.event_type,
     tags: record.tags,
+    cost: record.cost,
     cfp: {
       has_cfp: record.cfp?.has_cfp ?? false,
       cfp_url: record.cfp?.cfp_url ?? null,
@@ -127,6 +128,10 @@ function filterRecordsByCountry(records: EventRecord[], country?: string): Event
   }
 
   return records.filter((record) => record.location.country === country);
+}
+
+function filterByFreeEvents(records: EventRecord[]): EventRecord[] {
+  return records.filter((record) => record.cost?.is_free === true);
 }
 
 export async function getAvailableLocations(source: DashboardDataSource = "events"): Promise<string[]> {

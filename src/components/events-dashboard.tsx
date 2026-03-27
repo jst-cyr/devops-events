@@ -100,6 +100,53 @@ function formatLocation(item: EventListItem): string {
   return locationParts.join(", ");
 }
 
+function getCostBadgeText(item: EventListItem): string | null {
+  if (!item.cost) {
+    return null;
+  }
+
+  if (item.cost.is_free) {
+    return "Free";
+  }
+
+  if (item.cost.lowest_price) {
+    const price = item.cost.lowest_price;
+    const currency = item.cost.price_currency || "USD";
+    const symbol = currency === "USD" ? "$" : currency === "EUR" ? "€" : currency;
+    return `From ${symbol}${price}`;
+  }
+
+  if (item.cost.cost_level === "budget") {
+    return "Budget";
+  }
+  if (item.cost.cost_level === "standard") {
+    return "Standard";
+  }
+  if (item.cost.cost_level === "premium") {
+    return "Premium";
+  }
+
+  return null;
+}
+
+function getCostBadgeVariant(
+  item: EventListItem
+): "default" | "outline" | "secondary" | "destructive" {
+  if (!item.cost) {
+    return "outline";
+  }
+
+  if (item.cost.is_free) {
+    return "default";
+  }
+
+  if (item.cost.cost_level === "budget") {
+    return "secondary";
+  }
+
+  return "outline";
+}
+
 function EventItem({
   item,
   kind,
@@ -109,17 +156,21 @@ function EventItem({
   kind: DashboardKind;
   showCfpCloseDate?: boolean;
 }) {
+  const costBadgeText = getCostBadgeText(item);
+  const costBadgeVariant = getCostBadgeVariant(item);
+
   return (
     <li className="h-full rounded-lg border p-4">
       <div className="flex items-center gap-2">
         <DeliveryIcon item={item} />
         <h3 className="text-base font-semibold">{item.name}</h3>
       </div>
-      {(kind === "cfp" || showCfpCloseDate) && item.cfp.cfp_close_date ? (
-        <div className="mt-2">
+      <div className="mt-2 flex flex-wrap gap-2">
+        {(kind === "cfp" || showCfpCloseDate) && item.cfp.cfp_close_date ? (
           <Badge variant="outline">CFP closes {formatDate(item.cfp.cfp_close_date)}</Badge>
-        </div>
-      ) : null}
+        ) : null}
+        {costBadgeText ? <Badge variant={costBadgeVariant}>{costBadgeText}</Badge> : null}
+      </div>
       <p className="text-muted-foreground mt-1 text-sm">
         {formatDate(item.start_date)}
         {item.end_date !== item.start_date ? ` - ${formatDate(item.end_date)}` : ""}
