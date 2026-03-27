@@ -61,7 +61,14 @@
         "cfp_timezone": "America/Chicago",
         "cfp_status": "closed"
       },
-      "notes": null
+      "notes": null,
+      "cost": {
+        "is_free": false,
+        "lowest_price": 249.99,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "$249.99 (excl. tax) via tickets.devopsdays.org"
+      }
     },
     {
       "id": "devopsdays-nashville-2026",
@@ -90,9 +97,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-02-27",
         "cfp_timezone": "UTC",
-        "cfp_status": "closing_soon"
+        "cfp_status": "closed"
       },
-      "notes": "City inferred from CFP page; post labels event as Nashville."
+      "notes": "City inferred from CFP page; post labels event as Nashville.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 90,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "General Admission $90 via Humanitix"
+      }
     },
     {
       "id": "ieee-cloud-summit-2026",
@@ -123,7 +137,7 @@
         "cfp_open_date": "2025-11-01",
         "cfp_close_date": "2026-02-28",
         "cfp_timezone": "America/New_York",
-        "cfp_status": "closing_soon"
+        "cfp_status": "closed"
       },
       "notes": null
     },
@@ -156,7 +170,7 @@
         "cfp_open_date": "2025-11-01",
         "cfp_close_date": "2026-02-28",
         "cfp_timezone": "Europe/Berlin",
-        "cfp_status": "closing_soon"
+        "cfp_status": "closed"
       },
       "notes": null
     },
@@ -186,9 +200,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-01",
         "cfp_timezone": "Asia/Tokyo",
-        "cfp_status": "closing_soon"
+        "cfp_status": "closed"
       },
-      "notes": "Event page indicates onsite event with online streaming available."
+      "notes": "Event page indicates onsite event with online streaming available.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 15000,
+        "price_currency": "JPY",
+        "cost_level": "standard",
+        "notes": "¥15,000 online / ¥25,000 in-person (regular)"
+      }
     },
     {
       "id": "cncf-meetup-platform-effect-kolkata-2026",
@@ -1177,9 +1198,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-16",
         "cfp_timezone": "America/Los_Angeles",
-        "cfp_status": "closing_soon"
+        "cfp_status": "closed"
       },
-      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall."
+      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": null
+      }
     },
     {
       "id": "devopsdays-atlanta-2026",
@@ -1209,7 +1237,14 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Detail page confirms April 21-22, 2026 and venue in Atlanta."
+      "notes": "Detail page confirms April 21-22, 2026 and venue in Atlanta.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 217.8,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "$217.80 via Eventbrite"
+      }
     },
     {
       "id": "sreday-seattle-2026-q2",
@@ -1239,9 +1274,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-16",
         "cfp_timezone": "America/Los_Angeles",
-        "cfp_status": "closing_soon"
+        "cfp_status": "closed"
       },
-      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall."
+      "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": null
+      }
     },
     {
       "id": "iacconf-2026",
@@ -1274,7 +1316,14 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP page states 'Submission Deadline: Friday April 7, 2026'."
+      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP page states 'Submission Deadline: Friday April 7, 2026'.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": "Free online conference"
+      }
     },
     {
       "id": "sreday-austin-2026-q2",
@@ -1306,7 +1355,14 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall."
+      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": null
+      }
     },
     {
       "id": "sreday-munich-2026-q2",
@@ -1338,7 +1394,14 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall."
+      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "EUR",
+        "cost_level": "free",
+        "notes": null
+      }
     },
     {
       "id": "ai-devcon-london-2026",
@@ -1368,7 +1431,7 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-02-27",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
     },
@@ -1400,9 +1463,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-01",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
-      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
+      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Dynamic ticket widget; pricing not extractable from page source"
+      }
     },
     {
       "id": "o11y-con-2026",
@@ -1432,9 +1502,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-13",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
-      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
+      "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Event page failed to load; pricing unavailable"
+      }
     },
     {
       "id": "techmang26-2026",
@@ -1821,7 +1898,14 @@
         "cfp_timezone": "UTC",
         "cfp_status": "closed"
       },
-      "notes": "Papercall CFP page includes event date and links to organizer site."
+      "notes": "Papercall CFP page includes event date and links to organizer site.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Event site (modernsecurity.io) is a training academy; conference pricing unclear"
+      }
     },
     {
       "id": "open-source-summit-north-america-2026",
@@ -1853,7 +1937,14 @@
         "cfp_timezone": "America/Chicago",
         "cfp_status": "closed"
       },
-      "notes": "CFP close date follows original Slack post wording; Sessionize close marker appears as 2026-02-17 in some local timezone views."
+      "notes": "CFP close date follows original Slack post wording; Sessionize close marker appears as 2026-02-17 in some local timezone views.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 275,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "$275 academic/hobbyist, $500 small biz, $899 standard attendee"
+      }
     },
     {
       "id": "devopsdays-geneva-2026",
@@ -1883,7 +1974,14 @@
         "cfp_timezone": "Europe/Zurich",
         "cfp_status": "closed"
       },
-      "notes": "CFP form indicates closed; canonical event details sourced from devopsdays.org event page."
+      "notes": "CFP form indicates closed; canonical event details sourced from devopsdays.org event page.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 90,
+        "price_currency": "CHF",
+        "cost_level": "budget",
+        "notes": "CHF 90 student / CHF 180 regular / CHF 200 with dinner"
+      }
     },
     {
       "id": "ndc-copenhagen-2026",
@@ -2049,7 +2147,14 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": "Free Red Hat webinar"
+      }
     },
     {
       "id": "redhat-rhel-in-cloud-2026-04-08",
@@ -2082,7 +2187,14 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": "Free Red Hat webinar"
+      }
     },
     {
       "id": "redhat-platform-engineering-roadshow-2026-04-22",
@@ -2116,7 +2228,14 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback."
+      "notes": "Recovered from Red Hat events JSON endpoint /rhdc/jsonapi/solr_search/event fallback.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": "Free Red Hat webinar"
+      }
     },
     {
       "id": "devopsdays-zurich-2026",
@@ -2148,7 +2267,14 @@
         "cfp_timezone": "Europe/Zurich",
         "cfp_status": "closed"
       },
-      "notes": "Added for historical coverage. Sessionize confirms event dates, location, and closed CFP window."
+      "notes": "Added for historical coverage. Sessionize confirms event dates, location, and closed CFP window.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": "CHF",
+        "cost_level": null,
+        "notes": "Ticket page (pretix) returned 404; pricing unavailable"
+      }
     },
     {
       "id": "developerweek-2026-san-jose",
@@ -2211,7 +2337,14 @@
         "cfp_timezone": "Europe/Copenhagen",
         "cfp_status": "closed"
       },
-      "notes": "Official CFP is the Sessionize call; out-of-season and unconference application links were excluded."
+      "notes": "Official CFP is the Sessionize call; out-of-season and unconference application links were excluded.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Ticketbutler page returned 'Event not found'; pricing unavailable"
+      }
     },
     {
       "id": "devopsdays-raleigh-2026",
@@ -2241,7 +2374,14 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Event window inclusion from canonical welcome page dates and venue details."
+      "notes": "Event window inclusion from canonical welcome page dates and venue details.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 150,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "$150 via tickets.devopsdays.org"
+      }
     },
     {
       "id": "lock-down-the-lab-vault-backed-openshift-security-2026-03-26",
@@ -2302,9 +2442,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-29",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closing_soon"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "No registration page found; pricing unavailable"
+      }
     },
     {
       "id": "cloud-native-summit-munich-2026",
@@ -2332,9 +2479,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-31",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closing_soon"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 149,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "€149 individual / €189 corporate (+19% VAT)"
+      }
     },
     {
       "id": "devopsdays-kansas-city-2026",
@@ -2362,9 +2516,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-31",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closing_soon"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 60,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Early-Bird Conference $60 via ti.to"
+      }
     },
     {
       "id": "sreday-barcelona-2026-q2",
@@ -2396,7 +2557,14 @@
         "cfp_timezone": "Europe/Madrid",
         "cfp_status": "open"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "EUR",
+        "cost_level": "free",
+        "notes": null
+      }
     },
     {
       "id": "devopsdays-graz-2026",
@@ -2426,7 +2594,14 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": 39,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Early Bird: Workshop €39 / Conference €49 / Combi €69"
+      }
     },
     {
       "id": "sreday-nyc-q2-2026",
@@ -2456,7 +2631,14 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot."
+      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": null
+      }
     },
     {
       "id": "devbcn-2026",
@@ -2520,7 +2702,7 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-17",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "notes": "Added from curated CFP candidates list."
     },
@@ -2552,9 +2734,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-22",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
-      "notes": "Added from curated CFP candidates list."
+      "notes": "Added from curated CFP candidates list.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Registration listed as 'coming soon'; pricing unavailable"
+      }
     },
     {
       "id": "conf42-cloud-native-2026",
@@ -2583,9 +2772,16 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-03-23",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
-      "notes": "Added from curated CFP candidates list."
+      "notes": "Added from curated CFP candidates list.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free",
+        "notes": "Free online conference"
+      }
     },
     {
       "id": "swiss-cloud-native-day-2026",
@@ -2617,7 +2813,14 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Added from curated CFP candidates list."
+      "notes": "Added from curated CFP candidates list.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": "CHF",
+        "cost_level": null,
+        "notes": "Tickets listed as 'Available Soon'; pricing unavailable"
+      }
     },
     {
       "id": "devopsdays-berlin-2026",
@@ -2647,7 +2850,14 @@
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Added from curated CFP candidates list."
+      "notes": "Added from curated CFP candidates list.",
+      "cost": {
+        "is_free": false,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "No ticket page found; pricing unavailable"
+      }
     }
   ]
 }
