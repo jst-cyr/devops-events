@@ -48,9 +48,10 @@ If any match exists, skip that candidate and record the reason.
     - `cost.lowest_price` must be `null`, `0`, or absent.
     - `cost.cost_level` should be `"free"` if present.
   - If `cost.is_free = false`:
-    - `cost.lowest_price` may be a positive number or `null` (if unknown).
-    - `cost.price_currency` should be present (ISO 4217 code, defaults to `USD`).
-    - `cost.cost_level` should be one of `"budget" | "standard" | "premium"` if present.
+    - `cost.lowest_price` must be a positive number.
+    - `cost.price_currency` must be present (ISO 4217 code, defaults to `USD`).
+    - `cost.cost_level` must be one of `"budget" | "standard" | "premium"`.
+  - If pricing is unknown or unavailable, `cost.is_free` must be `true` and `cost.cost_level` must be `"free"` (see **Unknown pricing rule** in data model).
   - If cost object is absent, treat as pricing unknown (not an error; cost is optional).
 
 ### Write behavior

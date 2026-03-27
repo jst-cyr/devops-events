@@ -175,11 +175,13 @@ When extracting event data from event pages, also extract and normalize cost inf
     - `premium`: lowest ticket ≥ $500
   - Optionally include `cost.notes` if relevant (example: "Early bird pricing expired", "Requires corporate sponsorship").
 - If pricing information is unavailable or unclear after checking the event page and any linked ticketing site:
-  - Set `cost.is_free = false` and `cost.lowest_price = null`.
-  - Add a note in `cost.notes` explaining why pricing could not be determined (example: "Pricing not published yet").
+  - Set `cost.is_free = true`, `cost.lowest_price = null`, `cost.cost_level = "free"`.
+  - Omit `cost.price_currency`.
+  - Add a note in `cost.notes` explaining why pricing could not be determined (example: "Pricing not published yet; assumed free until confirmed").
 - If event page explicitly states pricing will be announced later:
-  - Set `cost.is_free = false`, `cost.lowest_price = null`, `cost.cost_level = null`.
-  - Add `cost.notes`: "Pricing to be announced."
+  - Set `cost.is_free = true`, `cost.lowest_price = null`, `cost.cost_level = "free"`.
+  - Add `cost.notes`: "Pricing to be announced; assumed free until confirmed."
+- **Rationale**: Unknown-price events must not be excluded by free-event filters. Assume free until a confirmed price is found.
 
 ### Reconciliation rules against `data/events.json`
 
@@ -200,7 +202,7 @@ When reconciling matched existing records, treat a missing or absent `cost` fiel
 
 1. For every existing record that falls within the event window or CFP window **and** does not already have a `cost` object, visit the record's `event_url` (and any linked registration/ticketing page) to extract cost information.
 2. If cost data is successfully extracted, emit an update candidate with `cost` as the changed field (`old: null`, `new: <extracted cost object>`).
-3. If the event page cannot be reached or pricing is indeterminate, emit an update with `cost.is_free = false`, `cost.lowest_price = null`, and `cost.notes` explaining why (e.g., "Pricing not published yet" or "Event page returned HTTP 404").
+3. If the event page cannot be reached or pricing is indeterminate, emit an update with `cost.is_free = true`, `cost.lowest_price = null`, `cost.cost_level = "free"`, and `cost.notes` explaining why (e.g., "Pricing not published yet; assumed free until confirmed" or "Event page returned HTTP 404; assumed free until confirmed").
 4. Do not skip existing records solely because their non-cost fields are unchanged — a missing `cost` field alone is sufficient reason to generate an update candidate.
 5. Prioritize in-window records first, then CFP-window-only records, to maximize coverage within token/time budgets.
 

@@ -77,6 +77,16 @@ Include when event pricing information is available.
   - `premium`: lowest ticket $500+
 - `notes` (string | null): Additional pricing context (example: "Early bird pricing available", "Corporate rate only", "Scholarship available").
 
+### Unknown pricing rule
+
+When pricing information is unavailable, unclear, or not yet published, **assume the event is free** until confirmed otherwise:
+
+- Set `is_free = true`, `cost_level = "free"`, `lowest_price = null`.
+- Omit `price_currency`.
+- Include a `notes` value explaining why pricing is unknown (example: "Pricing not published yet; assumed free until confirmed").
+
+This prevents events with unknown pricing from being excluded by free-event filters.
+
 ## Validation rules
 
 - `end_date` must be greater than or equal to `start_date`.
@@ -93,7 +103,7 @@ Include when event pricing information is available.
     - `cost.lowest_price` must be a positive number (or agent may set to `null` if pricing is unavailable/unclear).
     - `cost.price_currency` should be present (defaults to `USD` if omitted).
     - `cost.cost_level` must be one of `"budget" | "standard" | "premium"` if present.
-  - If `cost` object is absent, treat as pricing unknown (not free).
+  - If `cost` object is absent, treat as pricing unknown — assume free (see **Unknown pricing rule** above).
 
 ## Recommended normalized JSON example
 
