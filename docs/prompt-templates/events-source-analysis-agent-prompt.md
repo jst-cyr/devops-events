@@ -418,16 +418,26 @@ curl.exe -L "https://adatosystems.com/cfp-tracker/" -o "data/adatosystems-cfp-tr
 node -e "const { chromium } = require('playwright'); (async()=>{ const b=await chromium.launch({headless:true}); const p=await b.newPage(); await p.goto('https://adatosystems.com/cfp-tracker/', {waitUntil:'networkidle'}); const fs=require('fs'); fs.writeFileSync('data/adatosystems-cfp-tracker-<YYYY-MM-DD>-rendered.html', await p.content(), 'utf8'); await b.close(); })();"
 ```
 
-4. Parse the local HTML table (`Event Name`, `City`, `Country`, `Event Start`, `Event End`, `CFP Close`, `Event URL`, `CFP URL`) and convert to JSON rows.
-5. Filter CFP rows to the 56-day CFP window (`today` to `today+56`, inclusive).
-6. Reconcile filtered rows against both `data/events.json` and `data/events-candidates.json` using URL-first matching (`event_url`, then `cfp_url`), with optional name-only indicator.
-7. Write validation report to:
-   - `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`
-8. Validation report must include:
-   - `window_start`, `window_end`
-   - totals: `considered_rows`, `covered_by_url`, `name_match_only`, `missing`
-   - arrays: `missing`, `name_match_only`
-9. Generate `data/cfp-candidates.json` from the `missing` array using the prioritization rules in Output #6.
+4. Run the automated parse-and-reconcile script:
+
+```powershell
+node scripts/parse-cfp-tracker.mjs <YYYY-MM-DD>
+```
+
+   This script performs steps 4–9 below automatically:
+   - Parses the HTML table (`Event Name`, `City`, `Country`, `Event Start`, `Event End`, `CFP Close`, `Event URL`, `CFP URL`). Note: the table uses `class="tablesorter"` and links use uppercase `<A HREF=` tags.
+   - Filters CFP rows to the 56-day CFP window.
+   - Reconciles against `data/events.json` and `data/events-candidates.json` using URL-first matching (`event_url`, then `cfp_url`), with name-only fallback.
+   - Writes validation report to `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`.
+   - Generates `data/cfp-candidates.json` from the `missing` array using the DevOps-relevance keyword filter and prioritization rules in Output #6.
+
+5. If the script is unavailable, perform these steps manually:
+   - Parse the local HTML table and convert to JSON rows.
+   - Filter CFP rows to the 56-day CFP window (`today` to `today+56`, inclusive).
+   - Reconcile filtered rows against both `data/events.json` and `data/events-candidates.json` using URL-first matching (`event_url`, then `cfp_url`), with optional name-only indicator.
+   - Write validation report to `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`.
+   - Validation report must include: `window_start`, `window_end`, totals (`considered_rows`, `covered_by_url`, `name_match_only`, `missing`), arrays (`missing`, `name_match_only`).
+   - Generate `data/cfp-candidates.json` from the `missing` array using the prioritization rules in Output #6.
 
 ### Run notes for next execution (2026-02-27)
 
