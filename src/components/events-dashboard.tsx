@@ -131,7 +131,7 @@ function getCostBadgeText(item: EventListItem): string | null {
 
 function getCostBadgeVariant(
   item: EventListItem
-): "default" | "outline" | "secondary" | "destructive" {
+): "default" | "outline" | "secondary" {
   if (!item.cost) {
     return "outline";
   }
