@@ -3102,7 +3102,7 @@
       "location": {
         "city": "New York",
         "region": "NY",
-        "country": "USA",
+        "country": "United States",
         "country_code": "US",
         "is_online": false,
         "venue": null
@@ -3251,7 +3251,7 @@
       "location": {
         "city": "Denver",
         "region": "CO",
-        "country": "USA",
+        "country": "United States",
         "country_code": "US",
         "is_online": false,
         "venue": null
@@ -3289,7 +3289,7 @@
       "location": {
         "city": "Austin",
         "region": "TX",
-        "country": "USA",
+        "country": "United States",
         "country_code": "US",
         "is_online": false,
         "venue": null
@@ -3403,7 +3403,7 @@
       "location": {
         "city": "New York City",
         "region": "NY",
-        "country": "USA",
+        "country": "United States",
         "country_code": "US",
         "is_online": false,
         "venue": null
