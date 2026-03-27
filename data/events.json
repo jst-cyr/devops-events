@@ -1467,11 +1467,10 @@
       },
       "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Dynamic ticket widget; pricing not extractable from page source"
+        "cost_level": "free",
+        "notes": "Dynamic ticket widget; pricing not extractable from page source; assumed free until confirmed"
       }
     },
     {
@@ -1506,11 +1505,10 @@
       },
       "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Event page failed to load; pricing unavailable"
+        "cost_level": "free",
+        "notes": "Event page failed to load; pricing unavailable; assumed free until confirmed"
       }
     },
     {
@@ -1900,11 +1898,10 @@
       },
       "notes": "Papercall CFP page includes event date and links to organizer site.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Event site (modernsecurity.io) is a training academy; conference pricing unclear"
+        "cost_level": "free",
+        "notes": "Event site (modernsecurity.io) is a training academy; conference pricing unclear; assumed free until confirmed"
       }
     },
     {
@@ -2269,11 +2266,10 @@
       },
       "notes": "Added for historical coverage. Sessionize confirms event dates, location, and closed CFP window.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": "CHF",
-        "cost_level": null,
-        "notes": "Ticket page (pretix) returned 404; pricing unavailable"
+        "cost_level": "free",
+        "notes": "Ticket page (pretix) returned 404; pricing unavailable; assumed free until confirmed"
       }
     },
     {
@@ -2339,11 +2335,10 @@
       },
       "notes": "Official CFP is the Sessionize call; out-of-season and unconference application links were excluded.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Ticketbutler page returned 'Event not found'; pricing unavailable"
+        "cost_level": "free",
+        "notes": "Ticketbutler page returned 'Event not found'; pricing unavailable; assumed free until confirmed"
       }
     },
     {
@@ -2446,11 +2441,10 @@
       },
       "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "No registration page found; pricing unavailable"
+        "cost_level": "free",
+        "notes": "No registration page found; pricing unavailable; assumed free until confirmed"
       }
     },
     {
@@ -2738,11 +2732,10 @@
       },
       "notes": "Added from curated CFP candidates list.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Registration listed as 'coming soon'; pricing unavailable"
+        "cost_level": "free",
+        "notes": "Registration listed as 'coming soon'; pricing unavailable; assumed free until confirmed"
       }
     },
     {
@@ -2815,11 +2808,10 @@
       },
       "notes": "Added from curated CFP candidates list.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": "CHF",
-        "cost_level": null,
-        "notes": "Tickets listed as 'Available Soon'; pricing unavailable"
+        "cost_level": "free",
+        "notes": "Tickets listed as 'Available Soon'; pricing unavailable; assumed free until confirmed"
       }
     },
     {
@@ -2852,11 +2844,10 @@
       },
       "notes": "Added from curated CFP candidates list.",
       "cost": {
-        "is_free": false,
+        "is_free": true,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "No ticket page found; pricing unavailable"
+        "cost_level": "free",
+        "notes": "No ticket page found; pricing unavailable; assumed free until confirmed"
       }
     }
   ]
