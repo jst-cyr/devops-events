@@ -3008,6 +3008,408 @@
         "cfp_status": "unknown"
       },
       "notes": "Afternoon networking event hosted by F5, Red Hat, Splunk, WWT & Carahsoft. Covers F5/Red Hat Ansible/Splunk Closed-Loop Automation for U.S. Navy."
+    },
+    {
+      "id": "cloud-native-zurich-2026",
+      "name": "Cloud Native Zurich",
+      "event_url": "https://cloudnativezurich.ch/",
+      "start_date": "2026-06-11",
+      "end_date": "2026-06-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native"
+      ],
+      "source": "cloudnativezurich.ch",
+      "location": {
+        "city": "Zurich",
+        "region": null,
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-zurich-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-31",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "kcd-czech-and-slovak-2026",
+      "name": "KCD Czech and Slovak",
+      "event_url": "https://community.cncf.io/events/details/cncf-kcd-czech-slovak-presents-kcd-czech-amp-slovak-prague-2026/",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "kubernetes"
+      ],
+      "source": "community.cncf.io",
+      "location": {
+        "city": "Prague",
+        "region": null,
+        "country": "Czechia",
+        "country_code": "CZ",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-czech-slovak-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-31",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "apidays-new-york-2026",
+      "name": "apidays New York",
+      "event_url": "https://www.apidays.global/events/new-york",
+      "start_date": "2026-05-13",
+      "end_date": "2026-05-14",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "api"
+      ],
+      "source": "www.apidays.global",
+      "location": {
+        "city": "New York",
+        "region": "NY",
+        "country": "USA",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://apidays.typeform.com/speak",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-14",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "llmday-london-2026",
+      "name": "LLMDay London",
+      "event_url": "https://llmday.com/2026-london-q2/",
+      "start_date": "2026-05-28",
+      "end_date": "2026-05-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "llm"
+      ],
+      "source": "llmday.com",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "UK",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/llmday-2026-london-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-20",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "cloud-native-days-austria-2026",
+      "name": "Cloud Native Days Austria",
+      "event_url": "https://cloudnativedays.at/",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native"
+      ],
+      "source": "cloudnativedays.at",
+      "location": {
+        "city": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-days-austria-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-30",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "apidays-munich-2026",
+      "name": "apidays Munich",
+      "event_url": "https://www.apidays.global/events/munich",
+      "start_date": "2026-07-08",
+      "end_date": "2026-07-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "api"
+      ],
+      "source": "www.apidays.global",
+      "location": {
+        "city": "Munich",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://apidays.typeform.com/speak",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-12",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "devopsdays-denver-2026",
+      "name": "DevOpsDays Denver",
+      "event_url": "https://devopsdays.org/events/2026-denver/welcome/",
+      "start_date": "2026-09-22",
+      "end_date": "2026-09-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Denver",
+        "region": "CO",
+        "country": "USA",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/dodroxrox26/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-15",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "llmday-austin-2026",
+      "name": "LLMDay Austin",
+      "event_url": "https://llmday.com/2026-austin-q2/",
+      "start_date": "2026-05-12",
+      "end_date": "2026-05-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "llm"
+      ],
+      "source": "llmday.com",
+      "location": {
+        "city": "Austin",
+        "region": "TX",
+        "country": "USA",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/llmday-2026-austin-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-15",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "devopsdays-london-2026",
+      "name": "DevOpsDays London",
+      "event_url": "https://devopsdays.org/events/2026-london/welcome/",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "UK",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSfbFEGYxD_9gEyBzIb4oFi47-6r9ATWp4fCfR3IPL48XPL_9Q/viewform",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-17",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "conf42-large-language-models-2026",
+      "name": "Conf42 Large Language Models",
+      "event_url": "https://www.conf42.com/llms2026",
+      "start_date": "2026-06-18",
+      "end_date": "2026-06-18",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "llm",
+        "devops"
+      ],
+      "source": "www.conf42.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/conf42-large-language-models-llms-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-18",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "llmday-nyc-q2-26-2026",
+      "name": "LLMDay NYC Q2 26",
+      "event_url": "https://llmday.com/2026-nyc-q2/",
+      "start_date": "2026-06-04",
+      "end_date": "2026-06-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "llm"
+      ],
+      "source": "llmday.com",
+      "location": {
+        "city": "New York City",
+        "region": "NY",
+        "country": "USA",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not confirmed; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/llmday-2026-nyc-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-21",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Sourced from AdatoSystems CFP tracker."
     }
   ]
 }
