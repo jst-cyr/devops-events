@@ -16,7 +16,152 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
-  /devops|sreday|o11y|observability|cloud.native|kcd|kubernetes|platform|llmday|apidays|devopsdays|conf42/i;
+  /devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays/i;
+
+const EXCLUDED_COUNTRIES = new Set([
+  "china",
+  "romania",
+  "mexico",
+  "argentina",
+  "bolivia",
+  "brazil",
+  "chile",
+  "colombia",
+  "ecuador",
+  "guyana",
+  "paraguay",
+  "peru",
+  "suriname",
+  "uruguay",
+  "venezuela",
+  "belize",
+  "costa rica",
+  "el salvador",
+  "guatemala",
+  "honduras",
+  "nicaragua",
+  "panama",
+  "saudi arabia",
+  "iraq",
+  "iran",
+  "israel",
+  "united arab emirates",
+  "qatar",
+  "kuwait",
+  "oman",
+  "bahrain",
+  "jordan",
+  "lebanon",
+  "yemen",
+  "syria",
+]);
+
+const EXCLUDED_AFRICA_COUNTRIES = new Set([
+  "algeria",
+  "angola",
+  "benin",
+  "botswana",
+  "burkina faso",
+  "burundi",
+  "cabo verde",
+  "cameroon",
+  "central african republic",
+  "chad",
+  "comoros",
+  "democratic republic of the congo",
+  "djibouti",
+  "egypt",
+  "equatorial guinea",
+  "eritrea",
+  "eswatini",
+  "ethiopia",
+  "gabon",
+  "gambia",
+  "ghana",
+  "guinea",
+  "guinea-bissau",
+  "ivory coast",
+  "cote d'ivoire",
+  "kenya",
+  "lesotho",
+  "liberia",
+  "libya",
+  "madagascar",
+  "malawi",
+  "mali",
+  "mauritania",
+  "mauritius",
+  "morocco",
+  "mozambique",
+  "namibia",
+  "niger",
+  "nigeria",
+  "republic of the congo",
+  "rwanda",
+  "sao tome and principe",
+  "senegal",
+  "seychelles",
+  "sierra leone",
+  "somalia",
+  "south africa",
+  "south sudan",
+  "sudan",
+  "tanzania",
+  "togo",
+  "tunisia",
+  "uganda",
+  "zambia",
+  "zimbabwe",
+]);
+
+const EXCLUDED_GEO_TOKENS = [
+  "romania",
+  "brasov",
+  "mexico",
+  "brazil",
+  "rio de janeiro",
+  "recife",
+  "campinas",
+  "natal",
+  "feira de santana",
+  "goiania",
+  "goi\u00e2nia",
+  "sao paulo",
+  "s\u00e3o paulo",
+  "peru",
+  "lima",
+  "argentina",
+  "bolivia",
+  "chile",
+  "colombia",
+  "ecuador",
+  "guyana",
+  "paraguay",
+  "suriname",
+  "uruguay",
+  "venezuela",
+  "belize",
+  "costa rica",
+  "el salvador",
+  "guatemala",
+  "honduras",
+  "nicaragua",
+  "panama",
+  "china",
+];
+
+function isExcludedGeography(event) {
+  const country = (event.country || "").trim().toLowerCase();
+  const geographyText = [event.city || "", event.country || "", event.event_url || "", event.name || ""]
+    .join(" ")
+    .toLowerCase();
+
+  if (EXCLUDED_COUNTRIES.has(country) || EXCLUDED_AFRICA_COUNTRIES.has(country)) {
+    return true;
+  }
+
+  return EXCLUDED_GEO_TOKENS.some((token) => geographyText.includes(token));
+}
 
 // ---------------------------------------------------------------------------
 // Resolve run date
@@ -182,7 +327,7 @@ const runDateMs = new Date(`${runDate}T00:00:00Z`).getTime();
 const candidates = missing
   .filter((e) => {
     const searchText = [e.name, e.event_url || "", e.cfp_url || ""].join(" ");
-    return KEYWORD_PATTERN.test(searchText);
+    return KEYWORD_PATTERN.test(searchText) && !isExcludedGeography(e);
   })
   .sort((a, b) => {
     if (a.cfp_close !== b.cfp_close) return a.cfp_close.localeCompare(b.cfp_close);
