@@ -1202,11 +1202,11 @@
       },
       "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall.",
       "cost": {
-        "is_free": true,
-        "lowest_price": 0,
+        "is_free": false,
+        "lowest_price": 49,
         "price_currency": "USD",
-        "cost_level": "free",
-        "notes": null
+        "cost_level": "budget",
+        "notes": "Lowest public ticket on the Luma page is the Student / Job Seeker tier at $49; approval-only Community Hero tickets were excluded from pricing."
       }
     },
     {
@@ -1266,7 +1266,7 @@
         "country": "United States",
         "country_code": "US",
         "is_online": false,
-        "venue": "2033 6th Ave W suite 800"
+        "venue": "2033 6th Ave #800"
       },
       "cfp": {
         "has_cfp": true,
@@ -1278,17 +1278,17 @@
       },
       "notes": "SREDay page redirects to Luma embed with date/location details; CFP close date verified on PaperCall.",
       "cost": {
-        "is_free": true,
-        "lowest_price": 0,
+        "is_free": false,
+        "lowest_price": 49,
         "price_currency": "USD",
-        "cost_level": "free",
-        "notes": null
+        "cost_level": "budget",
+        "notes": "Lowest public ticket on the Luma page is the Student / Job Seeker tier at $49; approval-only Community Hero tickets were excluded from pricing."
       }
     },
     {
       "id": "iacconf-2026",
       "name": "IaCConf 2026",
-      "event_url": "https://www.iacconf.com/events",
+      "event_url": "https://www.iacconf.com/iacconf-2026",
       "start_date": "2026-05-14",
       "end_date": "2026-05-14",
       "delivery": "online",
@@ -1310,19 +1310,18 @@
       },
       "cfp": {
         "has_cfp": true,
-        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSeY6-IlyYXSauF8Dg9cs7fHGKiSJqTcecdk_ARXOKHj6HNN6w/viewform?usp=dialog",
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSeY6-IlyYXSauF8Dg9cs7fHGKiSJqTcecdk_ARXOKHj6HNN6w/viewform",
         "cfp_open_date": null,
         "cfp_close_date": "2026-04-07",
         "cfp_timezone": null,
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP page states 'Submission Deadline: Friday April 7, 2026'.",
+      "notes": "IaCConf 2026 detail page confirms the canonical event URL and a May 14, 2026 online event at 11 AM EDT; CFP link preserved from the event page CTA.",
       "cost": {
         "is_free": true,
-        "lowest_price": 0,
-        "price_currency": "USD",
+        "lowest_price": null,
         "cost_level": "free",
-        "notes": "Free online conference"
+        "notes": "Pricing not published on the registration page; assumed free until confirmed."
       }
     },
     {
@@ -1345,7 +1344,7 @@
         "country": "United States",
         "country_code": "US",
         "is_online": false,
-        "venue": null
+        "venue": "The Sunset Room"
       },
       "cfp": {
         "has_cfp": true,
@@ -1355,13 +1354,13 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall.",
+      "notes": "Luma event page confirms the Austin venue and public ticket tiers; the event is also within the 56-day event window.",
       "cost": {
-        "is_free": true,
-        "lowest_price": 0,
+        "is_free": false,
+        "lowest_price": 49,
         "price_currency": "USD",
-        "cost_level": "free",
-        "notes": null
+        "cost_level": "budget",
+        "notes": "Lowest public ticket on the Luma page is the Student / Job Seeker tier at $49; approval-only Community Hero tickets were excluded from pricing."
       }
     },
     {
@@ -1380,11 +1379,11 @@
       "source": "sreday.com",
       "location": {
         "city": "Munich",
-        "region": null,
+        "region": "Bayern",
         "country": "Germany",
         "country_code": "DE",
         "is_online": false,
-        "venue": null
+        "venue": "MaibornWolff GmbH"
       },
       "cfp": {
         "has_cfp": true,
@@ -1394,13 +1393,12 @@
         "cfp_timezone": "UTC",
         "cfp_status": "open"
       },
-      "notes": "Included via CFP window: event date is outside 56-day event window, but CFP close date is explicitly listed on PaperCall.",
+      "notes": "Luma event page confirms free registration at MaibornWolff GmbH for the May 21, 2026 in-person event, which is also inside the 56-day event window.",
       "cost": {
         "is_free": true,
-        "lowest_price": 0,
-        "price_currency": "EUR",
+        "lowest_price": null,
         "cost_level": "free",
-        "notes": null
+        "notes": "Free ticket via Luma registration."
       }
     },
     {
@@ -2523,7 +2521,7 @@
     },
     {
       "id": "sreday-barcelona-2026-q2",
-      "name": "SREDay Barcelona",
+      "name": "SREday Barcelona 2026 Q2",
       "event_url": "https://sreday.com/2026-barcelona-q2/",
       "start_date": "2026-05-08",
       "end_date": "2026-05-08",
@@ -2534,7 +2532,7 @@
         "devops",
         "cloud"
       ],
-      "source": "adatosystems.com",
+      "source": "sreday.com",
       "location": {
         "city": "Barcelona",
         "region": "Catalunya",
@@ -2551,13 +2549,12 @@
         "cfp_timezone": "Europe/Madrid",
         "cfp_status": "open"
       },
-      "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
+      "notes": "Luma event page confirms free registration at Dynatrace SLU, Lab Barcelona for the May 8, 2026 in-person event.",
       "cost": {
         "is_free": true,
-        "lowest_price": 0,
-        "price_currency": "EUR",
+        "lowest_price": null,
         "cost_level": "free",
-        "notes": null
+        "notes": "Free ticket via Luma registration."
       }
     },
     {
