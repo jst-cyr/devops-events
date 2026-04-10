@@ -3421,6 +3421,194 @@
         "cfp_status": "open"
       },
       "notes": "Sourced from AdatoSystems CFP tracker."
+    },
+    {
+      "id": "ndc-oslo-2026",
+      "name": "NDC Oslo 2026",
+      "event_url": "https://ndcoslo.com/",
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "software",
+        "cloud",
+        "ndc"
+      ],
+      "source": "adatosystems",
+      "location": {
+        "city": "Oslo",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://ndcoslo.com/call-for-papers",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-04-19",
+        "cfp_timezone": "Europe/Oslo",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published in tracker; assumed free until confirmed."
+      },
+      "notes": null
+    },
+    {
+      "id": "ndc-techtown-2026",
+      "name": "NDC TechTown 2026",
+      "event_url": "https://ndctechtown.com/",
+      "start_date": "2026-09-21",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "software",
+        "cloud",
+        "ndc"
+      ],
+      "source": "adatosystems",
+      "location": {
+        "city": "Kongsberg",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://ndctechtown.com/call-for-papers",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-03",
+        "cfp_timezone": "Europe/Oslo",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published in tracker; assumed free until confirmed."
+      },
+      "notes": "Tracker contains two CFP submission rows with different URLs; secondary submission URL: https://sessionize.com/ndc-techtown-2026"
+    },
+    {
+      "id": "devops-midwest-2026",
+      "name": "DevOps Midwest 2026",
+      "event_url": "https://sketchdev.io/devopsmidwest/",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "adatosystems",
+      "location": {
+        "city": "St. Louis",
+        "region": "Missouri",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Webster University"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/cfps/6537/submissions/new",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-31",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Tickets not yet on sale; assumed free until confirmed."
+      },
+      "notes": "Canonical event URL resolved via redirect from tracker URL http://www.devopsmidwest.com/."
+    },
+    {
+      "id": "devopsdays-dallas-2026",
+      "name": "DevOpsDays Dallas",
+      "event_url": "https://devopsdays.org/events/2026-dallas/welcome/",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Dallas",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/DevOpsDaysDallas2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-01",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "notes": null
+    },
+    {
+      "id": "platformcon-paris-2026",
+      "name": "PlatformCon Live Day Paris 2026",
+      "event_url": "https://platformconlive.fr/",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform",
+        "devops"
+      ],
+      "source": "adatosystems",
+      "location": {
+        "city": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "Espace Charenton"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://platformconlive.fr/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-01",
+        "cfp_timezone": "Europe/Paris",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 325,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Super Early Bird €325; general pricing not yet published."
+      },
+      "notes": "Tracker listed event dates as 2026-09-25 to 2026-09-24 (inverted); corrected to 2026-09-24 per official website."
     }
   ]
 }
