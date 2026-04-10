@@ -16,7 +16,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
-  /devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays/i;
+  /devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays|ndc/i;
 const EXCLUDED_TOPIC_PATTERN = /\bdatabase\b|postgres|postgresql|mysql|mongodb|data platform|data engineering/i;
 
 const EXCLUDED_COUNTRIES = new Set([
