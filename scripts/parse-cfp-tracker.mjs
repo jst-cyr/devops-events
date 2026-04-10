@@ -17,6 +17,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
   /devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays/i;
+const EXCLUDED_TOPIC_PATTERN = /\bdatabase\b|postgres|postgresql|mysql|mongodb|data platform|data engineering/i;
 
 const EXCLUDED_COUNTRIES = new Set([
   "china",
@@ -27,6 +28,7 @@ const EXCLUDED_COUNTRIES = new Set([
   "brazil",
   "chile",
   "colombia",
+  "columbia",
   "ecuador",
   "guyana",
   "paraguay",
@@ -134,6 +136,8 @@ const EXCLUDED_GEO_TOKENS = [
   "bolivia",
   "chile",
   "colombia",
+  "columbia",
+  "bogota",
   "ecuador",
   "guyana",
   "paraguay",
@@ -327,7 +331,11 @@ const runDateMs = new Date(`${runDate}T00:00:00Z`).getTime();
 const candidates = missing
   .filter((e) => {
     const searchText = [e.name, e.event_url || "", e.cfp_url || ""].join(" ");
-    return KEYWORD_PATTERN.test(searchText) && !isExcludedGeography(e);
+    return (
+      KEYWORD_PATTERN.test(searchText) &&
+      !EXCLUDED_TOPIC_PATTERN.test(searchText) &&
+      !isExcludedGeography(e)
+    );
   })
   .sort((a, b) => {
     if (a.cfp_close !== b.cfp_close) return a.cfp_close.localeCompare(b.cfp_close);
