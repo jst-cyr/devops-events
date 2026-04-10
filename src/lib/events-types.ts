@@ -1,6 +1,7 @@
 export const DEFAULT_PAGE_SIZE = 30;
 export const MAX_PAGE_SIZE = 30;
 export const TWO_WEEKS_DAYS = 14;
+export const THREE_WEEKS_DAYS = 21;
 export const FOUR_WEEKS_DAYS = 28;
 
 export type DashboardKind = "cfp" | "events";

@@ -1,5 +1,7 @@
 import { TWO_WEEKS_DAYS, type EventListItem } from "@/lib/events-types";
 
+const EVENT_WINDOW_WEEKS = Math.floor(TWO_WEEKS_DAYS / 7);
+
 function dayOrdinal(day: number): string {
   if (day >= 11 && day <= 13) {
     return `${day}th`;
@@ -79,18 +81,19 @@ export function buildSlackAnnouncement(options: {
   now: Date;
   cfps: EventListItem[];
   events: EventListItem[];
+  cfpWindowDays?: number;
 }): string {
-  const noticeWeeks = Math.floor(TWO_WEEKS_DAYS / 7);
+  const cfpWeeks = Math.floor((options.cfpWindowDays ?? TWO_WEEKS_DAYS) / 7);
   const heading = `:people_hugging: *Tech Events Around the World (${formatEditionDate(options.now)} edition)*`;
-  const intro = `This week's update highlights CFP deadlines and events in the next ${noticeWeeks} weeks where Puppet/DevOps/DevSecOps might be in the conversation. For upcoming events, only free events are shown. Looking for more, including bigger events that have a ticket price? Check out the new: https://devops-events.vercel.app/.`;
+  const intro = `This week's update highlights CFP deadlines closing in the next ${cfpWeeks} weeks and events in the next ${EVENT_WINDOW_WEEKS} weeks where Puppet/DevOps/DevSecOps might be in the conversation. For upcoming events, only free events are shown. Looking for more, including bigger events that have a ticket price? Check out the new: https://devops-events.vercel.app/.`;
 
   const cfpLines = options.cfps.length
     ? options.cfps.map(formatCfpLine)
-    : ["_No CFP opportunities closing in the next 2 weeks._"];
+    : [`_No CFP opportunities closing in the next ${cfpWeeks} weeks._`];
 
   const eventLines = options.events.length
     ? options.events.map(formatEventLine)
-    : ["_No events happening in the next 2 weeks._"];
+    : [`_No events happening in the next ${EVENT_WINDOW_WEEKS} weeks._`];
 
   return [
     heading,

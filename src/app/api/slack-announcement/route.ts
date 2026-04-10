@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
 import { getDashboardFeed } from "@/lib/events-data";
-import { MAX_PAGE_SIZE, TWO_WEEKS_DAYS, type DashboardKind, type EventListItem } from "@/lib/events-types";
+import { MAX_PAGE_SIZE, THREE_WEEKS_DAYS, TWO_WEEKS_DAYS, type DashboardKind, type EventListItem } from "@/lib/events-types";
 import { buildSlackAnnouncement } from "@/lib/slack-announcement";
 
-async function getAllWindowItems(kind: DashboardKind): Promise<EventListItem[]> {
+async function getAllWindowItems(kind: DashboardKind, windowDays: number): Promise<EventListItem[]> {
   const items: EventListItem[] = [];
   let cursor = 0;
   let hasMore = true;
@@ -14,7 +14,7 @@ async function getAllWindowItems(kind: DashboardKind): Promise<EventListItem[]> 
       kind,
       cursor,
       limit: MAX_PAGE_SIZE,
-      windowDays: TWO_WEEKS_DAYS,
+      windowDays,
     });
 
     items.push(...feed.items);
@@ -27,8 +27,8 @@ async function getAllWindowItems(kind: DashboardKind): Promise<EventListItem[]> 
 
 export async function GET() {
   const [cfps, allEvents] = await Promise.all([
-    getAllWindowItems("cfp"),
-    getAllWindowItems("events"),
+    getAllWindowItems("cfp", THREE_WEEKS_DAYS),
+    getAllWindowItems("events", TWO_WEEKS_DAYS),
   ]);
 
   // Filter events to include only free events for Slack announcements
@@ -38,6 +38,7 @@ export async function GET() {
     now: new Date(),
     cfps,
     events: freeEvents,
+    cfpWindowDays: THREE_WEEKS_DAYS,
   });
 
   return NextResponse.json(
