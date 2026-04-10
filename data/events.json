@@ -1431,6 +1431,13 @@
         "cfp_timezone": null,
         "cfp_status": "closed"
       },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 180,
+        "price_currency": "GBP",
+        "cost_level": "standard",
+        "notes": "In-person ticket tiers observed from GBP 180; free virtual attendance option also listed."
+      },
       "notes": "Extracted from AdatoSystems dated CFP sublist (2026-02-27). Included via CFP window."
     },
     {
@@ -2007,6 +2014,12 @@
         "cfp_close_date": "2026-02-01",
         "cfp_timezone": "Europe/Copenhagen",
         "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not clearly published on the event page during crawl; assumed free until confirmed."
       },
       "notes": null
     },
