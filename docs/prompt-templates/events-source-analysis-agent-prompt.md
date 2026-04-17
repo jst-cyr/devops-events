@@ -15,19 +15,82 @@ Discover and reconcile:
 1. Events with `start_date` in next **180 days**.
 2. CFPs with `cfp.cfp_close_date` in next **56 days** (even if event date is outside 180 days).
 
-### Execution precedence (required)
+### Execution phases (required)
 
-- Primary flow is agent-led web discovery from all listed sources.
-- Do not start from prebuilt local discovery seed files.
-- Treat `dev.events` as the broad discovery source and fully process in-window index results.
-- Use local scripts only as post-discovery helpers (for example CFP parsing/reconciliation), never as event discovery replacements.
-- Do not overwrite `data/events-candidates.json` with empty `records` unless discovery completed successfully and truly found zero net-new records.
-- If discovery is incomplete/blocked, write deterministic issues and explicitly mark run status as incomplete in summary.
+Follow these phases in order. Do not skip phases or reorder them.
 
-### Sources to analyze
+#### Phase 1 — Programmatic extraction (scripted, deterministic)
 
-- https://dev.events/ (discovery/index only; dev.events detail URLs are never canonical event URLs)
-- https://adatosystems.com/cfp-tracker/
+Run local scripts to gather raw discovery data. Do not attempt manual web crawling for sources that have scripts.
+
+1. **dev.events extraction:**
+
+```powershell
+node scripts/fetch-dev-events.mjs <YYYY-MM-DD>
+```
+
+   - Produces `data/dev-events-<YYYY-MM-DD>.json` with all events in the 180-day window.
+   - Expect 1,000+ events. If the script returns fewer than 500, treat the run as incomplete and log to `data/events-issues.json`.
+   - This replaces all manual dev.events browsing. Do not crawl dev.events index pages directly.
+
+2. **CFP tracker extraction:**
+
+```powershell
+curl.exe -L "https://adatosystems.com/cfp-tracker/" -o "data/adatosystems-cfp-tracker-<YYYY-MM-DD>.html"
+node scripts/parse-cfp-tracker.mjs <YYYY-MM-DD>
+```
+
+   - Produces `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json` and `data/cfp-candidates.json`.
+
+#### Phase 2 — Agent-led filtering (agent judgment)
+
+Read the `data/dev-events-<YYYY-MM-DD>.json` file and apply both **relevance filtering** and **geographic filtering** (see criteria in sections below) to reduce the full list to a shortlist of relevant events.
+
+For each record in the dev.events extraction, evaluate:
+
+1. **Topic relevance** — Does the `topic` field and/or `name` match the relevance criteria? The `topic` field from dev.events is coarse (e.g., `SRE`, `DevOps`, `Tech`, `IT`), so also consider the event name for signals.
+2. **Geographic eligibility** — Is `location.country` in an excluded geography?
+3. **Already tracked** — Does the event already exist in `data/events.json` (match by `name + start_date + country`)?
+
+Output a filtered shortlist of net-new, relevant, geographically eligible events. Record filtering counts:
+- `total_extracted`: count from the dev.events JSON
+- `excluded_geography`: count removed by geo filter
+- `excluded_relevance`: count removed by topic filter
+- `already_tracked`: count matched to existing events.json
+- `shortlisted`: count remaining for enrichment
+
+#### Phase 3 — Agent-led enrichment (for shortlisted events only)
+
+For each shortlisted dev.events event, plus events discovered from other agent-crawled sources:
+
+1. **Canonicalize the event URL** — dev.events detail URLs are never canonical. Resolve using this priority:
+   a. Fetch the dev.events detail page and follow the HTTP redirect target.
+   b. Find an explicit outbound link (`Visit website`, `Official site`, `conference website`).
+   c. Parse embedded iframe `src` from raw HTML.
+   d. If none succeed: write issue `missing_canonical_url` and do not create candidate.
+
+2. **Extract CFP information** — Visit the canonical event page and look for CFP/CFS links. Follow the CFP extraction rules below.
+
+3. **Extract cost/pricing** — Follow the cost extraction rules below.
+
+4. **Set delivery type** — Determine `in_person`, `online`, or `hybrid` from event page content.
+
+5. **Normalize to EventRecord** — Shape the data per `docs/data-model.md`.
+
+Canonical URL rules:
+- Never use a dev.events detail URL as final `event_url`.
+- Accept only absolute `https://` URLs.
+- Reject iframe `src` values that are `javascript:`, `data:`, empty/malformed, dev.events self-links, or non-event assets.
+- Canonicalize deterministically (remove only clear tracking params).
+- Record provenance in `notes` using deterministic phrases:
+  - `Canonical URL extracted via redirect.`
+  - `Canonical URL extracted via explicit outbound link.`
+  - `Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).`
+
+#### Phase 4 — Agent-crawled supplemental sources
+
+Crawl these sources directly for additional events not covered by dev.events:
+
 - https://devopsdays.org/events
 - https://www.usenix.org/conference/srecon
 - https://sreday.com/
@@ -37,26 +100,22 @@ Discover and reconcile:
 - https://cfgmgmtcamp.org/
 - https://www.developerweek.com/
 
-### Dev.events canonicalization (required)
+Apply the same relevance, geographic, and inclusion filters. Reconcile against both `data/events.json` and the dev.events shortlist to avoid duplicates.
 
-For each dev.events discovery item, set canonical `event_url` using this order:
+#### Phase 5 — Reconciliation (scripted)
 
-1. Direct HTTP redirect target from dev.events detail URL.
-2. Explicit outbound link in detail content (`Visit website`, `Official site`, `conference website`).
-3. Embedded iframe `src` from rendered DOM.
-4. Raw HTML fallback: parse iframe `src` directly when rendered DOM misses it.
-5. If none succeed: write issue `missing_canonical_url` and do not create candidate/update.
+After enrichment is complete, run the reconciliation script with the combined enriched candidates:
 
-Rules:
+```powershell
+python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <enriched-candidates-file>
+```
 
-- Never use dev.events detail URL as final `event_url`.
-- Accept only absolute `https://` canonical URLs.
-- Reject iframe `src` values that are `javascript:`, `data:`, empty/malformed, dev.events self-links, or obvious non-event assets.
-- Canonicalize deterministically (remove only clear tracking params).
-- Record provenance in `notes` using deterministic phrases:
-  - `Canonical URL extracted via redirect.`
-  - `Canonical URL extracted via explicit outbound link.`
-  - `Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).`
+   - Produces `data/events-candidates.json` and `data/events-updates.json`.
+
+#### Guardrails
+
+- Do not overwrite `data/events-candidates.json` with empty `records` unless all phases completed successfully and truly found zero net-new records.
+- If any phase is incomplete or blocked, write deterministic issues to `data/events-issues.json` and explicitly mark run status as incomplete in the summary.
 
 ### Inclusion rules
 
@@ -65,7 +124,7 @@ Include a record if either is true:
 - `start_date` in [today, today+180], or
 - `cfp.has_cfp = true` and `cfp.cfp_close_date` in [today, today+56].
 
-Follow pagination/load-more/month navigation/detail pages as needed.
+The dev.events extraction script handles date-window pagination automatically. For other agent-crawled sources, follow pagination/load-more/month navigation/detail pages as needed.
 
 ### CFP extraction rules
 
@@ -178,8 +237,8 @@ Produce these outputs:
 - All failures represented in `data/events-issues.json`.
 - No unchanged records in updates/candidates.
 - Per-source summary counts included: `discovered`, `filtered`, `matched`, `new`, `failed`.
-- Summary includes dedicated dev.events discovery count.
-- Unexpectedly low dev.events discovery is treated as incomplete and logged in `data/events-issues.json`.
+- Summary includes dedicated dev.events counts from Phase 2 filtering: `total_extracted`, `excluded_geography`, `excluded_relevance`, `already_tracked`, `shortlisted`.
+- dev.events extraction returning fewer than 500 events is treated as incomplete and logged in `data/events-issues.json`.
 
 ### Source-specific fallback rules
 
@@ -212,18 +271,34 @@ If main tracker parsing is unreliable:
 2. Extract event name, city/country, event dates, CFP close date, event URL, CFP URL.
 3. Continue run using fallback results and record deterministic notes.
 
-### Local CFP snapshot workflow
+### Local script reference
 
-1. Download snapshot:
+#### dev.events extraction
+
+```powershell
+node scripts/fetch-dev-events.mjs <YYYY-MM-DD>
+```
+
+- Output: `data/dev-events-<YYYY-MM-DD>.json`
+- Paginates through all dev.events results for the 180-day window.
+- Extracts: `name`, `start_date`, `end_date`, `topic`, `location` (city/country/continent/is_online), `dev_events_url`.
+- Optional: `--window-days N` to override the default 180-day window.
+
+#### CFP tracker snapshot
 
 ```powershell
 curl.exe -L "https://adatosystems.com/cfp-tracker/" -o "data/adatosystems-cfp-tracker-<YYYY-MM-DD>.html"
-```
-
-2. Run parser:
-
-```powershell
 node scripts/parse-cfp-tracker.mjs <YYYY-MM-DD>
 ```
 
-If unavailable, perform manual parse/reconcile with identical output shapes and ordering.
+- Output: `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json` and `data/cfp-candidates.json`.
+- If download is unavailable, perform manual parse/reconcile with identical output shapes and ordering.
+
+#### Event reconciliation
+
+```powershell
+python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <candidates-file>
+```
+
+- Output: `data/events-candidates.json` and `data/events-updates.json`.
+- Handles match priority (event_url → id → name+date+country), cost backfill, and window filtering.
