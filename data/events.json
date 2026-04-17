@@ -3658,6 +3658,995 @@
         "notes": "Super Early Bird €325; general pricing not yet published."
       },
       "notes": "Tracker listed event dates as 2026-09-25 to 2026-09-24 (inverted); corrected to 2026-09-24 per official website."
+    },
+    {
+      "id": "dev-ops-con-amsterdam-bu3gtvcm",
+      "name": "DevOpsCon Amsterdam",
+      "event_url": "https://devopscon.io/amsterdam",
+      "start_date": "2026-04-20",
+      "end_date": "2026-04-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-con-and-ml-con-2026-jxgedvzp",
+      "name": "DevOpsCon & MLCon 2026",
+      "event_url": "https://devopscon.io/",
+      "start_date": "2026-04-20",
+      "end_date": "2026-04-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "devopsdays-atlanta-2026-ehpztrqi",
+      "name": "devopsdays Atlanta 2026",
+      "event_url": "https://www.devopsdays.org/atlanta",
+      "start_date": "2026-04-21",
+      "end_date": "2026-04-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Atlanta",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-summit-london-6xpn6jgv",
+      "name": "AWS Summit London",
+      "event_url": "https://aws.amazon.com/events/summits/london",
+      "start_date": "2026-04-22",
+      "end_date": "2026-04-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "devopsdays-zurich-yirsesji",
+      "name": "devopsdays Zurich",
+      "event_url": "https://devopsdays.org/events/2026-zurich/welcome",
+      "start_date": "2026-05-06",
+      "end_date": "2026-05-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Winterthur",
+        "region": null,
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-con-london-zi8-zsr6",
+      "name": "DevOpsCon London",
+      "event_url": "https://devopscon.io/london",
+      "start_date": "2026-05-11",
+      "end_date": "2026-05-15",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": true,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "ai-sre-summit-2026-wzlcn7rs",
+      "name": "AI SRE Summit 2026",
+      "event_url": "https://komodor.com/ai-sre-summit-2026",
+      "start_date": "2026-05-12",
+      "end_date": "2026-05-12",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "ai"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "kcd-toronto-canada-2026-2c-axqah",
+      "name": "KCD Toronto Canada 2026",
+      "event_url": "https://community.cncf.io/events/details/cncf-kcd-toronto-presents-kcd-toronto-canada-2026",
+      "start_date": "2026-05-13",
+      "end_date": "2026-05-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "containers",
+        "kubernetes"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Toronto",
+        "region": null,
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-days-nashville-2026-ie-umt2t",
+      "name": "DevOps Days Nashville 2026",
+      "event_url": "https://devopsdays.org/events/2026-nashville/welcome",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Murfreesboro",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-community-lounge-at-aws-summit-hamburg-2026-8aemtioh",
+      "name": "AWS Community Lounge at AWS Summit Hamburg 2026",
+      "event_url": "https://aws.amazon.com/events/summits/hamburg/",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Hamburg",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "cloud-native-days-amsterdam-zic3-bdy",
+      "name": "Cloud Native Days Amsterdam",
+      "event_url": "https://cloudnative.amsterdam/",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "sovereign-cloud-stack-summit-2026-kylzyuoz",
+      "name": "Sovereign Cloud Stack Summit 2026",
+      "event_url": "https://sovereigncloudstack.org/insights/scs-summit-2026",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-21",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "code-to-cloud-summit-2026-2qqpvpt8",
+      "name": "Code To Cloud Summit 2026",
+      "event_url": "https://www.codetocloud.io/summit",
+      "start_date": "2026-05-23",
+      "end_date": "2026-05-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Calgary",
+        "region": null,
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-con-san-diego-nuwsef3t",
+      "name": "DevOpsCon San Diego",
+      "event_url": "https://devopscon.io/san-diego",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-05",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Diego",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": true,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "code-buzz-2026-rvsf70u8",
+      "name": "CodeBuzz 2026",
+      "event_url": "https://summit-community.de/veranstaltung/codebuzz",
+      "start_date": "2026-06-02",
+      "end_date": "2026-06-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Leipzig",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-community-day-midwest-2026-i-4xw7vl",
+      "name": "AWS Community Day Midwest 2026",
+      "event_url": "https://www.midwestcommunityday.com/",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Milwaukee",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "sr-eday-nyc-2026-q2-wyu77e",
+      "name": "SREday NYC 2026 Q2",
+      "event_url": "https://sreday.com/2026-nyc-q2",
+      "start_date": "2026-06-06",
+      "end_date": "2026-06-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "New York",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "devopsdays-krakow-ivppdakb",
+      "name": "Devopsdays KrakÃ³w",
+      "event_url": "https://devopsdays.org/events/2026-krakow",
+      "start_date": "2026-06-06",
+      "end_date": "2026-06-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Krakow",
+        "region": null,
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-summit-los-angeles-2026-twlwpqh",
+      "name": "AWS Summit Los Angeles 2026",
+      "event_url": "https://aws.amazon.com/events/summits/los-angeles",
+      "start_date": "2026-06-10",
+      "end_date": "2026-06-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Los Angeles",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-con-berlin-2026-zfhrxhlq",
+      "name": "DevOpsCon Berlin 2026",
+      "event_url": "https://devopscon.io/berlin",
+      "start_date": "2026-06-15",
+      "end_date": "2026-06-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-community-day-east-canada-2026-shg-q0yp",
+      "name": "AWS Community Day - East Canada 2026",
+      "event_url": "https://awscommunitydayeast.ca/",
+      "start_date": "2026-06-20",
+      "end_date": "2026-06-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Montreal",
+        "region": null,
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "platform-con-live-day-new-york-bqbuaygj",
+      "name": "PlatformCon live day New York",
+      "event_url": "https://platformcon.com/live-day-nyc",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "New York",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "software-should-work-eqso6ou2",
+      "name": "Software Should Work",
+      "event_url": "https://softwareshould.work/",
+      "start_date": "2026-07-16",
+      "end_date": "2026-07-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Columbia",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "sei-summer-series-2026-pvff5-9u",
+      "name": "SEI Summer Series 2026",
+      "event_url": "https://sei.cmu.edu/events/sei-summer-series",
+      "start_date": "2026-07-21",
+      "end_date": "2026-07-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Arlington",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "sys-admin-day-2026-in-leipzig-wxpsfrz",
+      "name": "SysAdminDay 2026 in Leipzig",
+      "event_url": "https://www.sysadminday.it/",
+      "start_date": "2026-07-31",
+      "end_date": "2026-07-31",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Leipzig",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "cloud-x-2026-tukex82m",
+      "name": "CloudX 2026",
+      "event_url": "https://cloudxconf.com/",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-03",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Santa Clara",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-days-graz-2026-qcu4tvro",
+      "name": "DevOpsDays Graz 2026",
+      "event_url": "https://www.devopsdays.at/",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Graz",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "heise-dev-sec-54vlammx",
+      "name": "heise devSec",
+      "event_url": "https://heise-devsec.de/cfp.php",
+      "start_date": "2026-09-22",
+      "end_date": "2026-09-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Marburg",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-con-nyc-2026-fhrmd9tb",
+      "name": "DevOpsCon NYC 2026",
+      "event_url": "https://devopscon.io/new-york",
+      "start_date": "2026-09-28",
+      "end_date": "2026-10-02",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "New York",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": true,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "devopsdays-berlin-2026-55-y6mge",
+      "name": "Devopsdays Berlin 2026",
+      "event_url": "https://devopsdays.org/events/2026-berlin/welcome",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "dev-ops-days-dallas-2026-nx2u6qdw",
+      "name": "DevOpsDays Dallas 2026",
+      "event_url": "https://devopsdays.org/events/2026-dallas/welcome",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Dallas",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-community-summit-manchester-2026-xsfgkpun",
+      "name": "AWS Community Summit - Manchester 2026",
+      "event_url": "https://www.comsum.co.uk/",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Manchester",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "aws-community-day-bulgaria-2026-ydc8fty3",
+      "name": "AWS Community Day Bulgaria 2026",
+      "event_url": "https://www.aws-community-day.bg/bg",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-03",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Sofia",
+        "region": null,
+        "country": "Bulgaria",
+        "country_code": "BG",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "platform-con-live-day-london-jkpies1t",
+      "name": "PlatformCon Live Day London",
+      "event_url": "https://platformcon.com/live-day-london",
+      "start_date": "2026-06-23",
+      "end_date": "2026-06-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud",
+        "platform"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL manually resolved; dev.events detail page timed out during enrichment.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "bit-summit-2026-s8l3ulhg",
+      "name": "bit summit 2026",
+      "event_url": "https://bit-summit.com/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "containers",
+        "kubernetes"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Hamburg",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "notes": "Canonical URL manually resolved; dev.events detail page timed out during enrichment. Topics: GitOps, Kubernetes, CI/CD, SRE, DevOps.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
     }
   ]
 }
