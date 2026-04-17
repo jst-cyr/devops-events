@@ -106,3 +106,26 @@ export function buildSlackAnnouncement(options: {
     ...eventLines,
   ].join("\n");
 }
+
+export function buildSponsorshipMessage(options: {
+  now: Date;
+  events: EventListItem[];
+}): string {
+  const heading = `:handshake: *Sponsorship Opportunities (${formatEditionDate(options.now)} edition)*`;
+  const intro = `The following premium events are at least 2 months out — potential sponsorship targets worth evaluating. These are large events where investment is more likely to pay off.`;
+
+  const eventLines = options.events.length
+    ? options.events.map((item) => {
+        const emoji = emojiForCountry(item.location.country_code, item.location.is_online);
+        const location = formatLocation(item);
+        const when = formatEventDateRange(item);
+        const cost = item.cost?.lowest_price
+          ? ` | ${item.cost.price_currency ?? ""}${item.cost.lowest_price}+`
+          : "";
+
+        return `${emoji} *${item.name}* (${location}). ${when}${cost}: ${item.event_url}`;
+      })
+    : ["_No premium events found 2+ months out._"];
+
+  return [heading, intro, "", "*Events:*", ...eventLines].join("\n");
+}
