@@ -3702,35 +3702,6 @@
       }
     },
     {
-      "id": "dev-ops-con-and-ml-con-2026-jxgedvzp",
-      "name": "DevOpsCon & MLCon 2026",
-      "event_url": "https://devopscon.io/",
-      "start_date": "2026-04-20",
-      "end_date": "2026-04-24",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Amsterdam",
-        "region": null,
-        "country": "Netherlands",
-        "country_code": "NL",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted via explicit outbound link.",
-      "cost": {
-        "is_free": false,
-        "lowest_price": null,
-        "price_currency": "EUR",
-        "cost_level": "premium",
-        "notes": "DevOpsCon is a paid commercial conference series by Software & Support Media. Ticket page exists at devopscon.io but is behind cookie consent wall. All DevOpsCon events have paid tiers."
-      }
-    },
-    {
       "id": "devopsdays-atlanta-2026-ehpztrqi",
       "name": "devopsdays Atlanta 2026",
       "event_url": "https://www.devopsdays.org/atlanta",
