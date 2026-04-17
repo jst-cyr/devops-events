@@ -31,7 +31,7 @@ from typing import List, Dict, Any, Tuple, Optional
 class EventReconciler:
     """Reconcile discovered events against existing database."""
     
-    def __init__(self, run_date: datetime, data_dir: Path):
+    def __init__(self, run_date: datetime, data_dir: Path, all_cost_backfill: bool = False):
         """
         Initialize reconciler with run date and data directory.
         
@@ -50,6 +50,7 @@ class EventReconciler:
         self.existing_events: List[Dict[str, Any]] = []
         self.timestamp = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         self.run_date_str = run_date.strftime("%Y-%m-%d")
+        self.all_cost_backfill = all_cost_backfill
 
     @staticmethod
     def default_unknown_cost() -> Dict[str, Any]:
@@ -176,12 +177,14 @@ class EventReconciler:
         """
         updates = []
         for event in self.existing_events:
-            # Must be in the event window
-            if not self.is_in_event_window(
-                event.get("start_date", ""),
-                event.get("end_date", "")
-            ):
-                continue
+            # Default behavior backfills in-window records only.
+            # Optional all-record mode backfills every missing-cost record.
+            if not self.all_cost_backfill:
+                if not self.is_in_event_window(
+                    event.get("start_date", ""),
+                    event.get("end_date", "")
+                ):
+                    continue
             
             # Must lack cost data
             if event.get("cost"):
@@ -407,6 +410,12 @@ Examples:
         default="data",
         help="Path to data directory (default: data/)"
     )
+
+    parser.add_argument(
+        "--all-cost-backfill",
+        action="store_true",
+        help="Generate cost backfill updates for all existing events lacking cost (ignores event window)"
+    )
     
     args = parser.parse_args()
     
@@ -422,7 +431,7 @@ Examples:
         run_date = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
     
     # Create reconciler and run
-    reconciler = EventReconciler(run_date, args.data_dir)
+    reconciler = EventReconciler(run_date, args.data_dir, all_cost_backfill=args.all_cost_backfill)
     input_path = Path(args.input_file) if args.input_file else None
     
     try:
