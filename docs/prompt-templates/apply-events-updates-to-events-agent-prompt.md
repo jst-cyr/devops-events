@@ -8,26 +8,33 @@ Use this prompt in the agent window to apply reviewed update patches from `event
 
 You are a data-curation agent for the `devops-events` repository.
 
-Your task is to apply approved field-level changes from `data/events-updates.json` to matching records in `data/events.json`.
+Your task is to apply approved field-level changes from `data/events-updates.json` to matching records in `data/events.json` and/or `data/events-candidates.json`.
 
 ### Inputs
 
 - Canonical file: `data/events.json`
+- Candidate file: `data/events-candidates.json`
 - Updates file: `data/events-updates.json`
 - Data model reference: `docs/data-model.md`
 
 ### Expected updates file shape
 
 Each update record contains only:
+- optional `target` (`dataset`, `file`) where `dataset` is `events` or `candidates`
 - `match` (`key_type`, `key_value`)
 - `name`
 - `changes` (`field_path` -> `{ old, new }`)
 
 ### Matching behavior
 
-For each update item, locate exactly one existing record in `data/events.json` using `match`:
+For each update item, choose target dataset:
+- if `target.dataset = events` (or target omitted), apply to `data/events.json`
+- if `target.dataset = candidates`, apply to `data/events-candidates.json`
+
+Then locate exactly one existing record using `match`:
 - `key_type = event_url` => match exact `event_url`
 - `key_type = id` => match exact `id`
+- `key_type = dev_events_slug` => match exact `dev_events_slug` (candidate records)
 - `key_type = name+start_date+country` => derive and match normalized composite key
 
 If no record or multiple records match, skip and report.
@@ -35,7 +42,7 @@ If no record or multiple records match, skip and report.
 ### Pre-apply checks
 
 For each field in `changes`:
-- Verify current value in canonical record equals `old`.
+- Verify current value in target record equals `old`.
 - If current value differs from `old`, skip that field and report conflict.
 
 If all changed fields for an update item conflict, skip the whole update item.
@@ -45,7 +52,7 @@ If all changed fields for an update item conflict, skip the whole update item.
 - Apply only non-conflicting field updates.
 - Update only the fields listed under `changes`.
 - Do not alter unrelated fields.
-- Keep JSON valid and preserve canonical top-level structure.
+- Keep JSON valid and preserve each file's top-level structure.
 
 ### Post-apply validation
 
@@ -80,12 +87,12 @@ Provide:
    - reason (`not_found`, `multiple_matches`, `old_value_conflict`, `invalid_new_value`)
    - field paths impacted
 
-3. **Updated canonical file**:
-   - write applied result to `data/events.json`
+3. **Updated files**:
+  - write applied result to `data/events.json` and/or `data/events-candidates.json` based on applied targets
 
 ### Quality checks before finalizing
 
-- `data/events.json` is valid JSON.
+- `data/events.json` and `data/events-candidates.json` remain valid JSON (if touched).
 - Only requested fields changed.
 - No unmatched/ambiguous updates were silently applied.
 - Conflicts are fully reported.
@@ -93,4 +100,4 @@ Provide:
 Now execute the workflow and provide:
 1) apply summary,
 2) conflict/skips report,
-3) confirmation that `data/events.json` was updated.
+3) confirmation of which files were updated.

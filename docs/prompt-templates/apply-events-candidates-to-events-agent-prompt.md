@@ -10,6 +10,9 @@ You are a data-curation agent for the `devops-events` repository.
 
 Your task is to add approved records from `data/events-candidates.json` into `data/events.json` safely and deterministically.
 
+Cost review gate policy:
+- Candidate cost values should be reviewed and applied via `data/events-updates.json` before this merge step.
+
 ### Inputs
 
 - Canonical file: `data/events.json`
@@ -43,7 +46,8 @@ If any match exists, skip that candidate and record the reason.
   - `location.city: null`
   - `location.country: "Online"`
   - `location.country_code: "XX"` (if unknown)
-- **Cost validation** (when cost object is present):
+- **Cost validation** (required for insert):
+- Candidate record must include `cost` object.
   - If `cost.is_free = true`:
     - `cost.lowest_price` must be `null`, `0`, or absent.
     - `cost.cost_level` should be `"free"` if present.
@@ -52,7 +56,7 @@ If any match exists, skip that candidate and record the reason.
     - `cost.price_currency` must be present (ISO 4217 code, defaults to `USD`).
     - `cost.cost_level` must be one of `"budget" | "standard" | "premium"`.
   - If pricing is unknown or unavailable, `cost.is_free` must be `true` and `cost.cost_level` must be `"free"` (see **Unknown pricing rule** in data model).
-  - If cost object is absent, treat as pricing unknown (not an error; cost is optional).
+  - If cost object is absent, treat as `invalid` for this merge step and skip the record.
 
 ### Write behavior
 

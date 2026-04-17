@@ -50,6 +50,16 @@ class EventReconciler:
         self.existing_events: List[Dict[str, Any]] = []
         self.timestamp = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         self.run_date_str = run_date.strftime("%Y-%m-%d")
+
+    @staticmethod
+    def default_unknown_cost() -> Dict[str, Any]:
+        """Default cost payload when pricing cannot be verified yet."""
+        return {
+            "is_free": True,
+            "lowest_price": None,
+            "cost_level": "free",
+            "notes": "Pricing not yet published; assumed free until confirmed"
+        }
     
     def load_existing_events(self) -> List[Dict[str, Any]]:
         """Load existing events from data/events.json"""
@@ -178,6 +188,10 @@ class EventReconciler:
                 continue
             
             updates.append({
+                "target": {
+                    "dataset": "events",
+                    "file": "data/events.json"
+                },
                 "match": {
                     "key_type": "id",
                     "key_value": event.get("id")
@@ -186,16 +200,60 @@ class EventReconciler:
                 "changes": {
                     "cost": {
                         "old": None,
-                        "new": {
-                            "is_free": True,
-                            "lowest_price": None,
-                            "cost_level": "free",
-                            "notes": "Pricing not yet published; assumed free until confirmed"
-                        }
+                        "new": self.default_unknown_cost()
                     }
+                },
+                "evidence": {
+                    "source": "fallback",
+                    "method": "unknown_pricing_policy",
+                    "checked_at": self.timestamp,
+                    "confidence": "low"
                 }
             })
         
+        return updates
+
+    def identify_candidate_cost_updates(self, candidates: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Generate review-gated cost proposals for candidates lacking cost.
+
+        These updates target data/events-candidates.json and should be reviewed
+        through events-updates.json before candidate merge.
+        """
+        updates = []
+        for candidate in candidates:
+            if candidate.get("cost"):
+                continue
+
+            match_key = candidate.get("dev_events_slug") or candidate.get("id")
+            if not match_key:
+                # Candidate cannot be safely matched for patching.
+                continue
+
+            updates.append({
+                "target": {
+                    "dataset": "candidates",
+                    "file": "data/events-candidates.json"
+                },
+                "match": {
+                    "key_type": "dev_events_slug",
+                    "key_value": match_key
+                },
+                "name": candidate.get("name"),
+                "changes": {
+                    "cost": {
+                        "old": None,
+                        "new": self.default_unknown_cost()
+                    }
+                },
+                "evidence": {
+                    "source": "fallback",
+                    "method": "unknown_pricing_policy",
+                    "checked_at": self.timestamp,
+                    "confidence": "low"
+                }
+            })
+
         return updates
     
     def reconcile_events(self, discovered_events: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
@@ -235,16 +293,31 @@ class EventReconciler:
             updates.extend(cost_updates)
         else:
             print("[INFO] No cost backfill updates needed")
+
+        # Add review-gated cost defaults for new candidates
+        print("\n=== IDENTIFYING CANDIDATE COST PROPOSALS ===\n")
+        candidate_cost_updates = self.identify_candidate_cost_updates(new_candidates)
+        if candidate_cost_updates:
+            print(f"[INFO] Found {len(candidate_cost_updates)} candidates needing cost proposals")
+            updates.extend(candidate_cost_updates)
+        else:
+            print("[INFO] No candidate cost proposals needed")
         
         return updates, new_candidates
     
     def write_updates_file(self, updates: List[Dict[str, Any]]) -> None:
         """Write events-updates.json"""
+        events_target_count = sum(1 for u in updates if u.get("target", {}).get("dataset") == "events")
+        candidates_target_count = sum(1 for u in updates if u.get("target", {}).get("dataset") == "candidates")
         output_file = self.data_dir / "events-updates.json"
         output = {
             "generated_at": self.timestamp,
             "window_days": 180,
             "source_run_date": self.run_date_str,
+            "target_summary": {
+                "events": events_target_count,
+                "candidates": candidates_target_count
+            },
             "records": updates
         }
         with open(output_file, 'w') as f:
@@ -285,7 +358,10 @@ class EventReconciler:
         # Write outputs
         print("\n=== WRITING OUTPUT FILES ===\n")
         self.write_updates_file(updates)
-        self.write_candidates_file(candidates)
+        if input_file:
+            self.write_candidates_file(candidates)
+        else:
+            print("[SKIP] No input discoveries provided; preserving existing data/events-candidates.json")
         
         print()
         print(f"[COMPLETE] Reconciliation finished")
