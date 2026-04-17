@@ -144,13 +144,13 @@ class EventReconciler:
         # Fuzzy name + date + country (tertiary)
         new_name = new_event.get("name", "").lower().strip()
         new_start = new_event.get("start_date", "")
-        new_country = new_event.get("location", {}).get("country", "").lower()
+        new_country = (new_event.get("location", {}).get("country") or "").lower()
         
         if new_name and new_start and new_country:
             for existing in existing_events:
                 existing_name = existing.get("name", "").lower().strip()
                 existing_start = existing.get("start_date", "")
-                existing_country = existing.get("location", {}).get("country", "").lower()
+                existing_country = (existing.get("location", {}).get("country") or "").lower()
                 
                 if (new_name == existing_name and 
                     new_start == existing_start and 
