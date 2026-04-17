@@ -34,9 +34,9 @@
       "notes": "CFP in post applies to virtual program.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not yet published; assumed free until confirmed"
+        "notes": "PlatformCon homepage states virtual flagship week registration is free and distinguishes separate live-day tickets that are on sale."
       }
     },
     {
@@ -1339,7 +1339,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published on the registration page; assumed free until confirmed."
+        "notes": "Registration section captures attendee details and consent but does not publish paid ticket amounts on the public page."
       }
     },
     {
@@ -1493,7 +1493,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Dynamic ticket widget; pricing not extractable from page source; assumed free until confirmed"
+        "notes": "Official site links to a Buy Tickets flow (Ticket Tailor), confirming a ticketed registration path; public crawl did not expose actual ticket price amounts."
       }
     },
     {
@@ -2304,7 +2304,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Ticket page (pretix) returned 404; pricing unavailable; assumed free until confirmed"
+        "notes": "Registration page routes to a Tito ticket page (dodzh2026) where tickets are currently waitlist-only and no public price amounts are shown in crawl output."
       }
     },
     {
@@ -2373,7 +2373,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Ticketbutler page returned 'Event not found'; pricing unavailable; assumed free until confirmed"
+        "notes": "Official event page now states DevOpsDays Copenhagen 2026 has been cancelled; no active ticket pricing applies."
       }
     },
     {
@@ -2743,7 +2743,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not yet published; assumed free until confirmed"
+        "notes": "Official site links to tickets.kcdnewyork.com, but public crawl hit a cookie/privacy gate and did not expose ticket price values."
       }
     },
     {
@@ -2781,7 +2781,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Registration listed as 'coming soon'; pricing unavailable; assumed free until confirmed"
+        "notes": "Event page now states the event is sold out (Das Event ist ausgebucht); public page still does not publish ticket prices."
       }
     },
     {
@@ -3737,10 +3737,11 @@
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 217.8,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Eventbrite listing shows ticket price at $217.80 for devopsdays Atlanta 2026."
       }
     },
     {
@@ -3767,9 +3768,9 @@
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "AWS Summit London page states this is a complimentary one-day event; registration form page requires attendee details but shows no paid ticket tiers."
       }
     },
     {
@@ -3797,7 +3798,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "Registration page links to Tito (dodzh2026); ticket classes are visible but currently waitlist-only and no public price amounts were extracted."
       }
     },
     {
@@ -4191,9 +4192,9 @@
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "AWS Summit Los Angeles page explicitly describes the summit as a free one-day event."
       }
     },
     {
@@ -4279,7 +4280,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "PlatformCon homepage labels Live Day New York as 'Tickets on sale'; specific ticket amounts were not exposed in crawl output."
       }
     },
     {
@@ -4616,7 +4617,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "PlatformCon homepage labels Live Day London as 'Tickets on sale' while also stating virtual registration is free; specific London ticket amounts were not exposed in crawl output."
       }
     },
     {
