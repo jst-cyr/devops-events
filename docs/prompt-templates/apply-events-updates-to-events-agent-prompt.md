@@ -24,6 +24,7 @@ Each update record contains only:
 - `match` (`key_type`, `key_value`)
 - `name`
 - `changes` (`field_path` -> `{ old, new }`)
+- For `cost` changes, include `evidence` object (`source_url`, `checked_at`, `method`, `confidence`) wherever available.
 
 ### Matching behavior
 
@@ -47,6 +48,10 @@ For each field in `changes`:
 
 If all changed fields for an update item conflict, skip the whole update item.
 
+For `cost` updates:
+- Require evidence-backed intent: do not apply blanket fallback-only updates that were not based on event-level pricing research.
+- If `changes.cost.new` is marked free due to unknown pricing, require notes to state that pricing pages were checked and no explicit pricing was published.
+
 ### Apply behavior
 
 - Apply only non-conflicting field updates.
@@ -67,7 +72,7 @@ If all changed fields for an update item conflict, skip the whole update item.
     - `cost.lowest_price` must be a positive number.
     - `cost.price_currency` must be present (ISO 4217 code).
     - `cost.cost_level` must be one of `"budget" | "standard" | "premium"`.
-  - If pricing is unknown or unavailable, `cost.is_free` must be `true` and `cost.cost_level` must be `"free"` (see **Unknown pricing rule** in data model).
+  - If pricing is unknown or unavailable, `cost.is_free` must be `true` and `cost.cost_level` must be `"free"` (see **Unknown pricing rule** in data model), and notes must describe the research outcome.
   - Report validation failures for cost field updates.
 
 ### Output requirements

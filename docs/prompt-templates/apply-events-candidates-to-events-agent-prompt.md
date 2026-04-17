@@ -12,6 +12,7 @@ Your task is to add approved records from `data/events-candidates.json` into `da
 
 Cost review gate policy:
 - Candidate cost values should be reviewed and applied via `data/events-updates.json` before this merge step.
+- Cost values must come from pricing determination (agentic crawl of event/registration/ticket pages), not from blanket fallback generation.
 
 ### Inputs
 
@@ -48,6 +49,7 @@ If any match exists, skip that candidate and record the reason.
   - `location.country_code: "XX"` (if unknown)
 - **Cost validation** (required for insert):
 - Candidate record must include `cost` object.
+  - Candidate record should include pricing evidence in notes when available (for example: pricing page URL, ticket provider, or explicit "registration free" source).
   - If `cost.is_free = true`:
     - `cost.lowest_price` must be `null`, `0`, or absent.
     - `cost.cost_level` should be `"free"` if present.
@@ -55,8 +57,8 @@ If any match exists, skip that candidate and record the reason.
     - `cost.lowest_price` must be a positive number.
     - `cost.price_currency` must be present (ISO 4217 code, defaults to `USD`).
     - `cost.cost_level` must be one of `"budget" | "standard" | "premium"`.
-  - If pricing is unknown or unavailable, `cost.is_free` must be `true` and `cost.cost_level` must be `"free"` (see **Unknown pricing rule** in data model).
-  - If cost object is absent, treat as `invalid` for this merge step and skip the record.
+  - If pricing is unknown or unavailable after research, `cost.is_free` must be `true` and `cost.cost_level` must be `"free"`, with notes clearly stating that pricing research was performed but no definitive price was published.
+  - If cost object is absent, or if cost appears to be unresolved without research evidence, treat as `invalid` for this merge step and skip the record.
 
 ### Write behavior
 

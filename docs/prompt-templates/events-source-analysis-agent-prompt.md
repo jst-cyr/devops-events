@@ -168,16 +168,18 @@ Prioritize: US, Canada, Australia, Ireland, Japan, UK, mainland Europe.
 
 ### Cost extraction
 
-- Extract pricing from event/registration/ticket pages.
+- Extract pricing from event/registration/ticket pages with event-level evidence.
 - If explicitly free: `cost.is_free=true`.
 - If paid: extract lowest available ticket and set:
   - `cost.lowest_price`
   - `cost.price_currency` (ISO 4217)
   - `cost.cost_level` (`budget` <100, `standard` 100-500, `premium` >=500)
-- If pricing unavailable/unclear: default to
-  - `is_free=true`, `lowest_price=null`, `cost_level="free"`
-  - omit `price_currency`
-  - add deterministic `cost.notes` explaining assumption.
+- Always capture evidence in notes (pricing URL checked, date checked, and result).
+- If pricing unavailable/unclear after research, use
+   - `is_free=true`, `lowest_price=null`, `cost_level="free"`
+   - omit `price_currency`
+   - add deterministic `cost.notes` stating pricing pages were checked but no explicit pricing was published.
+- Never use mass fallback pricing assumptions without event-level checks.
 
 ### Reconciliation against `data/events.json`
 
@@ -196,9 +198,9 @@ For non-matches:
 
 - Add as new candidates.
 
-Cost backfill rule:
+Cost update rule:
 
-- For in-window existing records missing `cost`, emit update even if all other fields unchanged.
+- For existing records missing `cost`, emit updates only when event-level pricing research was performed and evidence is captured.
 
 ### Required outputs
 
@@ -208,6 +210,7 @@ Produce these outputs:
 2. `data/events-updates.json` with shape:
    - top-level: `generated_at`, `window_days`, `source_run_date`, `records`
    - each record: `match`, `name`, `changes`
+   - for cost changes, include `evidence` with pricing source URL(s), `checked_at`, method, and confidence
 3. Concise markdown list of updates (in response text).
 4. `data/events-candidates.json` with shape:
    - `generated_at`, `window_days`, `source_run_date`, `records`
@@ -302,4 +305,5 @@ python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <candida
 ```
 
 - Output: `data/events-candidates.json` and `data/events-updates.json`.
-- Handles match priority (event_url → id → name+date+country), cost backfill, and window filtering.
+- Handles match priority (event_url → id → name+date+country) and window filtering.
+- Cost determination is not generated automatically by the script and must come from agent-led pricing research.

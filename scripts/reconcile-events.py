@@ -12,9 +12,6 @@ Usage:
   # Defaults (today, no new events)
   python scripts/reconcile-events.py
 
-  # Just cost backfill updates
-  python scripts/reconcile-events.py --run-date 2026-05-15
-
 Examples:
   python scripts/reconcile-events.py --run-date 2026-04-17 --input-file data/raw-discoveries.json --data-dir data
   python scripts/reconcile-events.py --help
@@ -31,7 +28,7 @@ from typing import List, Dict, Any, Tuple, Optional
 class EventReconciler:
     """Reconcile discovered events against existing database."""
     
-    def __init__(self, run_date: datetime, data_dir: Path, all_cost_backfill: bool = False):
+    def __init__(self, run_date: datetime, data_dir: Path):
         """
         Initialize reconciler with run date and data directory.
         
@@ -50,17 +47,6 @@ class EventReconciler:
         self.existing_events: List[Dict[str, Any]] = []
         self.timestamp = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         self.run_date_str = run_date.strftime("%Y-%m-%d")
-        self.all_cost_backfill = all_cost_backfill
-
-    @staticmethod
-    def default_unknown_cost() -> Dict[str, Any]:
-        """Default cost payload when pricing cannot be verified yet."""
-        return {
-            "is_free": True,
-            "lowest_price": None,
-            "cost_level": "free",
-            "notes": "Pricing not yet published; assumed free until confirmed"
-        }
     
     def load_existing_events(self) -> List[Dict[str, Any]]:
         """Load existing events from data/events.json"""
@@ -170,95 +156,6 @@ class EventReconciler:
         
         return (False, {})
     
-    def identify_cost_backfill_updates(self) -> List[Dict[str, Any]]:
-        """
-        Identify existing in-window events lacking cost data.
-        These become update candidates with cost field as the changed field.
-        """
-        updates = []
-        for event in self.existing_events:
-            # Default behavior backfills in-window records only.
-            # Optional all-record mode backfills every missing-cost record.
-            if not self.all_cost_backfill:
-                if not self.is_in_event_window(
-                    event.get("start_date", ""),
-                    event.get("end_date", "")
-                ):
-                    continue
-            
-            # Must lack cost data
-            if event.get("cost"):
-                continue
-            
-            updates.append({
-                "target": {
-                    "dataset": "events",
-                    "file": "data/events.json"
-                },
-                "match": {
-                    "key_type": "id",
-                    "key_value": event.get("id")
-                },
-                "name": event.get("name"),
-                "changes": {
-                    "cost": {
-                        "old": None,
-                        "new": self.default_unknown_cost()
-                    }
-                },
-                "evidence": {
-                    "source": "fallback",
-                    "method": "unknown_pricing_policy",
-                    "checked_at": self.timestamp,
-                    "confidence": "low"
-                }
-            })
-        
-        return updates
-
-    def identify_candidate_cost_updates(self, candidates: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """
-        Generate review-gated cost proposals for candidates lacking cost.
-
-        These updates target data/events-candidates.json and should be reviewed
-        through events-updates.json before candidate merge.
-        """
-        updates = []
-        for candidate in candidates:
-            if candidate.get("cost"):
-                continue
-
-            match_key = candidate.get("dev_events_slug") or candidate.get("id")
-            if not match_key:
-                # Candidate cannot be safely matched for patching.
-                continue
-
-            updates.append({
-                "target": {
-                    "dataset": "candidates",
-                    "file": "data/events-candidates.json"
-                },
-                "match": {
-                    "key_type": "dev_events_slug",
-                    "key_value": match_key
-                },
-                "name": candidate.get("name"),
-                "changes": {
-                    "cost": {
-                        "old": None,
-                        "new": self.default_unknown_cost()
-                    }
-                },
-                "evidence": {
-                    "source": "fallback",
-                    "method": "unknown_pricing_policy",
-                    "checked_at": self.timestamp,
-                    "confidence": "low"
-                }
-            })
-
-        return updates
-    
     def reconcile_events(self, discovered_events: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
         """
         Reconcile discovered events against existing database.
@@ -288,39 +185,21 @@ class EventReconciler:
                 print(f"[NEW] {candidate.get('name')} (candidate)")
                 new_candidates.append(candidate)
         
-        # Add cost backfill updates for existing records
-        print("\n=== IDENTIFYING COST BACKFILL UPDATES ===\n")
-        cost_updates = self.identify_cost_backfill_updates()
-        if cost_updates:
-            print(f"[INFO] Found {len(cost_updates)} events needing cost backfill")
-            updates.extend(cost_updates)
-        else:
-            print("[INFO] No cost backfill updates needed")
-
-        # Add review-gated cost defaults for new candidates
-        print("\n=== IDENTIFYING CANDIDATE COST PROPOSALS ===\n")
-        candidate_cost_updates = self.identify_candidate_cost_updates(new_candidates)
-        if candidate_cost_updates:
-            print(f"[INFO] Found {len(candidate_cost_updates)} candidates needing cost proposals")
-            updates.extend(candidate_cost_updates)
-        else:
-            print("[INFO] No candidate cost proposals needed")
+        # Note: cost determination is intentionally excluded from this script.
+        # Cost updates must be generated through agentic pricing research and
+        # reviewed in events-updates.json.
+        print("\n=== COST DETERMINATION ===\n")
+        print("[INFO] No automatic cost proposals generated in reconcile-events.py")
         
         return updates, new_candidates
     
     def write_updates_file(self, updates: List[Dict[str, Any]]) -> None:
         """Write events-updates.json"""
-        events_target_count = sum(1 for u in updates if u.get("target", {}).get("dataset") == "events")
-        candidates_target_count = sum(1 for u in updates if u.get("target", {}).get("dataset") == "candidates")
         output_file = self.data_dir / "events-updates.json"
         output = {
             "generated_at": self.timestamp,
             "window_days": 180,
             "source_run_date": self.run_date_str,
-            "target_summary": {
-                "events": events_target_count,
-                "candidates": candidates_target_count
-            },
             "records": updates
         }
         with open(output_file, 'w') as f:
@@ -382,9 +261,6 @@ Examples:
   # Reconcile discovered events
   python scripts/reconcile-events.py --run-date 2026-04-17 --input-file discoveries.json
 
-  # Cost backfill updates only (no new discoveries)
-  python scripts/reconcile-events.py --run-date 2026-05-15
-
   # Use default date (today)
   python scripts/reconcile-events.py --input-file data/raw-events.json
         """
@@ -411,12 +287,6 @@ Examples:
         help="Path to data directory (default: data/)"
     )
 
-    parser.add_argument(
-        "--all-cost-backfill",
-        action="store_true",
-        help="Generate cost backfill updates for all existing events lacking cost (ignores event window)"
-    )
-    
     args = parser.parse_args()
     
     # Parse and validate run date
@@ -431,7 +301,7 @@ Examples:
         run_date = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
     
     # Create reconciler and run
-    reconciler = EventReconciler(run_date, args.data_dir, all_cost_backfill=args.all_cost_backfill)
+    reconciler = EventReconciler(run_date, args.data_dir)
     input_path = Path(args.input_file) if args.input_file else None
     
     try:
