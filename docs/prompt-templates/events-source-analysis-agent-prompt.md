@@ -148,6 +148,7 @@ Include broad developer events only if likely relevant to DevOps practitioners.
 Exclude:
 
 - Database-centric events (MySQL/PostgreSQL/MongoDB/data platform ecosystems).
+- Automotive/embedded system-specific events (automotive grade linux, in-vehicle systems).
 - Open-source-only events without infra/devops operations focus.
 - Data/analytics events without clear DevOps/SRE/IaC relevance.
 
