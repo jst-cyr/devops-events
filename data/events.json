@@ -186,10 +186,11 @@
       },
       "notes": null,
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not yet published; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 99,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Pretix ticket shop shows: Early Bird Corporate €699, Early Bird Individual €399, Student €99 (all plus 19% VAT). Early bird ends April 30 2026. 3-day conference Sep 2-4 at Schuppen 52, Hamburg."
       }
     },
     {
@@ -1186,7 +1187,14 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": null
+      "notes": null,
+      "cost": {
+        "is_free": false,
+        "lowest_price": 625,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "USENIX registration page shows: Early $950, Standard $1,100, On-site $1,300. Student: Early $625, Standard $775, On-site $950. Champion members get $200 off. Past event (March 24-26, 2026)."
+      }
     },
     {
       "id": "sreday-san-francisco-2026-q2",
@@ -1414,9 +1422,9 @@
       "notes": "Luma event page confirms free registration at MaibornWolff GmbH for the May 21, 2026 in-person event, which is also inside the 56-day event window.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Free ticket via Luma registration."
+        "notes": "Luma ticket page confirms: 'This event is free to attend, woohoo!' Ticket types: Free Ticket and Community Hero, both free."
       }
     },
     {
@@ -2034,10 +2042,11 @@
         "cfp_status": "closed"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not clearly published on the event page during crawl; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 5900,
+        "price_currency": "DKK",
+        "cost_level": "premium",
+        "notes": "NDC Copenhagen ticket page shows 1-Day Pass at 5,900 DKK, 2-Day Pass at 9,900 DKK, Workshop Pass 10,900 DKK, All Access Pass 15,900 DKK. 25% VAT added to all ticket types."
       },
       "notes": null
     },
@@ -2073,10 +2082,11 @@
       },
       "notes": "Sessionize links canonical event site as worldcongress.dev.",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not yet published; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 429,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "WeAreDevelopers World Congress page shows promotional ticket at €429 (regular €539). 8-10 July 2026, Berlin. 15,000+ attendees."
       }
     },
     {
@@ -2479,7 +2489,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "No registration page found; pricing unavailable; assumed free until confirmed"
+        "notes": "DevOpsDays Amsterdam 2026 has been cancelled per official event page."
       }
     },
     {
@@ -2589,9 +2599,9 @@
       "notes": "Luma event page confirms free registration at Dynatrace SLU, Lab Barcelona for the May 8, 2026 in-person event.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Free ticket via Luma registration."
+        "notes": "Luma ticket page confirms free registration. Ticket types: Free Ticket and Community Hero, both free."
       }
     },
     {
@@ -2661,11 +2671,11 @@
       },
       "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
       "cost": {
-        "is_free": true,
-        "lowest_price": 0,
+        "is_free": false,
+        "lowest_price": 49,
         "price_currency": "USD",
-        "cost_level": "free",
-        "notes": null
+        "cost_level": "budget",
+        "notes": "Luma ticket page shows: Student/Job Seeker $49, Self-funding $99, General Admission $299 (early bird $199 ended). Community Hero free with approval."
       }
     },
     {
@@ -2702,10 +2712,11 @@
       },
       "notes": "Homepage lists June 16-17, 2026 at World Trade Center Barcelona; speaker call deadline shown as December 31, 2025.",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not yet published; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 440,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Ticket page shows: Regular €440, Late €600, Last Minute €700, Super Last Minute €800 (all inc. 21% VAT). 2-day conference at World Trade Center Barcelona, Jun 16-17 2026."
       }
     },
     {
@@ -2854,11 +2865,11 @@
       },
       "notes": "Added from curated CFP candidates list.",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": "free",
-        "notes": "Tickets listed as Available Soon; likely paid event but pricing unavailable. Assumed free until confirmed."
+        "price_currency": "CHF",
+        "cost_level": "standard",
+        "notes": "Event page shows 'Tickets Are Available Soon' via Tito, with discounted tickets for diversity/lower income. Organized by nonprofit. Implies paid event but exact pricing not yet published."
       }
     },
     {
@@ -2966,7 +2977,7 @@
         "is_free": true,
         "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Free to attend with registration via Luma"
+        "notes": "Luma ticket page confirms: 'This event is free to attend, woohoo!' Ticket types: Free Ticket and Community Hero, both free."
       },
       "cfp": {
         "has_cfp": true,
@@ -3121,7 +3132,7 @@
         "lowest_price": null,
         "price_currency": null,
         "cost_level": "free",
-        "notes": "KCD events are typically free. Bevy platform requires login for ticket; no pricing visible. Assumed free."
+        "notes": "CNCF community platform shows 'LOG IN TO PURCHASE TICKET'. KCD events are community-organized and typically free or very low cost. Exact pricing hidden behind login. Assumed free."
       },
       "cfp": {
         "has_cfp": true,
@@ -3378,11 +3389,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "price_currency": null,
-        "cost_level": "free",
-        "notes": "Registration page exists but not yet set up. DevOpsDays are typically paid. Assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 99,
+        "price_currency": "GBP",
+        "cost_level": "budget",
+        "notes": "Tito ticket page shows: Early Bird £99, Attendee £149, Supporter £249 (all inc. 20% VAT). Free Diversity ticket available for underrepresented groups/unwaged."
       },
       "cfp": {
         "has_cfp": true,
@@ -3503,10 +3514,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published in tracker; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 12490,
+        "price_currency": "NOK",
+        "cost_level": "premium",
+        "notes": "NDC Oslo ticket page shows early bird 1-Day Conference Pass at 12,490 NOK excl. 25% VAT. All Access Pass is 22,490 NOK. Early bird ends 22 May."
       },
       "notes": null
     },
@@ -3542,10 +3554,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published in tracker; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 7990,
+        "price_currency": "NOK",
+        "cost_level": "premium",
+        "notes": "NDC TechTown ticket page shows early bird 1-Day Conference Pass at 7,990 NOK excl. 25% MVA. All Access Pass 20,490 NOK. Early bird ends 5 June."
       },
       "notes": "Tracker contains two CFP submission rows with different URLs; secondary submission URL: https://sessionize.com/ndc-techtown-2026"
     },
@@ -3681,10 +3694,11 @@
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "DevOpsCon Amsterdam ticket page (devopscon.io/amsterdam/tickets-amsterdam) lists multiple paid ticket tiers (confirmed by user). Site is behind cookie consent wall preventing automated price extraction."
       }
     },
     {
@@ -3709,10 +3723,11 @@
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "DevOpsCon is a paid commercial conference series by Software & Support Media. Ticket page exists at devopscon.io but is behind cookie consent wall. All DevOpsCon events have paid tiers."
       }
     },
     {
@@ -3795,10 +3810,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "GBP",
+        "cost_level": "premium",
+        "notes": "DevOpsCon London ticket page exists at devopscon.io/london/tickets-london. Site behind cookie wall, prices not extractable. DevOpsCon is a paid commercial conference series."
       }
     },
     {
@@ -3824,9 +3840,9 @@
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "Event page confirms: 'Free virtual summit' and 'REGISTER FREE'. Online event by Komodor, May 12 2026."
       }
     },
     {
@@ -3993,10 +4009,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "CAD",
+        "cost_level": "standard",
+        "notes": "Event page shows 'Early Bird Pricing Ends Soon!' and links to Eventbrite for ticket purchase. Exact price not visible on landing page. Calgary, May 23 2026."
       }
     },
     {
@@ -4021,10 +4038,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "DevOpsCon San Diego ticket page at devopscon.io/san-diego/tickets-san-diego returned 404 but DevOpsCon is a paid commercial conference series. All editions have paid ticket tiers."
       }
     },
     {
@@ -4070,34 +4088,6 @@
       "source": "dev.events",
       "location": {
         "city": "Milwaukee",
-        "region": null,
-        "country": "United States",
-        "country_code": "US",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
-      }
-    },
-    {
-      "id": "sr-eday-nyc-2026-q2-wyu77e",
-      "name": "SREday NYC 2026 Q2",
-      "event_url": "https://sreday.com/2026-nyc-q2",
-      "start_date": "2026-06-06",
-      "end_date": "2026-06-06",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "New York",
         "region": null,
         "country": "United States",
         "country_code": "US",
@@ -4191,10 +4181,11 @@
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "DevOpsCon Berlin ticket page exists at devopscon.io/berlin/tickets-berlin. Site behind cookie wall. DevOpsCon is a paid commercial conference series."
       }
     },
     {
@@ -4359,10 +4350,11 @@
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 610,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Registration page shows tiered pricing by date: PRO Pass $610-$1,215, PREMIUM Pass $1,325-$2,650. Discounts: 25% off groups of 3+, 30% off student/government. Via Eventbrite."
       }
     },
     {
@@ -4415,10 +4407,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 1049,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Ticket page shows: Blind Bird €1,049 (available until program published), then €1,149. Plus 19% MwSt. Group discount 15%+ for 3+ attendees. Student/academic discounts available on request. 2-day conference Sep 22-23 in Marburg."
       }
     },
     {
@@ -4443,10 +4436,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "DevOpsCon NYC ticket page at devopscon.io/new-york/tickets-new-york returned 404 but DevOpsCon is a paid commercial conference series. All editions have paid ticket tiers."
       }
     },
     {
