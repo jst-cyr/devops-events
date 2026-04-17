@@ -31,7 +31,13 @@
         "cfp_timezone": "America/Los_Angeles",
         "cfp_status": "closed"
       },
-      "notes": "CFP in post applies to virtual program."
+      "notes": "CFP in post applies to virtual program.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; assumed free until confirmed"
+      }
     },
     {
       "id": "devopsdays-austin-2026",
@@ -139,7 +145,13 @@
         "cfp_timezone": "America/New_York",
         "cfp_status": "closed"
       },
-      "notes": null
+      "notes": null,
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; assumed free until confirmed"
+      }
     },
     {
       "id": "containerdays-hamburg-2026",
@@ -172,7 +184,13 @@
         "cfp_timezone": "Europe/Berlin",
         "cfp_status": "closed"
       },
-      "notes": null
+      "notes": null,
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; assumed free until confirmed"
+      }
     },
     {
       "id": "devopsdays-tokyo-2026",
@@ -2053,7 +2071,13 @@
         "cfp_timezone": "Europe/Berlin",
         "cfp_status": "closed"
       },
-      "notes": "Sessionize links canonical event site as worldcongress.dev."
+      "notes": "Sessionize links canonical event site as worldcongress.dev.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; assumed free until confirmed"
+      }
     },
     {
       "id": "redhat-aiops-to-action-2026-03-17",
@@ -2676,7 +2700,13 @@
         "cfp_timezone": "Europe/Madrid",
         "cfp_status": "closed"
       },
-      "notes": "Homepage lists June 16-17, 2026 at World Trade Center Barcelona; speaker call deadline shown as December 31, 2025."
+      "notes": "Homepage lists June 16-17, 2026 at World Trade Center Barcelona; speaker call deadline shown as December 31, 2025.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; assumed free until confirmed"
+      }
     },
     {
       "id": "kcd-new-york-2026",
@@ -2708,7 +2738,13 @@
         "cfp_timezone": null,
         "cfp_status": "closed"
       },
-      "notes": "Added from curated CFP candidates list."
+      "notes": "Added from curated CFP candidates list.",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; assumed free until confirmed"
+      }
     },
     {
       "id": "austrian-platform-engineering-community-2026",
