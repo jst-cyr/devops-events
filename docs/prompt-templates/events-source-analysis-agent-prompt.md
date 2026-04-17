@@ -112,6 +112,18 @@ python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <enriche
 
    - Produces `data/events-candidates.json` and `data/events-updates.json`.
 
+#### Phase 6 — Cost refresh on canonical events (agentic, required)
+
+Run an explicit cost-verification pass against `data/events.json` for records where cost is missing or currently marked free.
+
+For each targeted existing event:
+1. Visit canonical event URL and follow registration/ticket links.
+2. Capture event-level evidence (source URL, wording, ticket provider, and check timestamp).
+3. If explicit free wording exists, set free with evidence-backed notes.
+4. If explicit paid pricing exists, set paid values with lowest public ticket and currency.
+5. If ticketing exists but price is not visible, keep unresolved semantics in notes and confidence (do not fabricate paid/free amounts).
+6. Write only reviewed, event-level cost changes into `data/events-updates.json` with `target.dataset = "events"`.
+
 #### Guardrails
 
 - Do not overwrite `data/events-candidates.json` with empty `records` unless all phases completed successfully and truly found zero net-new records.
