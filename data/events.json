@@ -3774,34 +3774,6 @@
       }
     },
     {
-      "id": "devopsdays-zurich-yirsesji",
-      "name": "devopsdays Zurich",
-      "event_url": "https://devopsdays.org/events/2026-zurich/welcome",
-      "start_date": "2026-05-06",
-      "end_date": "2026-05-07",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Winterthur",
-        "region": null,
-        "country": "Switzerland",
-        "country_code": "CH",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Registration page links to Tito (dodzh2026); ticket classes are visible but currently waitlist-only and no public price amounts were extracted."
-      }
-    },
-    {
       "id": "dev-ops-con-london-zi8-zsr6",
       "name": "DevOpsCon London",
       "event_url": "https://devopscon.io/london",
