@@ -15,6 +15,14 @@ Your mission is to discover:
 
 from the following sources, then reconcile those findings with `data/events.json`.
 
+### Execution precedence and run integrity (required)
+
+- Primary flow is agent-led web discovery from all listed sources; do not start from prebuilt local discovery seed files.
+- Treat `dev.events` as the broad discovery source and fully process in-window index results before finalizing outputs.
+- Use local scripts only as post-discovery helpers (for example CFP parsing/reconciliation), never as a substitute for event discovery.
+- Do not overwrite `data/events-candidates.json` with an empty `records` array unless discovery completed successfully and produced zero net-new records.
+- If discovery is incomplete/blocked, write deterministic issue records and keep run status explicit in the markdown summary.
+
 ### Sources to analyze
 
 - https://dev.events/ (discovery/index only; do not treat dev.events event detail pages as canonical event sources)
@@ -340,6 +348,8 @@ Produce six outputs:
 - Ensure no dev.events detail URL is used as final `event_url` when canonicalization fails.
 - Ensure each dev.events-derived record has deterministic canonicalization provenance in `notes`.
 - Ensure `data/cfp-candidates.json` is ordered by `cfp_close_date` then `name`, with deterministic `rank`, `days_until_cfp_close`, and `priority_tier`.
+- Ensure the summary includes per-source counts (`discovered`, `filtered`, `matched`, `new`, `failed`) and a dedicated `dev.events` discovery count.
+- Ensure a run with unexpectedly low `dev.events` discoveries is treated as incomplete and represented in `data/events-issues.json`.
 
 ### Execution constraints
 
