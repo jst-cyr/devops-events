@@ -24,8 +24,55 @@ This pulls from several data sources:
 
 ## Data
 
-- Canonical events data file: [data/events.json](data/events.json)
+## Analysis Workflow & Scripts
 
+### Event Analysis (180-day window)
+For discovering new events and identifying existing events requiring updates:
+
+```bash
+# Full workflow:
+# 1. Run agent analysis to discover events (produces discovered-events.json)
+# 2. Reconcile against existing database
+python scripts/reconcile-events.py --run-date 2026-04-17 --input-file discovered-events.json
+
+# Cost backfill only (no new discoveries)
+python scripts/reconcile-events.py --run-date 2026-04-17
+
+# Today's run with default date
+python scripts/reconcile-events.py --input-file discovered-events.json
+```
+
+**Outputs:**
+- `data/events-candidates.json` - New events for review
+- `data/events-updates.json` - Field-level updates (cost backfill, data corrections)
+- `data/events-issues.json` - Data quality issues and extraction failures
+
+**Configuration:**
+- Event discovery window: 180 days (for marketing sponsorship lead time)
+- CFP discovery window: 56 days (manageable review scope)
+- Geographic filter: Excludes China, Africa, Central/South America, Middle East, Romania, Mexico
+
+### CFP Analysis (56-day window)
+For discovering Call for Papers opportunities:
+
+```bash
+# Download CFP tracker snapshot
+cURL.exe -L "https://adatosystems.com/cfp-tracker/" -o "data/adatosystems-cfp-tracker-2026-04-17.html"
+
+# Parse and reconcile
+node scripts/parse-cfp-tracker.mjs 2026-04-17
+```
+
+**Outputs:**
+- `data/cfp-candidates.json` - Prioritized DevOps-relevant CFP opportunities
+- `data/adatosystems-cfp-validation-2026-04-17.json` - Reconciliation report
+
+### Usage Pattern (Weekly/Monthly Runs)
+1. Run agent to discover events and CFPs from sources
+2. Execute `reconcile-events.py` with discovered events file
+3. Execute `parse-cfp-tracker.mjs` for CFP extraction
+4. Review `events-candidates.json` and `cfp-candidates.json` in agent window
+5. Apply approved candidates to `events.json` using apply-events agent prompt
 ## Web App (Next.js)
 
 This repository now includes a Next.js application at the repository root.
