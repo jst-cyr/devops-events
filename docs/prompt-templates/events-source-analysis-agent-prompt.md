@@ -10,8 +10,8 @@ You are a data-curation agent for the `devops-events` repository.
 
 Your mission is to discover:
 
-1. **Upcoming events in the next 56 days**, and
-2. **Upcoming/active CFP opportunities whose CFP deadline is in the next 56 days** (even if the event date is outside that 56-day event window),
+1. **Upcoming events in the next 180 days**, and
+2. **Upcoming/active CFP opportunities whose CFP deadline is in the next 56 days** (even if the event date is outside that 180-day event window),
 
 from the following sources, then reconcile those findings with `data/events.json`.
 
@@ -88,7 +88,7 @@ When using iframe fallback, enforce all of the following:
 ### Time windows (dual-window rule)
 
 - Use today as day 0.
-- Event window: collect events with `start_date` between today and today + 56 days (inclusive).
+- Event window: collect events with `start_date` between today and today + 180 days (inclusive).
 - CFP window: collect records where `cfp.has_cfp = true` and `cfp.cfp_close_date` is between today and today + 56 days (inclusive), even when `start_date` is outside the event window.
 - Include a record when **either** condition matches:
    - `start_date` in event window, or
@@ -229,7 +229,7 @@ Produce six outputs:
 ```json
 {
    "generated_at": "<ISO-8601 UTC timestamp>",
-   "window_days": 56,
+   "window_days": 180,
    "source_run_date": "<YYYY-MM-DD>",
    "records": [
       {
@@ -259,13 +259,11 @@ Produce six outputs:
 ```json
 {
   "generated_at": "<ISO-8601 UTC timestamp>",
-  "window_days": 56,
+  "window_days": 180,
   "source_run_date": "<YYYY-MM-DD>",
   "records": []
 }
 ```
-
-Where `records` contains normalized `EventRecord` items.
 
 5. **Issues JSON file** at `data/events-issues.json`:
     - Write every item attempted but not fully extracted/reconciled.
@@ -275,7 +273,7 @@ Where `records` contains normalized `EventRecord` items.
 ```json
 {
    "generated_at": "<ISO-8601 UTC timestamp>",
-   "window_days": 56,
+   "window_days": 180,
    "source_run_date": "<YYYY-MM-DD>",
    "records": [
       {
@@ -324,7 +322,7 @@ Where `records` contains normalized `EventRecord` items.
 
 - Ensure every included event has a valid `name`, `event_url`, `start_date`, `end_date`, `delivery`, and `location`.
 - Ensure every included record satisfies at least one inclusion condition:
-   - `start_date` in the 56-day event window, or
+   - `start_date` in the 180-day event window, or
    - `cfp.has_cfp = true` and `cfp.cfp_close_date` in the 56-day CFP window.
 - Ensure excluded geographies are not present.
 - Ensure dev.events-discovered records do not use dev.events detail URLs for `event_url`.
@@ -376,7 +374,7 @@ Use this fallback sequence:
    - `https://www.redhat.com/rhdc/jsonapi/solr_search/event`
 3. Paginate the JSON endpoint with `?page=0..N` until `docs` is empty.
 4. For each doc, extract canonical event URL (`url`), `title`, `start_date`, `end_date`, and delivery signal (`event_type`/`online_event_type`).
-5. Filter by the 56-day window and relevance/geo rules before reconciliation.
+5. Filter by the 180-day event window and relevance/geo rules before reconciliation.
 6. Only create a Red Hat issue if both listing-page fallback and JSON-endpoint fallback fail.
 7. When fallback succeeds, do not keep a stale Red Hat blocked issue.
 
@@ -453,7 +451,7 @@ node scripts/parse-cfp-tracker.mjs <YYYY-MM-DD>
 - If a source is blocked by CSP or anti-bot redirects (for example, `redhat.com` events page), record a deterministic issue and continue with alternate source coverage.
 - For `iacconf.com`, treat extractor-level CSP/parse failure as recoverable: retry via raw HTML + `__NEXT_DATA__` parsing before logging an issue.
 - For `redhat.com/events`, prefer JSON fallback at `https://www.redhat.com/rhdc/jsonapi/solr_search/event?page=<n>` to avoid tracker-bounce false failures.
-- Treat CFP discovery as first-class: include records where CFP close date is in-window even if the event itself is later than 56 days.
+- Treat CFP discovery as first-class: include records where CFP close date is in-window even if the event itself is later than 180 days.
 - For CFP CTAs (for example IaCConf `View the Call for Presenters`), follow through to the CFP destination page/form to extract the actual close deadline before classifying in/out of window.
 - If the AdatoSystems main CFP tracker is unreliable, use the dated sublist post for that run day and record this fallback in `notes`/issues.
 
