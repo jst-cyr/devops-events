@@ -160,6 +160,7 @@ Include broad developer events only if likely relevant to DevOps practitioners.
 Exclude:
 
 - Database-centric events (MySQL/PostgreSQL/MongoDB/data platform ecosystems).
+- Microsoft Power Platform events (including Power Platform conferences/summits).
 - Automotive/embedded system-specific events (automotive grade linux, in-vehicle systems).
 - Open-source-only events without infra/devops operations focus.
 - Data/analytics events without clear DevOps/SRE/IaC relevance.
@@ -240,7 +241,7 @@ Produce these outputs:
 - Include filter (case-insensitive across name/event_url/cfp_url):
   - `devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays`
 - Exclude filter (case-insensitive across name/event_url/cfp_url):
-   - `greenio|green-io|sustainability|sustainable`
+   - `greenio|green-io|sustainability|sustainable|power\s+platform|microsoft\s+power\s+platform`
 - Sort: `cfp_close_date` asc, then `name` asc.
 - Add:
   - `rank` (1..n)
