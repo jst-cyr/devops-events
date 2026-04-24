@@ -163,6 +163,7 @@ Exclude:
 - Automotive/embedded system-specific events (automotive grade linux, in-vehicle systems).
 - Open-source-only events without infra/devops operations focus.
 - Data/analytics events without clear DevOps/SRE/IaC relevance.
+- Sustainability-focused conference brands/events (including Greenio / greenio.tech).
 
 ### Geographic filtering
 
@@ -238,6 +239,8 @@ Produce these outputs:
 - Build from CFP tracker records in 56-day CFP window missing from both `data/events.json` and `data/events-candidates.json`.
 - Include filter (case-insensitive across name/event_url/cfp_url):
   - `devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays`
+- Exclude filter (case-insensitive across name/event_url/cfp_url):
+   - `greenio|green-io|sustainability|sustainable`
 - Sort: `cfp_close_date` asc, then `name` asc.
 - Add:
   - `rank` (1..n)
@@ -252,6 +255,9 @@ Produce these outputs:
 - No dev.events detail URL as final `event_url`.
 - All failures represented in `data/events-issues.json`.
 - No unchanged records in updates/candidates.
+- Explicit overlap audit included in summary for `events-candidates.json`:
+   - overlap by normalized `event_url`
+   - overlap by normalized `name + start_date + country`
 - Per-source summary counts included: `discovered`, `filtered`, `matched`, `new`, `failed`.
 - Summary includes dedicated dev.events counts from Phase 2 filtering: `total_extracted`, `excluded_geography`, `excluded_relevance`, `already_tracked`, `shortlisted`.
 - dev.events extraction returning fewer than 500 events is treated as incomplete and logged in `data/events-issues.json`.

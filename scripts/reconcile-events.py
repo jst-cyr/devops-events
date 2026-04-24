@@ -20,9 +20,12 @@ Examples:
 import json
 import argparse
 import sys
+import re
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
+from urllib.parse import urlparse, parse_qsl, urlencode
 
 
 class EventReconciler:
@@ -95,6 +98,41 @@ class EventReconciler:
             return datetime.strptime(date_str, "%Y-%m-%d")
         except (ValueError, TypeError):
             return None
+
+    @staticmethod
+    def normalize_url(url: str) -> str:
+        """Normalize URLs for stable matching (scheme/host/path/tracking params)."""
+        if not url:
+            return ""
+        try:
+            parsed = urlparse(url.strip())
+            scheme = (parsed.scheme or "https").lower()
+            hostname = (parsed.hostname or "").lower()
+            port = parsed.port
+            host = hostname if port in (None, 80, 443) else f"{hostname}:{port}"
+
+            path = re.sub(r"/+", "/", parsed.path or "/")
+            path = path.rstrip("/") or "/"
+
+            filtered_query = [
+                (k, v)
+                for (k, v) in parse_qsl(parsed.query, keep_blank_values=True)
+                if not k.lower().startswith("utm_") and k.lower() not in {"fbclid", "gclid", "ref", "source"}
+            ]
+            query = ("?" + urlencode(filtered_query, doseq=True)) if filtered_query else ""
+            return f"{scheme}://{host}{path}{query}"
+        except Exception:
+            return (url or "").strip().lower().rstrip("/")
+
+    @staticmethod
+    def normalize_name(name: str) -> str:
+        """Normalize names for fuzzy equivalence across punctuation/diacritics."""
+        if not name:
+            return ""
+        normalized = unicodedata.normalize("NFKD", name.lower())
+        normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+        normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+        return re.sub(r"\s+", " ", normalized).strip()
     
     def is_in_event_window(self, start_date: str, end_date: str) -> bool:
         """Check if event falls in the 180-day analysis window"""
@@ -125,10 +163,11 @@ class EventReconciler:
         Returns: (is_match: bool, matched_record: Dict or empty dict)
         """
         # URL match (primary)
-        new_url = new_event.get("event_url", "").lower().strip()
+        new_url = self.normalize_url(new_event.get("event_url", ""))
         if new_url:
             for existing in existing_events:
-                if existing.get("event_url", "").lower().strip() == new_url:
+                existing_url = self.normalize_url(existing.get("event_url", ""))
+                if existing_url == new_url:
                     return (True, existing)
         
         # ID match (secondary)
@@ -139,13 +178,13 @@ class EventReconciler:
                     return (True, existing)
         
         # Fuzzy name + date + country (tertiary)
-        new_name = new_event.get("name", "").lower().strip()
+        new_name = self.normalize_name(new_event.get("name", ""))
         new_start = new_event.get("start_date", "")
         new_country = (new_event.get("location", {}).get("country") or "").lower()
         
         if new_name and new_start and new_country:
             for existing in existing_events:
-                existing_name = existing.get("name", "").lower().strip()
+                existing_name = self.normalize_name(existing.get("name", ""))
                 existing_start = existing.get("start_date", "")
                 existing_country = (existing.get("location", {}).get("country") or "").lower()
                 
