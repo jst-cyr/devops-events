@@ -35,6 +35,17 @@ EXCLUDED_FORMAT_PATTERN = re.compile(
     re.IGNORECASE,
 )
 EXCLUDED_COUNTRIES = {"singapore"}
+GENERIC_EVENT_HOSTS = {
+    "dev.events",
+    "www.dev.events",
+    "community.cncf.io",
+    "sessionize.com",
+    "www.sessionize.com",
+    "meetup.com",
+    "www.meetup.com",
+    "eventbrite.com",
+    "www.eventbrite.com",
+}
 
 
 class EventReconciler:
@@ -174,6 +185,122 @@ class EventReconciler:
             return False
 
         return left_tokens.issubset(right_tokens) or right_tokens.issubset(left_tokens)
+
+    @staticmethod
+    def _get_hostname(url: str) -> str:
+        if not url:
+            return ""
+        try:
+            return (urlparse(url.strip()).hostname or "").lower()
+        except Exception:
+            return ""
+
+    @staticmethod
+    def _is_nonempty(value: Any) -> bool:
+        return bool(isinstance(value, str) and value.strip())
+
+    @classmethod
+    def _is_better_name(cls, candidate_name: str, existing_name: str) -> bool:
+        """Return True when candidate name is a safer, richer replacement."""
+        if not cls._is_nonempty(candidate_name):
+            return False
+        if not cls._is_nonempty(existing_name):
+            return True
+
+        cand = candidate_name.strip()
+        exist = existing_name.strip()
+        if cand == exist:
+            return False
+
+        cand_norm = cls.normalize_name(cand, drop_year_tokens=True)
+        exist_norm = cls.normalize_name(exist, drop_year_tokens=True)
+        if not cand_norm or not exist_norm or cand_norm == exist_norm:
+            return False
+
+        # Guardrail: if existing has explicit 4-digit years, candidate must retain one of them.
+        existing_years = set(re.findall(r"\b(?:19|20)\d{2}\b", exist))
+        candidate_years = set(re.findall(r"\b(?:19|20)\d{2}\b", cand))
+        if existing_years and not (existing_years & candidate_years):
+            return False
+
+        # Guardrail: avoid replacing canonical names with modality variants.
+        modality_tokens = {"virtual", "online", "hybrid"}
+        cand_tokens_raw = cls._tokenize_name(cls.normalize_name(cand))
+        exist_tokens_raw = cls._tokenize_name(cls.normalize_name(exist))
+        if (cand_tokens_raw & modality_tokens) and not (exist_tokens_raw & modality_tokens):
+            return False
+
+        cand_tokens = cls._tokenize_name(cand_norm)
+        exist_tokens = cls._tokenize_name(exist_norm)
+        # Prefer candidate only when it strictly adds context while keeping the same core tokens.
+        return exist_tokens.issubset(cand_tokens) and len(cand_tokens) > len(exist_tokens)
+
+    @classmethod
+    def _is_better_event_url(cls, candidate_url: str, existing_url: str) -> bool:
+        """Return True when candidate URL is a safer canonical upgrade."""
+        cand_norm = cls.normalize_url(candidate_url)
+        exist_norm = cls.normalize_url(existing_url)
+
+        if not cand_norm:
+            return False
+        if not exist_norm:
+            return True
+        if cand_norm == exist_norm:
+            return False
+
+        cand_host = cls._get_hostname(cand_norm)
+        exist_host = cls._get_hostname(exist_norm)
+        if not cand_host:
+            return False
+
+        # Prefer dedicated domain over known generic aggregator/listing hosts.
+        return exist_host in GENERIC_EVENT_HOSTS and cand_host not in GENERIC_EVENT_HOSTS
+
+    def build_update_patch(self, candidate: Dict[str, Any], matched: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Build field-level update patch when a matched candidate has better data."""
+        changes: Dict[str, Dict[str, Any]] = {}
+
+        existing_name = matched.get("name", "")
+        candidate_name = candidate.get("name", "")
+        if self._is_better_name(candidate_name, existing_name):
+            changes["name"] = {
+                "old": existing_name,
+                "new": candidate_name,
+            }
+
+        existing_url = matched.get("event_url", "")
+        candidate_url = candidate.get("event_url", "")
+        if self._is_better_event_url(candidate_url, existing_url):
+            changes["event_url"] = {
+                "old": existing_url,
+                "new": candidate_url,
+            }
+
+        if not changes:
+            return None
+
+        match_key_type = "id" if matched.get("id") else "name+start_date+country"
+        if match_key_type == "id":
+            match_key_value: Any = matched.get("id")
+        else:
+            match_key_value = {
+                "name": matched.get("name", ""),
+                "start_date": matched.get("start_date", ""),
+                "country": ((matched.get("location") or {}).get("country") or ""),
+            }
+
+        return {
+            "target": {
+                "dataset": "events",
+                "file": "data/events.json",
+            },
+            "match": {
+                "key_type": match_key_type,
+                "key_value": match_key_value,
+            },
+            "name": matched.get("name", ""),
+            "changes": changes,
+        }
     
     def is_in_event_window(self, start_date: str, end_date: str) -> bool:
         """Check if event falls in the 180-day analysis window"""
@@ -365,7 +492,10 @@ class EventReconciler:
             
             if is_match:
                 print(f"[MATCH] {candidate.get('name')} -> {matched.get('id')}")
-                # TODO: Implement field-level diff detection for updates
+                patch = self.build_update_patch(candidate, matched)
+                if patch:
+                    print(f"[UPDATE] {candidate.get('name')} -> field updates proposed")
+                    updates.append(patch)
             else:
                 probable = self.find_probable_overlap(candidate)
                 if probable:
