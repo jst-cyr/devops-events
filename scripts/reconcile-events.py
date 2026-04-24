@@ -29,7 +29,11 @@ from typing import List, Dict, Any, Tuple, Optional
 from urllib.parse import urlparse, parse_qsl, urlencode
 
 
-EXCLUDED_TOPIC_PATTERN = re.compile(r"power\s+platform|microsoft\s+power\s+platform", re.IGNORECASE)
+EXCLUDED_TOPIC_PATTERN = re.compile(
+    r"\bdatabase\b|postgres|postgresql|mysql|mongodb|data\s+platform|data\s+engineering"
+    r"|automotive|\bagl\b|power\s+platform|microsoft\s+power\s+platform",
+    re.IGNORECASE,
+)
 EXCLUDED_FORMAT_PATTERN = re.compile(
     r"^\s*course\s*:|\bcourse\b|\bbootcamp\b|\btraining\b|\bcertification\b|/courses?/",
     re.IGNORECASE,
@@ -348,7 +352,7 @@ class EventReconciler:
             ]
         )
         if EXCLUDED_TOPIC_PATTERN.search(search_text):
-            return True, "excluded topic: Power Platform"
+            return True, "excluded topic: out-of-scope domain"
 
         if EXCLUDED_FORMAT_PATTERN.search(search_text):
             return True, "excluded format: course/training"
