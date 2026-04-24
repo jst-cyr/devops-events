@@ -28,6 +28,10 @@ from typing import List, Dict, Any, Tuple, Optional
 from urllib.parse import urlparse, parse_qsl, urlencode
 
 
+EXCLUDED_TOPIC_PATTERN = re.compile(r"power\s+platform|microsoft\s+power\s+platform", re.IGNORECASE)
+EXCLUDED_COUNTRIES = {"singapore"}
+
+
 class EventReconciler:
     """Reconcile discovered events against existing database."""
     
@@ -150,6 +154,25 @@ class EventReconciler:
         if not close:
             return False
         return self.run_date <= close <= self.cfp_window_end
+
+    @staticmethod
+    def is_excluded_event(candidate: Dict[str, Any]) -> Tuple[bool, str]:
+        """Return exclusion decision and reason for non-fit events."""
+        country = ((candidate.get("location") or {}).get("country") or "").strip().lower()
+        if country in EXCLUDED_COUNTRIES:
+            return True, f"excluded geography: {country}"
+
+        search_text = " ".join(
+            [
+                candidate.get("name", "") or "",
+                candidate.get("event_url", "") or "",
+                candidate.get("notes", "") or "",
+            ]
+        )
+        if EXCLUDED_TOPIC_PATTERN.search(search_text):
+            return True, "excluded topic: Power Platform"
+
+        return False, ""
     
     def match_event(self, new_event: Dict[str, Any], existing_events: List[Dict[str, Any]]) -> Tuple[bool, Dict[str, Any]]:
         """
@@ -207,6 +230,11 @@ class EventReconciler:
         print("\n=== RECONCILING DISCOVERED EVENTS ===\n")
         
         for candidate in discovered_events:
+            is_excluded, reason = self.is_excluded_event(candidate)
+            if is_excluded:
+                print(f"[SKIP] {candidate.get('name')} - {reason}")
+                continue
+
             # Skip if outside the 180-day event window
             if not self.is_in_event_window(
                 candidate.get("start_date", ""),
