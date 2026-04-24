@@ -13,6 +13,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { get as httpsGet } from "node:https";
 
 const DELAY_MS = 1500; // polite pause between requests
+const EXCLUDED_SHORTLIST_TOPIC_PATTERN =
+  /power\s+platform|microsoft\s+power\s+platform|power\s*apps?|power\s*automate|power\s*bi|dynamics\s*365/i;
 
 // ---------------------------------------------------------------------------
 // CLI
@@ -199,13 +201,34 @@ function cleanUrl(url) {
   }
 }
 
+function isExcludedAtShortlist(record) {
+  const searchText = [
+    record.name || "",
+    record.topic || "",
+    record.dev_events_url || "",
+  ].join(" ");
+  return EXCLUDED_SHORTLIST_TOPIC_PATTERN.test(searchText);
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
 async function main() {
   const input = JSON.parse(readFileSync(inputFile, "utf-8"));
-  const records = input.records;
+  const allRecords = Array.isArray(input.records) ? input.records : [];
+  const excludedAtShortlist = allRecords.filter((r) => isExcludedAtShortlist(r));
+  const records = allRecords.filter((r) => !isExcludedAtShortlist(r));
+
+  if (excludedAtShortlist.length > 0) {
+    console.log(
+      `\nShortlist pre-filter: excluded ${excludedAtShortlist.length} Microsoft Power Platform-family events before enrichment.`
+    );
+    for (const r of excludedAtShortlist) {
+      console.log(`  - EXCLUDED: ${r.name}`);
+    }
+  }
+
   console.log(`\nProcessing ${records.length} events...\n`);
 
   const enriched = [];
@@ -288,7 +311,12 @@ async function main() {
   const output = {
     generated_at: new Date().toISOString(),
     source_file: inputFile,
-    enrichment: { total: records.length, resolved, failed },
+    enrichment: {
+      total: records.length,
+      resolved,
+      failed,
+      excluded_at_shortlist: excludedAtShortlist.length,
+    },
     records: enriched,
     issues,
   };

@@ -51,6 +51,7 @@ python scripts/reconcile-events.py --input-file discovered-events.json
 - Event discovery window: 180 days (for marketing sponsorship lead time)
 - CFP discovery window: 56 days (manageable review scope)
 - Geographic filter: Excludes China, Africa, Central/South America, Middle East, Romania, Mexico
+- Early shortlist filter: `scripts/enrich-dev-events.mjs` drops Microsoft Power Platform-family events (`Power Platform`, `Power Apps`, `Power Automate`, `Power BI`, `Dynamics 365`) before enrichment fetches.
 
 ### CFP Analysis (56-day window)
 For discovering Call for Papers opportunities:
