@@ -22,6 +22,7 @@ import argparse
 import sys
 import re
 import unicodedata
+import difflib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
@@ -232,15 +233,74 @@ class EventReconciler:
                     return (True, existing)
         
         return (False, {})
+
+    @staticmethod
+    def _name_similarity(a: str, b: str) -> float:
+        """Return fuzzy similarity score for names in [0, 1]."""
+        if not a or not b:
+            return 0.0
+        return difflib.SequenceMatcher(None, a, b).ratio()
+
+    def find_probable_overlap(self, candidate: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Find best near-duplicate in existing events for optional LLM review."""
+        cand_country = ((candidate.get("location") or {}).get("country") or "").strip().lower()
+        cand_start = self.parse_date(candidate.get("start_date", ""))
+        if not cand_country or not cand_start:
+            return None
+
+        cand_name = self.normalize_name(candidate.get("name", ""), drop_year_tokens=True)
+        best: Optional[Dict[str, Any]] = None
+        best_score = 0.0
+
+        for existing in self.existing_events:
+            existing_country = ((existing.get("location") or {}).get("country") or "").strip().lower()
+            if existing_country != cand_country:
+                continue
+
+            existing_start = self.parse_date(existing.get("start_date", ""))
+            if not existing_start:
+                continue
+
+            date_delta_days = abs((cand_start - existing_start).days)
+            if date_delta_days > 2:
+                continue
+
+            existing_name = self.normalize_name(existing.get("name", ""), drop_year_tokens=True)
+            name_score = self._name_similarity(cand_name, existing_name)
+            if name_score < 0.85:
+                continue
+
+            # Blend strong name similarity with date proximity.
+            date_score = 1.0 if date_delta_days == 0 else (0.7 if date_delta_days == 1 else 0.4)
+            combined_score = (0.8 * name_score) + (0.2 * date_score)
+
+            if combined_score > best_score:
+                best_score = combined_score
+                best = {
+                    "existing_id": existing.get("id"),
+                    "existing_name": existing.get("name"),
+                    "existing_event_url": existing.get("event_url"),
+                    "existing_start_date": existing.get("start_date"),
+                    "existing_country": (existing.get("location") or {}).get("country"),
+                    "match_signals": {
+                        "name_similarity": round(name_score, 4),
+                        "date_delta_days": date_delta_days,
+                        "country_exact": True,
+                        "combined_score": round(combined_score, 4),
+                    },
+                }
+
+        return best
     
-    def reconcile_events(self, discovered_events: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    def reconcile_events(self, discovered_events: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
         """
         Reconcile discovered events against existing database.
         
-        Returns: (updates, new_candidates)
+        Returns: (updates, new_candidates, overlap_review)
         """
         updates = []
         new_candidates = []
+        overlap_review = []
         
         print("\n=== RECONCILING DISCOVERED EVENTS ===\n")
         
@@ -264,6 +324,20 @@ class EventReconciler:
                 print(f"[MATCH] {candidate.get('name')} -> {matched.get('id')}")
                 # TODO: Implement field-level diff detection for updates
             else:
+                probable = self.find_probable_overlap(candidate)
+                if probable:
+                    print(f"[REVIEW] {candidate.get('name')} - possible overlap with {probable.get('existing_id')}")
+                    overlap_review.append({
+                        "candidate": {
+                            "id": candidate.get("id"),
+                            "name": candidate.get("name"),
+                            "event_url": candidate.get("event_url"),
+                            "start_date": candidate.get("start_date"),
+                            "country": (candidate.get("location") or {}).get("country"),
+                        },
+                        "likely_existing": probable,
+                        "recommended_action": "llm_review_required",
+                    })
                 print(f"[NEW] {candidate.get('name')} (candidate)")
                 new_candidates.append(candidate)
         
@@ -273,7 +347,7 @@ class EventReconciler:
         print("\n=== COST DETERMINATION ===\n")
         print("[INFO] No automatic cost proposals generated in reconcile-events.py")
         
-        return updates, new_candidates
+        return updates, new_candidates, overlap_review
     
     def write_updates_file(self, updates: List[Dict[str, Any]]) -> None:
         """Write events-updates.json"""
@@ -300,6 +374,19 @@ class EventReconciler:
         with open(output_file, 'w') as f:
             json.dump(output, f, indent=2)
         print(f"[WRITE] {output_file} ({len(candidates)} candidates)")
+
+    def write_overlap_review_file(self, overlap_review: List[Dict[str, Any]]) -> None:
+        """Write events-overlap-review.json"""
+        output_file = self.data_dir / "events-overlap-review.json"
+        output = {
+            "generated_at": self.timestamp,
+            "window_days": 180,
+            "source_run_date": self.run_date_str,
+            "records": overlap_review,
+        }
+        with open(output_file, 'w') as f:
+            json.dump(output, f, indent=2)
+        print(f"[WRITE] {output_file} ({len(overlap_review)} overlap review records)")
     
     def run(self, input_file: Optional[Path]) -> int:
         """Execute full reconciliation workflow"""
@@ -317,19 +404,20 @@ class EventReconciler:
         print()
         
         # Reconcile
-        updates, candidates = self.reconcile_events(discovered)
+        updates, candidates, overlap_review = self.reconcile_events(discovered)
         
         # Write outputs
         print("\n=== WRITING OUTPUT FILES ===\n")
         self.write_updates_file(updates)
         if input_file:
             self.write_candidates_file(candidates)
+            self.write_overlap_review_file(overlap_review)
         else:
             print("[SKIP] No input discoveries provided; preserving existing data/events-candidates.json")
         
         print()
         print(f"[COMPLETE] Reconciliation finished")
-        print(f"[SUMMARY] {len(updates)} updates | {len(candidates)} new candidates | outputs in {self.data_dir}/")
+        print(f"[SUMMARY] {len(updates)} updates | {len(candidates)} new candidates | {len(overlap_review)} overlap-review records | outputs in {self.data_dir}/")
         return 0
 
 

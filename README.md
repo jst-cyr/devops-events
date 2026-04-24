@@ -20,6 +20,7 @@ This pulls from several data sources:
 - Agent prompt template for source analysis: [docs/prompt-templates/events-source-analysis-agent-prompt.md](docs/prompt-templates/events-source-analysis-agent-prompt.md)
 - Agent prompt template for promoting candidates into events.json: [docs/prompt-templates/apply-events-candidates-to-events-agent-prompt.md](docs/prompt-templates/apply-events-candidates-to-events-agent-prompt.md)
 - Agent prompt template for applying updates into events.json: [docs/prompt-templates/apply-events-updates-to-events-agent-prompt.md](docs/prompt-templates/apply-events-updates-to-events-agent-prompt.md)
+- Agent prompt template for overlap review decisions: [docs/prompt-templates/review-events-overlap-agent-prompt.md](docs/prompt-templates/review-events-overlap-agent-prompt.md)
 - Sample dataset from 2026-02-20 weekly post: [data/sample-events-2026-02-20.json](data/sample-events-2026-02-20.json)
 
 ## Data
@@ -45,6 +46,7 @@ python scripts/reconcile-events.py --input-file discovered-events.json
 **Outputs:**
 - `data/events-candidates.json` - New events for review
 - `data/events-updates.json` - Field-level updates (cost backfill, data corrections)
+- `data/events-overlap-review.json` - Probable duplicate candidates for focused LLM review
 - `data/events-issues.json` - Data quality issues and extraction failures
 
 **Configuration:**
@@ -71,6 +73,7 @@ node scripts/parse-cfp-tracker.mjs 2026-04-17
 ### Usage Pattern (Weekly/Monthly Runs)
 1. Run agent to discover events and CFPs from sources
 2. Execute `reconcile-events.py` with discovered events file
+3. Run overlap review agent prompt using `data/events-overlap-review.json` to classify duplicate candidates
 3. Execute `parse-cfp-tracker.mjs` for CFP extraction
 4. Review `events-candidates.json` and `cfp-candidates.json` in agent window
 5. Apply approved candidates to `events.json` using apply-events agent prompt
