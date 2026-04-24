@@ -146,6 +146,34 @@ class EventReconciler:
             # Strip standalone years so cross-source duplicates still match by name/date/country.
             normalized = re.sub(r"\b(?:19|20)\d{2}\b", " ", normalized)
         return re.sub(r"\s+", " ", normalized).strip()
+
+    @staticmethod
+    def _tokenize_name(name: str) -> set:
+        """Tokenize normalized event names for subset comparisons."""
+        if not name:
+            return set()
+        return {t for t in name.split(" ") if t}
+
+    @classmethod
+    def _is_name_variant_match(cls, left_name: str, right_name: str, left_city: str, right_city: str) -> bool:
+        """
+        Detect pragmatic name variants across sources, e.g.:
+        - "KCD Toronto" vs "KCD Toronto Canada"
+        Requires aligned city to avoid broad false positives.
+        """
+        if not left_name or not right_name:
+            return False
+
+        left_tokens = cls._tokenize_name(left_name)
+        right_tokens = cls._tokenize_name(right_name)
+        if len(left_tokens) < 2 or len(right_tokens) < 2:
+            return False
+
+        city_match = bool(left_city and right_city and left_city == right_city)
+        if not city_match:
+            return False
+
+        return left_tokens.issubset(right_tokens) or right_tokens.issubset(left_tokens)
     
     def is_in_event_window(self, start_date: str, end_date: str) -> bool:
         """Check if event falls in the 180-day analysis window"""
@@ -217,6 +245,7 @@ class EventReconciler:
         new_name_without_year = self.normalize_name(new_event.get("name", ""), drop_year_tokens=True)
         new_start = new_event.get("start_date", "")
         new_country = (new_event.get("location", {}).get("country") or "").lower()
+        new_city = (new_event.get("location", {}).get("city") or "").strip().lower()
         
         if new_name and new_start and new_country:
             for existing in existing_events:
@@ -224,6 +253,7 @@ class EventReconciler:
                 existing_name_without_year = self.normalize_name(existing.get("name", ""), drop_year_tokens=True)
                 existing_start = existing.get("start_date", "")
                 existing_country = (existing.get("location", {}).get("country") or "").lower()
+                existing_city = (existing.get("location", {}).get("city") or "").strip().lower()
                 
                 names_match = (
                     new_name == existing_name
@@ -231,6 +261,12 @@ class EventReconciler:
                         new_name_without_year
                         and existing_name_without_year
                         and new_name_without_year == existing_name_without_year
+                    )
+                    or self._is_name_variant_match(
+                        new_name_without_year,
+                        existing_name_without_year,
+                        new_city,
+                        existing_city,
                     )
                 )
 
