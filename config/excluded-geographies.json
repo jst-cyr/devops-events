@@ -30,6 +30,10 @@
     "honduras",
     "nicaragua",
     "panama",
+    "india",
+    "vietnam",
+    "south korea",
+    "taiwan",
     "saudi arabia",
     "iraq",
     "iran",
@@ -114,6 +118,19 @@
     "são paulo",
     "lima",
     "bogota",
-    "czechia"
+    "czechia",
+    "bengaluru",
+    "bangalore",
+    "mumbai",
+    "delhi",
+    "hyderabad",
+    "chennai",
+    "pune",
+    "kolkata",
+    "hanoi",
+    "ho chi minh city",
+    "seoul",
+    "busan",
+    "taipei"
   ]
 }
