@@ -164,6 +164,7 @@ Exclude:
 - Automotive/embedded system-specific events (automotive grade linux, in-vehicle systems).
 - Open-source-only events without infra/devops operations focus.
 - Data/analytics events without clear DevOps/SRE/IaC relevance.
+- Course/training/bootcamp/certification offerings that are not practitioner networking/sponsorship/speaking events.
 - Sustainability-focused conference brands/events (including Greenio / greenio.tech).
 
 ### Geographic filtering

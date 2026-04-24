@@ -30,6 +30,10 @@ from urllib.parse import urlparse, parse_qsl, urlencode
 
 
 EXCLUDED_TOPIC_PATTERN = re.compile(r"power\s+platform|microsoft\s+power\s+platform", re.IGNORECASE)
+EXCLUDED_FORMAT_PATTERN = re.compile(
+    r"^\s*course\s*:|\bcourse\b|\bbootcamp\b|\btraining\b|\bcertification\b|/courses?/",
+    re.IGNORECASE,
+)
 EXCLUDED_COUNTRIES = {"singapore"}
 
 
@@ -176,6 +180,9 @@ class EventReconciler:
         )
         if EXCLUDED_TOPIC_PATTERN.search(search_text):
             return True, "excluded topic: Power Platform"
+
+        if EXCLUDED_FORMAT_PATTERN.search(search_text):
+            return True, "excluded format: course/training"
 
         return False, ""
     

@@ -54,6 +54,7 @@ python scripts/reconcile-events.py --input-file discovered-events.json
 - CFP discovery window: 56 days (manageable review scope)
 - Geographic filter: Excludes China, Africa, Central/South America, Middle East, Romania, Mexico
 - Early shortlist filter: `scripts/enrich-dev-events.mjs` drops Microsoft Power Platform-family events (`Power Platform`, `Power Apps`, `Power Automate`, `Power BI`, `Dynamics 365`) before enrichment fetches.
+- Early shortlist and reconcile filters also drop course/training-style records (for example `Course: ...`, `course`, `bootcamp`, `training`, `certification`, `/course` URLs).
 
 ### CFP Analysis (56-day window)
 For discovering Call for Papers opportunities:

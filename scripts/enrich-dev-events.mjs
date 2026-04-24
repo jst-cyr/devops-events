@@ -15,6 +15,8 @@ import { get as httpsGet } from "node:https";
 const DELAY_MS = 1500; // polite pause between requests
 const EXCLUDED_SHORTLIST_TOPIC_PATTERN =
   /power\s+platform|microsoft\s+power\s+platform|power\s*apps?|power\s*automate|power\s*bi|dynamics\s*365/i;
+const EXCLUDED_SHORTLIST_FORMAT_PATTERN =
+  /^\s*course\s*:|\bcourse\b|\bbootcamp\b|\btraining\b|\bcertification\b|\/courses?\//i;
 
 // ---------------------------------------------------------------------------
 // CLI
@@ -201,13 +203,22 @@ function cleanUrl(url) {
   }
 }
 
-function isExcludedAtShortlist(record) {
+function getShortlistExclusionReason(record) {
   const searchText = [
     record.name || "",
     record.topic || "",
     record.dev_events_url || "",
   ].join(" ");
-  return EXCLUDED_SHORTLIST_TOPIC_PATTERN.test(searchText);
+
+  if (EXCLUDED_SHORTLIST_TOPIC_PATTERN.test(searchText)) {
+    return "excluded topic: Microsoft Power Platform family";
+  }
+
+  if (EXCLUDED_SHORTLIST_FORMAT_PATTERN.test(searchText)) {
+    return "excluded format: course/training content";
+  }
+
+  return null;
 }
 
 // ---------------------------------------------------------------------------
@@ -217,15 +228,17 @@ function isExcludedAtShortlist(record) {
 async function main() {
   const input = JSON.parse(readFileSync(inputFile, "utf-8"));
   const allRecords = Array.isArray(input.records) ? input.records : [];
-  const excludedAtShortlist = allRecords.filter((r) => isExcludedAtShortlist(r));
-  const records = allRecords.filter((r) => !isExcludedAtShortlist(r));
+  const excludedAtShortlist = allRecords
+    .map((r) => ({ record: r, reason: getShortlistExclusionReason(r) }))
+    .filter((x) => Boolean(x.reason));
+  const records = allRecords.filter((r) => !getShortlistExclusionReason(r));
 
   if (excludedAtShortlist.length > 0) {
     console.log(
-      `\nShortlist pre-filter: excluded ${excludedAtShortlist.length} Microsoft Power Platform-family events before enrichment.`
+      `\nShortlist pre-filter: excluded ${excludedAtShortlist.length} out-of-scope records before enrichment.`
     );
-    for (const r of excludedAtShortlist) {
-      console.log(`  - EXCLUDED: ${r.name}`);
+    for (const x of excludedAtShortlist) {
+      console.log(`  - EXCLUDED: ${x.record.name} (${x.reason})`);
     }
   }
 
