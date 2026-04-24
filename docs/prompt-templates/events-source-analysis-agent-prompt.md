@@ -167,7 +167,7 @@ Exclude:
 
 ### Geographic filtering
 
-Exclude: China, all Africa, Middle East countries, Romania, Mexico, Croatia, Lithuania, Greece, Czech Republic, all Central America, all South America.
+Exclude: China, Singapore, all Africa, Middle East countries, Romania, Mexico, Croatia, Lithuania, Greece, Czech Republic, all Central America, all South America.
 
 Prioritize: US, Canada, Australia, Ireland, Japan, UK, mainland Europe.
 

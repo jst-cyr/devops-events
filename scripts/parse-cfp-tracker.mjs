@@ -22,6 +22,7 @@ const EXCLUDED_BRAND_PATTERN = /green\s*-?\s*io|greenio|sustainability|sustainab
 
 const EXCLUDED_COUNTRIES = new Set([
   "china",
+  "singapore",
   "romania",
   "mexico",
   "croatia",
@@ -122,6 +123,7 @@ const EXCLUDED_AFRICA_COUNTRIES = new Set([
 ]);
 
 const EXCLUDED_GEO_TOKENS = [
+  "singapore",
   "romania",
   "brasov",
   "mexico",
