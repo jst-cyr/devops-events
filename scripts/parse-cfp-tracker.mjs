@@ -13,6 +13,15 @@
 // (download first with: curl.exe -L "https://adatosystems.com/cfp-tracker/" -o "data/adatosystems-cfp-tracker-<date>.html")
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Load centralized excluded geographies configuration
+const configPath = join(__dirname, "..", "config", "excluded-geographies.json");
+const geographiesConfig = JSON.parse(readFileSync(configPath, "utf8"));
 
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
@@ -20,151 +29,9 @@ const KEYWORD_PATTERN =
 const EXCLUDED_TOPIC_PATTERN = /\bdatabase\b|postgres|postgresql|mysql|mongodb|data platform|data engineering|automotive|\bagl\b|power\s+platform|microsoft\s+power\s+platform/i;
 const EXCLUDED_BRAND_PATTERN = /green\s*-?\s*io|greenio|sustainability|sustainable/i;
 
-const EXCLUDED_COUNTRIES = new Set([
-  "china",
-  "singapore",
-  "romania",
-  "mexico",
-  "croatia",
-  "lithuania",
-  "greece",
-  "czech republic",
-  "argentina",
-  "bolivia",
-  "brazil",
-  "chile",
-  "colombia",
-  "columbia",
-  "ecuador",
-  "guyana",
-  "paraguay",
-  "peru",
-  "suriname",
-  "uruguay",
-  "venezuela",
-  "belize",
-  "costa rica",
-  "el salvador",
-  "guatemala",
-  "honduras",
-  "nicaragua",
-  "panama",
-  "saudi arabia",
-  "iraq",
-  "iran",
-  "israel",
-  "united arab emirates",
-  "qatar",
-  "kuwait",
-  "oman",
-  "bahrain",
-  "jordan",
-  "lebanon",
-  "yemen",
-  "syria",
-]);
-
-const EXCLUDED_AFRICA_COUNTRIES = new Set([
-  "algeria",
-  "angola",
-  "benin",
-  "botswana",
-  "burkina faso",
-  "burundi",
-  "cabo verde",
-  "cameroon",
-  "central african republic",
-  "chad",
-  "comoros",
-  "democratic republic of the congo",
-  "djibouti",
-  "egypt",
-  "equatorial guinea",
-  "eritrea",
-  "eswatini",
-  "ethiopia",
-  "gabon",
-  "gambia",
-  "ghana",
-  "guinea",
-  "guinea-bissau",
-  "ivory coast",
-  "cote d'ivoire",
-  "kenya",
-  "lesotho",
-  "liberia",
-  "libya",
-  "madagascar",
-  "malawi",
-  "mali",
-  "mauritania",
-  "mauritius",
-  "morocco",
-  "mozambique",
-  "namibia",
-  "niger",
-  "nigeria",
-  "republic of the congo",
-  "rwanda",
-  "sao tome and principe",
-  "senegal",
-  "seychelles",
-  "sierra leone",
-  "somalia",
-  "south africa",
-  "south sudan",
-  "sudan",
-  "tanzania",
-  "togo",
-  "tunisia",
-  "uganda",
-  "zambia",
-  "zimbabwe",
-]);
-
-const EXCLUDED_GEO_TOKENS = [
-  "singapore",
-  "romania",
-  "brasov",
-  "mexico",
-  "croatia",
-  "lithuania",
-  "greece",
-  "czech republic",
-  "czechia",
-  "brazil",
-  "rio de janeiro",
-  "recife",
-  "campinas",
-  "natal",
-  "feira de santana",
-  "goiania",
-  "goi\u00e2nia",
-  "sao paulo",
-  "s\u00e3o paulo",
-  "peru",
-  "lima",
-  "argentina",
-  "bolivia",
-  "chile",
-  "colombia",
-  "columbia",
-  "bogota",
-  "ecuador",
-  "guyana",
-  "paraguay",
-  "suriname",
-  "uruguay",
-  "venezuela",
-  "belize",
-  "costa rica",
-  "el salvador",
-  "guatemala",
-  "honduras",
-  "nicaragua",
-  "panama",
-  "china",
-];
+const EXCLUDED_COUNTRIES = new Set(geographiesConfig.excluded_countries);
+const EXCLUDED_AFRICA_COUNTRIES = new Set(geographiesConfig.excluded_africa_countries);
+const EXCLUDED_GEO_TOKENS = geographiesConfig.excluded_geo_tokens;
 
 function isExcludedGeography(event) {
   const country = (event.country || "").trim().toLowerCase();

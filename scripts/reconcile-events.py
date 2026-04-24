@@ -34,7 +34,21 @@ EXCLUDED_FORMAT_PATTERN = re.compile(
     r"^\s*course\s*:|\bcourse\b|\bbootcamp\b|\btraining\b|\bcertification\b|/courses?/",
     re.IGNORECASE,
 )
-EXCLUDED_COUNTRIES = {"singapore"}
+
+# Load centralized excluded geographies configuration
+def _load_excluded_geographies():
+    config_file = Path(__file__).parent.parent / "config" / "excluded-geographies.json"
+    try:
+        with open(config_file, 'r') as f:
+            config = json.load(f)
+            all_countries = set(config.get("excluded_countries", []))
+            all_countries.update(config.get("excluded_africa_countries", []))
+            return all_countries
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[WARN] Failed to load excluded geographies config: {e}")
+        return {"singapore", "malaysia"}
+
+EXCLUDED_COUNTRIES = _load_excluded_geographies()
 GENERIC_EVENT_HOSTS = {
     "dev.events",
     "www.dev.events",
