@@ -129,13 +129,17 @@ class EventReconciler:
             return (url or "").strip().lower().rstrip("/")
 
     @staticmethod
-    def normalize_name(name: str) -> str:
+    def normalize_name(name: str, drop_year_tokens: bool = False) -> str:
         """Normalize names for fuzzy equivalence across punctuation/diacritics."""
         if not name:
             return ""
         normalized = unicodedata.normalize("NFKD", name.lower())
         normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
         normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+        if drop_year_tokens:
+            # Many sources append year in titles (e.g., "DevOpsDays Zurich 2026").
+            # Strip standalone years so cross-source duplicates still match by name/date/country.
+            normalized = re.sub(r"\b(?:19|20)\d{2}\b", " ", normalized)
         return re.sub(r"\s+", " ", normalized).strip()
     
     def is_in_event_window(self, start_date: str, end_date: str) -> bool:
@@ -202,16 +206,27 @@ class EventReconciler:
         
         # Fuzzy name + date + country (tertiary)
         new_name = self.normalize_name(new_event.get("name", ""))
+        new_name_without_year = self.normalize_name(new_event.get("name", ""), drop_year_tokens=True)
         new_start = new_event.get("start_date", "")
         new_country = (new_event.get("location", {}).get("country") or "").lower()
         
         if new_name and new_start and new_country:
             for existing in existing_events:
                 existing_name = self.normalize_name(existing.get("name", ""))
+                existing_name_without_year = self.normalize_name(existing.get("name", ""), drop_year_tokens=True)
                 existing_start = existing.get("start_date", "")
                 existing_country = (existing.get("location", {}).get("country") or "").lower()
                 
-                if (new_name == existing_name and 
+                names_match = (
+                    new_name == existing_name
+                    or (
+                        new_name_without_year
+                        and existing_name_without_year
+                        and new_name_without_year == existing_name_without_year
+                    )
+                )
+
+                if (names_match and 
                     new_start == existing_start and 
                     new_country == existing_country):
                     return (True, existing)
