@@ -2607,7 +2607,7 @@
     {
       "id": "devopsdays-graz-2026",
       "name": "DevOpsDays Graz",
-      "event_url": "https://pretalx.com/redirect/?url=https%3A//www.devopsdays.at/%3AOi4vzuMvkiLLtgW2DFA7RArD_Mjn9YooECWmNMy5mtw",
+      "event_url": "https://www.devopsdays.at/",
       "start_date": "2026-09-04",
       "end_date": "2026-09-05",
       "delivery": "in_person",
@@ -4334,34 +4334,6 @@
         "price_currency": "USD",
         "cost_level": "premium",
         "notes": "Registration page shows tiered pricing by date: PRO Pass $610-$1,215, PREMIUM Pass $1,325-$2,650. Discounts: 25% off groups of 3+, 30% off student/government. Via Eventbrite."
-      }
-    },
-    {
-      "id": "dev-ops-days-graz-2026-qcu4tvro",
-      "name": "DevOpsDays Graz 2026",
-      "event_url": "https://www.devopsdays.at/",
-      "start_date": "2026-09-04",
-      "end_date": "2026-09-05",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Graz",
-        "region": null,
-        "country": "Austria",
-        "country_code": "AT",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted via explicit outbound link.",
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
       }
     },
     {
