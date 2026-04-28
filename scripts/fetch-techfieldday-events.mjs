@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-// Fetch upcoming network-focused Tech Field Day events from the WordPress REST
-// API and normalize them into records compatible with reconcile-events.py.
+// Fetch upcoming Tech Field Day events from the WordPress REST API, apply
+// deterministic relevance scoring, and normalize accepted records into output
+// compatible with reconcile-events.py.
 //
 // Usage:
 //   node scripts/fetch-techfieldday-events.mjs [YYYY-MM-DD]
@@ -16,7 +17,39 @@ const SOURCE = "techfieldday.com";
 const WINDOW_DAYS = 180;
 const PAGE_SIZE = 20;
 const DELAY_MS = 1000;
-const NETWORK_TITLE_PATTERN = /\b(networking|network|mobility|wireless)\b/i;
+const MIN_FIT_SCORE = 4;
+
+const INCLUDED_EVENT_TYPE_PATTERN = /\bevent-type-field-day\b/i;
+const EXCLUDED_EVENT_TYPE_PATTERN = /\bevent-type-(extra|experience|exclusive)\b/i;
+
+const TITLE_SIGNALS = [
+  { pattern: /\bcloud\b/i, score: 3, tag: "cloud" },
+  { pattern: /\binfrastructure\b/i, score: 3, tag: "infrastructure" },
+  { pattern: /\bplatform\b/i, score: 2, tag: "platform-engineering" },
+  { pattern: /\bsecurity\b/i, score: 3, tag: "security" },
+  { pattern: /\bcompliance\b/i, score: 3, tag: "compliance" },
+  { pattern: /\bgovernance\b/i, score: 2, tag: "governance" },
+  { pattern: /\brisk\b/i, score: 1, tag: "risk" },
+  { pattern: /\bpolicy\b/i, score: 1, tag: "policy" },
+  { pattern: /\bdevops\b/i, score: 2, tag: "devops" },
+  { pattern: /\bsre\b/i, score: 2, tag: "sre" },
+  { pattern: /\bnetwork(?:ing)?\b/i, score: 1, tag: "networking" },
+  { pattern: /\bmobility\b/i, score: 1, tag: "wireless" },
+  { pattern: /\bwireless\b/i, score: 1, tag: "wireless" },
+];
+
+const TOPIC_SIGNALS = [
+  { pattern: /\bcloud\b/i, score: 3, tag: "cloud" },
+  { pattern: /\binfrastructure\b/i, score: 3, tag: "infrastructure" },
+  { pattern: /\bai infrastructure\b/i, score: 2, tag: "infrastructure" },
+  { pattern: /\bsecurity\b/i, score: 3, tag: "security" },
+  { pattern: /\bcompliance\b/i, score: 3, tag: "compliance" },
+  { pattern: /\bgovernance\b/i, score: 2, tag: "governance" },
+  { pattern: /\bdevops\b/i, score: 2, tag: "devops" },
+  { pattern: /\bsre\b/i, score: 2, tag: "sre" },
+  { pattern: /\bnetworking\b/i, score: 1, tag: "networking" },
+  { pattern: /\bmobility\b/i, score: 1, tag: "wireless" },
+];
 
 const STATE_NAMES = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas",
@@ -167,12 +200,58 @@ function normalizeLocationName(name) {
   };
 }
 
-function buildTags(name) {
-  const tags = ["networking", "network-engineering"];
-  if (/mobility/i.test(name)) {
-    tags.push("wireless");
+function decodeHtmlAndStrip(text) {
+  return decodeHtml(text);
+}
+
+function collectSignals(text, definitions, matchedTags) {
+  let score = 0;
+  const matched = [];
+  for (const signal of definitions) {
+    if (signal.pattern.test(text)) {
+      score += signal.score;
+      matched.push(signal.tag);
+      matchedTags.add(signal.tag);
+    }
   }
-  return tags;
+  return { score, matched };
+}
+
+function scorePostFit(post, topicNames) {
+  const name = decodeHtmlAndStrip(post?.title?.rendered);
+  const excerpt = decodeHtmlAndStrip(post?.excerpt?.rendered || "");
+  const topicText = topicNames.join(" ");
+  const classText = (Array.isArray(post?.class_list) ? post.class_list.join(" ") : "");
+  const searchText = [name, topicText, excerpt, classText].join(" ");
+
+  const tags = new Set(["techfieldday"]);
+  const titleHits = collectSignals(name, TITLE_SIGNALS, tags);
+  const topicHits = collectSignals(topicText, TOPIC_SIGNALS, tags);
+
+  let score = titleHits.score + topicHits.score;
+  if (/\binfrastructure\b/i.test(searchText) && /\bsecurity|compliance|governance\b/i.test(searchText)) {
+    score += 2;
+    tags.add("infra-security");
+  }
+
+  return {
+    name,
+    score,
+    accepted: score >= MIN_FIT_SCORE,
+    matched_tags: [...tags],
+    matched_signals: {
+      title: titleHits.matched,
+      topic: topicHits.matched,
+    },
+  };
+}
+
+function buildTags(fit, name) {
+  const tags = new Set(fit.matched_tags);
+  if (/\bnetwork|mobility|wireless\b/i.test(name)) {
+    tags.add("network-engineering");
+  }
+  return [...tags];
 }
 
 async function fetchLocationTerm(locationId, cache) {
@@ -191,6 +270,23 @@ async function fetchLocationTerm(locationId, cache) {
     const fallback = normalizeLocationName(null);
     cache.set(locationId, fallback);
     return fallback;
+  }
+}
+
+async function fetchTopicTerm(topicId, cache) {
+  if (!topicId) return null;
+  if (cache.has(topicId)) return cache.get(topicId);
+
+  const url = `${BASE_URL}/wp-json/wp/v2/topic/${topicId}`;
+  try {
+    const response = await fetchJson(url);
+    const topic = decodeHtmlAndStrip(response?.data?.name || "");
+    cache.set(topicId, topic);
+    return topic;
+  } catch (error) {
+    console.warn(`[WARN] Failed to resolve topic ${topicId}: ${error.message}`);
+    cache.set(topicId, null);
+    return null;
   }
 }
 
@@ -219,11 +315,29 @@ async function fetchAllEvents() {
 async function main() {
   const posts = await fetchAllEvents();
   const locationCache = new Map();
+  const topicCache = new Map();
   const records = [];
+  let skippedByType = 0;
+  let skippedByScore = 0;
 
   for (const post of posts) {
-    const name = decodeHtml(post?.title?.rendered);
-    if (!NETWORK_TITLE_PATTERN.test(name)) {
+    const classText = (Array.isArray(post?.class_list) ? post.class_list.join(" ") : "");
+    if (!INCLUDED_EVENT_TYPE_PATTERN.test(classText) || EXCLUDED_EVENT_TYPE_PATTERN.test(classText)) {
+      skippedByType += 1;
+      continue;
+    }
+
+    const topicIds = Array.isArray(post?.topic) ? post.topic : [];
+    const topicNames = [];
+    for (const topicId of topicIds) {
+      const topicName = await fetchTopicTerm(topicId, topicCache);
+      if (topicName) topicNames.push(topicName);
+    }
+
+    const fit = scorePostFit(post, topicNames);
+    const name = fit.name;
+    if (!fit.accepted) {
+      skippedByScore += 1;
       continue;
     }
 
@@ -243,7 +357,7 @@ async function main() {
       end_date: endDate,
       delivery: "hybrid",
       event_type: "conference",
-      tags: buildTags(name),
+      tags: buildTags(fit, name),
       source: SOURCE,
       location: {
         city: location.city,
@@ -261,6 +375,12 @@ async function main() {
       },
       notes:
         "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live.",
+      fit: {
+        score: fit.score,
+        threshold: MIN_FIT_SCORE,
+        matched_signals: fit.matched_signals,
+        topic_terms: topicNames,
+      },
     });
   }
 
@@ -282,6 +402,8 @@ async function main() {
   const outputPath = `data/techfieldday-events-${runDate}.json`;
   writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n");
   console.log(`\nWrote ${records.length} Tech Field Day records to ${outputPath}`);
+  console.log(`Skipped by event-type gate: ${skippedByType}`);
+  console.log(`Skipped by fit score gate: ${skippedByScore}`);
 }
 
 main().catch((error) => {
