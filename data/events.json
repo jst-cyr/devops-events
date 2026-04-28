@@ -2314,7 +2314,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Registration page routes to a Tito ticket page (dodzh2026) where tickets are currently waitlist-only and no public price amounts are shown in crawl output."
+        "notes": "Confirmed paid conference via Tito ticketing, currently waitlist-only. Full ticket price not publicly published. Includes 2-day access, meals, evening event, and conference T-shirt."
       }
     },
     {
@@ -2754,7 +2754,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Official site links to tickets.kcdnewyork.com, but public crawl hit a cookie/privacy gate and did not expose ticket price values."
+        "notes": "KCD New York 2026 tickets at tickets.kcdnewyork.com. Cookie consent wall prevented price extraction. Confirmed paid community conference. Price not extractable."
       }
     },
     {
@@ -2869,7 +2869,7 @@
         "lowest_price": null,
         "price_currency": "CHF",
         "cost_level": "standard",
-        "notes": "Event page shows 'Tickets Are Available Soon' via Tito, with discounted tickets for diversity/lower income. Organized by nonprofit. Implies paid event but exact pricing not yet published."
+        "notes": "Swiss Cloud Native Day 2026 (Sept 17, Mount Gurten, Bern). Tito page shows \"Tickets Are Available Soon\" with waitlist. Discounted tickets for diversity/lower income. Paid event, exact price not yet published."
       }
     },
     {
@@ -3594,7 +3594,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Tickets not yet on sale; assumed free until confirmed."
+        "notes": "DevOps Midwest 2026 (Sept 16, Webster University, St. Louis, MO). Official site states \"Tickets will be on sale soon.\" Confirmed paid event, price not yet published."
       },
       "notes": "Canonical event URL resolved via redirect from tracker URL http://www.devopsmidwest.com/."
     },
@@ -3627,10 +3627,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 200,
+        "cost_level": "standard",
+        "notes": "DevOpsDays Dallas 2026 general ticket $200 + 8.25% sales tax = $216.50. Source: devopsdays.org/events/2026-dallas/registration",
+        "price_currency": "USD"
       },
       "notes": null
     },
@@ -3813,7 +3814,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "KCD Toronto 2026 tickets via community.cncf.io require login to view pricing. Event description mentions early bird registration (ended March 1). Confirmed paid event, price not publicly visible."
       }
     },
     {
@@ -3840,9 +3841,9 @@
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "AWS Summit Hamburg 2026 confirmed as a free one-day event per official AWS page (\"AWS Summit Hamburg is a free one-day event\"). This community lounge is co-located with the free summit."
       }
     },
     {
@@ -3865,7 +3866,7 @@
         "is_online": false,
         "venue": null
       },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
+      "notes": "CANCELLED: Cloud Native Days Amsterdam 2026 has been cancelled per official website announcement (cloudnative.amsterdam). Will return in 2027.",
       "cost": {
         "is_free": true,
         "lowest_price": null,
@@ -3924,10 +3925,10 @@
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
         "is_free": false,
-        "lowest_price": null,
+        "lowest_price": 61.77,
         "price_currency": "CAD",
-        "cost_level": "standard",
-        "notes": "Event page shows 'Early Bird Pricing Ends Soon!' and links to Eventbrite for ticket purchase. Exact price not visible on landing page. Calgary, May 23 2026."
+        "cost_level": "low",
+        "notes": "Code To Cloud Summit 2026 Eventbrite: From CAD61.77 early bird (discount applied). Offer ends approximately May 2, 2026. Calgary, AB. Source: eventbrite.ca"
       }
     },
     {
@@ -4010,10 +4011,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 25,
+        "cost_level": "low",
+        "notes": "AWS Community Day Midwest 2026: Conference pass $25.00 USD. Annual volunteer-run community event in Indianapolis. Source: awsmidwest.regfox.com/aws-community-day-midwest",
+        "price_currency": "USD"
       }
     },
     {
@@ -4133,10 +4135,11 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 22.63,
+        "cost_level": "low",
+        "notes": "AWS Community Day East Canada 2026 Eventbrite: From CAD22.63 early bird. Community event, ticket revenue covers venue/event costs. Source: eventbrite.com/e/aws-community-day-montreal-tickets-1986733601684",
+        "price_currency": "CAD"
       }
     },
     {
@@ -4162,10 +4165,10 @@
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "PlatformCon homepage labels Live Day New York as 'Tickets on sale'; specific ticket amounts were not exposed in crawl output."
+        "cost_level": "standard",
+        "notes": "PlatformCon Live Day New York labeled \"Tickets on sale\" on platformcon.com homepage. In-person paid event. Specific ticket price not exposed in crawl."
       }
     },
     {
@@ -4363,7 +4366,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "AWS Community Summit Manchester 2026 (Oct 1, Victoria Warehouse) has earlybird tickets on sale per comsum.co.uk. Paid community event. Exact price not visible on public landing page."
       }
     },
     {
@@ -4392,7 +4395,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "AWS Community Day Bulgaria 2026 (Oct 3, Sofia Tech Park) tickets via bilet.bg. Paid community event. Exact price not visible in crawl."
       }
     },
     {
@@ -4418,10 +4421,10 @@
       },
       "notes": "Canonical URL manually resolved; dev.events detail page timed out during enrichment.",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "PlatformCon homepage labels Live Day London as 'Tickets on sale' while also stating virtual registration is free; specific London ticket amounts were not exposed in crawl output."
+        "cost_level": "standard",
+        "notes": "PlatformCon Live Day London labeled \"Tickets on sale\" on platformcon.com homepage. In-person paid event. (Virtual PlatformCon registration is separately free.) Specific ticket price not exposed in crawl."
       }
     },
     {
@@ -4471,9 +4474,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "LinuxFest Northwest confirmed free. Sponsor prospectus states \"FREE educational event celebrating Open Source Software\". Event occurred April 24-26, 2026 in Bellingham, WA."
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
     },
@@ -4518,10 +4521,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 160,
+        "cost_level": "standard",
+        "notes": "Cloud Native Days Italy 2026: Regular ticket EUR160 ex. VAT (22%). Early Bird EUR100 and Very Early Bird EUR85 tiers have sold out. Source: cloudnativedaysitaly.org",
+        "price_currency": "EUR"
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
     },
@@ -4542,10 +4546,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 449,
+        "cost_level": "premium",
+        "notes": "Observability Summit 2026 confirmed rates: Standard $449 USD, Academic $100 USD. Source: events.linuxfoundation.org/observability-summit-north-america/register/",
+        "price_currency": "USD"
       },
       "notes": "Canonical URL extracted via explicit outbound link."
     },
@@ -4566,10 +4571,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 15,
+        "cost_level": "low",
+        "notes": "Atlanta Cloud+AI Conference advance ticket $15.00 + $1.30 service fee = $16.30 on TicketLeap. Community event by Developers Association of Georgia. Source: events.ticketleap.com",
+        "price_currency": "USD"
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
     },
@@ -4615,9 +4621,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "AlmaLinux Day Los Angeles confirmed free. Registration via Indico (events.almalinux.org/event/189/) with no ticket cost. Community event by AlmaLinux OS Foundation."
       },
       "notes": "Canonical URL extracted via explicit outbound link."
     },
@@ -4638,10 +4644,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 249,
+        "cost_level": "premium",
+        "notes": "KubeCon Japan 2026 confirmed rates: Corporate standard $525 USD, Individual standard $249 USD, Academic $100 USD. Source: events.linuxfoundation.org/kubecon-cloudnativecon-japan/register/",
+        "price_currency": "USD"
       },
       "notes": "Canonical URL extracted via explicit outbound link."
     },
@@ -4662,10 +4669,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 895,
+        "cost_level": "premium",
+        "notes": "AI Infrastructure Summit 2026: Standard Event Pass EUR2549, Digital Event Pass EUR895. Co-located with Enterprise AI Summit, Big Data Minds, Business Intelligence Summit. Source: we-conect.com/events/ai-infrastructure-summit-2026",
+        "price_currency": "EUR"
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
     },
@@ -4689,7 +4697,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "MacSysAdmin Conference 2026 (Sept 29 - Oct 2, Gothenburg, Sweden). 21st edition. No ticket prices published on the website as of April 2026."
       },
       "notes": "Canonical URL extracted via explicit outbound link."
     },
@@ -4713,7 +4721,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "KCD Sofia 2026 announced \"Early Bird and Regular ticket sales soon\" per official site. Sold out in 2025. Confirmed paid event, price not yet published as of April 2026."
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
     },
@@ -4734,10 +4742,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 700,
+        "cost_level": "premium",
+        "notes": "The Cloud & AI Summit 2026: All-access conference pass $900/person. Early bird $700 with code CAS26EarlyBird (expires April 30, 2026). Microsoft Azure/AI focused, 3 days. Source: cloudandaisummit.com/attend/register",
+        "price_currency": "USD"
       },
       "notes": "Canonical URL extracted via explicit outbound link."
     },
@@ -4758,10 +4767,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 499,
+        "cost_level": "premium",
+        "notes": "Platform Summit 2026 super early bird pricing (until June 8): EUR499 summit-only, EUR585 summit+unconference bundle. Source: nordicapis.com/events/platform-summit-2026/",
+        "price_currency": "EUR"
       },
       "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
     },
@@ -4809,7 +4819,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "KCD UK Edinburgh 2026 tickets via community.cncf.io require login. Workshops are free; conference tickets are paid. Price not publicly visible."
       },
       "notes": "Canonical URL extracted via explicit outbound link."
     },
@@ -4844,9 +4854,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "Luma ticket page confirms: \"This event is free to attend, woohoo!\" Free Ticket and Community Hero types, both free. Source: lu.ma/embed/event/evt-DVJNFaWoytEvByr/simple"
       }
     },
     {
@@ -4880,9 +4890,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "Luma ticket page confirms: \"This event is free to attend, woohoo!\" Free Ticket and Community Hero types, both free. Source: lu.ma/embed/event/evt-4zvCAzI2QDBdb3n/simple"
       }
     },
     {
@@ -4916,9 +4926,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "Luma ticket page confirms: \"This event is free to attend, woohoo!\" Free Ticket and Community Hero types, both free. Source: lu.ma/embed/event/evt-gNWNB8rIs45HwO4/simple"
       }
     },
     {
@@ -4952,9 +4962,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": null,
+        "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "notes": "Luma ticket page confirms: \"This event is free to attend, woohoo!\" Free Ticket and Community Hero types, both free. Source: lu.ma/embed/event/evt-Ho3Gp0nZFmNUjW0/simple"
       }
     },
     {
@@ -5022,10 +5032,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 199,
+        "cost_level": "standard",
+        "notes": "SREday London Q3 2026 Luma ticket prices: Self-funding GBP199, Early Bird GA GBP299 (until Jul 31), Full GA GBP399 (from Aug 1), Student/Job Seeker GBP49. Source: lu.ma embed event IKsbB1DCmfBEwHI",
+        "price_currency": "GBP"
       }
     }
   ]
