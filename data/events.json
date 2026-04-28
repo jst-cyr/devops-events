@@ -19,7 +19,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -311,7 +311,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -342,7 +342,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -843,7 +843,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -877,7 +877,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -910,7 +910,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -943,7 +943,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -977,7 +977,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -1010,7 +1010,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -1043,7 +1043,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -1077,7 +1077,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -1110,7 +1110,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -1330,7 +1330,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -1915,7 +1915,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2109,7 +2109,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2143,7 +2143,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2177,7 +2177,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2217,7 +2217,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2258,7 +2258,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2442,7 +2442,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -2812,7 +2812,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -3423,7 +3423,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": null
       },
@@ -3804,7 +3804,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": "Online"
       },
@@ -4598,7 +4598,7 @@
         "city": "Washington",
         "region": null,
         "country": "United States",
-        "country_code": null,
+        "country_code": "US",
         "is_online": false,
         "venue": null
       },
@@ -4622,7 +4622,7 @@
         "city": "Austin",
         "region": null,
         "country": "United States",
-        "country_code": null,
+        "country_code": "US",
         "is_online": false,
         "venue": null
       },
@@ -4646,7 +4646,7 @@
         "city": "Bologna",
         "region": null,
         "country": "Italy",
-        "country_code": null,
+        "country_code": "IT",
         "is_online": false,
         "venue": null
       },
@@ -4670,7 +4670,7 @@
         "city": "Minneapolis",
         "region": null,
         "country": "United States",
-        "country_code": null,
+        "country_code": "US",
         "is_online": false,
         "venue": null
       },
@@ -4694,7 +4694,7 @@
         "city": "Marietta",
         "region": null,
         "country": "United States",
-        "country_code": null,
+        "country_code": "US",
         "is_online": false,
         "venue": null
       },
@@ -4718,7 +4718,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": null
       },
@@ -4742,7 +4742,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": null
       },
@@ -4766,7 +4766,7 @@
         "city": "Los Angeles",
         "region": null,
         "country": "United States",
-        "country_code": null,
+        "country_code": "US",
         "is_online": false,
         "venue": null
       },
@@ -4790,7 +4790,7 @@
         "city": "Yokohama",
         "region": null,
         "country": "Japan",
-        "country_code": null,
+        "country_code": "JP",
         "is_online": false,
         "venue": null
       },
@@ -4814,7 +4814,7 @@
         "city": "Berlin",
         "region": null,
         "country": "Germany",
-        "country_code": null,
+        "country_code": "DE",
         "is_online": false,
         "venue": null
       },
@@ -4838,7 +4838,7 @@
         "city": "Gothenburg",
         "region": null,
         "country": "Sweden",
-        "country_code": null,
+        "country_code": "SE",
         "is_online": false,
         "venue": null
       },
@@ -4862,7 +4862,7 @@
         "city": "Sofia",
         "region": null,
         "country": "Bulgaria",
-        "country_code": null,
+        "country_code": "BG",
         "is_online": false,
         "venue": null
       },
@@ -4886,7 +4886,7 @@
         "city": "St. Charles",
         "region": null,
         "country": "United States",
-        "country_code": null,
+        "country_code": "US",
         "is_online": false,
         "venue": null
       },
@@ -4910,7 +4910,7 @@
         "city": "Stockholm",
         "region": null,
         "country": "Sweden",
-        "country_code": null,
+        "country_code": "SE",
         "is_online": false,
         "venue": null
       },
@@ -4934,7 +4934,7 @@
         "city": null,
         "region": null,
         "country": "Online",
-        "country_code": "XX",
+        "country_code": null,
         "is_online": true,
         "venue": null
       },
@@ -4958,7 +4958,7 @@
         "city": "Edinburgh",
         "region": null,
         "country": "United Kingdom",
-        "country_code": null,
+        "country_code": "GB",
         "is_online": false,
         "venue": null
       },
