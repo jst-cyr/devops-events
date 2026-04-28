@@ -3702,35 +3702,6 @@
       }
     },
     {
-      "id": "devopsdays-atlanta-2026-ehpztrqi",
-      "name": "devopsdays Atlanta 2026",
-      "event_url": "https://www.devopsdays.org/atlanta",
-      "start_date": "2026-04-21",
-      "end_date": "2026-04-22",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Atlanta",
-        "region": null,
-        "country": "United States",
-        "country_code": "US",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted via explicit outbound link.",
-      "cost": {
-        "is_free": false,
-        "lowest_price": 217.8,
-        "price_currency": "USD",
-        "cost_level": "standard",
-        "notes": "Eventbrite listing shows ticket price at $217.80 for devopsdays Atlanta 2026."
-      }
-    },
-    {
       "id": "aws-summit-london-6xpn6jgv",
       "name": "AWS Summit London",
       "event_url": "https://aws.amazon.com/events/summits/london",
@@ -3838,34 +3809,6 @@
         "venue": null
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
-      }
-    },
-    {
-      "id": "dev-ops-days-nashville-2026-ie-umt2t",
-      "name": "DevOps Days Nashville 2026",
-      "event_url": "https://devopsdays.org/events/2026-nashville/welcome",
-      "start_date": "2026-05-14",
-      "end_date": "2026-05-15",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Murfreesboro",
-        "region": null,
-        "country": "United States",
-        "country_code": "US",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
       "cost": {
         "is_free": true,
         "lowest_price": null,
@@ -4395,62 +4338,6 @@
       }
     },
     {
-      "id": "devopsdays-berlin-2026-55-y6mge",
-      "name": "Devopsdays Berlin 2026",
-      "event_url": "https://devopsdays.org/events/2026-berlin/welcome",
-      "start_date": "2026-09-29",
-      "end_date": "2026-09-30",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Berlin",
-        "region": null,
-        "country": "Germany",
-        "country_code": "DE",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted via explicit outbound link.",
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
-      }
-    },
-    {
-      "id": "dev-ops-days-dallas-2026-nx2u6qdw",
-      "name": "DevOpsDays Dallas 2026",
-      "event_url": "https://devopsdays.org/events/2026-dallas/welcome",
-      "start_date": "2026-09-29",
-      "end_date": "2026-09-30",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Dallas",
-        "region": null,
-        "country": "United States",
-        "country_code": "US",
-        "is_online": false,
-        "venue": null
-      },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback).",
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
-      }
-    },
-    {
       "id": "aws-community-summit-manchester-2026-xsfgkpun",
       "name": "AWS Community Summit - Manchester 2026",
       "event_url": "https://www.comsum.co.uk/",
@@ -4692,30 +4579,6 @@
       "event_url": "https://mastering-obs.de/",
       "start_date": "2026-06-05",
       "end_date": "2026-06-05",
-      "delivery": "online",
-      "source": "dev.events",
-      "location": {
-        "city": null,
-        "region": null,
-        "country": "Online",
-        "country_code": null,
-        "is_online": true,
-        "venue": null
-      },
-      "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
-      },
-      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
-    },
-    {
-      "id": "platformcon-virtual-20260622",
-      "name": "PlatformCON Virtual",
-      "event_url": "https://platformcon.com/program",
-      "start_date": "2026-06-22",
-      "end_date": "2026-06-26",
       "delivery": "online",
       "source": "dev.events",
       "location": {
