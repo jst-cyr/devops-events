@@ -5378,6 +5378,123 @@
         "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
       },
       "notes": null
+    },
+    {
+      "id": "nanog-97",
+      "name": "NANOG 97",
+      "event_url": "https://nanog.org/events/nanog-97/",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-03",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "nanog.org",
+      "location": {
+        "city": "Bellevue",
+        "region": "WA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 100,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Published NANOG conference rates show early in-person pricing from $775 USD, student pricing from $100 USD, and virtual registration at $150 USD."
+      },
+      "notes": "Participation mode sourced from NANOG's upcoming events listing. Detail page spotlight topic: Site Reliability Engineering."
+    },
+    {
+      "id": "nanog-98",
+      "name": "NANOG 98",
+      "event_url": "https://nanog.org/events/nanog-98/",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-21",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "nanog.org",
+      "location": {
+        "city": "Miami",
+        "region": "FL",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 100,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Published NANOG conference rates show early in-person pricing from $775 USD, student pricing from $100 USD, and virtual registration at $150 USD."
+      },
+      "notes": "Participation mode sourced from NANOG's upcoming events listing."
+    },
+    {
+      "id": "techfieldday-mfd14",
+      "name": "Mobility Field Day 14",
+      "event_url": "https://techfieldday.com/event/mfd14/",
+      "start_date": "2026-05-06",
+      "end_date": "2026-05-08",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "networking",
+        "network-engineering",
+        "wireless"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No public ticket pricing listed. Tech Field Day directs prospective delegates to contact the organizers to attend, and presentations are streamed live on the event page."
+      },
+      "notes": "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live."
+    },
+    {
+      "id": "techfieldday-nfd41",
+      "name": "Networking Field Day 41",
+      "event_url": "https://techfieldday.com/event/nfd41/",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-08",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No public ticket pricing listed. Tech Field Day directs prospective delegates to contact the organizers to attend, and presentations are streamed live on the event page."
+      },
+      "notes": "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live."
     }
   ]
 }
