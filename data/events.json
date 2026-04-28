@@ -5038,6 +5038,346 @@
         "notes": "SREday London Q3 2026 Luma ticket prices: Self-funding GBP199, Early Bird GA GBP299 (until Jul 31), Full GA GBP399 (from Aug 1), Student/Job Seeker GBP49. Source: lu.ma embed event IKsbB1DCmfBEwHI",
         "price_currency": "GBP"
       }
+    },
+    {
+      "id": "usnua-mnnug-spring-event-2026",
+      "name": "(MN)NUG - SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/mnnug-spring-event-2026",
+      "start_date": "2026-04-29",
+      "end_date": "2026-04-29",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Edina",
+        "region": "Minnesota",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Wooden Hill Brewing Company",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-ohnug-columbus-springevent-2026",
+      "name": "(OH)NUG - COLUMBUS SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/ohnug-columbus-springevent-2026",
+      "start_date": "2026-05-07",
+      "end_date": "2026-05-07",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Gahanna",
+        "region": "Ohio",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "The Peak Edison",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-vtnug-spring-event-2026",
+      "name": "(VT)NUG - SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/vtnug-spring-event-2026",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-14",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Colchester",
+        "region": "Vermont",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-minug-detroit-spring-event-2026",
+      "name": "(MI)NUG - DETROIT SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/minug-detroit-spring-event-2026",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-14",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Royal Oak",
+        "region": "Michigan",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-ohnug-cincinnati-spring-event-2026",
+      "name": "(OH)NUG - CINCINNATI SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/ohnug-cincinnati-spring-event-2026",
+      "start_date": "2026-05-19",
+      "end_date": "2026-05-19",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Milford",
+        "region": "Ohio",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Little Miami Brewing",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-txnug-dallas-spring-event-2026",
+      "name": "(TX)NUG - DALLAS SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/txnug-dallas-spring-event-2026",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-21",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Farmers Branch",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "BankHead Brewing Company",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-vanug-spring-event-2026",
+      "name": "(VA)NUG - SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/vanug-spring-event-2026",
+      "start_date": "2026-05-26",
+      "end_date": "2026-05-26",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Reston",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-ornug-spring-event-2026",
+      "name": "(OR)NUG - INAUGURAL EVENT 2026",
+      "event_url": "https://www.usnua.com/ornug-spring-event-2026",
+      "start_date": "2026-05-27",
+      "end_date": "2026-05-27",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Lucky Labrador Beer Hall",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-nhnug-spring-event-2026",
+      "name": "(NH)NUG - SPRING EVENT 2026",
+      "event_url": "https://www.usnua.com/nhnug-spring-event-2026",
+      "start_date": "2026-05-27",
+      "end_date": "2026-05-27",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Londonderry",
+        "region": "New Hampshire",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-kynug-louisville-summer-event-2026",
+      "name": "(KY)NUG - LOUISVILLE SUMMER EVENT 2026",
+      "event_url": "https://www.usnua.com/kynug-louisville-summer-event-2026",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-17",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Louisville",
+        "region": "Kentucky",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "TopGolf",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
     }
   ]
 }
