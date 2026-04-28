@@ -2626,11 +2626,11 @@
       },
       "cfp": {
         "has_cfp": true,
-        "cfp_url": null,
+        "cfp_url": "https://pretalx.com/devopsdays-graz-2026/cfp",
         "cfp_open_date": null,
         "cfp_close_date": "2026-04-30",
-        "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_timezone": "Europe/Berlin",
+        "cfp_status": "closing_soon"
       },
       "notes": "Imported from weekly prioritized CFP candidates generated from local AdatoSystems tracker snapshot.",
       "cost": {
