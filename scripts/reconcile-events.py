@@ -65,6 +65,70 @@ GENERIC_EVENT_HOSTS = {
     "www.eventbrite.com",
 }
 
+# Pragmatic fallback map for countries that commonly appear in the dataset.
+COUNTRY_CODE_FALLBACKS = {
+    "angola": "AO",
+    "argentina": "AR",
+    "australia": "AU",
+    "austria": "AT",
+    "belgium": "BE",
+    "bosnia and herzegovina": "BA",
+    "brazil": "BR",
+    "bulgaria": "BG",
+    "canada": "CA",
+    "chile": "CL",
+    "colombia": "CO",
+    "croatia": "HR",
+    "czech republic": "CZ",
+    "denmark": "DK",
+    "finland": "FI",
+    "france": "FR",
+    "georgia": "GE",
+    "germany": "DE",
+    "greece": "GR",
+    "hungary": "HU",
+    "india": "IN",
+    "indonesia": "ID",
+    "ireland": "IE",
+    "israel": "IL",
+    "italy": "IT",
+    "japan": "JP",
+    "kenya": "KE",
+    "lithuania": "LT",
+    "luxembourg": "LU",
+    "malaysia": "MY",
+    "mexico": "MX",
+    "netherlands": "NL",
+    "new zealand": "NZ",
+    "nigeria": "NG",
+    "norway": "NO",
+    "peru": "PE",
+    "philippines": "PH",
+    "poland": "PL",
+    "portugal": "PT",
+    "romania": "RO",
+    "russia": "RU",
+    "serbia": "RS",
+    "singapore": "SG",
+    "south africa": "ZA",
+    "south korea": "KR",
+    "spain": "ES",
+    "sweden": "SE",
+    "switzerland": "CH",
+    "taiwan": "TW",
+    "tanzania": "TZ",
+    "thailand": "TH",
+    "turkiye": "TR",
+    "turkey": "TR",
+    "uk": "GB",
+    "ukraine": "UA",
+    "united kingdom": "GB",
+    "united states": "US",
+    "usa": "US",
+    "uzbekistan": "UZ",
+    "vietnam": "VN",
+}
+
 
 class EventReconciler:
     """Reconcile discovered events against existing database."""
@@ -86,8 +150,69 @@ class EventReconciler:
         self.cfp_window_end = run_date + timedelta(days=56)
         
         self.existing_events: List[Dict[str, Any]] = []
+        self.country_code_lookup: Dict[str, str] = dict(COUNTRY_CODE_FALLBACKS)
         self.timestamp = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         self.run_date_str = run_date.strftime("%Y-%m-%d")
+
+    @staticmethod
+    def _normalize_country_key(country: str) -> str:
+        if not isinstance(country, str):
+            return ""
+        normalized = unicodedata.normalize("NFKD", country.lower())
+        normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+        normalized = re.sub(r"\s+", " ", normalized).strip()
+        return normalized
+
+    def _build_country_code_lookup(self) -> Dict[str, str]:
+        lookup = dict(COUNTRY_CODE_FALLBACKS)
+        for record in self.existing_events:
+            location = record.get("location") or {}
+            country = location.get("country")
+            country_code = location.get("country_code")
+
+            if not country or not country_code:
+                continue
+
+            if record.get("delivery") == "online" or location.get("is_online"):
+                continue
+
+            key = self._normalize_country_key(country)
+            if key:
+                lookup[key] = str(country_code).strip().upper()
+
+        return lookup
+
+    def _resolve_country_code(self, country: str) -> Optional[str]:
+        key = self._normalize_country_key(country)
+        if not key:
+            return None
+        return self.country_code_lookup.get(key)
+
+    def normalize_country_code_for_event(self, event: Dict[str, Any]) -> Tuple[bool, str]:
+        location = event.setdefault("location", {})
+        delivery = (event.get("delivery") or "").strip().lower()
+        country = (location.get("country") or "").strip()
+        is_online = bool(location.get("is_online"))
+
+        if delivery == "online" or is_online or country.lower() == "online":
+            location["is_online"] = True
+            if not country:
+                location["country"] = "Online"
+            location["country_code"] = None
+            return True, ""
+
+        current_code = location.get("country_code")
+        if isinstance(current_code, str) and current_code.strip():
+            location["country_code"] = current_code.strip().upper()
+            return True, ""
+
+        resolved_code = self._resolve_country_code(country)
+        if resolved_code:
+            location["country_code"] = resolved_code
+            return True, ""
+
+        event_label = event.get("id") or event.get("name") or "unknown_event"
+        return False, f"missing country_code for in-person/hybrid event: {event_label} ({country or 'unknown country'})"
     
     def load_existing_events(self) -> List[Dict[str, Any]]:
         """Load existing events from data/events.json"""
@@ -102,6 +227,7 @@ class EventReconciler:
                 events = data.get("records", [])
                 print(f"[LOAD] Loaded {len(events)} existing events from {events_file}")
                 self.existing_events = events
+                self.country_code_lookup = self._build_country_code_lookup()
                 return events
         except (json.JSONDecodeError, IOError) as e:
             print(f"[ERROR] Failed to load {events_file}: {e}")
@@ -493,6 +619,11 @@ class EventReconciler:
         print("\n=== RECONCILING DISCOVERED EVENTS ===\n")
         
         for candidate in discovered_events:
+            valid_country_code, country_error = self.normalize_country_code_for_event(candidate)
+            if not valid_country_code:
+                print(f"[SKIP] {candidate.get('name')} - {country_error}")
+                continue
+
             is_excluded, reason = self.is_excluded_event(candidate)
             if is_excluded:
                 print(f"[SKIP] {candidate.get('name')} - {reason}")
