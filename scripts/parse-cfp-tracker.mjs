@@ -25,7 +25,7 @@ const geographiesConfig = JSON.parse(readFileSync(configPath, "utf8"));
 
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
-  /devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays|ndc/i;
+  /devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays|ndc|network|nanog|netdevops/i;
 const EXCLUDED_TOPIC_PATTERN = /\bdatabase\b|postgres|postgresql|mysql|mongodb|data platform|data engineering|automotive|\bagl\b|power\s+platform|microsoft\s+power\s+platform/i;
 const EXCLUDED_BRAND_PATTERN = /green\s*-?\s*io|greenio|sustainability|sustainable/i;
 
