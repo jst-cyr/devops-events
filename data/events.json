@@ -4093,6 +4093,14 @@
         "is_online": false,
         "venue": null
       },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://devopsdays.org/events/2026-krakow/propose/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-10",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
         "is_free": true,
@@ -4969,6 +4977,221 @@
         "notes": "Pricing not published yet; assumed free until confirmed"
       },
       "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "sreday-paris-q2-2026",
+      "name": "SREDay Paris Q2 2026",
+      "event_url": "https://sreday.com/2026-paris-q2/",
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-16",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "devops"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Paris",
+        "region": null,
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-paris-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-30",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "llmday-hamburg-2026",
+      "name": "LLMDay Hamburg 2026",
+      "event_url": "https://llmday.com/2026-hamburg-q2/",
+      "start_date": "2026-06-18",
+      "end_date": "2026-06-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "llm"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Hamburg",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/llmday-2026-hamburg-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-04",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "llmday-lisbon-q2-2026",
+      "name": "LLMDay Lisbon Q2 2026",
+      "event_url": "https://llmday.com/2026-lisbon-q2/",
+      "start_date": "2026-06-24",
+      "end_date": "2026-06-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "ai",
+        "llm"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Lisbon",
+        "region": null,
+        "country": "Portugal",
+        "country_code": "PT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/llmday-2026-lisbon-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-10",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "sreday-lisbon-q2-2026",
+      "name": "SREDay Lisbon Q2 2026",
+      "event_url": "https://sreday.com/2026-lisbon-q2/",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "devops"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Lisbon",
+        "region": null,
+        "country": "Portugal",
+        "country_code": "PT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-lisbon-q2",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-11",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "devopsdays-barcelona-2026",
+      "name": "DevOpsDays Barcelona",
+      "event_url": "https://devopsdays.org/events/2026-barcelona/welcome/",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-14",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Barcelona",
+        "region": null,
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopsdays-barcelona-2026/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-15",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
+    },
+    {
+      "id": "sreday-london-q3-2026",
+      "name": "SREDay London Q3 2026",
+      "event_url": "https://sreday.com/2026-london-q3/",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "devops"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-london-q3",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-17",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      }
     }
   ]
 }
