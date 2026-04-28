@@ -42,6 +42,16 @@ node scripts/parse-cfp-tracker.mjs <YYYY-MM-DD>
 
    - Produces `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json` and `data/cfp-candidates.json`.
 
+3. **USNUA (US Networking User Association) extraction:**
+
+```powershell
+node scripts/fetch-usnua-events.mjs <YYYY-MM-DD>
+```
+
+   - Produces `data/usnua-events-<YYYY-MM-DD>.json` with upcoming NUG (Networking User Group) events scraped from usnua.com.
+   - These are free, in-person, US-based network engineering community meetups. Cost is set to `free` automatically.
+   - Run this script instead of manually crawling usnua.com.
+
 #### Phase 2 — Agent-led filtering (agent judgment)
 
 Read the `data/dev-events-<YYYY-MM-DD>.json` file and apply both **relevance filtering** and **geographic filtering** (see criteria in sections below) to reduce the full list to a shortlist of relevant events.
@@ -89,7 +99,7 @@ Canonical URL rules:
 
 #### Phase 4 — Agent-crawled supplemental sources
 
-Crawl these sources directly for additional events not covered by dev.events:
+Crawl these sources directly for additional events not covered by dev.events or the scripted extractors:
 
 - https://devopsdays.org/events
 - https://www.usenix.org/conference/srecon
@@ -99,18 +109,23 @@ Crawl these sources directly for additional events not covered by dev.events:
 - https://www.carahsoft.com/red-hat/events
 - https://cfgmgmtcamp.org/
 - https://www.developerweek.com/
+- https://nanog.org/events/ (network engineering — NANOG conferences and meetings)
+- https://techfieldday.com/events/ (network/tech field day events)
+
+Do **not** manually crawl usnua.com — it is covered by `scripts/fetch-usnua-events.mjs` in Phase 1.
 
 Apply the same relevance, geographic, and inclusion filters. Reconcile against both `data/events.json` and the dev.events shortlist to avoid duplicates.
 
 #### Phase 5 — Reconciliation (scripted)
 
-After enrichment is complete, run the reconciliation script with the combined enriched candidates:
+After enrichment is complete, run the reconciliation script with the combined enriched candidates. Pass a single merged input file that includes events from all sources (dev.events enriched candidates, USNUA events, agent-crawled events):
 
 ```powershell
 python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <enriched-candidates-file>
 ```
 
    - Produces `data/events-candidates.json` and `data/events-updates.json`.
+   - The USNUA output (`data/usnua-events-<YYYY-MM-DD>.json`) can be passed directly as `--input-file` for a USNUA-only reconciliation run, or merged with other discovered events before passing.
 
 #### Phase 6 — Cost refresh on canonical events (agentic, required)
 
@@ -153,7 +168,7 @@ When CFP exists:
 
 ### Relevance and exclusion
 
-Include events relevant to: Puppet, IaC, AI in infra/devops context, DevOps, SRE, Linux/OS, sysadmin, network automation.
+Include events relevant to: Puppet, IaC, AI in infra/devops context, DevOps, SRE, Linux/OS, sysadmin, network engineering, network automation, NetDevOps, NANOG.
 
 Include broad developer events only if likely relevant to DevOps practitioners.
 
