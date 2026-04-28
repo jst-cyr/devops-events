@@ -54,8 +54,8 @@ function getFlagComponent(countryCode: string) {
 }
 
 function DeliveryIcon({ item }: { item: EventListItem }) {
-  const normalizedCountryCode = item.location.country_code.trim().toUpperCase();
-  const countryLabel = item.location.country || normalizedCountryCode;
+  const normalizedCountryCode = (item.location.country_code ?? "").trim().toUpperCase();
+  const countryLabel = item.location.country || normalizedCountryCode || "Unknown location";
   const FlagIcon = getFlagComponent(normalizedCountryCode);
 
   if (item.delivery === "online") {
