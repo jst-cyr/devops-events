@@ -4585,6 +4585,390 @@
         "cost_level": "free",
         "notes": "Pricing not published yet; assumed free until confirmed"
       }
+    },
+    {
+      "id": "linuxfest-northwest-20260424",
+      "name": "LinuxFest Northwest",
+      "event_url": "https://www.linuxfestnorthwest.org/",
+      "start_date": "2026-04-24",
+      "end_date": "2026-04-26",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Washington",
+        "region": null,
+        "country": "United States",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "kcd-texas-2026-20260515",
+      "name": "KCD Texas 2026",
+      "event_url": "https://community.cncf.io/events/details/cncf-kcd-texas-presents-kcd-texas-2026/cohost-kcd-texas",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-15",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Austin",
+        "region": null,
+        "country": "United States",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "cloud-native-days-italy-2026-20260518",
+      "name": "Cloud Native Days Italy 2026",
+      "event_url": "https://cloudnativedaysitaly.org/",
+      "start_date": "2026-05-18",
+      "end_date": "2026-05-19",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Bologna",
+        "region": null,
+        "country": "Italy",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "observability-summit-20260521",
+      "name": "Observability Summit",
+      "event_url": "https://events.linuxfoundation.org/observability-summit-north-america",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-22",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Minneapolis",
+        "region": null,
+        "country": "United States",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "atlanta-cloud-ai-conference-2026-20260530",
+      "name": "Atlanta Cloud+AI Conference 2026",
+      "event_url": "https://atlcloudconf.com/",
+      "start_date": "2026-05-30",
+      "end_date": "2026-05-30",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Marietta",
+        "region": null,
+        "country": "United States",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "mastering-observability-2026-20260605",
+      "name": "Mastering Observability 2026",
+      "event_url": "https://mastering-obs.de/",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-05",
+      "delivery": "online",
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "platformcon-virtual-20260622",
+      "name": "PlatformCON Virtual",
+      "event_url": "https://platformcon.com/program",
+      "start_date": "2026-06-22",
+      "end_date": "2026-06-26",
+      "delivery": "online",
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "almalinux-day-los-angeles-20260718",
+      "name": "AlmaLinux Day: Los Angeles",
+      "event_url": "https://almalinux.org/almalinux-day-los-angeles-2026",
+      "start_date": "2026-07-18",
+      "end_date": "2026-07-18",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Los Angeles",
+        "region": null,
+        "country": "United States",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "kubecon-cloudnativecon-japan-2026-20260729",
+      "name": "KubeCon + CloudNativeCon Japan 2026",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan-2026",
+      "start_date": "2026-07-29",
+      "end_date": "2026-07-30",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Yokohama",
+        "region": null,
+        "country": "Japan",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "ai-infrastructure-summit-2026-20260928",
+      "name": "AI Infrastructure Summit 2026",
+      "event_url": "https://www.we-conect.com/events/ai-infrastructure-summit-2026",
+      "start_date": "2026-09-28",
+      "end_date": "2026-09-29",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "macsysadmin-20260929",
+      "name": "MacSysAdmin",
+      "event_url": "https://macsysadmin.se/",
+      "start_date": "2026-09-29",
+      "end_date": "2026-10-02",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Gothenburg",
+        "region": null,
+        "country": "Sweden",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "kcd-sofia-2026-20260929",
+      "name": "KCD Sofia 2026",
+      "event_url": "https://kcd.bg/",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-29",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Sofia",
+        "region": null,
+        "country": "Bulgaria",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "the-cloud-ai-summit-2026-20260930",
+      "name": "The Cloud & AI Summit 2026",
+      "event_url": "https://www.cloudandaisummit.com/",
+      "start_date": "2026-09-30",
+      "end_date": "2026-10-02",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "St. Charles",
+        "region": null,
+        "country": "United States",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "platform-summit-2026-20261012",
+      "name": "Platform Summit 2026",
+      "event_url": "https://nordicapis.com/events/platform-summit-2026",
+      "start_date": "2026-10-12",
+      "end_date": "2026-10-14",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Stockholm",
+        "region": null,
+        "country": "Sweden",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "devsecops-2026-20261015",
+      "name": "DevSecOps 2026",
+      "event_url": "https://www.conf42.com/devsecops2026",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-15",
+      "delivery": "online",
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted from dev.events embedded iframe src (raw HTML fallback)."
+    },
+    {
+      "id": "kcd-uk-edinburgh-2026-20261019",
+      "name": "KCD UK Edinburgh 2026",
+      "event_url": "https://kcduk.io/",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-20",
+      "delivery": "in_person",
+      "source": "dev.events",
+      "location": {
+        "city": "Edinburgh",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
     }
   ]
 }
