@@ -5495,6 +5495,136 @@
         "notes": "No public ticket pricing listed. Tech Field Day directs prospective delegates to contact the organizers to attend, and presentations are streamed live on the event page."
       },
       "notes": "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live."
+    },
+    {
+      "id": "techfieldday-xfd15",
+      "name": "Security Field Day 15",
+      "event_url": "https://techfieldday.com/event/xfd15/",
+      "start_date": "2026-04-29",
+      "end_date": "2026-04-30",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "techfieldday",
+        "security"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No public ticket pricing listed. Tech Field Day directs prospective delegates to contact the organizers to attend, and presentations are streamed live on the event page."
+      },
+      "notes": "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live.",
+      "fit": {
+        "score": 6,
+        "threshold": 4,
+        "matched_signals": {
+          "title": [
+            "security"
+          ],
+          "topic": [
+            "security"
+          ]
+        },
+        "topic_terms": [
+          "Security"
+        ]
+      }
+    },
+    {
+      "id": "techfieldday-aiifd5",
+      "name": "AI Infrastructure Field Day 5",
+      "event_url": "https://techfieldday.com/event/aiifd5/",
+      "start_date": "2026-06-10",
+      "end_date": "2026-06-11",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "techfieldday",
+        "infrastructure"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No public ticket pricing listed. Tech Field Day directs prospective delegates to contact the organizers to attend, and presentations are streamed live on the event page."
+      },
+      "notes": "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live.",
+      "fit": {
+        "score": 8,
+        "threshold": 4,
+        "matched_signals": {
+          "title": [
+            "infrastructure"
+          ],
+          "topic": [
+            "infrastructure",
+            "infrastructure"
+          ]
+        },
+        "topic_terms": [
+          "AI Infrastructure"
+        ]
+      }
+    },
+    {
+      "id": "techfieldday-cfd26",
+      "name": "Cloud Field Day 26",
+      "event_url": "https://techfieldday.com/event/cfd26/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-24",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "techfieldday",
+        "cloud"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No public ticket pricing listed. Tech Field Day directs prospective delegates to contact the organizers to attend, and presentations are streamed live on the event page."
+      },
+      "notes": "Date sourced from Tech Field Day WordPress event metadata. Delivery set to hybrid because the event has a physical location and the event page states presentations are streamed live.",
+      "fit": {
+        "score": 6,
+        "threshold": 4,
+        "matched_signals": {
+          "title": [
+            "cloud"
+          ],
+          "topic": [
+            "cloud"
+          ]
+        },
+        "topic_terms": [
+          "Cloud"
+        ]
+      }
     }
   ]
 }
