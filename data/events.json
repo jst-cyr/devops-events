@@ -190,7 +190,7 @@
         "lowest_price": 99,
         "price_currency": "EUR",
         "cost_level": "premium",
-        "notes": "Pretix ticket shop shows: Early Bird Corporate €699, Early Bird Individual €399, Student €99 (all plus 19% VAT). Early bird ends April 30 2026. 3-day conference Sep 2-4 at Schuppen 52, Hamburg."
+        "notes": "Pretix ticket shop shows: Early Bird Corporate \u00e2\u201a\u00ac699, Early Bird Individual \u00e2\u201a\u00ac399, Student \u00e2\u201a\u00ac99 (all plus 19% VAT). Early bird ends April 30 2026. 3-day conference Sep 2-4 at Schuppen 52, Hamburg."
       }
     },
     {
@@ -227,7 +227,7 @@
         "lowest_price": 15000,
         "price_currency": "JPY",
         "cost_level": "standard",
-        "notes": "¥15,000 online / ¥25,000 in-person (regular)"
+        "notes": "\u00c2\u00a515,000 online / \u00c2\u00a525,000 in-person (regular)"
       }
     },
     {
@@ -807,7 +807,7 @@
       ],
       "source": "dev.events",
       "location": {
-        "city": "Logroño",
+        "city": "Logro\u00c3\u00b1o",
         "region": "La Rioja",
         "country": "Spain",
         "country_code": "ES",
@@ -2031,7 +2031,7 @@
         "country": "Denmark",
         "country_code": "DK",
         "is_online": false,
-        "venue": "Øksnehallen"
+        "venue": "\u00c3\u02dcksnehallen"
       },
       "cfp": {
         "has_cfp": true,
@@ -2086,7 +2086,7 @@
         "lowest_price": 429,
         "price_currency": "EUR",
         "cost_level": "premium",
-        "notes": "WeAreDevelopers World Congress page shows promotional ticket at €429 (regular €539). 8-10 July 2026, Berlin. 15,000+ attendees."
+        "notes": "WeAreDevelopers World Congress page shows promotional ticket at \u00e2\u201a\u00ac429 (regular \u00e2\u201a\u00ac539). 8-10 July 2026, Berlin. 15,000+ attendees."
       }
     },
     {
@@ -2526,7 +2526,7 @@
         "lowest_price": 149,
         "price_currency": "EUR",
         "cost_level": "standard",
-        "notes": "€149 individual / €189 corporate (+19% VAT)"
+        "notes": "\u00e2\u201a\u00ac149 individual / \u00e2\u201a\u00ac189 corporate (+19% VAT)"
       }
     },
     {
@@ -2638,7 +2638,7 @@
         "lowest_price": 39,
         "price_currency": "EUR",
         "cost_level": "budget",
-        "notes": "Early Bird: Workshop €39 / Conference €49 / Combi €69"
+        "notes": "Early Bird: Workshop \u00e2\u201a\u00ac39 / Conference \u00e2\u201a\u00ac49 / Combi \u00e2\u201a\u00ac69"
       }
     },
     {
@@ -2716,7 +2716,7 @@
         "lowest_price": 440,
         "price_currency": "EUR",
         "cost_level": "premium",
-        "notes": "Ticket page shows: Regular €440, Late €600, Last Minute €700, Super Last Minute €800 (all inc. 21% VAT). 2-day conference at World Trade Center Barcelona, Jun 16-17 2026."
+        "notes": "Ticket page shows: Regular \u00e2\u201a\u00ac440, Late \u00e2\u201a\u00ac600, Last Minute \u00e2\u201a\u00ac700, Super Last Minute \u00e2\u201a\u00ac800 (all inc. 21% VAT). 2-day conference at World Trade Center Barcelona, Jun 16-17 2026."
       }
     },
     {
@@ -3393,7 +3393,7 @@
         "lowest_price": 99,
         "price_currency": "GBP",
         "cost_level": "budget",
-        "notes": "Tito ticket page shows: Early Bird £99, Attendee £149, Supporter £249 (all inc. 20% VAT). Free Diversity ticket available for underrepresented groups/unwaged."
+        "notes": "Tito ticket page shows: Early Bird \u00c2\u00a399, Attendee \u00c2\u00a3149, Supporter \u00c2\u00a3249 (all inc. 20% VAT). Free Diversity ticket available for underrepresented groups/unwaged."
       },
       "cfp": {
         "has_cfp": true,
@@ -3650,7 +3650,7 @@
       "source": "adatosystems",
       "location": {
         "city": "Paris",
-        "region": "Île-de-France",
+        "region": "\u00c3\u017dle-de-France",
         "country": "France",
         "country_code": "FR",
         "is_online": false,
@@ -3669,7 +3669,7 @@
         "lowest_price": 325,
         "price_currency": "EUR",
         "cost_level": "standard",
-        "notes": "Super Early Bird €325; general pricing not yet published."
+        "notes": "Super Early Bird \u00e2\u201a\u00ac325; general pricing not yet published."
       },
       "notes": "Tracker listed event dates as 2026-09-25 to 2026-09-24 (inverted); corrected to 2026-09-24 per official website."
     },
@@ -4020,7 +4020,7 @@
     },
     {
       "id": "devopsdays-krakow-ivppdakb",
-      "name": "Devopsdays KrakÃ³w",
+      "name": "Devopsdays Krak\u00c3\u0192\u00c2\u00b3w",
       "event_url": "https://devopsdays.org/events/2026-krakow",
       "start_date": "2026-06-06",
       "end_date": "2026-06-06",
@@ -4308,7 +4308,7 @@
         "lowest_price": 1049,
         "price_currency": "EUR",
         "cost_level": "premium",
-        "notes": "Ticket page shows: Blind Bird €1,049 (available until program published), then €1,149. Plus 19% MwSt. Group discount 15%+ for 3+ attendees. Student/academic discounts available on request. 2-day conference Sep 22-23 in Marburg."
+        "notes": "Ticket page shows: Blind Bird \u00e2\u201a\u00ac1,049 (available until program published), then \u00e2\u201a\u00ac1,149. Plus 19% MwSt. Group discount 15%+ for 3+ attendees. Student/academic discounts available on request. 2-day conference Sep 22-23 in Marburg."
       }
     },
     {
@@ -5624,6 +5624,406 @@
         "topic_terms": [
           "Cloud"
         ]
+      }
+    },
+    {
+      "id": "gartner-it-infrastructure,-operations-&-cloud-strategies",
+      "name": "Gartner IT Infrastructure, Operations & Cloud Strategies",
+      "event_url": "https://www.gartner.com/en/conferences/apac/infrastructure-operations-cloud-australia",
+      "start_date": "2026-05-11",
+      "end_date": "2026-05-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "Sydney",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 500,
+        "price_currency": "USD",
+        "cost_level": "premium"
+      }
+    },
+    {
+      "id": "kcd-helsinki",
+      "name": "KCD Helsinki",
+      "event_url": "https://kcdhelsinki.fi/",
+      "start_date": "2026-05-20",
+      "end_date": "2026-05-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "Helsinki",
+        "country": "Finland",
+        "country_code": "FI",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      }
+    },
+    {
+      "id": "linux-security-summit-north-america",
+      "name": "Linux Security Summit North America",
+      "event_url": "https://events.linuxfoundation.org/linux-security-summit-north-america",
+      "start_date": "2026-05-21",
+      "end_date": "2026-05-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "linux"
+      ],
+      "location": {
+        "city": "Minneapolis",
+        "country": "US",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 150,
+        "price_currency": "USD",
+        "cost_level": "standard"
+      }
+    },
+    {
+      "id": "platmosphere",
+      "name": "Platmosphere",
+      "event_url": "https://platmosphere.com/",
+      "start_date": "2026-05-26",
+      "end_date": "2026-05-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "Milan",
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 300,
+        "price_currency": "EUR",
+        "cost_level": "standard"
+      }
+    },
+    {
+      "id": "cozysummit-virtual",
+      "name": "CozySummit Virtual",
+      "event_url": "https://community.cncf.io/",
+      "start_date": "2026-05-26",
+      "end_date": "2026-05-26",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "country": "Online",
+        "is_online": true
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      }
+    },
+    {
+      "id": "dash-by-datadog-2026",
+      "name": "DASH by Datadog 2026",
+      "event_url": "https://dash.datadoghq.com/",
+      "start_date": "2026-06-09",
+      "end_date": "2026-06-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre"
+      ],
+      "location": {
+        "city": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      }
+    },
+    {
+      "id": "cloud-native-&-open-source-ai-conference",
+      "name": "Cloud Native & Open Source AI Conference",
+      "event_url": "https://www.communitystack.io/conferences/cloud-native-london",
+      "start_date": "2026-06-11",
+      "end_date": "2026-06-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "London",
+        "country": "GB",
+        "country_code": "GB",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      }
+    },
+    {
+      "id": "observability-day-2026",
+      "name": "Observability Day 2026",
+      "event_url": "https://gmonit.ru/event/observabilityday2026",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre"
+      ],
+      "location": {
+        "city": "Moscow",
+        "country": "Russia",
+        "country_code": "RU",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      }
+    },
+    {
+      "id": "cloud-foundry-summit",
+      "name": "Cloud Foundry Summit",
+      "event_url": "https://events.linuxfoundation.org/cloud-foundry-summit",
+      "start_date": "2026-09-21",
+      "end_date": "2026-09-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "Heidelberg",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 400,
+        "price_currency": "USD",
+        "cost_level": "premium"
+      }
+    },
+    {
+      "id": "civo-navigate-london-2026",
+      "name": "Civo Navigate London 2026",
+      "event_url": "https://www.civo.com/navigate/london/2025",
+      "start_date": "2026-09-22",
+      "end_date": "2026-09-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "London",
+        "country": "GB",
+        "country_code": "GB",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 150,
+        "price_currency": "GBP",
+        "cost_level": "standard"
+      }
+    },
+    {
+      "id": "kubecon-+-cloudnativecon-na-2026",
+      "name": "KubeCon + CloudNativeCon NA 2026",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america-2026",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "kubernetes"
+      ],
+      "location": {
+        "city": "LA",
+        "country": "US",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 600,
+        "price_currency": "USD",
+        "cost_level": "premium"
+      }
+    },
+    {
+      "id": "dutch-cloud-native-day-2026",
+      "name": "Dutch Cloud Native Day 2026",
+      "event_url": "https://dutchcloudnativeday.nl/",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud"
+      ],
+      "location": {
+        "city": "Utrecht",
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      }
+    },
+    {
+      "id": "(oh)nug-cleveland",
+      "name": "(OH)NUG Cleveland",
+      "event_url": "https://www.usnua.com/ohnug-cleveland-springevent-2026",
+      "start_date": "2026-05-19",
+      "end_date": "2026-05-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "networking"
+      ],
+      "location": {
+        "city": "Cleveland",
+        "country": "US",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
       }
     }
   ]
