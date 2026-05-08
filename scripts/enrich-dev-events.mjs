@@ -15,6 +15,8 @@ import { get as httpsGet } from "node:https";
 const DELAY_MS = 1500; // polite pause between requests
 const EXCLUDED_SHORTLIST_TOPIC_PATTERN =
   /power\s+platform|microsoft\s+power\s+platform|power\s*apps?|power\s*automate|power\s*bi|dynamics\s*365/i;
+const EXCLUDED_SHORTLIST_EMBEDDED_PATTERN =
+  /\bembedded\b|\bfirmware\b|\brtos\b|\byocto\b|embedded\s+linux|embedded-linux|\belc\b|automotive\s+grade\s+linux|\bagl\b/i;
 const EXCLUDED_SHORTLIST_QA_PATTERN =
   /\btesting\b|\btest\s+automation\b|\bqa\b|quality\s+assurance|testingmind|automationstar|eurostar\s+software\s+testing/i;
 const EXCLUDED_SHORTLIST_FORMAT_PATTERN =
@@ -214,6 +216,10 @@ function getShortlistExclusionReason(record) {
 
   if (EXCLUDED_SHORTLIST_TOPIC_PATTERN.test(searchText)) {
     return "excluded topic: Microsoft Power Platform family";
+  }
+
+  if (EXCLUDED_SHORTLIST_EMBEDDED_PATTERN.test(searchText)) {
+    return "excluded topic: embedded/firmware scenario";
   }
 
   if (EXCLUDED_SHORTLIST_QA_PATTERN.test(searchText)) {

@@ -32,6 +32,7 @@ from urllib.parse import urlparse, parse_qsl, urlencode
 EXCLUDED_TOPIC_PATTERN = re.compile(
     r"\bdatabase\b|postgres|postgresql|mysql|mongodb|data\s+platform|data\s+engineering"
     r"|automotive|\bagl\b|power\s+platform|microsoft\s+power\s+platform"
+    r"|\bembedded\b|\bfirmware\b|\brtos\b|\byocto\b|embedded\s+linux|embedded-linux|\belc\b"
     r"|\btesting\b|\btest\s+automation\b|\bqa\b|quality\s+assurance|testingmind|automationstar|eurostar\s+software\s+testing",
     re.IGNORECASE,
 )
