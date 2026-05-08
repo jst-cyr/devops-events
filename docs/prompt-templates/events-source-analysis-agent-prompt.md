@@ -116,18 +116,48 @@ Do **not** manually crawl usnua.com — it is covered by `scripts/fetch-usnua-ev
 
 Apply the same relevance, geographic, and inclusion filters. Reconcile against both `data/events.json` and the dev.events shortlist to avoid duplicates.
 
-#### Phase 5 — Reconciliation (scripted)
+#### Phase 5 — Agentic content validation (required)
 
-After enrichment is complete, run the reconciliation script with the combined enriched candidates. Pass a single merged input file that includes events from all sources (dev.events enriched candidates, USNUA events, agent-crawled events):
+Before reconciliation, validate that enriched candidates are genuinely relevant to DevOps/infrastructure/SRE by crawling their canonical event URLs.
+
+For each enriched event record from all sources (dev.events, USNUA, agent-crawled):
+
+1. **Visit the canonical `event_url`** — Fetch the event landing page or official event description.
+2. **Read the event description, tagline, agenda, and speaker profiles** — Do NOT rely on event names or dev.events classifications alone.
+3. **Evaluate against inclusion criteria** — Does the actual event content indicate focus on:
+   - Infrastructure operations, DevOps practices, SRE, cloud-native, Kubernetes, containers, configuration management, IaC, network automation, sysadmin, Puppet, Ansible, Terraform, observability, security operations, or related practitioner topics?
+   - OR is it primarily focused on: general business/management, domain registrars, sales/marketing, testing/QA without infra ops tie-in, general AI/ML without infrastructure context, general networking meetups, etc.?
+
+4. **Exclude ambiguous or out-of-scope events**:
+   - Event pages that are vague, mostly marketing, or lack technical depth.
+   - Events named after business domains (e.g., "Domain Days") without infrastructure operations content.
+   - Generic "networking" or "tech" events without DevOps/SRE specificity.
+   - Events with minimal agenda details (cannot confirm relevance).
+
+5. **Record validation result** — For excluded events, write to `data/events-issues.json`:
+   - `source`: event source (dev.events, usnua, etc.)
+   - `discovered_name`: event name
+   - `discovered_url`: canonical event URL
+   - `stage`: "content_validation"
+   - `reason`: deterministic exclusion reason (e.g., "out-of-scope domain", "insufficient technical content", "generic networking event")
+   - `notes`: brief description of page content
+
+6. **Pass validated events to Phase 6** — Only events with confirmed relevance proceed to reconciliation.
+
+**Validation is mandatory and non-waivable.** If event page content is inaccessible (404, blocked, etc.), write issue and mark as unresolved.
+
+#### Phase 6 — Reconciliation (scripted)
+
+After content validation is complete, run the reconciliation script with the validated enriched candidates. Pass a single merged input file that includes events from all sources (dev.events enriched candidates, USNUA events, agent-crawled events):
 
 ```powershell
-python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <enriched-candidates-file>
+python scripts/reconcile-events.py --run-date <YYYY-MM-DD> --input-file <validated-candidates-file>
 ```
 
    - Produces `data/events-candidates.json` and `data/events-updates.json`.
-   - The USNUA output (`data/usnua-events-<YYYY-MM-DD>.json`) can be passed directly as `--input-file` for a USNUA-only reconciliation run, or merged with other discovered events before passing.
+   - The USNUA output (`data/usnua-events-<YYYY-MM-DD>.json`) can be passed directly as `--input-file` for a USNUA-only reconciliation run, or merged with other validated events before passing.
 
-#### Phase 6 — Cost refresh on canonical events (agentic, required)
+#### Phase 7 — Cost refresh on canonical events (agentic, required)
 
 Run an explicit cost-verification pass against `data/events.json` for records where cost is missing or currently marked free.
 
