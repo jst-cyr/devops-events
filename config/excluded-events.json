@@ -20,6 +20,12 @@
       "reason": "Duplicated in different modalities/regions; low DevOps relevance; causes reconciliation issues",
       "url_pattern": "api-platform.com",
       "event_id_pattern": "*api-platform*"
+    },
+    {
+      "name": "OpenSearchCon",
+      "reason": "Specialized search/analytics database conference; not aligned with DevOps/SRE practitioner focus",
+      "url_pattern": "opensearchcon",
+      "event_id_pattern": "*opensearchcon*"
     }
   ]
 }
