@@ -3363,11 +3363,11 @@
         "has_cfp": true,
         "cfp_url": "https://www.papercall.io/llmday-2026-austin-q2",
         "cfp_open_date": null,
-        "cfp_close_date": "2026-05-15",
+        "cfp_close_date": "2026-03-15",
         "cfp_timezone": "UTC",
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
-      "notes": "Sourced from AdatoSystems CFP tracker."
+      "notes": "Sourced from AdatoSystems CFP tracker. CFP closed March 15, 2026. Event occurred May 12, 2026 (outside 180-day window)."
     },
     {
       "id": "devopsdays-london-2026",
