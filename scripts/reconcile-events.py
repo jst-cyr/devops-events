@@ -653,6 +653,14 @@ class EventReconciler:
                     print(f"[UPDATE] {candidate.get('name')} -> field updates proposed")
                     updates.append(patch)
             else:
+                # Check within the current batch for duplicates not yet in existing_events.
+                # This catches same-event entries from different sources with URL variants
+                # (e.g., /index_en.php vs root, /fr vs /en) or slight name differences.
+                is_intra_match, intra_matched = self.match_event(candidate, new_candidates)
+                if is_intra_match:
+                    print(f"[SKIP] {candidate.get('name')} - intra-batch duplicate of already-queued '{intra_matched.get('name')}'")
+                    continue
+
                 probable = self.find_probable_overlap(candidate)
                 if probable:
                     print(f"[REVIEW] {candidate.get('name')} - possible overlap with {probable.get('existing_id')}")
