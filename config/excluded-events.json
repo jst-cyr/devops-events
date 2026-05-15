@@ -1,0 +1,25 @@
+{
+  "comment": "Excluded events - prevents these from appearing in reconciliation results",
+  "description": "This file contains patterns and URLs of events to exclude from candidate discovery. Reasons include: vendor marketing events, non-developer focus, or deliberate rejections.",
+  "last_updated": "2026-05-15",
+  "exclusions": [
+    {
+      "name": "ArgoCon Japan",
+      "reason": "LF co-located vendor event; not aligned with DevOps/SRE practitioner focus",
+      "url_pattern": "events.linuxfoundation.org.*argocon",
+      "event_id_pattern": "*argocon*"
+    },
+    {
+      "name": "swampUP 2026",
+      "reason": "JFrog vendor-specific marketing event; not aligned with DevOps/SRE practitioner focus",
+      "url_pattern": "swampup.jfrog.com",
+      "event_id_pattern": "*swampup*"
+    },
+    {
+      "name": "API Platform Conference",
+      "reason": "Duplicated in different modalities/regions; low DevOps relevance; causes reconciliation issues",
+      "url_pattern": "api-platform.com",
+      "event_id_pattern": "*api-platform*"
+    }
+  ]
+}

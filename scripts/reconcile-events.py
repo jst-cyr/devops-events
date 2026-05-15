@@ -55,6 +55,31 @@ def _load_excluded_geographies():
         return {"singapore", "malaysia"}
 
 EXCLUDED_COUNTRIES = _load_excluded_geographies()
+
+# Load centralized excluded events configuration
+def _load_excluded_events():
+    config_file = Path(__file__).parent.parent / "config" / "excluded-events.json"
+    try:
+        with open(config_file, 'r') as f:
+            config = json.load(f)
+            exclusions = []
+            for exclusion in config.get("exclusions", []):
+                patterns = {
+                    "url": re.compile(exclusion.get("url_pattern", ""), re.IGNORECASE) if exclusion.get("url_pattern") else None,
+                    "event_id": re.compile(exclusion.get("event_id_pattern", ""), re.IGNORECASE) if exclusion.get("event_id_pattern") else None,
+                }
+                exclusions.append({
+                    "name": exclusion.get("name"),
+                    "reason": exclusion.get("reason"),
+                    "patterns": patterns,
+                })
+            return exclusions
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[WARN] Failed to load excluded events config: {e}")
+        return []
+
+EXCLUDED_EVENTS = _load_excluded_events()
+
 GENERIC_EVENT_HOSTS = {
     "dev.events",
     "www.dev.events",
@@ -468,6 +493,18 @@ class EventReconciler:
     @staticmethod
     def is_excluded_event(candidate: Dict[str, Any]) -> Tuple[bool, str]:
         """Return exclusion decision and reason for non-fit events."""
+        # Check against explicitly excluded events
+        event_name = (candidate.get("name") or "").lower()
+        event_url = (candidate.get("event_url") or "").lower()
+        event_id = (candidate.get("id") or "").lower()
+        
+        for exclusion in EXCLUDED_EVENTS:
+            patterns = exclusion.get("patterns", {})
+            if patterns.get("url") and patterns["url"].search(event_url):
+                return True, f"excluded event: {exclusion['name']} (URL match)"
+            if patterns.get("event_id") and patterns["event_id"].search(event_id or ""):
+                return True, f"excluded event: {exclusion['name']} (ID match)"
+        
         country = ((candidate.get("location") or {}).get("country") or "").strip().lower()
         if country in EXCLUDED_COUNTRIES:
             return True, f"excluded geography: {country}"
