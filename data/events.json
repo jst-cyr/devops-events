@@ -6028,6 +6028,938 @@
         "is_free": true,
         "cost_level": "free"
       }
+    },
+    {
+      "name": "Baltic Connect Tallinn 2026",
+      "event_url": "https://balticconnect.io/",
+      "start_date": "2026-06-04",
+      "end_date": "2026-06-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Tallinn",
+        "region": null,
+        "country": "Estonia",
+        "country_code": "EE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Cloud community event series across the Baltics (Estonia, Latvia, Lithuania). Topics: cloud migrations, DevOps, AI adoption.",
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Mastering GitOps",
+      "event_url": "https://www.mastering-gitops.de/",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": null,
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "id": "usnua-ohnug-cleveland-summer-event-2026",
+      "name": "(OH)NUG - CLEVELAND SUMMER EVENT 2026",
+      "event_url": "https://www.usnua.com/ohnug-cleveland-summer-event-2026",
+      "start_date": "2026-07-09",
+      "end_date": "2026-07-09",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "The Wild Eagle Steak and Saloon",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "name": "TailscaleUp 2026",
+      "event_url": "https://www.tailscale.com/tailscaleup",
+      "start_date": "2026-08-26",
+      "end_date": "2026-08-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Observability 2026",
+      "event_url": "https://www.conf42.com/obs2026",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-10",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": null,
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "AI Infra Summit",
+      "event_url": "https://aihwedgesummit.com/events/aihwedgesummit",
+      "start_date": "2026-09-15",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Santa Clara",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "meshcloud Con '26",
+      "event_url": "https://con26.meshcloud.io/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Frankfurt am Main",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Devopsdays Halifax",
+      "event_url": "https://devopsdays.org/events/2026-halifax",
+      "start_date": "2026-09-29",
+      "end_date": "2026-09-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Halifax",
+        "region": null,
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "NIC 2026",
+      "event_url": "https://www.nicconf.com/",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Oslo",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "ServerlessDays 2026",
+      "event_url": "https://milan.serverlessdays.io/",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Milan",
+        "region": null,
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://papercall.io/cfps/6593/submissions/new",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-01",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Cloud Native Days Poland 2026",
+      "event_url": "https://cloudnativedayspoland.org/",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Warsaw",
+        "region": null,
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Devopsdays Istanbul 2026",
+      "event_url": "https://devopsdays.org/events/2026-istanbul",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Istanbul",
+        "region": null,
+        "country": "Turkey",
+        "country_code": "TR",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Cloud Native Days Norway",
+      "event_url": "https://2026.cloudnativedays.no/",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Bergen",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "PlatformCon Live Day Sydney",
+      "event_url": "https://sydney.platformcon.com/",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Sydney",
+        "region": null,
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Security Field Day 16",
+      "event_url": "https://techfieldday.com/event/xfd16/",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-29",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devsecops",
+        "sase",
+        "networking"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Tech Field Day events are free to attend (invite-only for delegates; public livestream available)."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Enterprise security focus: SASE, cybersecurity operations. Source: techfieldday.com/event/xfd16/",
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Cloud Native Summit - APAC 2026",
+      "event_url": "https://www.cloudnative.ai/",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Melbourne",
+        "region": null,
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "SREday Amsterdam 2026 Q4",
+      "event_url": "https://sreday.com/2026-amsterdam-q4",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Platform Engineering 2026",
+      "event_url": "https://www.conf42.com/platform2026",
+      "start_date": "2026-11-05",
+      "end_date": "2026-11-05",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": null,
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Texas Linux Fest",
+      "event_url": "https://2026.texaslinuxfest.org/",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Austin",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "CloudCon SYD 2026",
+      "event_url": "https://cloudcon.au/",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Sydney",
+        "region": null,
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Open Source SecurityCon North America",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/open-source-securitycon",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Cloud Native AI & Inference Day North America",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cloud-native-ai-inference-day",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Platform Engineering Day North America",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/platform-engineering-day",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Observability Day North America",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/observability-day",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Kubernetes on Edge Day North America",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/kubernetes-on-edge-day",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "CLC 26",
+      "event_url": "https://clc-conference.eu/",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Mannheim",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "name": "Open Source Monitoring Conference (OSMC) 2026",
+      "event_url": "https://osmc.de/",
+      "start_date": "2026-11-17",
+      "end_date": "2026-11-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "monitoring",
+        "observability",
+        "open-source"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Nuremberg",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://osmc.de/call-for-papers/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-30",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "CFP closes Jun 30. Included because CFP is within 56-day window. Open source monitoring: Icinga, Nagios, Zabbix, Grafana, Prometheus.",
+      "last_verified_at": "2026-05-15T00:00:00Z"
     }
   ]
 }
