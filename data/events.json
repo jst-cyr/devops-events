@@ -1,5 +1,5 @@
 {
-  "post_edition": "2026-05-15T15:15:00Z",
+  "post_edition": "2026-05-22T18:37:50.897650Z",
   "source_message": "Tech Events Around the World (Feb 20th edition)",
   "records": [
     {
@@ -3021,14 +3021,14 @@
       },
       "cfp": {
         "has_cfp": true,
-        "cfp_url": "https://srecon26emea.usenix.hotcrp.com/",
+        "cfp_url": "https://www.usenix.org/conference/srecon26emea/call-for-participation",
         "cfp_open_date": null,
         "cfp_close_date": "2026-05-27",
         "cfp_timezone": "UTC",
-        "cfp_status": "closing_soon"
+        "cfp_status": "open"
       },
       "notes": "CFP closes May 27, 2026 — 12 days remaining as of 2026-05-15. In-person presentations only.",
-      "updated_at": "2026-05-15T15:43:17.109Z"
+      "updated_at": "2026-05-22T18:37:50.894509Z"
     },
     {
       "id": "tech-on-tap-san-diego-2026",
@@ -6370,7 +6370,8 @@
         "cfp_status": "open"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "serverlessdays-2026-milan"
     },
     {
       "name": "Cloud Native Days Poland 2026",
@@ -6960,6 +6961,46 @@
       },
       "notes": "CFP closes Jun 30. Included because CFP is within 56-day window. Open source monitoring: Icinga, Nagios, Zabbix, Grafana, Prometheus.",
       "last_verified_at": "2026-05-15T00:00:00Z"
+    },
+    {
+      "id": "cfp-candidate-cloud-native-denmark",
+      "name": "Cloud Native Denmark",
+      "event_url": "https://cloudnativedenmark.dk/",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "devops",
+        "sre"
+      ],
+      "source": "cfp-tracker",
+      "location": {
+        "city": "Copenhagen",
+        "region": null,
+        "country": "Denmark",
+        "country_code": null,
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-denmark-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-14",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": null,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Pricing not yet published"
+      },
+      "notes": "CFP candidate from AdatoSystems tracker; closes 2026-07-14",
+      "created_at": "2026-05-22T18:37:50.896642Z"
     }
   ]
 }
