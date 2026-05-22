@@ -375,6 +375,21 @@ class EventReconciler:
             return set()
         return {t for t in name.split(" ") if t}
 
+    @staticmethod
+    def _expand_alias_tokens(tokens: set) -> set:
+        """Expand common region abbreviations to improve cross-source name matching."""
+        expanded = set(tokens)
+        if "na" in expanded:
+            expanded.discard("na")
+            expanded.update({"north", "america"})
+        if "emea" in expanded:
+            expanded.discard("emea")
+            expanded.update({"europe", "middle", "east", "africa"})
+        if "apac" in expanded:
+            expanded.discard("apac")
+            expanded.update({"asia", "pacific"})
+        return expanded
+
     @classmethod
     def _is_name_variant_match(cls, left_name: str, right_name: str, left_city: str, right_city: str) -> bool:
         """
@@ -387,6 +402,8 @@ class EventReconciler:
 
         left_tokens = cls._tokenize_name(left_name)
         right_tokens = cls._tokenize_name(right_name)
+        left_tokens = cls._expand_alias_tokens(left_tokens)
+        right_tokens = cls._expand_alias_tokens(right_tokens)
         if len(left_tokens) < 2 or len(right_tokens) < 2:
             return False
 
