@@ -140,7 +140,7 @@ COUNTRY_CODE_FALLBACKS = {
 class EventReconciler:
     """Reconcile discovered events against existing database."""
     
-    def __init__(self, run_date: datetime, data_dir: Path):
+    def __init__(self, run_date: datetime, data_dir: Path, allow_dev_events_listing_urls: bool = False):
         """
         Initialize reconciler with run date and data directory.
         
@@ -151,6 +151,7 @@ class EventReconciler:
         self.run_date = run_date
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(parents=True, exist_ok=True)
+        self.allow_dev_events_listing_urls = allow_dev_events_listing_urls
         
         # Windows: 180 days for events, 56 days for CFPs
         self.event_window_end = run_date + timedelta(days=180)
@@ -160,6 +161,35 @@ class EventReconciler:
         self.country_code_lookup: Dict[str, str] = dict(COUNTRY_CODE_FALLBACKS)
         self.timestamp = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         self.run_date_str = run_date.strftime("%Y-%m-%d")
+
+    def validate_discovered_urls(self, discovered_events: List[Dict[str, Any]]) -> Tuple[bool, List[Dict[str, Any]]]:
+        """Fail fast when discovered records still contain unresolved dev.events listing URLs."""
+        unresolved = [
+            event for event in discovered_events
+            if self._is_dev_events_listing_url(event.get("event_url", ""))
+        ]
+
+        if not unresolved:
+            return True, []
+
+        if self.allow_dev_events_listing_urls:
+            print(
+                f"[WARN] Found {len(unresolved)} discovered records with unresolved dev.events listing URLs; continuing due to --allow-dev-events-listing-url"
+            )
+            return True, unresolved
+
+        print(
+            f"[ERROR] Found {len(unresolved)} discovered records with unresolved dev.events listing URLs."
+        )
+        print("[ERROR] Reconciliation requires canonical event_url values before matching.")
+        print("[HINT] Run enrichment first, then reconcile using enriched output:")
+        print(f"[HINT]   node scripts/enrich-dev-events.mjs {self.run_date_str}")
+        print(f"[HINT]   python scripts/reconcile-events.py --run-date {self.run_date_str} --input-file data/dev-events-enriched-{self.run_date_str}.json")
+        for sample in unresolved[:5]:
+            print(f"[HINT]   unresolved: {sample.get('name')} -> {sample.get('event_url')}")
+        if len(unresolved) > 5:
+            print(f"[HINT]   ... and {len(unresolved) - 5} more")
+        return False, unresolved
 
     @staticmethod
     def _normalize_country_key(country: str) -> str:
@@ -194,6 +224,34 @@ class EventReconciler:
         if not key:
             return None
         return self.country_code_lookup.get(key)
+
+    @staticmethod
+    def _normalize_country_for_match(country: str) -> str:
+        """Normalize country labels used by hybrid sources (e.g. 'United States and Online')."""
+        if not isinstance(country, str):
+            return ""
+        normalized = country.strip().lower()
+        normalized = re.sub(r"\s+", " ", normalized)
+        normalized = re.sub(r"\s+and\s+online$", "", normalized)
+        return normalized.strip()
+
+    @staticmethod
+    def _canonicalize_dev_events_prefixed_id(event_id: str) -> str:
+        """Map 'dev-events-<slug>' ids to '<slug>' for cross-phase dedupe matching."""
+        if not isinstance(event_id, str):
+            return ""
+        return re.sub(r"^dev-events-", "", event_id.strip())
+
+    @staticmethod
+    def _is_dev_events_listing_url(url: str) -> bool:
+        """Return True when URL points to a dev.events listing/detail page, not canonical source."""
+        if not isinstance(url, str) or not url.strip():
+            return False
+        try:
+            host = (urlparse(url.strip()).hostname or "").lower()
+            return host in {"dev.events", "www.dev.events"}
+        except Exception:
+            return "dev.events" in url.lower()
 
     def normalize_country_code_for_event(self, event: Dict[str, Any]) -> Tuple[bool, str]:
         location = event.setdefault("location", {})
@@ -517,12 +575,27 @@ class EventReconciler:
             for existing in existing_events:
                 if existing.get("id") == new_id:
                     return (True, existing)
+
+            # Cross-phase fallback: shortlist/candidate ids may be prefixed with "dev-events-"
+            # while canonical records keep the original slug id.
+            canonical_new_id = self._canonicalize_dev_events_prefixed_id(new_id)
+            if canonical_new_id and canonical_new_id != new_id:
+                for existing in existing_events:
+                    existing_id = existing.get("id")
+                    if existing_id == canonical_new_id:
+                        return (True, existing)
+
+            # Symmetric fallback in case existing id is prefixed and candidate id is not.
+            for existing in existing_events:
+                existing_id = existing.get("id")
+                if self._canonicalize_dev_events_prefixed_id(existing_id) == canonical_new_id:
+                    return (True, existing)
         
         # Fuzzy name + date + country (tertiary)
         new_name = self.normalize_name(new_event.get("name", ""))
         new_name_without_year = self.normalize_name(new_event.get("name", ""), drop_year_tokens=True)
         new_start = new_event.get("start_date", "")
-        new_country = (new_event.get("location", {}).get("country") or "").lower()
+        new_country = self._normalize_country_for_match((new_event.get("location", {}).get("country") or ""))
         new_city = (new_event.get("location", {}).get("city") or "").strip().lower()
         
         if new_name and new_start and new_country:
@@ -530,7 +603,7 @@ class EventReconciler:
                 existing_name = self.normalize_name(existing.get("name", ""))
                 existing_name_without_year = self.normalize_name(existing.get("name", ""), drop_year_tokens=True)
                 existing_start = existing.get("start_date", "")
-                existing_country = (existing.get("location", {}).get("country") or "").lower()
+                existing_country = self._normalize_country_for_match((existing.get("location", {}).get("country") or ""))
                 existing_city = (existing.get("location", {}).get("city") or "").strip().lower()
                 
                 names_match = (
@@ -626,6 +699,12 @@ class EventReconciler:
         print("\n=== RECONCILING DISCOVERED EVENTS ===\n")
         
         for candidate in discovered_events:
+            if self._is_dev_events_listing_url(candidate.get("event_url", "")):
+                print(
+                    f"[SKIP] {candidate.get('name')} - unresolved canonical URL (dev.events listing URL retained)"
+                )
+                continue
+
             valid_country_code, country_error = self.normalize_country_code_for_event(candidate)
             if not valid_country_code:
                 print(f"[SKIP] {candidate.get('name')} - {country_error}")
@@ -737,6 +816,10 @@ class EventReconciler:
         
         # Load discovered events
         discovered = self.load_discovered_events(input_file)
+
+        urls_valid, _ = self.validate_discovered_urls(discovered)
+        if not urls_valid:
+            return 1
         
         print()
         
@@ -794,6 +877,12 @@ Examples:
         help="Path to data directory (default: data/)"
     )
 
+    parser.add_argument(
+        "--allow-dev-events-listing-url",
+        action="store_true",
+        help="Allow input records whose event_url is still a dev.events listing URL (not recommended)."
+    )
+
     args = parser.parse_args()
     
     # Parse and validate run date
@@ -808,7 +897,11 @@ Examples:
         run_date = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
     
     # Create reconciler and run
-    reconciler = EventReconciler(run_date, args.data_dir)
+    reconciler = EventReconciler(
+        run_date,
+        args.data_dir,
+        allow_dev_events_listing_urls=args.allow_dev_events_listing_url,
+    )
     input_path = Path(args.input_file) if args.input_file else None
     
     try:
