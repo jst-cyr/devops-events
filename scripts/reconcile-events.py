@@ -36,6 +36,7 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     r"|\btesting\b|\btest\s+automation\b|\bqa\b|quality\s+assurance|testingmind|automationstar|eurostar\s+software\s+testing"
     r"|\bbazel\b|fluxcon|ciliumcon|backstagecon"
     r"|\bmessage\s+queue\b|\bmessaging\s+system\b|\bmqsummit\b"
+    r"|\bfunctional\s+programming\b|\blambda\s+world\b"
     # Explicitly rejected events (vendor-specific, single-project, or out-of-scope)
     r"|argocon|swampup\.jfrog\.com|api-platform\.com|opensearchcon",
     re.IGNORECASE,
@@ -540,6 +541,8 @@ class EventReconciler:
                 candidate.get("name", "") or "",
                 candidate.get("event_url", "") or "",
                 candidate.get("notes", "") or "",
+                candidate.get("event_type", "") or "",
+                " ".join(candidate.get("tags", []) or []),
             ]
         )
         if EXCLUDED_TOPIC_PATTERN.search(search_text):
