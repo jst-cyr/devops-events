@@ -7001,6 +7001,71 @@
       },
       "notes": "CFP candidate from AdatoSystems tracker; closes 2026-07-14",
       "created_at": "2026-05-22T18:37:50.896642Z"
+    },
+    {
+      "id": "dev-events-kcd-sf-bay-area-2026-5tjp9ihh",
+      "name": "KCD SF Bay Area 2026",
+      "event_url": "https://community2.cncf.io/events/details/cncf-kcd-sf-bay-area-presents-kcd-san-francisco-bay-area-2026",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-02",
+      "delivery": "in_person",
+      "event_type": "Docker / Kubernetes",
+      "tags": [
+        "Docker / Kubernetes"
+      ],
+      "source": "dev-events",
+      "location": {
+        "city": "San Francisco",
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing pages checked but no explicit pricing published."
+      },
+      "notes": "Sourced from dev.events; topic=Docker / Kubernetes"
+    },
+    {
+      "id": "dev-events-gartner-it-infrastructure-operations-and-cloud-strategies-arnsh3u6",
+      "name": "Gartner IT Infrastructure, Operations & Cloud Strategies",
+      "event_url": "https://www.gartner.com/en/conferences/emea/infrastructure-operations-cloud-uk",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-17",
+      "delivery": "in_person",
+      "event_type": "Cloud",
+      "tags": [
+        "Cloud"
+      ],
+      "source": "dev-events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": null,
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing pages checked but no explicit pricing published."
+      },
+      "notes": "Sourced from dev.events; topic=Cloud"
     }
   ]
 }
