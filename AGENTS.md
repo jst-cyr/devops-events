@@ -71,6 +71,7 @@ Read `data/dev-events-<YYYY-MM-DD>.json` and filter to a shortlist using **agent
 - Kubernetes, containers, configuration management, IaC
 - Network automation, sysadmin, Puppet, Ansible, Terraform
 - Observability, monitoring, security operations
+- **BSides community security conferences** (practitioner-focused infosec)
 - Related practitioner topics
 
 **Exclusion criteria:**
@@ -80,6 +81,8 @@ Read `data/dev-events-<YYYY-MM-DD>.json` and filter to a shortlist using **agent
 - **Cryptocurrency/blockchain (ETHGlobal, ETHConf, etc.)**
 - **Language-specific conferences (JetBrains PHPverse, PyData, etc.)**
 - Robotics hardware, Gartner business summits, finance symposia
+- **Generic hacker cons, pen-test events, and offensive security events** (DEFCON villages, Summercon, etc.) — unless explicitly whitelisted
+- **Regional/vendor cybersecurity summits** without clear practitioner DevOps/SRE overlap
 
 **Output:** `data/dev-events-shortlist-<YYYY-MM-DD>.json`
 

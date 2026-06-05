@@ -40,7 +40,12 @@ const excludedGeoTokens = new Set(geoConfig.excluded_geo_tokens.map(t => t.toLow
 // Topics clearly in-scope for DevOps/SRE/infrastructure
 const includeTopics = new Set([
   'DevOps', 'Docker / Kubernetes', 'SRE', 'Cloud', 'AWS', 'Azure',
-  'Linux / OS', 'Operating Systems / OS', 'Serverless', 'Cybersecurity / InfoSec',
+  'Linux / OS', 'Operating Systems / OS', 'Serverless',
+  // NOTE: 'Cybersecurity / InfoSec' is intentionally NOT here.
+  // It auto-included too many hacker cons, pen-test events, and generic security
+  // conferences that don't match our target audience (enterprise vulnerability
+  // mitigation practitioners). Specific security events are whitelisted by name
+  // in ambiguousKeepNames below.
 ]);
 
 // Topics clearly out-of-scope
@@ -62,10 +67,12 @@ const excludeTopics = new Set([
 //
 // Matching is case-insensitive substring match against event name.
 const ambiguousKeepNames = [
-  // AI topic — security/infrastructure AI only
-  'Confidential Computing Summit',
-  'Offensive AI Con',
-  'AI Security Summit',
+  // BSides community security conferences (practitioner-focused infosec)
+  'BSides',
+  'Elbsides',        // BSides-equivalent (Hamburg)
+  'Hack Glasgow',    // BSides-equivalent community infosec
+
+  // AI topic — infrastructure-focused
   'Data Centre Expo',
   'Open Source Observability Day',
   'Civo Navigate',
