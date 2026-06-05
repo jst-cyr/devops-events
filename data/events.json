@@ -5029,6 +5029,82 @@
         "notes": "Pricing pages checked but no explicit pricing published."
       },
       "notes": "Sourced from dev.events; topic=Cloud"
+    },
+    {
+      "id": "devopsdays-portland-2026",
+      "name": "DevOpsDays Portland",
+      "event_url": "https://devopsdays.org/events/2026-portland-or/welcome/",
+      "start_date": "2026-09-08",
+      "end_date": "2026-09-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "cfp-tracker",
+      "location": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopsdays-portland-2026/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-06",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": null,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Pricing not yet published"
+      },
+      "notes": "Added from reviewed CFP candidate list (AdatoSystems tracker).",
+      "created_at": "2026-06-05T00:00:00.000Z"
+    },
+    {
+      "id": "devopsdays-portugal-2026",
+      "name": "DevOpsDays Portugal",
+      "event_url": "https://devopsdays.org/events/2026-portugal/welcome/",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "cfp-tracker",
+      "location": {
+        "city": "Porto",
+        "region": null,
+        "country": "Portugal",
+        "country_code": "PT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-porto-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-15",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": null,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": null,
+        "notes": "Pricing not yet published"
+      },
+      "notes": "Added from reviewed CFP candidate list (AdatoSystems tracker).",
+      "created_at": "2026-06-05T00:00:00.000Z"
     }
   ]
 }
