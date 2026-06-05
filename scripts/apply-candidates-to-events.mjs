@@ -284,6 +284,11 @@ function normalizeCandidate(record) {
     r.event_type = 'conference';
   }
 
+  // Promote enrichment.official_website_url to event_url if current URL is a calendar stub
+  if (r.enrichment?.official_website_url && r.event_url?.includes('bsides.org/event/')) {
+    r.event_url = r.enrichment.official_website_url;
+  }
+
   // Clean up dev.events-specific fields that don't belong in events.json
   delete r.dev_events_slug;
   delete r.dev_events_url;

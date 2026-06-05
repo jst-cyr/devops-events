@@ -255,6 +255,11 @@ async function enrichCandidate(candidate, mapping) {
       result.enrichment.official_website_url = mappingEntry.official_website;
       result.enrichment.from_mapping = true;
 
+      // Promote official website to event_url (bsides.org calendar stubs are not canonical)
+      if (mappingEntry.official_website) {
+        result.event_url = mappingEntry.official_website;
+      }
+
       if (mappingEntry.location.city) {
         result.location = result.location || {};
         result.location.city = mappingEntry.location.city;
