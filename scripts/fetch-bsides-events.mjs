@@ -579,8 +579,14 @@ function classifyDelivery(location, textBlob) {
   return "in_person";
 }
 
+function normalizeBsidesName(name) {
+  // iCal SUMMARY often smashes "BSides" and location together (e.g., "BSidesKristiansand").
+  // Insert a space after "BSides" if followed by an uppercase letter without one.
+  return name.replace(/^(BSides)([A-Z])/i, '$1 $2');
+}
+
 function normalizeIcsEventToRecord(icsEvent) {
-  const name = cleanText(icsEvent.SUMMARY || "");
+  const name = normalizeBsidesName(cleanText(icsEvent.SUMMARY || ""));
   const eventUrl = cleanText(icsEvent.URL || "");
   const rawDescription = parseIcsValue(icsEvent.DESCRIPTION || "");
   const description = cleanText(rawDescription);
