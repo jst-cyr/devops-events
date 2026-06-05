@@ -1025,10 +1025,10 @@
       "notes": "Added from curated CFP candidates list.",
       "cost": {
         "is_free": false,
-        "lowest_price": null,
+        "lowest_price": 290,
         "price_currency": "CHF",
         "cost_level": "standard",
-        "notes": "Swiss Cloud Native Day 2026 (Sept 17, Mount Gurten, Bern). Tito page shows \"Tickets Are Available Soon\" with waitlist. Discounted tickets for diversity/lower income. Paid event, exact price not yet published."
+        "notes": "Event page ticket block shows Conference ticket CHF 290.00 (incl. MwSt.)."
       }
     },
     {
@@ -1113,7 +1113,7 @@
       "name": "SREcon26 Europe/Middle East/Africa",
       "event_url": "https://www.usenix.org/conference/srecon26emea",
       "start_date": "2026-10-13",
-      "end_date": "2026-10-15",
+      "end_date": "2026-10-16",
       "delivery": "in_person",
       "event_type": "conference",
       "tags": [
@@ -1153,7 +1153,7 @@
       "id": "cloud-native-zurich-2026",
       "name": "Cloud Native Zurich",
       "event_url": "https://cloudnativezurich.ch/",
-      "start_date": "2026-06-11",
+      "start_date": "2026-06-10",
       "end_date": "2026-06-11",
       "delivery": "in_person",
       "event_type": "conference",
@@ -1646,8 +1646,8 @@
       "id": "devops-midwest-2026",
       "name": "DevOps Midwest 2026",
       "event_url": "https://sketchdev.io/devopsmidwest/",
-      "start_date": "2026-09-17",
-      "end_date": "2026-09-17",
+      "start_date": "2026-09-16",
+      "end_date": "2026-09-16",
       "delivery": "in_person",
       "event_type": "conference",
       "tags": [
@@ -2044,8 +2044,8 @@
       "id": "devopsdays-krakow-ivppdakb",
       "name": "Devopsdays KrakÃƒÂ³w",
       "event_url": "https://devopsdays.org/events/2026-krakow",
-      "start_date": "2026-06-06",
-      "end_date": "2026-06-06",
+      "start_date": "2026-07-04",
+      "end_date": "2026-07-04",
       "delivery": "in_person",
       "event_type": "conference",
       "tags": [
@@ -2215,10 +2215,11 @@
       },
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "is_free": false,
+        "lowest_price": 499,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Tickets listed on event page: $499 early bird and $599 standard."
       }
     },
     {
@@ -3771,8 +3772,11 @@
         "cfp_status": "unknown"
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free"
+        "is_free": false,
+        "lowest_price": 1099,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "DASH page shows in-person ticket at $1099 regular price; virtual attendance is free. Event record is in_person, so paid ticket applies."
       }
     },
     {
@@ -3903,8 +3907,8 @@
       "id": "kubecon-+-cloudnativecon-na-2026",
       "name": "KubeCon + CloudNativeCon NA 2026",
       "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america-2026",
-      "start_date": "2026-11-09",
-      "end_date": "2026-11-12",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-29",
       "delivery": "in_person",
       "event_type": "conference",
       "tags": [
@@ -4956,11 +4960,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": null,
-        "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Pricing not yet published"
+        "is_free": false,
+        "lowest_price": 999,
+        "price_currency": "DKK",
+        "cost_level": "standard",
+        "notes": "Published ticket tiers: 999 DKK early blind bird, 1,499 DKK blind bird, 1,999 DKK standard, 4,999 DKK late bird."
       },
       "notes": "CFP candidate from AdatoSystems tracker; closes 2026-07-14",
       "created_at": "2026-05-22T18:37:50.896642Z"
