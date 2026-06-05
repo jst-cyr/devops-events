@@ -79,6 +79,29 @@ const allRecords = [
 
 console.log(`\nTotal merged records: ${allRecords.length}`);
 
+// Detect records with enrichment errors and write to events-issues.json
+const errorRecords = allRecords.filter(r => r.enrichment?.errors?.length > 0);
+if (errorRecords.length > 0) {
+  const issuesPath = path.join(dataDir, 'events-issues.json');
+  let existingIssues = { records: [] };
+  try {
+    existingIssues = JSON.parse(fs.readFileSync(issuesPath, 'utf-8'));
+  } catch (e) { /* file may not exist */ }
+
+  const newIssues = errorRecords.map(r => ({
+    source: r.source || (r.id?.startsWith('bsides-') ? 'bsides.org' : 'unknown'),
+    discovered_name: r.name,
+    discovered_url: r.event_url,
+    stage: 'enrichment',
+    reason: r.enrichment.errors.join('; '),
+    notes: `Official website URL: ${r.enrichment?.official_website_url || 'none'}. Event included as candidate but website could not be verified.`,
+  }));
+
+  existingIssues.records.push(...newIssues);
+  fs.writeFileSync(issuesPath, JSON.stringify(existingIssues, null, 2) + '\n', 'utf-8');
+  console.log(`\n⚠️  Flagged ${newIssues.length} enrichment errors in ${issuesPath}`);
+}
+
 // Write merged file
 const output = {
   generated_at: new Date().toISOString(),

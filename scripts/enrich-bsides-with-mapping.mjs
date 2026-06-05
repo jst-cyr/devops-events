@@ -288,6 +288,8 @@ async function enrichCandidate(candidate, mapping) {
       } else {
         result.enrichment.errors.push(`Could not fetch website: ${websiteResponse.status || websiteResponse.error}`);
       }
+    } else if (mappingEntry) {
+      result.enrichment.errors.push('No official website URL in mapping');
     } else {
       result.enrichment.errors.push('Event not found in mapping');
     }
