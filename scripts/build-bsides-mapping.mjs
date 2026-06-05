@@ -60,7 +60,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-kristiansand': {
     name: 'BSides Kristiansand',
     dates: '2026-06-05',
-    website: 'https://bsideskristiansand.no/',
+    website: 'https://bsideskrs.no/',
     country: 'Norway',
     region: null,
     city: 'Kristiansand',
@@ -68,7 +68,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-roanoke': {
     name: 'BSides Roanoke',
     dates: '2026-06-05',
-    website: 'https://www.bsidesroanoke.com/',
+    website: 'https://bsidesroa.org/',
     country: 'United States',
     region: 'Virginia',
     city: 'Roanoke',
@@ -84,18 +84,10 @@ const ALLBSIDES_MAPPING = {
   'bsides-fort-wayne': {
     name: 'BSides Fort Wayne',
     dates: '2026-06-06',
-    website: 'https://www.bsidesfw.com/',
+    website: 'https://www.bsidesfortwayne.org/',
     country: 'United States',
     region: 'Indiana',
     city: 'Fort Wayne',
-  },
-  'bsides-albany': {
-    name: 'BSides Albany',
-    dates: '2026-06-06',
-    website: 'https://www.bsidesalbany.org/',
-    country: 'United States',
-    region: 'New York',
-    city: 'Albany',
   },
   'bsides-boulder': {
     name: 'BSides Boulder',
@@ -124,7 +116,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-leeds': {
     name: 'BSides Leeds',
     dates: '2026-06-13',
-    website: 'https://www.bsidesledds.com/',
+    website: 'https://bsidesleeds.com/',
     country: 'United Kingdom',
     region: 'West Yorkshire',
     city: 'Leeds',
@@ -132,7 +124,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-umea': {
     name: 'BSides Umeå',
     dates: '2026-06-16',
-    website: 'https://bsidesumea.se/',
+    website: 'https://indico.neic.no/event/287/',
     country: 'Sweden',
     region: 'Västerbotten',
     city: 'Umeå',
@@ -188,7 +180,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-hk': {
     name: 'BSides Hong Kong',
     dates: '2026-06-25 - 06-26',
-    website: 'https://www.bsideshk.com/',
+    website: 'https://bsideshk.org/',
     country: 'Hong Kong',
     region: null,
     city: 'Hong Kong',
@@ -212,7 +204,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-brisbane': {
     name: 'BSides Brisbane',
     dates: '2026-07-04',
-    website: 'https://www.bsidesbrisbane.com.au/',
+    website: 'https://bsidesbrisbane.com/',
     country: 'Australia',
     region: 'Queensland',
     city: 'Brisbane',
@@ -220,7 +212,7 @@ const ALLBSIDES_MAPPING = {
   'bsides-pgh': {
     name: 'BSides Pittsburgh',
     dates: '2026-07-10',
-    website: 'https://www.bsidespgh.org/',
+    website: 'https://www.bsidespgh.com/',
     country: 'United States',
     region: 'Pennsylvania',
     city: 'Pittsburgh',
