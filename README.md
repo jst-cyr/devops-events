@@ -4,6 +4,7 @@ This project is an open-source project aimed to filter through multiple sources 
 This pulls from several data sources:
 - https://dev.events/ 
 - https://adatosystems.com/cfp-tracker/
+- https://bsides.org/events/
 - https://devopsdays.org/events
 - https://www.usenix.org/conference/srecon
 - https://sreday.com/
@@ -31,6 +32,10 @@ This pulls from several data sources:
 For discovering new events and identifying existing events requiring updates:
 
 ```bash
+# Optional: ingest BSides security events first
+node scripts/fetch-bsides-events.mjs 2026-04-17
+python scripts/reconcile-events.py --run-date 2026-04-17 --input-file data/bsides-events-2026-04-17.json
+
 # Full workflow:
 # 1. Run agent analysis to discover events (produces discovered-events.json)
 # 2. Reconcile against existing database
@@ -53,6 +58,7 @@ python scripts/reconcile-events.py --input-file discovered-events.json
 - Event discovery window: 180 days (for marketing sponsorship lead time)
 - CFP discovery window: 56 days (manageable review scope)
 - Geographic filter: Excludes China, Africa, Central/South America, Middle East, Romania, Mexico
+- BSides ingestion: `scripts/fetch-bsides-events.mjs` reads BSides iCal feed and enriches each event page to extract canonical event URLs and CFP links when present.
 - Early shortlist filter: `scripts/enrich-dev-events.mjs` drops Microsoft Power Platform-family events (`Power Platform`, `Power Apps`, `Power Automate`, `Power BI`, `Dynamics 365`) before enrichment fetches.
 - Early shortlist and reconcile filters also drop course/training-style records (for example `Course: ...`, `course`, `bootcamp`, `training`, `certification`, `/course` URLs).
 

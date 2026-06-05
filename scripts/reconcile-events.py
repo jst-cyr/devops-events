@@ -88,6 +88,7 @@ COUNTRY_CODE_FALLBACKS = {
     "colombia": "CO",
     "croatia": "HR",
     "czech republic": "CZ",
+    "czechia": "CZ",
     "denmark": "DK",
     "finland": "FI",
     "france": "FR",
@@ -95,6 +96,7 @@ COUNTRY_CODE_FALLBACKS = {
     "germany": "DE",
     "greece": "GR",
     "hungary": "HU",
+    "hong kong": "HK",
     "india": "IN",
     "indonesia": "ID",
     "ireland": "IE",
@@ -107,6 +109,7 @@ COUNTRY_CODE_FALLBACKS = {
     "malaysia": "MY",
     "mexico": "MX",
     "netherlands": "NL",
+    "nepal": "NP",
     "new zealand": "NZ",
     "nigeria": "NG",
     "norway": "NO",
@@ -116,8 +119,10 @@ COUNTRY_CODE_FALLBACKS = {
     "portugal": "PT",
     "romania": "RO",
     "russia": "RU",
+    "scotland": "GB",
     "serbia": "RS",
     "singapore": "SG",
+    "slovenia": "SI",
     "south africa": "ZA",
     "south korea": "KR",
     "spain": "ES",
@@ -133,6 +138,7 @@ COUNTRY_CODE_FALLBACKS = {
     "united kingdom": "GB",
     "united states": "US",
     "usa": "US",
+    "wales": "GB",
     "uzbekistan": "UZ",
     "vietnam": "VN",
 }
@@ -257,6 +263,7 @@ class EventReconciler:
     def normalize_country_code_for_event(self, event: Dict[str, Any]) -> Tuple[bool, str]:
         location = event.setdefault("location", {})
         delivery = (event.get("delivery") or "").strip().lower()
+        source = (event.get("source") or "").strip().lower()
         country = (location.get("country") or "").strip()
         is_online = bool(location.get("is_online"))
 
@@ -275,6 +282,14 @@ class EventReconciler:
         resolved_code = self._resolve_country_code(country)
         if resolved_code:
             location["country_code"] = resolved_code
+            return True, ""
+
+        # BSides feed frequently omits structured country metadata.
+        # Preserve these records for review instead of dropping them.
+        if source == "bsides.org":
+            location["country_code"] = None
+            if not country:
+                location["country"] = "Unknown"
             return True, ""
 
         event_label = event.get("id") or event.get("name") or "unknown_event"
