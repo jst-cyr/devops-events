@@ -250,7 +250,7 @@ async function enrichCandidate(candidate, mapping) {
       });
     }
 
-    // Use mapping data for location
+    // Use mapping data for location and name
     if (mappingEntry) {
       result.enrichment.official_website_url = mappingEntry.official_website;
       result.enrichment.from_mapping = true;
@@ -258,6 +258,11 @@ async function enrichCandidate(candidate, mapping) {
       // Promote official website to event_url (bsides.org calendar stubs are not canonical)
       if (mappingEntry.official_website) {
         result.event_url = mappingEntry.official_website;
+      }
+
+      // Use mapping name (clean UTF-8) over iCal name (may have encoding issues)
+      if (mappingEntry.name) {
+        result.name = mappingEntry.name;
       }
 
       if (mappingEntry.location.city) {
