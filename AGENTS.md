@@ -174,7 +174,9 @@ For **every enriched candidate** from Phases 2, 3, and 4:
    - **ETHGlobal and other cryptocurrency/blockchain consumer events**
    - **JetBrains PHPverse and language-specific conferences (Python data science, etc.)**
 
-5. **Record validation result** — For excluded events, write to `data/events-issues.json`:
+5. **Record validation result** — Segment outputs by type:
+
+   **Out-of-scope events → `data/events-ignored-<YYYY-MM-DD>.json`:**
    - `source`: event source (dev.events, usnua, etc.)
    - `discovered_name`: event name
    - `discovered_url`: canonical event URL
@@ -182,9 +184,15 @@ For **every enriched candidate** from Phases 2, 3, and 4:
    - `reason`: deterministic exclusion reason (e.g., "out-of-scope: cryptocurrency", "out-of-scope: general business", "insufficient technical content")
    - `notes`: brief description of actual page content
 
+   **Actual errors → `data/events-issues.json`:**
+   - Events where the canonical URL could not be fetched (HTTP errors, DNS failures, timeouts)
+   - Events where enrichment data could not be extracted
+   - Missing canonical URLs that could not be resolved
+   - Use `stage` values: `"enrichment"`, `"fetch_error"`, `"missing_canonical_url"`
+
 6. **Pass validated events to Phase 6** — Only events with confirmed relevance proceed to reconciliation.
 
-**Validation is mandatory and non-waivable.** If event page is inaccessible (404, blocked, etc.), write issue and mark as unresolved. Prefer **exclusion with documentation** over risky inclusion.
+**Validation is mandatory and non-waivable.** If event page is inaccessible (404, blocked, etc.), write to `data/events-issues.json` as an error and mark as unresolved. Prefer **exclusion with documentation** over risky inclusion.
 
 **See:** Reference inclusion/exclusion criteria in Phase 2 above. No separate prompt template; agent applies content judgment directly.
 
@@ -334,5 +342,6 @@ devops-events/
     ├── events.json                    ← Canonical database
     ├── events-candidates.json         ← Phase 6 output (NEW events)
     ├── events-updates.json            ← Phase 7 output
-    └── events-issues.json             ← Validation issues
+    ├── events-issues.json             ← Errors (fetch failures, missing URLs, enrichment errors)
+    └── events-ignored-<YYYY-MM-DD>.json  ← Out-of-scope exclusions (topic/geo/relevance filters)
 ```

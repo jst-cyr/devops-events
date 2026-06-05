@@ -253,13 +253,50 @@ const outPath = path.join(dataDir, `dev-events-shortlist-${runDate}.json`);
 fs.writeFileSync(outPath, JSON.stringify(output, null, 2) + '\n', 'utf-8');
 console.log(`\nWrote shortlist: ${outPath} (${shortlisted.length} records)`);
 
-// Write issues for excluded ambiguous records
-const issues = excluded.relevance.map(r => ({
+// Write ignored (out-of-scope) events to events-ignored file
+const ignored = [
+  ...excluded.relevance.map(r => ({
+    source: 'dev.events',
+    discovered_name: r.name,
+    stage: 'relevance_filter',
+    reason: `out-of-scope: ${r.topic} topic, name does not indicate DevOps/SRE/infrastructure focus`,
+    notes: r.reason,
+  })),
+  ...excluded.topic.map(r => ({
+    source: 'dev.events',
+    discovered_name: r.name,
+    stage: 'topic_filter',
+    reason: `out-of-scope: ${r.topic} topic is in the exclude list`,
+    notes: 'auto-excluded by topic classification',
+  })),
+  ...excluded.geography.map(r => ({
+    source: 'dev.events',
+    discovered_name: r.name,
+    stage: 'geography_filter',
+    reason: `excluded geography: ${r.country || r.city}`,
+    notes: 'auto-excluded by geographic filter',
+  })),
+];
+
+if (ignored.length > 0) {
+  const ignoredOutput = {
+    generated_at: new Date().toISOString(),
+    source_run_date: runDate,
+    total_ignored: ignored.length,
+    records: ignored,
+  };
+  const ignoredPath = path.join(dataDir, `events-ignored-${runDate}.json`);
+  fs.writeFileSync(ignoredPath, JSON.stringify(ignoredOutput, null, 2) + '\n', 'utf-8');
+  console.log(`Wrote ${ignored.length} ignored events to ${ignoredPath}`);
+}
+
+// Write issues for events with actual errors (e.g., missing canonical URL)
+const issues = excluded.no_url.map(r => ({
   source: 'dev.events',
   discovered_name: r.name,
-  stage: 'content_validation',
-  reason: `out-of-scope: ${r.topic} topic, name does not indicate DevOps/SRE/infrastructure focus`,
-  notes: r.reason,
+  stage: 'enrichment',
+  reason: 'missing_canonical_url',
+  notes: `Could not resolve canonical URL; dev.events URL: ${r.event_url || 'none'}`,
 }));
 
 if (issues.length > 0) {
@@ -270,5 +307,5 @@ if (issues.length > 0) {
   } catch (e) { /* file may not exist */ }
   existingIssues.records.push(...issues);
   fs.writeFileSync(issuesPath, JSON.stringify(existingIssues, null, 2) + '\n', 'utf-8');
-  console.log(`Appended ${issues.length} exclusion issues to ${issuesPath}`);
+  console.log(`Appended ${issues.length} enrichment issues to ${issuesPath}`);
 }

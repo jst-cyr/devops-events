@@ -30,7 +30,7 @@ node scripts/fetch-dev-events.mjs <YYYY-MM-DD>
 ```
 
    - Produces `data/dev-events-<YYYY-MM-DD>.json` with all events in the 180-day window.
-   - Expect 1,000+ events. If the script returns fewer than 500, treat the run as incomplete and log to `data/events-issues.json`.
+   - Expect 1,000+ events. If the script returns fewer than 500, treat the run as incomplete and log to `data/events-issues.json` (this is an error condition, not an out-of-scope determination).
    - This replaces all manual dev.events browsing. Do not crawl dev.events index pages directly.
 
 2. **CFP tracker extraction:**
@@ -134,13 +134,21 @@ For each enriched event record from all sources (dev.events, USNUA, agent-crawle
    - Generic "networking" or "tech" events without DevOps/SRE specificity.
    - Events with minimal agenda details (cannot confirm relevance).
 
-5. **Record validation result** — For excluded events, write to `data/events-issues.json`:
+5. **Record validation result** — Segment outputs by type:
+
+   **Out-of-scope events → `data/events-ignored-<YYYY-MM-DD>.json`:**
    - `source`: event source (dev.events, usnua, etc.)
    - `discovered_name`: event name
    - `discovered_url`: canonical event URL
    - `stage`: "content_validation"
    - `reason`: deterministic exclusion reason (e.g., "out-of-scope domain", "insufficient technical content", "generic networking event")
    - `notes`: brief description of page content
+
+   **Actual errors → `data/events-issues.json`:**
+   - Events where the canonical URL could not be fetched (HTTP errors, DNS failures, timeouts)
+   - Events where enrichment data could not be extracted
+   - Missing canonical URLs that could not be resolved
+   - Use `stage` values: `"enrichment"`, `"fetch_error"`, `"missing_canonical_url"`
 
 6. **Pass validated events to Phase 6** — Only events with confirmed relevance proceed to reconciliation.
 
@@ -172,7 +180,7 @@ For each targeted existing event:
 #### Guardrails
 
 - Do not overwrite `data/events-candidates.json` with empty `records` unless all phases completed successfully and truly found zero net-new records.
-- If any phase is incomplete or blocked, write deterministic issues to `data/events-issues.json` and explicitly mark run status as incomplete in the summary.
+- If any phase is incomplete or blocked, write deterministic errors to `data/events-issues.json` and explicitly mark run status as incomplete in the summary. Out-of-scope determinations go to `data/events-ignored-<YYYY-MM-DD>.json`.
 
 ### Inclusion rules
 
@@ -275,11 +283,15 @@ Produce these outputs:
 3. Concise markdown list of updates (in response text).
 4. `data/events-candidates.json` with shape:
    - `generated_at`, `window_days`, `source_run_date`, `records`
-5. `data/events-issues.json` with shape:
+5. `data/events-issues.json` — **errors only** (fetch failures, missing URLs, enrichment errors):
    - `generated_at`, `window_days`, `source_run_date`, `records`
    - each record: `source`, `discovered_name`, `discovered_url`, `attempted_url`, `stage`, `reason`, `http_status`, `in_window`, `notes`
-6. `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`
-7. `data/cfp-candidates.json` with shape:
+   - `stage` values: `enrichment`, `fetch_error`, `missing_canonical_url`
+6. `data/events-ignored-<YYYY-MM-DD>.json` — **out-of-scope determinations** (topic/geo/relevance exclusions):
+   - `generated_at`, `source_run_date`, `total_ignored`, `records`
+   - each record: `source`, `discovered_name`, `discovered_url`, `stage`, `reason`, `notes`
+7. `data/adatosystems-cfp-validation-<YYYY-MM-DD>.json`
+8. `data/cfp-candidates.json` with shape:
    - `generated_at`, `source_report`, `window_start`, `window_end`, `prioritization`, `total_candidates`, `candidates`
 
 ### CFP prioritization (`data/cfp-candidates.json`)
@@ -301,7 +313,7 @@ Produce these outputs:
 - Included records satisfy inclusion rules (180-day event or 56-day CFP).
 - Excluded geographies absent.
 - No dev.events detail URL as final `event_url`.
-- All failures represented in `data/events-issues.json`.
+- All fetch/enrichment failures represented in `data/events-issues.json`. All out-of-scope exclusions in `data/events-ignored-<YYYY-MM-DD>.json`.
 - No unchanged records in updates/candidates.
 - Explicit overlap audit included in summary for `events-candidates.json`:
    - overlap by normalized `event_url`

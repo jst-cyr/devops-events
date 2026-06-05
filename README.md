@@ -52,7 +52,8 @@ python scripts/reconcile-events.py --input-file discovered-events.json
 - `data/events-candidates.json` - New events for review
 - `data/events-updates.json` - Field-level updates (cost backfill, data corrections)
 - `data/events-overlap-review.json` - Probable duplicate candidates for focused LLM review
-- `data/events-issues.json` - Data quality issues and extraction failures
+- `data/events-issues.json` - Errors (fetch failures, missing URLs, enrichment errors)
+- `data/events-ignored-<YYYY-MM-DD>.json` - Out-of-scope exclusions (topic/geo/relevance filters)
 
 **Configuration:**
 - Event discovery window: 180 days (for marketing sponsorship lead time)
