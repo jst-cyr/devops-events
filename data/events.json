@@ -1730,7 +1730,7 @@
       "source": "adatosystems",
       "location": {
         "city": "Paris",
-        "region": "ÃŽle-de-France",
+        "region": "Île-de-France",
         "country": "France",
         "country_code": "FR",
         "is_online": false,
@@ -2042,7 +2042,7 @@
     },
     {
       "id": "devopsdays-krakow-ivppdakb",
-      "name": "Devopsdays KrakÃƒÂ³w",
+      "name": "Devopsdays Kraków",
       "event_url": "https://devopsdays.org/events/2026-krakow",
       "start_date": "2026-07-04",
       "end_date": "2026-07-04",
@@ -6791,7 +6791,7 @@
     },
     {
       "id": "bsides-bsidesumea-2",
-      "name": "BSidesUmeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥",
+      "name": "BSides Umeå",
       "event_url": "https://indico.neic.no/event/287/",
       "start_date": "2026-06-16",
       "end_date": "2026-06-16",
@@ -6804,8 +6804,8 @@
       ],
       "source": "bsides.org",
       "location": {
-        "city": "UmeÃ¥",
-        "region": "VÃ¤sterbotten",
+        "city": "Umeå",
+        "region": "Västerbotten",
         "country": "Sweden",
         "country_code": "SE",
         "is_online": false,
