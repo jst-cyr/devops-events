@@ -121,6 +121,10 @@ const alwaysExcludeNames = [
 
   // General dev conferences without DevOps/SRE focus
   'Carolina Code Conference',
+
+  // Vendor-specific product roadshows (not practitioner conferences)
+  'Nutanix',
+  '.NEXT on Tour',
 ];
 
 const alwaysExcludePatterns = alwaysExcludeNames.map(n => n.toLowerCase());
