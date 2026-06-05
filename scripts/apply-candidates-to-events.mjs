@@ -146,6 +146,158 @@ function findDuplicate(candidate, existingRecords) {
   return { duplicate: false };
 }
 
+// Topic-to-tags mapping for dev.events candidates
+const TOPIC_TAGS_MAP = {
+  'DevOps': ['devops'],
+  'Docker / Kubernetes': ['kubernetes', 'containers', 'cloud-native'],
+  'Cloud': ['cloud'],
+  'Azure': ['cloud', 'azure'],
+  'AWS': ['cloud', 'aws'],
+  'SRE': ['sre'],
+  'Linux / OS': ['linux', 'sysadmin'],
+  'BSD / OS': ['bsd', 'sysadmin'],
+  'Cybersecurity / InfoSec': ['security'],
+  'Open Source': ['open-source'],
+  'Serverless': ['cloud', 'serverless'],
+  'Tech': ['devops'],
+  'Artificial Intelligence (AI)': ['ai', 'devops'],
+};
+
+// Country name to ISO 3166-1 alpha-2 code
+const COUNTRY_CODE_MAP = {
+  'United States': 'US', 'Canada': 'CA', 'United Kingdom': 'GB', 'Germany': 'DE',
+  'France': 'FR', 'Netherlands': 'NL', 'Belgium': 'BE', 'Denmark': 'DK',
+  'Norway': 'NO', 'Sweden': 'SE', 'Austria': 'AT', 'Switzerland': 'CH',
+  'Italy': 'IT', 'Spain': 'ES', 'Portugal': 'PT', 'Ireland': 'IE',
+  'Poland': 'PL', 'Hungary': 'HU', 'Japan': 'JP', 'Australia': 'AU',
+  'New Zealand': 'NZ', 'India': 'IN', 'Indonesia': 'ID', 'Hong Kong': 'HK',
+  'Online': 'XX', 'Russia': 'RU',
+};
+
+// Generate a slug-style id from event name and start_date
+function generateId(name, startDate) {
+  const slug = name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+  const year = startDate ? startDate.substring(0, 4) : '';
+  // Avoid appending year if slug already ends with the year
+  if (slug.endsWith(year)) return slug;
+  return `${slug}-${year}`;
+}
+
+// Normalize a candidate record to conform to EventRecord schema
+function normalizeCandidate(record) {
+  const r = { ...record };
+
+  // Generate id if missing
+  if (!r.id) {
+    r.id = generateId(r.name, r.start_date);
+  }
+
+  // Set source if missing
+  if (!r.source) {
+    if (r.dev_events_slug || r.dev_events_url) {
+      r.source = 'dev.events';
+    } else if (r.id?.startsWith('bsides-')) {
+      r.source = 'bsides.org';
+    } else {
+      r.source = 'unknown';
+    }
+  }
+
+  // Set delivery if missing
+  if (!r.delivery) {
+    if (r.location?.is_online) {
+      // Check if it also has a city (hybrid)
+      r.delivery = r.location.city ? 'hybrid' : 'online';
+    } else {
+      r.delivery = 'in_person';
+    }
+  }
+
+  // Fix location for online events
+  if (r.delivery === 'online') {
+    r.location = r.location || {};
+    r.location.is_online = true;
+    r.location.city = null;
+    r.location.country = 'Online';
+    r.location.country_code = 'XX';
+  }
+
+  // Fix location for hybrid events
+  if (r.delivery === 'hybrid') {
+    r.location = r.location || {};
+    r.location.is_online = true;
+    // Keep city/country for hybrid; fix country to strip "and Online" suffixes
+    if (r.location.country) {
+      r.location.country = r.location.country.replace(/\s+and\s+Online$/i, '').trim();
+    }
+    // Resolve country_code if missing
+    if (!r.location.country_code && r.location.country) {
+      r.location.country_code = COUNTRY_CODE_MAP[r.location.country] || null;
+    }
+  }
+
+  // Resolve country_code if missing for in_person
+  if (r.delivery === 'in_person' && !r.location?.country_code && r.location?.country) {
+    r.location.country_code = COUNTRY_CODE_MAP[r.location.country] || null;
+  }
+
+  // Set tags if missing
+  if (!r.tags && r.topic) {
+    r.tags = TOPIC_TAGS_MAP[r.topic] || ['devops'];
+  }
+
+  // Set cost if missing — assume free per data model unknown pricing rule
+  if (!r.cost) {
+    r.cost = {
+      is_free: true,
+      cost_level: 'free',
+      notes: 'Pricing not verified; assumed free until confirmed.',
+    };
+  } else {
+    // Fix null is_free — apply unknown pricing rule
+    if (r.cost.is_free === null || r.cost.is_free === undefined) {
+      r.cost.is_free = true;
+      r.cost.cost_level = 'free';
+      r.cost.lowest_price = null;
+      if (!r.cost.notes) r.cost.notes = 'Pricing not verified; assumed free until confirmed.';
+    }
+    // Clean up null price_currency when free
+    if (r.cost.is_free && r.cost.price_currency === null) {
+      delete r.cost.price_currency;
+    }
+    // Clean up found_pricing_info (not part of EventRecord schema)
+    delete r.cost.found_pricing_info;
+  }
+
+  // Fix http:// URLs to https://
+  if (r.event_url && r.event_url.startsWith('http://')) {
+    r.event_url = r.event_url.replace('http://', 'https://');
+  }
+
+  // Set event_type if missing
+  if (!r.event_type) {
+    r.event_type = 'conference';
+  }
+
+  // Clean up dev.events-specific fields that don't belong in events.json
+  delete r.dev_events_slug;
+  delete r.dev_events_url;
+  delete r.topic;
+  delete r.canonical_method;
+  delete r.canonical_notes;
+  delete r.enrichment;
+  delete r.validation;
+  delete r.continent;
+  if (r.location) delete r.location.continent;
+
+  return r;
+}
+
 // Main merge workflow
 async function mergeEvents() {
   console.log('[MERGE] Loading events.json and events-candidates.json...');
@@ -161,7 +313,9 @@ async function mergeEvents() {
   const inserted = [];
   const skipped = [];
 
-  for (const candidate of candidates) {
+  for (const rawCandidate of candidates) {
+    // Normalize candidate to EventRecord schema
+    const candidate = normalizeCandidate(rawCandidate);
     console.log(`[MERGE] Processing: ${candidate.id}...`);
 
     // Check validation first
