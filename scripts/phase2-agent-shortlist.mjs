@@ -63,7 +63,8 @@ const excludeTopics = new Set([
 
 // ─── Agent name-level whitelist for ambiguous topics ────────────────────
 // These are specific events from ambiguous topics that agent judgment determined
-// are relevant to DevOps/SRE/infrastructure operations.
+// are relevant for Puppet's practitioner audience (infra operations, OSS ops,
+// sysadmin, and closely related community security).
 //
 // Matching is case-insensitive substring match against event name.
 const ambiguousKeepNames = [
@@ -73,35 +74,15 @@ const ambiguousKeepNames = [
   'Hack Glasgow',    // BSides-equivalent community infosec
 
   // AI topic — infrastructure-focused
-  'Data Centre Expo',
   'Open Source Observability Day',
   'Civo Navigate',
 
-  // Microsoft topic — infrastructure-focused MS events
-  'Experts Live UK',
-  'Experts Live Austria',
-  'Experts Live Sweden',
-  'TechMentor',
-  'Cybersecurity Live',
-  'Nordic Integration Summit',
-
   // Tech topic — infrastructure-relevant
-  'S2N: Storage Server Network',
-  'Open Tech Day',    // Software-defined Storage
-  'Feature Flags',
   'KeyCloakCon',
 
-  // Open Source topic — security/monitoring
+  // Open Source topic — operations/security monitoring
   'European Open Source Security Forum',
-  'OWASP Global AppSec',
   'Open Source Monitoring Conference',
-  'All Things Open',
-
-  // Tech leadership — DevOps org patterns
-  'Fast Flow Conf',
-
-  // Software architecture — performance/SRE
-  'P99 CONF',
 
   // BSD / OS — sysadmin/infrastructure
   'BSDCan',
