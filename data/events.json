@@ -5109,6 +5109,1945 @@
       },
       "notes": "Added from reviewed CFP candidate list (AdatoSystems tracker).",
       "created_at": "2026-06-05T00:00:00.000Z"
+    },
+    {
+      "name": "BSides Buffalo 2026",
+      "start_date": "2026-06-06",
+      "end_date": "2026-06-06",
+      "location": {
+        "city": "Buffalo",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://www.bsidesbuffalo.org/",
+      "notes": null,
+      "id": "bsides-buffalo-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Elbsides 2026",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-05",
+      "location": {
+        "city": "Hamburg",
+        "region": null,
+        "country": "Germany",
+        "is_online": false,
+        "country_code": "DE"
+      },
+      "event_url": "https://www.elbsides.eu/2026",
+      "notes": null,
+      "id": "elbsides-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "European Open Source Security Forum",
+      "start_date": "2026-06-09",
+      "end_date": "2026-06-09",
+      "location": {
+        "city": "Brussels",
+        "region": null,
+        "country": "Belgium",
+        "is_online": false,
+        "country_code": "BE"
+      },
+      "event_url": "https://events.linuxfoundation.org/european-open-source-security-forum",
+      "notes": null,
+      "id": "european-open-source-security-forum-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "open-source"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides SATX 2026",
+      "start_date": "2026-06-13",
+      "end_date": "2026-06-13",
+      "location": {
+        "city": "San Antonio",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://www.bsidessatx.com/",
+      "notes": null,
+      "id": "bsides-satx-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSDCan",
+      "start_date": "2026-06-17",
+      "end_date": "2026-06-20",
+      "location": {
+        "city": "Ottawa",
+        "region": null,
+        "country": "Canada",
+        "is_online": false,
+        "country_code": "CA"
+      },
+      "event_url": "https://www.bsdcan.org/2026",
+      "notes": null,
+      "id": "bsdcan-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "bsd",
+        "sysadmin"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "PlatformCON Virtual",
+      "start_date": "2026-06-22",
+      "end_date": "2026-06-26",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "is_online": true,
+        "country_code": "XX"
+      },
+      "event_url": "https://platformcon.com/program",
+      "notes": null,
+      "id": "platformcon-virtual-2026",
+      "source": "dev.events",
+      "delivery": "online",
+      "tags": [
+        "cloud"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Aarhus 2026",
+      "start_date": "2026-06-20",
+      "end_date": "2026-06-20",
+      "location": {
+        "city": "Aarhus",
+        "region": null,
+        "country": "Denmark",
+        "is_online": false,
+        "country_code": "DK"
+      },
+      "event_url": "https://bsidesaarhus.dk/",
+      "notes": null,
+      "id": "bsides-aarhus-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Azure Day Roma 2026",
+      "start_date": "2026-06-19",
+      "end_date": "2026-06-19",
+      "location": {
+        "city": "Rome",
+        "region": null,
+        "country": "Italy",
+        "is_online": false,
+        "country_code": "IT"
+      },
+      "event_url": "https://www.azureday.it/",
+      "notes": null,
+      "id": "azure-day-roma-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "azure"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Porto",
+      "start_date": "2026-06-26",
+      "end_date": "2026-06-27",
+      "location": {
+        "city": "Porto",
+        "region": null,
+        "country": "Portugal",
+        "is_online": false,
+        "country_code": "PT"
+      },
+      "event_url": "https://bsidesporto.org/",
+      "notes": null,
+      "id": "bsides-porto-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSidesPGH 2026",
+      "start_date": "2026-07-10",
+      "end_date": "2026-07-10",
+      "location": {
+        "city": "Pittsburgh",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://bsidespgh.com/",
+      "notes": null,
+      "id": "bsidespgh-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "KeyCloakCon Japan",
+      "start_date": "2026-07-28",
+      "end_date": "2026-07-28",
+      "location": {
+        "city": "Yokohama",
+        "region": null,
+        "country": "Japan",
+        "is_online": false,
+        "country_code": "JP"
+      },
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/co-located-events/keycloakcon",
+      "notes": null,
+      "id": "keycloakcon-japan-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Azure Cloud Lab - Sesiones Junior mentorizadas",
+      "start_date": "2026-07-31",
+      "end_date": "2026-07-31",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "is_online": true,
+        "country_code": "XX"
+      },
+      "event_url": "https://www.azurecloudlab.net/",
+      "notes": null,
+      "id": "azure-cloud-lab-sesiones-junior-mentorizadas-2026",
+      "source": "dev.events",
+      "delivery": "online",
+      "tags": [
+        "cloud",
+        "azure"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Brighton",
+      "start_date": "2026-08-07",
+      "end_date": "2026-08-08",
+      "location": {
+        "city": "Brighton",
+        "region": null,
+        "country": "United Kingdom",
+        "is_online": false,
+        "country_code": "GB"
+      },
+      "event_url": "https://bsidesbrighton.co.uk/",
+      "notes": null,
+      "id": "bsides-brighton-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "KCD Kubernetes Community Days Melbourne 2026",
+      "start_date": "2026-08-04",
+      "end_date": "2026-08-04",
+      "location": {
+        "city": "Melbourne",
+        "region": null,
+        "country": "Australia",
+        "is_online": false,
+        "country_code": "AU"
+      },
+      "event_url": "https://community2.cncf.io/events/details/cncf-kcd-australia-presents-kcd-melbourne-2026",
+      "notes": null,
+      "id": "kcd-kubernetes-community-days-melbourne-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "kubernetes",
+        "containers",
+        "cloud-native"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Hack Glasgow",
+      "start_date": "2026-08-15",
+      "end_date": "2026-08-15",
+      "location": {
+        "city": "Glasgow",
+        "region": null,
+        "country": "United Kingdom",
+        "is_online": false,
+        "country_code": "GB"
+      },
+      "event_url": "https://hackglasgow.live/",
+      "notes": null,
+      "id": "hack-glasgow-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Kubeflow Community Showcase 2026: GenAI and MLOps in Action",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-19",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "is_online": true,
+        "country_code": "XX"
+      },
+      "event_url": "https://community2.cncf.io/events/details/cncf-virtual-project-events-hosted-by-cncf-presents-kubeflow-community-showcase-2026-genai-and-mlops-in-action",
+      "notes": null,
+      "id": "kubeflow-community-showcase-2026-genai-and-mlops-in-action-2026",
+      "source": "dev.events",
+      "delivery": "online",
+      "tags": [
+        "kubernetes",
+        "containers",
+        "cloud-native"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "seL4 Summit",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-03",
+      "location": {
+        "city": "Vancouver",
+        "region": null,
+        "country": "Canada",
+        "is_online": false,
+        "country_code": "CA"
+      },
+      "event_url": "https://events.linuxfoundation.org/sel4-summit",
+      "notes": null,
+      "id": "sel4-summit-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "linux",
+        "sysadmin"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Azure Community Day 2026",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-04",
+      "location": {
+        "city": "Koln",
+        "region": null,
+        "country": "Germany",
+        "is_online": false,
+        "country_code": "DE"
+      },
+      "event_url": "https://azure-community-day.de/",
+      "notes": null,
+      "id": "azure-community-day-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "azure"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "AWS Community Day Poland 2026",
+      "start_date": "2026-09-08",
+      "end_date": "2026-09-08",
+      "location": {
+        "city": "Warsaw",
+        "region": null,
+        "country": "Poland",
+        "is_online": false,
+        "country_code": "PL"
+      },
+      "event_url": "https://awscommunity.pl/en",
+      "notes": null,
+      "id": "aws-community-day-poland-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "aws"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "EuroBSDCon",
+      "start_date": "2026-09-09",
+      "end_date": "2026-09-13",
+      "location": {
+        "city": "Brussels",
+        "region": null,
+        "country": "Belgium",
+        "is_online": false,
+        "country_code": "BE"
+      },
+      "event_url": "https://2026.eurobsdcon.org/",
+      "notes": null,
+      "id": "eurobsdcon-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "bsd",
+        "sysadmin"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Belfast 2026",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-10",
+      "location": {
+        "city": "Belfast",
+        "region": null,
+        "country": "Ireland",
+        "is_online": false,
+        "country_code": "IE"
+      },
+      "event_url": "https://bsidesbelfast.org/",
+      "notes": null,
+      "id": "bsides-belfast-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "AzureOnBeer 2026",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-11",
+      "location": {
+        "city": "Vicenza",
+        "region": null,
+        "country": "Italy",
+        "is_online": false,
+        "country_code": "IT"
+      },
+      "event_url": "https://azureonbeer.azmv.it/",
+      "notes": null,
+      "id": "azureonbeer-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "azure"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSidesDen 2026",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-11",
+      "location": {
+        "city": "Denver",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://www.bsidesden.org/",
+      "notes": null,
+      "id": "bsidesden-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "AWS Community Day CEE 2026",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "location": {
+        "city": "Budapest",
+        "region": null,
+        "country": "Hungary",
+        "is_online": false,
+        "country_code": "HU"
+      },
+      "event_url": "https://awscommunity.eu/",
+      "notes": null,
+      "id": "aws-community-day-cee-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "aws"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSidesCache 2026",
+      "start_date": "2026-09-18",
+      "end_date": "2026-09-18",
+      "location": {
+        "city": "Logan",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://www.bsidescache.org/",
+      "notes": null,
+      "id": "bsidescache-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Azure Fest 2026",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-23",
+      "location": {
+        "city": "Nieuwegein",
+        "region": null,
+        "country": "Netherlands",
+        "is_online": false,
+        "country_code": "NL"
+      },
+      "event_url": "https://azurefest.nl/",
+      "notes": null,
+      "id": "azure-fest-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "azure"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Security BSides Albuquerque 2026",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-26",
+      "location": {
+        "city": "Albuquerque",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://www.bsidesabq.org/",
+      "notes": null,
+      "id": "security-bsides-albuquerque-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Edmonton",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-25",
+      "location": {
+        "city": "Edmonton",
+        "region": null,
+        "country": "Canada",
+        "is_online": false,
+        "country_code": "CA"
+      },
+      "event_url": "https://www.bsidesedmonton.org/",
+      "notes": null,
+      "id": "bsides-edmonton-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Orlando 2026",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-26",
+      "location": {
+        "city": "Orlando",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://bsidesorlando.org/",
+      "notes": null,
+      "id": "bsides-orlando-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Cleveland 2026",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "location": {
+        "city": "Cleveland",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://bsidescle.com/events/2026-conference.php",
+      "notes": null,
+      "id": "bsides-cleveland-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Cheltenham 2026",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-03",
+      "location": {
+        "city": "Cheltenham",
+        "region": null,
+        "country": "United Kingdom",
+        "is_online": false,
+        "country_code": "GB"
+      },
+      "event_url": "https://bsidescheltenham.org.uk/",
+      "notes": null,
+      "id": "bsides-cheltenham-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Bloomington 2026",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-03",
+      "location": {
+        "city": "Bloomington",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://bsidesbloomington.org/",
+      "notes": null,
+      "id": "bsides-bloomington-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "ai-PULSE",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "location": {
+        "city": "Paris",
+        "region": null,
+        "country": "France",
+        "is_online": false,
+        "country_code": "FR"
+      },
+      "event_url": "https://www.ai-pulse.eu/",
+      "notes": null,
+      "id": "ai-pulse-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "DevOops 2026",
+      "start_date": "2026-10-12",
+      "end_date": "2026-10-13",
+      "location": {
+        "city": "Saint Petersburg",
+        "region": null,
+        "country": "Russia",
+        "is_online": true,
+        "country_code": "RU"
+      },
+      "event_url": "https://devoops.ru/",
+      "notes": null,
+      "id": "devoops-2026",
+      "source": "dev.events",
+      "delivery": "hybrid",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Containerkonferansen 2026",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-15",
+      "location": {
+        "city": "Trondheim",
+        "region": null,
+        "country": "Norway",
+        "is_online": false,
+        "country_code": "NO"
+      },
+      "event_url": "https://containerkonferansen.nhn.no/",
+      "notes": null,
+      "id": "containerkonferansen-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "kubernetes",
+        "containers",
+        "cloud-native"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSidesNYC 0x06",
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17",
+      "location": {
+        "city": "New York",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://bsidesnyc.org/",
+      "notes": null,
+      "id": "bsidesnyc-0x06-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "AWS North Community Conference",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-15",
+      "location": {
+        "city": "Gateshead",
+        "region": null,
+        "country": "United Kingdom",
+        "is_online": false,
+        "country_code": "GB"
+      },
+      "event_url": "https://www.northcommunityconf.com/",
+      "notes": null,
+      "id": "aws-north-community-conference-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "aws"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "AWS Community Day Australia 2026",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-16",
+      "location": {
+        "city": "Brisbane",
+        "region": null,
+        "country": "Australia",
+        "is_online": false,
+        "country_code": "AU"
+      },
+      "event_url": "https://awscommunitydayaus.com/",
+      "notes": null,
+      "id": "aws-community-day-australia-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "aws"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Open Source Observability Day 2026",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-23",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "is_online": true,
+        "country_code": "XX"
+      },
+      "event_url": "https://osoday.com/",
+      "notes": null,
+      "id": "open-source-observability-day-2026",
+      "source": "dev.events",
+      "delivery": "online",
+      "tags": [
+        "ai",
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "SeaGL 2026",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "location": {
+        "city": "Seattle",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://seagl.org/",
+      "notes": null,
+      "id": "seagl-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "linux",
+        "sysadmin"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Kubernetes Community Days Indonesia 2026",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "location": {
+        "city": "Bandung",
+        "region": null,
+        "country": "Indonesia",
+        "is_online": false,
+        "country_code": "ID"
+      },
+      "event_url": "https://kcd.cloudnative.id/",
+      "notes": null,
+      "id": "kubernetes-community-days-indonesia-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "kubernetes",
+        "containers",
+        "cloud-native"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "KubeCon + CloudNativeCon North America",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-12",
+      "location": {
+        "city": "Salt Lake City",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america",
+      "notes": null,
+      "id": "kubecon-cloudnativecon-north-america-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "kubernetes",
+        "containers",
+        "cloud-native"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Cloud Identity Summit '26",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-03",
+      "location": {
+        "city": "Frankfurt am Main",
+        "region": null,
+        "country": "Germany",
+        "is_online": false,
+        "country_code": "DE"
+      },
+      "event_url": "https://www.identitysummit.cloud/",
+      "notes": null,
+      "id": "cloud-identity-summit-26-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "CLC",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-12",
+      "location": {
+        "city": "Mannheim",
+        "region": null,
+        "country": "Germany",
+        "is_online": false,
+        "country_code": "DE"
+      },
+      "event_url": "https://clc-conference.eu/index_en.php",
+      "notes": null,
+      "id": "clc-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Cloud Day 2026",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-18",
+      "location": {
+        "city": "Milan",
+        "region": null,
+        "country": "Italy",
+        "is_online": false,
+        "country_code": "IT"
+      },
+      "event_url": "https://www.cloudday.it/",
+      "notes": null,
+      "id": "cloud-day-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "X-Ops Conference Madrid 2026",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-21",
+      "location": {
+        "city": "Mostoles",
+        "region": null,
+        "country": "Spain",
+        "is_online": false,
+        "country_code": "ES"
+      },
+      "event_url": "https://xopsconference.com/",
+      "notes": null,
+      "id": "x-ops-conference-madrid-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "BSides Amsterdam 2026",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-19",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "is_online": false,
+        "country_code": "NL"
+      },
+      "event_url": "https://www.bsidesams.org/",
+      "notes": null,
+      "id": "bsides-amsterdam-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "OVHcloud Summit",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-19",
+      "location": {
+        "city": "Paris",
+        "region": null,
+        "country": "France",
+        "is_online": false,
+        "country_code": "FR"
+      },
+      "event_url": "https://summit.ovhcloud.com/en",
+      "notes": null,
+      "id": "ovhcloud-summit-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Azure Summit 2026",
+      "start_date": "2026-11-24",
+      "end_date": "2026-11-25",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "is_online": true,
+        "country_code": "XX"
+      },
+      "event_url": "https://events.m365-summits.de/AzureSummit2425November2026",
+      "notes": null,
+      "id": "azure-summit-2026",
+      "source": "dev.events",
+      "delivery": "online",
+      "tags": [
+        "cloud",
+        "azure"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Enterprise DevOps Summit 2026",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-01",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "is_online": false,
+        "country_code": "DE"
+      },
+      "event_url": "https://www.we-conect.com/events/enterprise-devops-summit-2026",
+      "notes": null,
+      "id": "enterprise-devops-summit-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Enterprise DevSecOps 2026",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-01",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "is_online": false,
+        "country_code": "DE"
+      },
+      "event_url": "https://www.we-conect.com/events/enterprise-devsecops-2026",
+      "notes": null,
+      "id": "enterprise-devsecops-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "AWS re:Invent 2026",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-04",
+      "location": {
+        "city": "Las Vegas",
+        "region": null,
+        "country": "United States",
+        "is_online": false,
+        "country_code": "US"
+      },
+      "event_url": "https://reinvent.awsevents.com/",
+      "notes": null,
+      "id": "aws-reinvent-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud",
+        "aws"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "Cloud Native AI Summit Europe",
+      "start_date": "2026-12-02",
+      "end_date": "2026-12-03",
+      "location": {
+        "city": "Paris",
+        "region": null,
+        "country": "France",
+        "is_online": false,
+        "country_code": "FR"
+      },
+      "event_url": "https://www.cloudnative.ai/events/paris",
+      "notes": null,
+      "id": "cloud-native-ai-summit-europe-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "cloud"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "DevOpsCon Munich 2026",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-04",
+      "location": {
+        "city": "Munich",
+        "region": null,
+        "country": "Germany",
+        "is_online": true,
+        "country_code": "DE"
+      },
+      "event_url": "https://devopscon.io/munich",
+      "notes": null,
+      "id": "devopscon-munich-2026",
+      "source": "dev.events",
+      "delivery": "hybrid",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "name": "KCD Porto 2026 | Collab with DevOps Days Portugal",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-20",
+      "location": {
+        "city": "Porto",
+        "region": null,
+        "country": "Portugal",
+        "is_online": false,
+        "country_code": "PT"
+      },
+      "event_url": "https://community.cncf.io/events/details/cncf-kcd-porto-presents-kcd-porto-2026-collab-with-devops-days-portugal",
+      "notes": null,
+      "id": "kcd-porto-2026-collab-with-devops-days-portugal-2026",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "devops"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "event_type": "conference"
+    },
+    {
+      "id": "bsides-bsideskristiansand-2026",
+      "name": "BSidesKristiansand",
+      "event_url": "https://bsides.org/event/bsideskristiansand-2026/",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Kristiansand",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": "BSides in Kristiansand, Norway"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidesroanoke",
+      "name": "BSidesRoanoke",
+      "event_url": "https://bsides.org/event/bsidesroanoke/",
+      "start_date": "2026-06-05",
+      "end_date": "2026-06-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Roanoke",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsides-fort-wayne",
+      "name": "BSides Fort Wayne",
+      "event_url": "https://bsides.org/event/bsides-fort-wayne/",
+      "start_date": "2026-06-06",
+      "end_date": "2026-06-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Fort Wayne",
+        "region": "Indiana",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": "BSides Fort Wayne will have its 5 year birthday on Saturday, June 6th at Purdue Fort Wayne. BSidesFW has grown considerably since our first year and we look forward to this years as well!"
+    },
+    {
+      "id": "bsides-bsidesboulder-2",
+      "name": "BSidesBoulder",
+      "event_url": "https://bsides.org/event/bsidesboulder-2/",
+      "start_date": "2026-06-12",
+      "end_date": "2026-06-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Boulder",
+        "region": "Colorado",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidesdsm-des-moines-ia-usa",
+      "name": "BSidesDSM - Des Moines, IA, USA",
+      "event_url": "https://bsides.org/event/bsidesdsm-des-moines-ia-usa/",
+      "start_date": "2026-06-13",
+      "end_date": "2026-06-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Des Moines",
+        "region": "Iowa",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing information not yet published",
+        "lowest_price": null
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidesleeds-2",
+      "name": "BSidesLeeds",
+      "event_url": "https://bsides.org/event/bsidesleeds-2/",
+      "start_date": "2026-06-13",
+      "end_date": "2026-06-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Leeds",
+        "region": "West Yorkshire",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidesumea-2",
+      "name": "BSidesUmeÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥",
+      "event_url": "https://bsides.org/event/bsidesumea-2/",
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-16",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "UmeÃ¥",
+        "region": "VÃ¤sterbotten",
+        "country": "Sweden",
+        "country_code": "SE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsideshk-2",
+      "name": "BSidesHK",
+      "event_url": "https://bsides.org/event/bsideshk-2/",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Hong Kong",
+        "region": null,
+        "country": "Hong Kong",
+        "country_code": "HK",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": "Hong Kong Unconfirmed"
+    },
+    {
+      "id": "bsides-bsides-vienna",
+      "name": "BSides Vienna",
+      "event_url": "https://bsidesvienna.at/",
+      "start_date": "2026-06-27",
+      "end_date": "2026-06-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": "BSidesVienna, Vienna, Austria"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free event confirmed on website",
+        "lowest_price": null
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidesbrisbane-brisbane-australia",
+      "name": "BSidesBrisbane - Brisbane, Australia",
+      "event_url": "https://bsides.org/event/bsidesbrisbane-brisbane-australia/",
+      "start_date": "2026-07-04",
+      "end_date": "2026-07-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidespgh-pittsburgh-pa-usa-3",
+      "name": "BSidesPGH - Pittsburgh, PA, USA",
+      "event_url": "https://bsides.org/event/bsidespgh-pittsburgh-pa-usa-3/",
+      "start_date": "2026-07-10",
+      "end_date": "2026-07-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Pittsburgh",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsidespgh-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsides-adelaide",
+      "name": "BSides Adelaide",
+      "event_url": "https://bsides.org/event/bsides-adelaide/",
+      "start_date": "2026-07-27",
+      "end_date": "2026-07-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Adelaide",
+        "region": "South Australia",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsides-basingstoke",
+      "name": "BSides Basingstoke",
+      "event_url": "https://bsides.org/event/bsides-basingstoke/",
+      "start_date": "2026-07-31",
+      "end_date": "2026-07-31",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Basingstoke",
+        "region": "Hampshire",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
     }
   ]
 }
