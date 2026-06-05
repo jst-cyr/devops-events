@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "run_date": "2026-06-05",
+    "timestamp": "2026-06-05T21:41:11.488Z",
+    "source": "allbsides.com + manual curation",
+    "total_events": 28,
+    "notes": "This mapping links BSides event IDs (from events-candidates.json) to official websites"
+  },
+  "events": [
+    {
+      "event_id": "bsides-harrisburg",
+      "name": "BSides Harrisburg",
+      "official_website": "https://bsideshbg.com/",
+      "location": {
+        "city": "Harrisburg",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-05-29"
+    },
+    {
+      "event_id": "bsides-chennai",
+      "name": "BSides Chennai",
+      "official_website": "https://www.bsideschennai.in/",
+      "location": {
+        "city": "Chennai",
+        "region": null,
+        "country": "India",
+        "country_code": "IN"
+      },
+      "event_dates": "2026-05-30"
+    },
+    {
+      "event_id": "bsides-maine",
+      "name": "BSides Maine",
+      "official_website": "https://www.bsidesmaine.org/",
+      "location": {
+        "city": null,
+        "region": "Maine",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-05-30"
+    },
+    {
+      "event_id": "bsides-edmonton",
+      "name": "BSides Edmonton",
+      "official_website": "https://www.bsidesedmonton.ca/",
+      "location": {
+        "city": "Edmonton",
+        "region": "Alberta",
+        "country": "Canada",
+        "country_code": "CA"
+      },
+      "event_dates": "2026-06-05 - 06-06"
+    },
+    {
+      "event_id": "bsides-recife",
+      "name": "BSides Recife",
+      "official_website": "https://www.bsidesrecife.com.br/",
+      "location": {
+        "city": "Recife",
+        "region": "Pernambuco",
+        "country": "Brazil",
+        "country_code": "BR"
+      },
+      "event_dates": "2026-06-05 - 06-06"
+    },
+    {
+      "event_id": "bsides-kristiansand",
+      "name": "BSides Kristiansand",
+      "official_website": "https://bsideskrs.no/",
+      "location": {
+        "city": "Kristiansand",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO"
+      },
+      "event_dates": "2026-06-05"
+    },
+    {
+      "event_id": "bsides-roanoke",
+      "name": "BSides Roanoke",
+      "official_website": "https://bsidesroa.org/",
+      "location": {
+        "city": "Roanoke",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-06-05"
+    },
+    {
+      "event_id": "bsides-buffalo",
+      "name": "BSides Buffalo",
+      "official_website": "https://www.bsidesbuffalo.org/",
+      "location": {
+        "city": "Buffalo",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-06-06"
+    },
+    {
+      "event_id": "bsides-fort-wayne",
+      "name": "BSides Fort Wayne",
+      "official_website": "https://www.bsidesfortwayne.org/",
+      "location": {
+        "city": "Fort Wayne",
+        "region": "Indiana",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-06-06"
+    },
+    {
+      "event_id": "bsides-boulder",
+      "name": "BSides Boulder",
+      "official_website": "https://www.bsidesboulder.org/",
+      "location": {
+        "city": "Boulder",
+        "region": "Colorado",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-06-12"
+    },
+    {
+      "event_id": "bsides-satx",
+      "name": "BSides SATX",
+      "official_website": "https://www.bsidessatx.com/",
+      "location": {
+        "city": "San Antonio",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-06-13"
+    },
+    {
+      "event_id": "bsides-dsm",
+      "name": "BSides Des Moines",
+      "official_website": "https://www.bsidesdsm.org/",
+      "location": {
+        "city": "Des Moines",
+        "region": "Iowa",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-06-13"
+    },
+    {
+      "event_id": "bsides-leeds",
+      "name": "BSides Leeds",
+      "official_website": "https://bsidesleeds.com/",
+      "location": {
+        "city": "Leeds",
+        "region": "West Yorkshire",
+        "country": "United Kingdom",
+        "country_code": "GB"
+      },
+      "event_dates": "2026-06-13"
+    },
+    {
+      "event_id": "bsides-umea",
+      "name": "BSides Umeå",
+      "official_website": "https://indico.neic.no/event/287/",
+      "location": {
+        "city": "Umeå",
+        "region": "Västerbotten",
+        "country": "Sweden",
+        "country_code": "SE"
+      },
+      "event_dates": "2026-06-16"
+    },
+    {
+      "event_id": "bsides-cochabamba",
+      "name": "BSides Cochabamba",
+      "official_website": "https://bsidescoco.com/",
+      "location": {
+        "city": "Cochabamba",
+        "region": null,
+        "country": "Bolivia",
+        "country_code": "BO"
+      },
+      "event_dates": "2026-06-20"
+    },
+    {
+      "event_id": "bsides-vitoria",
+      "name": "BSides Vitória",
+      "official_website": "https://bsides.vix.br/",
+      "location": {
+        "city": "Vitória",
+        "region": "Espírito Santo",
+        "country": "Brazil",
+        "country_code": "BR"
+      },
+      "event_dates": "2026-06-20"
+    },
+    {
+      "event_id": "bsides-bsides-vitoria",
+      "name": "BSides Vitória",
+      "official_website": "https://bsides.vix.br/",
+      "location": {
+        "city": "Vitória",
+        "region": "Espírito Santo",
+        "country": "Brazil",
+        "country_code": "BR"
+      },
+      "event_dates": "2026-06-20"
+    },
+    {
+      "event_id": "bsides-joburg",
+      "name": "BSides Johannesburg",
+      "official_website": "https://www.bsidesjoburg.co.za/",
+      "location": {
+        "city": "Johannesburg",
+        "region": "Gauteng",
+        "country": "South Africa",
+        "country_code": "ZA"
+      },
+      "event_dates": "2026-07-25"
+    },
+    {
+      "event_id": "bsides-bsides-joburg-2026",
+      "name": "BSides Johannesburg",
+      "official_website": "https://www.bsidesjoburg.co.za/",
+      "location": {
+        "city": "Johannesburg",
+        "region": "Gauteng",
+        "country": "South Africa",
+        "country_code": "ZA"
+      },
+      "event_dates": "2026-07-25"
+    },
+    {
+      "event_id": "bsides-aarhus",
+      "name": "BSides Aarhus",
+      "official_website": "https://bsidesaarhus.dk/",
+      "location": {
+        "city": "Aarhus",
+        "region": null,
+        "country": "Denmark",
+        "country_code": "DK"
+      },
+      "event_dates": "2026-06-20"
+    },
+    {
+      "event_id": "bsides-hk",
+      "name": "BSides Hong Kong",
+      "official_website": "https://bsideshk.org/",
+      "location": {
+        "city": "Hong Kong",
+        "region": null,
+        "country": "Hong Kong",
+        "country_code": "HK"
+      },
+      "event_dates": "2026-06-25 - 06-26"
+    },
+    {
+      "event_id": "bsides-porto",
+      "name": "BSides Porto",
+      "official_website": "https://www.bsidesporto.com/",
+      "location": {
+        "city": "Porto",
+        "region": "Porto",
+        "country": "Portugal",
+        "country_code": "PT"
+      },
+      "event_dates": "2026-06-26 - 06-27"
+    },
+    {
+      "event_id": "bsides-vienna",
+      "name": "BSides Vienna",
+      "official_website": "https://bsidesvienna.at/",
+      "location": {
+        "city": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT"
+      },
+      "event_dates": "2026-06-27"
+    },
+    {
+      "event_id": "bsides-brisbane",
+      "name": "BSides Brisbane",
+      "official_website": "https://bsidesbrisbane.com/",
+      "location": {
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "country_code": "AU"
+      },
+      "event_dates": "2026-07-04"
+    },
+    {
+      "event_id": "bsides-pgh",
+      "name": "BSides Pittsburgh",
+      "official_website": "https://www.bsidespgh.com/",
+      "location": {
+        "city": "Pittsburgh",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "country_code": "US"
+      },
+      "event_dates": "2026-07-10"
+    },
+    {
+      "event_id": "bsides-adelaide",
+      "name": "BSides Adelaide",
+      "official_website": "https://www.bsidesadelaide.com.au/",
+      "location": {
+        "city": "Adelaide",
+        "region": "South Australia",
+        "country": "Australia",
+        "country_code": "AU"
+      },
+      "event_dates": "2026-07-27 - 07-28"
+    },
+    {
+      "event_id": "bsides-basingstoke",
+      "name": "BSides Basingstoke",
+      "official_website": "https://www.bsidesbasingstoke.com/",
+      "location": {
+        "city": "Basingstoke",
+        "region": "Hampshire",
+        "country": "United Kingdom",
+        "country_code": "GB"
+      },
+      "event_dates": "2026-07-31"
+    },
+    {
+      "event_id": "bsides-luanda",
+      "name": "BSides Luanda",
+      "official_website": "https://www.bsidesluanda.com/",
+      "location": {
+        "city": "Luanda",
+        "region": null,
+        "country": "Angola",
+        "country_code": "AO"
+      },
+      "event_dates": "2026-08-15"
+    }
+  ]
+}
