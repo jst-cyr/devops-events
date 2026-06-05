@@ -41,9 +41,26 @@ const usnuaEvents = loadIfExists(`usnua-events-${runDate}.json`);
 const techFieldDay = loadIfExists(`techfieldday-events-${runDate}.json`);
 const nanogEvents = loadIfExists(`nanog-events-${runDate}.json`);
 
+// ─── BSides events to exclude (no working official website) ────────────────
+// These BSides events have been confirmed to have no discoverable official
+// website from any source (allbsides.com, infosecmap.com, bsides.org, DNS).
+const bsidesExcludeIds = new Set([
+  'bsides-albany',                      // Domain bsidesalbany.org does not resolve; no alternative found
+  'bsides-bsidesalbany-albany-ny-usa',  // Same event from iCal feed with longer id
+]);
+
+// Filter out excluded BSides events and log them
+const bsidesFiltered = bsidesEnriched.filter(r => {
+  if (bsidesExcludeIds.has(r.id)) {
+    console.log(`  Excluded BSides: ${r.name} (${r.id}) — no working official website`);
+    return false;
+  }
+  return true;
+});
+
 console.log('=== SOURCE COUNTS ===');
 console.log(`Dev.events shortlist: ${devEventsShortlist.length}`);
-console.log(`BSides enriched: ${bsidesEnriched.length}`);
+console.log(`BSides enriched: ${bsidesFiltered.length}${bsidesEnriched.length !== bsidesFiltered.length ? ` (${bsidesEnriched.length - bsidesFiltered.length} excluded)` : ''}`);
 console.log(`USNUA events: ${usnuaEvents.length}`);
 console.log(`TechFieldDay events: ${techFieldDay.length}`);
 console.log(`NANOG events: ${nanogEvents.length}`);
@@ -71,7 +88,7 @@ function stripProvenanceNotes(record) {
 // Merge all records
 const allRecords = [
   ...devEventsShortlist.map(stripProvenanceNotes),
-  ...bsidesEnriched,
+  ...bsidesFiltered,
   ...usnuaEvents,
   ...techFieldDay,
   ...nanogEvents,
@@ -108,7 +125,7 @@ const output = {
   source_run_date: runDate,
   sources: {
     dev_events_shortlist: devEventsShortlist.length,
-    bsides_enriched: bsidesEnriched.length,
+    bsides_enriched: bsidesFiltered.length,
     usnua_events: usnuaEvents.length,
     techfieldday_events: techFieldDay.length,
     nanog_events: nanogEvents.length,
