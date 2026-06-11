@@ -29,7 +29,22 @@ This file does not duplicate it — it points you at the right primitives.
 
 ## How to run the pipeline with Claude Code
 
-Use the slash commands instead of pasting prompt templates by hand:
+**You can drive this entirely in natural language — slash commands are optional shortcuts.**
+When the user asks to "pull down / refresh / discover the latest event candidates" (or similar),
+that means: run the full discovery pipeline below (equivalent to `/discover-events` with today's
+date). Read AGENTS.md, then execute Phases 1–7 in order, fanning enrichment (Phase 3) and
+validation (Phase 5) out across the subagents. Do not wait to be told to use a command.
+
+Mapping of common conversational requests:
+
+| The user says… | Run |
+|----------------|-----|
+| "pull down / refresh / discover latest events", "do a discovery run" | full pipeline = `/discover-events <today>` |
+| "merge / apply the approved candidates" | `/apply-candidates` |
+| "apply the reviewed updates" | `/apply-updates` |
+| "review the overlaps / duplicates" | `/review-overlap <date>` |
+
+The slash commands below are the same workflows with a fixed name, if you prefer typing them:
 
 | Command | Replaces | What it does |
 |---------|----------|--------------|
