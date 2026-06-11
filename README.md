@@ -14,6 +14,22 @@ This pulls from several data sources:
 - https://cfgmgmtcamp.org/
 - https://www.developerweek.com/
 
+## Running with Claude Code
+
+The agentic pipeline runs as native [Claude Code](https://claude.com/claude-code) commands —
+no copy-pasting prompt templates. `CLAUDE.md` is loaded automatically; `AGENTS.md` remains the
+authoritative workflow spec.
+
+| Command | Does |
+|---------|------|
+| `/discover-events <YYYY-MM-DD>` | Full 7-phase discovery + reconciliation (fans enrichment/validation out across subagents) |
+| `/apply-candidates` | Merge approved candidates into `events.json` |
+| `/apply-updates` | Apply reviewed field-level patches |
+| `/review-overlap <YYYY-MM-DD>` | Classify probable-duplicate candidates |
+
+Subagents `event-enricher` (Phase 3) and `content-validator` (Phase 5) handle the slow per-event
+web work in parallel. See [.claude/](.claude/) for definitions.
+
 ## Documentation
 
 - Data model for events/CFPs: [docs/data-model.md](docs/data-model.md)
