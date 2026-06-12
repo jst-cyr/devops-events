@@ -7048,6 +7048,613 @@
         "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
       },
       "notes": null
+    },
+    {
+      "id": "owasp-global-appsec-eu-2026",
+      "name": "OWASP Global AppSec EU 2026",
+      "event_url": "https://owasp.glueup.com/event/owasp-global-appsec-eu-2026-vienna-austria-162243",
+      "start_date": "2026-06-22",
+      "end_date": "2026-06-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "appsec",
+        "devsecops",
+        "application-security"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": "Austria Center Vienna"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/owasp-global-appsec-eu-2026-cfp-wash/",
+        "cfp_open_date": "2025-11-17",
+        "cfp_close_date": "2026-02-03",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not visible; registration page (owasp.glueup.com tickets) returned HTTP 403 and exact prices not published in accessible content; checked https://owasp.glueup.com/event/owasp-global-appsec-eu-2026-vienna-austria-162243/tickets.html. OWASP members get discounted tickets. Assumed free until confirmed. Training days June 22-24, main conference June 25-26."
+      }
+    },
+    {
+      "id": "kcd-washington-dc-2026",
+      "name": "KCD Washington DC 2026",
+      "event_url": "https://community.cncf.io/events/details/cncf-kcd-washington-dc-presents-kcd-washington-dc-2026",
+      "start_date": "2026-09-15",
+      "end_date": "2026-09-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "cncf",
+        "containers",
+        "platform"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Washington",
+        "region": "District of Columbia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "American Red Cross Hall of Service, 1730 E Street NW, Washington 20006"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 25,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Early Bird tickets at $25 (limited quantity) per redirected event page (community2.cncf.io): 'Register now to lock in Early Bird tickets at $25 â€” limited quantity.'"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-washington-dc-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-26",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      }
+    },
+    {
+      "id": "aws-community-day-dach-2026",
+      "name": "AWS Community Day DACH",
+      "event_url": "https://www.aws-community-day.de/",
+      "start_date": "2026-09-15",
+      "end_date": "2026-09-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud",
+        "serverless",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Kosmos, Berlin"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published/visible; checked https://www.aws-community-day.de/ (registration not yet announced); assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      }
+    },
+    {
+      "id": "aws-dmv-community-day-2026",
+      "name": "AWS DMV Community Day 2026",
+      "event_url": "https://www.dmvcommunityday.com/",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud",
+        "devops",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Arlington",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "AWS HQ2 WAS17, 510 14th Street South"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/aws-dmv-community-day-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 25,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "$25 per ticket including food and beverages; registration deadline Oct 2, 2026; limited availability; checked https://www.dmvcommunityday.com/"
+      }
+    },
+    {
+      "id": "owasp-global-appsec-usa-2026",
+      "name": "OWASP Global AppSec USA 2026",
+      "event_url": "https://owasp.glueup.com/event/owasp-2026-global-appsec-usa-san-francisco-ca-167174",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "appsec",
+        "devsecops",
+        "owasp",
+        "application-security"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published/visible; canonical registration page https://owasp.glueup.com/event/owasp-2026-global-appsec-usa-san-francisco-ca-167174 returned HTTP 403 to automated fetch; assumed free until confirmed"
+      },
+      "notes": "Canonical glueup page blocked (HTTP 403) to automated fetch; classified relevant based on OWASP Global AppSec being a well-known application security conference. CFP not verifiable.",
+      "last_verified_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "conf42-chaos-engineering-2026",
+      "name": "Chaos Engineering 2026",
+      "event_url": "https://www.conf42.com/ce2026",
+      "start_date": "2026-12-03",
+      "end_date": "2026-12-03",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "chaos-engineering",
+        "sre",
+        "resilience",
+        "observability",
+        "reliability",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online (Conf42)"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Conf42 events are free online tech conferences. Pricing page not directly fetchable (403 on https://www.conf42.com/ce2026); Conf42 platform events are free to attend."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/events?keywords=conf42",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Online Conf42 chaos engineering track on 2026-12-03. CFP managed via PaperCall.io; specific close date not published. Event page returns 403 to automated fetch; details confirmed via web search."
+    },
+    {
+      "id": "confidential-computing-summit-2026",
+      "name": "Confidential Computing Summit",
+      "event_url": "https://events.linuxfoundation.org/confidential-computing-summit",
+      "start_date": "2026-06-23",
+      "end_date": "2026-06-24",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "confidential-computing",
+        "security",
+        "cloud-native",
+        "devsecops",
+        "infrastructure",
+        "data-security"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 199,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Lowest price $199 USD (Academic/Hobbyist, standard registration May 18â€“Jun 24, 2026). Regular attendee rate $595 USD; early bird expired. Pricing seen at https://events.linuxfoundation.org/confidential-computing-summit/register/"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Linux Foundation + OPAQUE event on confidential computing infrastructure, secure/privacy-preserving AI workflows, hardware enclaves, enterprise security. CFP process complete (acceptance emails already sent per registration page; contact cfp@linuxfoundation.org)."
+    },
+    {
+      "id": "google-cloud-next-extended-bangkok-2026",
+      "name": "Google Cloud Next Extended Bangkok 2026",
+      "event_url": "https://gdg.community.dev/events/details/google-gdg-cloud-bangkok-presents-google-cloud-next-extended-2026",
+      "start_date": "2026-07-19",
+      "end_date": "2026-07-19",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "google-cloud",
+        "cloud-native",
+        "cloud",
+        "ai",
+        "infrastructure"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Bangkok",
+        "region": null,
+        "country": "Thailand",
+        "country_code": "TH",
+        "is_online": false,
+        "venue": "K+ Building Samyan, 72 Soi Chula 20"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Free community RSVP event; no ticket price listed; checked https://gdg.community.dev/events/details/google-gdg-cloud-bangkok-presents-google-cloud-next-extended-2026"
+      },
+      "notes": "GDG Cloud Bangkok recap of Google Cloud Next; 1:00 PM - 6:00 PM Bangkok time.",
+      "last_verified_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "techmentor-cybersecurity-live-microsoft-hq-2026",
+      "name": "TechMentor & Cybersecurity Live @ Microsoft HQ 2026",
+      "event_url": "https://techmentorevents.com/events/microsofthq-2026/home.aspx",
+      "start_date": "2026-08-03",
+      "end_date": "2026-08-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "powershell",
+        "devops",
+        "azure",
+        "hybrid-cloud",
+        "sysadmin",
+        "security",
+        "infrastructure",
+        "identity"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Redmond",
+        "region": "Washington",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Microsoft Headquarters"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": null
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 1825,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Extended Super Early Bird (by June 12): 3-day $1,825 / 4-day $2,325 / 5-day $2,825. Standard pricing higher. From https://techmentorevents.com/events/microsofthq-2026/home.aspx"
+      },
+      "notes": "Aug 3 pre-conference labs; Aug 4-7 main sessions. Co-located with Cybersecurity Live!",
+      "last_verified_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "fast-flow-conf-uk-2026",
+      "name": "Fast Flow Conf UK 2026",
+      "event_url": "https://www.fastflowconf.com/",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform-engineering",
+        "team-topologies",
+        "software-delivery",
+        "devops",
+        "flow"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "CodeNode, 10 South Place, London EC2M 7EB"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Ticket price not published on page; checked https://www.fastflowconf.com/; assumed free until confirmed."
+      },
+      "notes": "Single-day, multi-track event on Team Topologies and platform engineering; 2026 theme includes agentic AI for teams.",
+      "last_verified_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "all-things-open-2026",
+      "name": "All Things Open 2026",
+      "event_url": "https://allthingsopen.org/events/all-things-open-2026",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "open-source",
+        "devops",
+        "infrastructure",
+        "cloud-native"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Raleigh",
+        "region": "North Carolina",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Raleigh Convention Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://2026.allthingsopen.org/speak",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-03-31",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published/visible; checked https://2026.allthingsopen.org/ (Early Bird Special and 'Get Half Off Select Tickets' mentioned but no numeric price disclosed); assumed free until confirmed"
+      }
+    },
+    {
+      "id": "open-source-summit-japan-2026",
+      "name": "Open Source Summit Japan 2026",
+      "event_url": "https://events.linuxfoundation.org/open-source-summit-japan-2026",
+      "start_date": "2026-12-07",
+      "end_date": "2026-12-09",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "open-source",
+        "linux",
+        "cloud-native",
+        "infrastructure",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Tokyo",
+        "region": null,
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published/visible on event page; checked https://events.linuxfoundation.org/open-source-summit-japan/; assumed free until confirmed"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://events.linuxfoundation.org/open-source-summit-japan/program/cfp/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-24",
+        "cfp_timezone": "Asia/Tokyo",
+        "cfp_status": "open"
+      }
+    },
+    {
+      "id": "redhat-network-automation-workshop-sydney-2026",
+      "name": "Getting Started with Network Automation Hands-On Workshop",
+      "event_url": "https://reg.experiences.redhat.com/flow/redhat/4005250/rhexpressregistrationapp/page/expressregistration",
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-16",
+      "delivery": "in_person",
+      "event_type": "workshop",
+      "tags": [
+        "ansible",
+        "network-automation",
+        "automation",
+        "infrastructure"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "North Sydney",
+        "region": "New South Wales",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Hands-on field workshop; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "redhat-platform-security-hybrid-cloud-webinar-2026",
+      "name": "Accelerating Platform Security for the Hybrid Cloud in the AI Era",
+      "event_url": "https://www.redhat.com/en/events/webinar/accelerating-platform-security-for-the-hybrid-cloud-in-the-ai-era",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "online",
+      "event_type": "webinar",
+      "tags": [
+        "platform",
+        "security",
+        "cloud-native",
+        "openshift"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Virtual"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free Red Hat webinar."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null,
+      "last_verified_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "carahsoft-devsecops-conference-2026",
+      "name": "DevSecOps Conference 2026",
+      "event_url": "https://www.carahsoft.com/events/74058-devsecops-conference-2026",
+      "start_date": "2026-07-28",
+      "end_date": "2026-07-28",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devsecops",
+        "devops",
+        "cloud-native",
+        "security",
+        "compliance",
+        "ai"
+      ],
+      "source": "carahsoft.com",
+      "location": {
+        "city": "Reston",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Carahsoft Conference & Collaboration Center, Reston, VA"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free; 5.4 CPE credit hours available through NASBA."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Hybrid (in-person and livestream) DevSecOps conference. Topics include AI-enabled DevSecOps, cloud security, compliance modernization, and ATO streamlining via panels and fireside chats. Hosts: Carahsoft & GovCIO Media & Research. Speaker lineup predetermined (no open CFP). Open only to U.S. Public Sector employees, integrators and sponsoring partners.",
+      "timezone": "America/New_York",
+      "last_verified_at": "2026-06-11T00:00:00Z",
+      "created_at": "2026-06-11T00:00:00Z",
+      "updated_at": "2026-06-11T00:00:00Z"
     }
   ]
 }
