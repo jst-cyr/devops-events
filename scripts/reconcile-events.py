@@ -40,7 +40,7 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     # Explicitly rejected events (vendor-specific, single-project, or out-of-scope)
     r"|argocon|swampup\.jfrog\.com|api-platform\.com|opensearchcon"
     # General software dev conferences with only a minor DevOps track
-    r"|accelerate\s+chicago|gotochgo\.com",
+    r"|accelerate\s+chicago|gotochgo\.com|vslive\.com",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
