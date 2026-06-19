@@ -51,7 +51,8 @@
     "jordan",
     "lebanon",
     "yemen",
-    "syria"
+    "syria",
+    "dominican republic"
   ],
   "excluded_africa_countries": [
     "algeria",
@@ -142,6 +143,8 @@
     "st. petersburg",
     "st petersburg",
     "novosibirsk",
-    "kazan"
+    "kazan",
+    "santo domingo",
+    "dominican republic"
   ]
 }
