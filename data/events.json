@@ -5063,11 +5063,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": null,
-        "lowest_price": null,
-        "price_currency": null,
-        "cost_level": null,
-        "notes": "Pricing not yet published"
+        "is_free": false,
+        "lowest_price": 90,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Individual ticket $90; Corporate $145. Sourced from official registration page."
       },
       "notes": "Added from reviewed CFP candidate list (AdatoSystems tracker).",
       "created_at": "2026-06-05T00:00:00.000Z"
@@ -5101,11 +5101,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": null,
+        "is_free": true,
         "lowest_price": null,
         "price_currency": null,
-        "cost_level": null,
-        "notes": "Pricing not yet published"
+        "cost_level": "free",
+        "notes": "Ticket pricing not listed on official devopsdays.org event page as of 2026-06-19; unknown pricing rule applied."
       },
       "notes": "Added from reviewed CFP candidate list (AdatoSystems tracker).",
       "created_at": "2026-06-05T00:00:00.000Z"
@@ -6224,6 +6224,15 @@
         "cost_level": "free",
         "notes": "Pricing not verified; assumed free until confirmed."
       },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cncf-hosted-co-located-events-north-america-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-21",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon",
+        "notes": "CFP is for CNCF-hosted co-located events (ArgoCon, BackstageCon, CiliumCon, etc.), not KubeCon main stage."
+      },
       "event_type": "conference"
     },
     {
@@ -6511,6 +6520,14 @@
         "is_free": true,
         "cost_level": "free",
         "notes": "Pricing not verified; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-summit-europe-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-14",
+        "cfp_timezone": null,
+        "cfp_status": "open"
       },
       "event_type": "conference"
     },
@@ -7229,12 +7246,11 @@
         "venue": null
       },
       "cfp": {
-        "has_cfp": false,
-        "cfp_url": null,
-        "cfp_open_date": null,
-        "cfp_close_date": null,
-        "cfp_timezone": null,
-        "cfp_status": "unknown"
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/owasp-global-appsec-us-2026-cfp-SF/",
+        "cfp_close_date": "2026-06-29",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
       },
       "cost": {
         "is_free": true,
@@ -7458,7 +7474,7 @@
     {
       "id": "all-things-open-2026",
       "name": "All Things Open 2026",
-      "event_url": "https://allthingsopen.org/events/all-things-open-2026",
+      "event_url": "https://2026.allthingsopen.org/",
       "start_date": "2026-10-19",
       "end_date": "2026-10-20",
       "delivery": "in_person",
