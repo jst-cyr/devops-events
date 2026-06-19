@@ -38,7 +38,9 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     r"|\bmessage\s+queue\b|\bmessaging\s+system\b|\bmqsummit\b"
     r"|\bfunctional\s+programming\b|\blambda\s+world\b"
     # Explicitly rejected events (vendor-specific, single-project, or out-of-scope)
-    r"|argocon|swampup\.jfrog\.com|api-platform\.com|opensearchcon",
+    r"|argocon|swampup\.jfrog\.com|api-platform\.com|opensearchcon"
+    # General software dev conferences with only a minor DevOps track
+    r"|accelerate\s+chicago|gotochgo\.com",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
