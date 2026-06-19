@@ -7655,6 +7655,134 @@
       "last_verified_at": "2026-06-11T00:00:00Z",
       "created_at": "2026-06-11T00:00:00Z",
       "updated_at": "2026-06-11T00:00:00Z"
+    },
+    {
+      "id": "kcd-budapest-2026",
+      "name": "KCD Budapest 2026",
+      "event_url": "https://kcdbudapest.hu",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "devops",
+        "cncf"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Budapest",
+        "region": null,
+        "country": "Hungary",
+        "country_code": "HU",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not published; event site is a Coming Soon page as of 2026-06-19. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-budapest-2026",
+        "cfp_open_date": "2026-07-07",
+        "cfp_close_date": "2026-08-19",
+        "cfp_timezone": "Europe/Budapest",
+        "cfp_status": "upcoming"
+      },
+      "notes": "Event date sourced from Sessionize (2026-11-04); CFP tracker listed 2026-11-03. CFP opens 2026-07-07, closes 2026-08-19. Venue not yet announced.",
+      "timezone": "Europe/Budapest",
+      "last_verified_at": "2026-06-19T00:00:00Z",
+      "created_at": "2026-06-19T00:00:00Z",
+      "updated_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "id": "japan-community-day-cncj-2026",
+      "name": "Japan Community Day hosted by Cloud Native Community Japan (CNCJ)",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/co-located-events/japan-community-day/",
+      "start_date": "2026-07-28",
+      "end_date": "2026-07-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "devops",
+        "community"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Yokohama",
+        "region": "Kanagawa",
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": "PACIFICO Yokohama"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free co-located add-on; requires KubeCon + CloudNativeCon Japan 2026 registration. Confirmed at events.linuxfoundation.org on 2026-06-19."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/japan-community-day-2026",
+        "cfp_open_date": "2026-05-20",
+        "cfp_close_date": "2026-07-01",
+        "cfp_timezone": "Asia/Tokyo",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Co-located with KubeCon + CloudNativeCon Japan 2026 (July 28-30, PACIFICO Yokohama). Free add-on requiring KubeCon registration.",
+      "timezone": "Asia/Tokyo",
+      "last_verified_at": "2026-06-19T00:00:00Z",
+      "created_at": "2026-06-19T00:00:00Z",
+      "updated_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "id": "kcd-suisse-romande-2026",
+      "name": "KCD Suisse Romande 2026",
+      "event_url": "https://cloud-native-romandy.ch/kcd2026",
+      "start_date": "2026-12-09",
+      "end_date": "2026-12-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "devops",
+        "kcd"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Meyrin",
+        "region": "Geneva",
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": "CERN Science Gateway"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Registration listed as Coming Soon on official site (cloud-native-romandy.ch/kcd2026, checked 2026-06-19). Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-suisse-romande-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-15",
+        "cfp_timezone": "Europe/Zurich",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL via redirect from kcd.cloud-native-romandy.ch. CFP close date from Sessionize (2026-08-15) overrides tracker value (2026-07-15). Venue is CERN Science Gateway, Meyrin (Geneva canton).",
+      "timezone": "Europe/Zurich",
+      "last_verified_at": "2026-06-19T00:00:00Z",
+      "created_at": "2026-06-19T00:00:00Z",
+      "updated_at": "2026-06-19T00:00:00Z"
     }
   ]
 }
