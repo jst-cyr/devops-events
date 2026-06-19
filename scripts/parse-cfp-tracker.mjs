@@ -23,6 +23,9 @@ const __dirname = dirname(__filename);
 const configPath = join(__dirname, "..", "config", "excluded-geographies.json");
 const geographiesConfig = JSON.parse(readFileSync(configPath, "utf8"));
 
+const cityLookupPath = join(__dirname, "..", "config", "city-country-lookup.json");
+const CITY_COUNTRY_LOOKUP = JSON.parse(readFileSync(cityLookupPath, "utf8"));
+
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
   /devops|sreday|srecon|o11y|observability|cloud native|cloudnative|kubecon|kcd|kubernetes|serverless|platform|llmday|apidays|ndc|network|nanog|netdevops|monitoring|infrastructure|infra/i;
@@ -33,8 +36,16 @@ const EXCLUDED_COUNTRIES = new Set(geographiesConfig.excluded_countries);
 const EXCLUDED_AFRICA_COUNTRIES = new Set(geographiesConfig.excluded_africa_countries);
 const EXCLUDED_GEO_TOKENS = geographiesConfig.excluded_geo_tokens;
 
+function resolveCountry(event) {
+  const country = (event.country || "").trim();
+  if (country) return country.toLowerCase();
+  // Fall back to city→country lookup when the tracker omits the country field
+  const lookedUp = CITY_COUNTRY_LOOKUP[event.city || ""];
+  return lookedUp ? lookedUp.toLowerCase() : "";
+}
+
 function isExcludedGeography(event) {
-  const country = (event.country || "").trim().toLowerCase();
+  const country = resolveCountry(event);
   const geographyText = [event.city || "", event.country || "", event.event_url || "", event.name || ""]
     .join(" ")
     .toLowerCase();
