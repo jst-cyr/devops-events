@@ -40,27 +40,21 @@ function resolveCountry(event) {
   const countryRaw = (event.country || "").trim();
   const cityRaw = (event.city || "").trim();
 
-  // If the country field already names an excluded country, use it directly
-  if (countryRaw) {
-    const c = countryRaw.toLowerCase();
-    if (EXCLUDED_COUNTRIES.has(c) || EXCLUDED_AFRICA_COUNTRIES.has(c)) return c;
-  }
-
-  // City lookup (handles blank country and correct city)
+  // City lookup (handles blank country and correct city name in city field)
   if (cityRaw && CITY_COUNTRY_LOOKUP[cityRaw]) {
-    return CITY_COUNTRY_LOOKUP[cityRaw].toLowerCase();
+    return CITY_COUNTRY_LOOKUP[cityRaw];
   }
 
-  // Country-field-as-city lookup (handles state names, city names, or mojibake in country column)
+  // Country-field-as-city lookup (handles US states, German Bundesländer, repeated city names, mojibake)
   if (countryRaw && CITY_COUNTRY_LOOKUP[countryRaw]) {
-    return CITY_COUNTRY_LOOKUP[countryRaw].toLowerCase();
+    return CITY_COUNTRY_LOOKUP[countryRaw];
   }
 
-  return countryRaw.toLowerCase();
+  return countryRaw;
 }
 
 function isExcludedGeography(event) {
-  const country = resolveCountry(event);
+  const country = resolveCountry(event).toLowerCase();
   const geographyText = [event.city || "", event.country || "", event.event_url || "", event.name || ""]
     .join(" ")
     .toLowerCase();

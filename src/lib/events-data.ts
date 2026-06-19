@@ -128,7 +128,9 @@ function filterRecordsByCountry(records: EventRecord[], country?: string): Event
     return records;
   }
 
-  return records.filter((record) => record.location.country === country);
+  return records.filter(
+    (record) => record.location.country.toLowerCase() === country.toLowerCase(),
+  );
 }
 
 function resolveCostLevel(record: EventRecord): CostLevel | null {
