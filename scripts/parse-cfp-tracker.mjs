@@ -37,11 +37,26 @@ const EXCLUDED_AFRICA_COUNTRIES = new Set(geographiesConfig.excluded_africa_coun
 const EXCLUDED_GEO_TOKENS = geographiesConfig.excluded_geo_tokens;
 
 function resolveCountry(event) {
-  const country = (event.country || "").trim();
-  if (country) return country.toLowerCase();
-  // Fall back to city→country lookup when the tracker omits the country field
-  const lookedUp = CITY_COUNTRY_LOOKUP[event.city || ""];
-  return lookedUp ? lookedUp.toLowerCase() : "";
+  const countryRaw = (event.country || "").trim();
+  const cityRaw = (event.city || "").trim();
+
+  // If the country field already names an excluded country, use it directly
+  if (countryRaw) {
+    const c = countryRaw.toLowerCase();
+    if (EXCLUDED_COUNTRIES.has(c) || EXCLUDED_AFRICA_COUNTRIES.has(c)) return c;
+  }
+
+  // City lookup (handles blank country and correct city)
+  if (cityRaw && CITY_COUNTRY_LOOKUP[cityRaw]) {
+    return CITY_COUNTRY_LOOKUP[cityRaw].toLowerCase();
+  }
+
+  // Country-field-as-city lookup (handles state names, city names, or mojibake in country column)
+  if (countryRaw && CITY_COUNTRY_LOOKUP[countryRaw]) {
+    return CITY_COUNTRY_LOOKUP[countryRaw].toLowerCase();
+  }
+
+  return countryRaw.toLowerCase();
 }
 
 function isExcludedGeography(event) {
@@ -103,12 +118,22 @@ if (!tbodyMatch) {
 const rows = [...tbodyMatch[1].matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)];
 console.log("Total rows in table:", rows.length);
 
+function decodeHtmlEntities(str) {
+  return str
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(parseInt(code, 10)))
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'");
+}
+
 const trackerEvents = rows
   .map((row) => {
     const cells = [...row[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => {
       const content = m[1].trim();
       const linkMatch = content.match(/href="([^"]+)"/i);
-      const text = content.replace(/<[^>]+>/g, "").replace(/&#8217;/g, "'").trim();
+      const text = decodeHtmlEntities(content.replace(/<[^>]+>/g, "")).trim();
       return { text, link: linkMatch ? linkMatch[1] : null };
     });
     if (cells.length < 8) return null;
@@ -218,7 +243,11 @@ console.log(`\nValidation report written to ${validationPath}`);
 // ---------------------------------------------------------------------------
 const runDateMs = new Date(`${runDate}T00:00:00Z`).getTime();
 
-const candidates = missing
+// Deduplicate by CFP URL: when the same CFP appears multiple times (different
+// tracker rows with the same cfp_url), keep only the entry with the earliest
+// deadline so submitters see the most urgent date.
+const seenCfpUrls = new Map();
+const deduped = missing
   .filter((e) => {
     const searchText = [e.name, e.event_url || "", e.cfp_url || ""].join(" ");
     return (
@@ -228,6 +257,15 @@ const candidates = missing
       !isExcludedGeography(e)
     );
   })
+  .sort((a, b) => a.cfp_close.localeCompare(b.cfp_close))
+  .filter((e) => {
+    const key = e.cfp_url || `${e.name}::${e.event_url}`;
+    if (seenCfpUrls.has(key)) return false;
+    seenCfpUrls.set(key, true);
+    return true;
+  });
+
+const candidates = deduped
   .sort((a, b) => {
     if (a.cfp_close !== b.cfp_close) return a.cfp_close.localeCompare(b.cfp_close);
     return a.name.localeCompare(b.name);
@@ -243,7 +281,7 @@ const candidates = missing
       rank: i + 1,
       name: e.name,
       city: e.city,
-      country: e.country,
+      country: resolveCountry(e),
       event_start: e.event_start,
       event_end: e.event_end,
       cfp_close_date: e.cfp_close,
