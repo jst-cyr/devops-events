@@ -7799,6 +7799,1376 @@
       "last_verified_at": "2026-06-19T00:00:00Z",
       "created_at": "2026-06-19T00:00:00Z",
       "updated_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Experts Live Austria 2026",
+      "event_url": "https://expertslive.at/",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "in_person",
+      "location": {
+        "city": "Linz",
+        "region": "Upper Austria",
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": "Bildungshaus & Seminarhotel Jägermayrhof, Römerstraße 98"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/experts-live-austria-2026/",
+        "cfp_close_date": "2026-02-28",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing pages checked; no specific prices displayed. Unknown pricing rule applied."
+      },
+      "tags": [
+        "microsoft",
+        "azure",
+        "microsoft-365",
+        "ai",
+        "security",
+        "hybrid-cloud",
+        "community"
+      ],
+      "source": "dev.events",
+      "id": "experts-live-austria-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "SecureChainCon 2026",
+      "event_url": "https://ortelius.io/blog/2026/04/06/securechaincon-2026/",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "online",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Zoom"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Explicitly free per Ortelius blog and event page."
+      },
+      "tags": [
+        "security",
+        "devsecops",
+        "supply-chain-security",
+        "sbom",
+        "software-supply-chain",
+        "open-source",
+        "ai",
+        "vulnerability-management"
+      ],
+      "source": "dev.events",
+      "id": "securechaincon-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "ThreatModCon 2026 Vienna",
+      "event_url": "https://www.threatmodcon.com/vienna-2026",
+      "start_date": "2026-06-26",
+      "end_date": "2026-06-27",
+      "delivery": "in_person",
+      "location": {
+        "city": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": "Melia Vienna"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 126.54,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Tickets from €126.54 per Eventbrite."
+      },
+      "tags": [
+        "threat-modeling",
+        "security",
+        "appsec",
+        "cybersecurity",
+        "secure-by-design"
+      ],
+      "source": "dev.events",
+      "id": "threatmodcon-vienna-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "AWS Summit Washington, D.C. Agenda",
+      "event_url": "https://aws.amazon.com/events/summits/washington-dc/",
+      "start_date": "2026-06-30",
+      "end_date": "2026-07-01",
+      "delivery": "in_person",
+      "location": {
+        "city": "Washington",
+        "region": "District of Columbia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Walter E. Washington Convention Center"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Explicitly described as a free two-day event on the official AWS Summit Washington D.C. page."
+      },
+      "tags": [
+        "aws",
+        "cloud",
+        "generative-ai",
+        "public-sector",
+        "cloud-native",
+        "security",
+        "ai"
+      ],
+      "source": "dev.events",
+      "id": "aws-summit-washington-dc-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "CodeSecCon 2026",
+      "event_url": "https://www.securitysummits.com/event/codeseccon/",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-19",
+      "delivery": "online",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/codeseccon-2026/",
+        "cfp_close_date": "2026-06-30",
+        "cfp_timezone": "UTC-04:00",
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No pricing found on event or registration pages; unknown pricing rule applied."
+      },
+      "tags": [
+        "security",
+        "appsec",
+        "devsecops",
+        "cybersecurity",
+        "application-security",
+        "software-security",
+        "ai-security",
+        "supply-chain-security"
+      ],
+      "source": "dev.events",
+      "id": "codeseccon-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "KCDC 2026",
+      "event_url": "https://www.kcdc.info/",
+      "start_date": "2026-09-09",
+      "end_date": "2026-09-11",
+      "delivery": "in_person",
+      "location": {
+        "city": "Kansas City",
+        "region": "Missouri",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Kansas City Convention Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcdc-2026/",
+        "cfp_close_date": "2026-03-09",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 299,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Super-early-bird $299; regular $399."
+      },
+      "tags": [
+        "software-architecture",
+        "developer",
+        "conference",
+        "workshops"
+      ],
+      "source": "dev.events",
+      "id": "kcdc-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "DC State of the Stack 2026",
+      "event_url": "https://dcstateofthestack.org/",
+      "start_date": "2026-09-16",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "location": {
+        "city": "Washington",
+        "region": "DC",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "American Red Cross HQ, 1730 E St NW"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/dc-stateofthestack-2026",
+        "cfp_close_date": "2026-06-08",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not displayed on registration page; unknown pricing rule applied."
+      },
+      "tags": [
+        "devops",
+        "platform-engineering",
+        "ai",
+        "mlops",
+        "cloud-native",
+        "security",
+        "developer-experience",
+        "site-reliability-engineering",
+        "compliance"
+      ],
+      "source": "dev.events",
+      "id": "dc-state-of-the-stack-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "OWASP AppSec Days Portugal 2026",
+      "event_url": "https://appsecdays.pt/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "location": {
+        "city": "Porto",
+        "region": null,
+        "country": "Portugal",
+        "country_code": "PT",
+        "is_online": false,
+        "venue": "Fundação António Cupertino de Miranda"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not published on event page; unknown pricing rule applied."
+      },
+      "tags": [
+        "security",
+        "appsec",
+        "owasp",
+        "cybersecurity",
+        "application-security"
+      ],
+      "source": "dev.events",
+      "id": "owasp-appsec-days-portugal-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "OWASP AppSec Days France 2026",
+      "event_url": "https://www.owaspappsecdays.fr/2026/index.html",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "location": {
+        "city": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "La Maison des Associations et de la Solidarité"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/owasp-appsec-days-france-2026/",
+        "cfp_close_date": "2026-05-07",
+        "cfp_timezone": "Europe/Paris",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Eventbrite listing not yet published; unknown pricing rule applied."
+      },
+      "tags": [
+        "security",
+        "appsec",
+        "owasp",
+        "application-security",
+        "cybersecurity"
+      ],
+      "source": "dev.events",
+      "id": "owasp-appsec-days-france-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "API Conference NYC 2026",
+      "event_url": "https://apiconference.net/new-york/",
+      "start_date": "2026-09-28",
+      "end_date": "2026-10-02",
+      "delivery": "hybrid",
+      "location": {
+        "city": "New York",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "New York Marriott at the Brooklyn Bridge"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://apiconference.net/new-york/call-for-papers-ny-2/",
+        "cfp_close_date": "2026-04-07",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 629,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Early bird Single Day $629; 2-Day $1,169; 3-Day $1,529."
+      },
+      "tags": [
+        "api",
+        "web-apis",
+        "api-design",
+        "api-management",
+        "microservices",
+        "api-security"
+      ],
+      "source": "dev.events",
+      "id": "api-conference-nyc-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "UseCaseConf 2026",
+      "event_url": "https://usecaseconf.tech",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "location": {
+        "city": "Verona",
+        "region": null,
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/usecaseconf-2026/",
+        "cfp_close_date": "2026-07-06",
+        "cfp_timezone": "Europe/Rome",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Free admission with mandatory registration."
+      },
+      "tags": [
+        "devops",
+        "cloud",
+        "ci-cd",
+        "infrastructure",
+        "digital-transformation",
+        "platform-engineering",
+        "ai",
+        "security"
+      ],
+      "source": "dev.events",
+      "id": "usecaseconf-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Open Tech Day 26: Software-defined Storage",
+      "event_url": "https://opentechday.de/",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "location": {
+        "city": "Nuremberg",
+        "region": "Bavaria",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://opentechday.de/propose/",
+        "cfp_close_date": "2026-05-31",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing pages checked but no prices found; unknown pricing rule applied."
+      },
+      "tags": [
+        "storage",
+        "software-defined-storage",
+        "open-source",
+        "cloud-native",
+        "infrastructure",
+        "distributed-systems"
+      ],
+      "source": "dev.events",
+      "id": "open-tech-day-26-software-defined-storage",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "IT Security Community Exchange (IT-SECX) 2026",
+      "event_url": "https://itsecx.ustp.at",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-02",
+      "delivery": "in_person",
+      "location": {
+        "city": "St. Pölten",
+        "region": null,
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": "Campus St. Pölten"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://itsecx.ustp.at/call-for-contribution",
+        "cfp_close_date": "2026-07-12",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Historical editions listed as free entry; assumed free until confirmed."
+      },
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "cloud-security",
+        "devsecops",
+        "privacy",
+        "incident-response"
+      ],
+      "source": "dev.events",
+      "id": "it-secx-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "BSides Memphis",
+      "event_url": "https://bsidesmemphis.org/",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-03",
+      "delivery": "in_person",
+      "location": {
+        "city": "Memphis",
+        "region": "Tennessee",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Epicenter Memphis"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsidesmemphis.org/call-for-papers/",
+        "cfp_close_date": "2026-06-19",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Tickets not yet released; BSides 501(c)(3) community conference; unknown pricing rule applied."
+      },
+      "tags": [
+        "cybersecurity",
+        "infosec",
+        "security",
+        "bsides",
+        "community"
+      ],
+      "source": "dev.events",
+      "id": "bsides-memphis-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Experts Live Sweden 2026",
+      "event_url": "https://else26.expertslive.se/",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "delivery": "in_person",
+      "location": {
+        "city": "Stockholm",
+        "region": null,
+        "country": "Sweden",
+        "country_code": "SE",
+        "is_online": false,
+        "venue": "House of People"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/experts-live-sweden-2026/",
+        "cfp_close_date": "2026-04-30",
+        "cfp_timezone": "W. Europe Daylight Time (UTC+02:00)",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No pricing found on official site; unknown pricing rule applied."
+      },
+      "tags": [
+        "microsoft",
+        "azure",
+        "security",
+        "ai",
+        "identity",
+        "modern-workplace",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "id": "experts-live-sweden-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "AWS Community Day Spain 2026",
+      "event_url": "https://2026.awscommunity.es/",
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17",
+      "delivery": "in_person",
+      "location": {
+        "city": "Santiago de Compostela",
+        "region": "Galicia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "Centro de Novas Tecnoloxías de Galicia (CNTG)"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/aws-community-day-spain-2026/",
+        "cfp_close_date": "2026-08-31",
+        "cfp_timezone": "Europe/Madrid",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Explicitly free and community-organized."
+      },
+      "tags": [
+        "aws",
+        "cloud",
+        "community",
+        "cloud-native",
+        "serverless",
+        "containers",
+        "security",
+        "genai"
+      ],
+      "source": "dev.events",
+      "id": "aws-community-day-spain-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Data Centre Expo at TechEx Europe",
+      "event_url": "https://datacentrecongress.com/europe/",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-20",
+      "delivery": "in_person",
+      "location": {
+        "city": "Amsterdam",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": "RAI Amsterdam"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://datacentrecongress.com/europe/get-involved/",
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 749,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Free expo pass available; Gold Pass from €749 early-bird."
+      },
+      "tags": [
+        "data-center",
+        "infrastructure",
+        "cloud",
+        "ai",
+        "enterprise",
+        "security",
+        "iot",
+        "digital-transformation"
+      ],
+      "source": "dev.events",
+      "id": "data-centre-expo-techex-europe-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "apidays Australia",
+      "event_url": "https://apidays.global/australia/",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-29",
+      "delivery": "in_person",
+      "location": {
+        "city": "Melbourne",
+        "region": "Victoria",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": "Melbourne Convention and Exhibition Centre (MCEC)"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://apidays.typeform.com/speak",
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Ticket portal returned HTTP 403; no pricing found; unknown pricing rule applied."
+      },
+      "tags": [
+        "api",
+        "api-management",
+        "ai",
+        "integration",
+        "cloud",
+        "data-sovereignty",
+        "security"
+      ],
+      "source": "dev.events",
+      "id": "apidays-australia-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Triangle InfoSeCon 2026",
+      "event_url": "https://www.triangleinfosecon.com",
+      "start_date": "2026-10-30",
+      "end_date": "2026-10-30",
+      "delivery": "in_person",
+      "location": {
+        "city": "Raleigh",
+        "region": "North Carolina",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Raleigh Convention Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/triangle-infosecon-2026/",
+        "cfp_close_date": "2026-10-02",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 65,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Student/Military $65; Professional $175; Leadership $199."
+      },
+      "tags": [
+        "cybersecurity",
+        "infosec",
+        "security",
+        "threat-intelligence",
+        "ai-security",
+        "risk-management"
+      ],
+      "source": "dev.events",
+      "id": "triangle-infosecon-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "S2N: Storage Server Network",
+      "event_url": "https://s2n.heise.de/",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-04",
+      "delivery": "in_person",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Estrel Congress Center (ECC)"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://s2n.heise.de/cfp.php",
+        "cfp_close_date": "2026-05-10",
+        "cfp_timezone": "Europe/Berlin",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 449,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Very Early Bird €449 net + 19% VAT; workshop tickets €599 net each."
+      },
+      "tags": [
+        "storage",
+        "networking",
+        "infrastructure",
+        "sysadmin",
+        "data-center",
+        "cloud",
+        "ai",
+        "it-operations"
+      ],
+      "source": "dev.events",
+      "id": "s2n-storage-server-network-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "2026 BSIDES Columbus",
+      "event_url": "https://www.bsidescolumbus.com/",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-06",
+      "delivery": "in_person",
+      "location": {
+        "city": "Canal Winchester",
+        "region": "Ohio",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "BrewDog Columbus"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/2026-bsides-columbus",
+        "cfp_close_date": "2026-08-31",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; unknown pricing rule applied."
+      },
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "hacking",
+        "ctf",
+        "incident-response",
+        "forensics"
+      ],
+      "source": "dev.events",
+      "id": "bsides-columbus-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Simply Cyber Con 2026",
+      "event_url": "https://simplycybercon.org/",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-09",
+      "delivery": "hybrid",
+      "location": {
+        "city": "Folly Beach",
+        "region": "South Carolina",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Tides Folly Beach"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/simply-cyber-con-2026",
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 40,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Early Bird GA $40 (through July 31); Standard GA $50."
+      },
+      "tags": [
+        "cybersecurity",
+        "infosec",
+        "security"
+      ],
+      "source": "dev.events",
+      "id": "simply-cyber-con-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "BSides Copenhagen 2026",
+      "event_url": "https://2026.bsideskbh.dk",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-14",
+      "delivery": "in_person",
+      "location": {
+        "city": "Copenhagen",
+        "region": null,
+        "country": "Denmark",
+        "country_code": "DK",
+        "is_online": false,
+        "venue": "Bella Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-copenhagen-2026/",
+        "cfp_close_date": "2026-08-15",
+        "cfp_timezone": "Europe/Copenhagen",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published; unknown pricing rule applied."
+      },
+      "tags": [
+        "security",
+        "infosec",
+        "cybersecurity",
+        "bsides"
+      ],
+      "source": "dev.events",
+      "id": "bsides-copenhagen-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "API Conference Berlin 2026",
+      "event_url": "https://apiconference.net/berlin/",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-20",
+      "delivery": "hybrid",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Maritim proArte Hotel"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://callforpapers.sandsmedia.com/",
+        "cfp_close_date": "2026-05-26",
+        "cfp_timezone": "CET",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 539,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Early bird Workshop Day from €539; regular €732; 2-Day from €859."
+      },
+      "tags": [
+        "api",
+        "api-design",
+        "api-management",
+        "api-security",
+        "platform-engineering",
+        "web-apis"
+      ],
+      "source": "dev.events",
+      "id": "api-conference-berlin-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "apidays Paris",
+      "event_url": "https://apidays.global/events/paris",
+      "start_date": "2026-12-01",
+      "end_date": "2026-12-03",
+      "delivery": "in_person",
+      "location": {
+        "city": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "CNIT Forest"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://apidays.typeform.com/speak",
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Ticket portal returned HTTP 403; no pricing found; unknown pricing rule applied."
+      },
+      "tags": [
+        "api",
+        "ai",
+        "developer",
+        "cloud",
+        "integration"
+      ],
+      "source": "dev.events",
+      "id": "apidays-paris-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "IT Security Summit Munich",
+      "event_url": "https://it-security-summit.com/munich/",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-04",
+      "delivery": "hybrid",
+      "location": {
+        "city": "Munich",
+        "region": "Bavaria",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Holiday Inn Munich – City Centre, Hochstraße 3, 81669 Munich"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 479,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Early bird 1-Day Workshop Pass from €479; 2-Day from €879."
+      },
+      "tags": [
+        "cybersecurity",
+        "infosec",
+        "devsecops",
+        "cloud-security",
+        "api-security",
+        "ai-security",
+        "web-security"
+      ],
+      "source": "dev.events",
+      "id": "it-security-summit-munich-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "IT-Tage 2026",
+      "event_url": "https://www.ittage.informatik-aktuell.de",
+      "start_date": "2026-12-07",
+      "end_date": "2026-12-10",
+      "delivery": "in_person",
+      "location": {
+        "city": "Frankfurt am Main",
+        "region": "Hesse",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Kap Europa"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.ittage.informatik-aktuell.de/call-for-papers.html",
+        "cfp_close_date": "2026-04-30",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 990,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "1-day ticket from €990 (early bird + team discount, min 3 participants); full 4-day from €2,190."
+      },
+      "tags": [
+        "devops",
+        "software-architecture",
+        "cloud",
+        "it-security",
+        "ai",
+        "databases",
+        "agile",
+        "software-development"
+      ],
+      "source": "dev.events",
+      "id": "it-tage-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "DevOps REX",
+      "event_url": "https://www.devopsrex.fr/fr",
+      "start_date": "2026-12-09",
+      "end_date": "2026-12-10",
+      "delivery": "in_person",
+      "location": {
+        "city": "Paris",
+        "region": "Ile-de-France",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "Porte de Versailles, Hall 5.2"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.devopsrex.fr/fr/cfp",
+        "cfp_close_date": "2026-09-16",
+        "cfp_timezone": "Europe/Paris",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 215,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Full Access 2-day pass currently €215 (50% blind rate); regular €430."
+      },
+      "tags": [
+        "devops",
+        "devsecops",
+        "finops",
+        "platform-engineering",
+        "ai",
+        "security"
+      ],
+      "source": "dev.events",
+      "id": "devops-rex-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "ONE Summit Japan",
+      "event_url": "https://events.linuxfoundation.org/open-networking-edge-summit-japan",
+      "start_date": "2026-12-10",
+      "end_date": "2026-12-11",
+      "delivery": "in_person",
+      "location": {
+        "city": "Tokyo",
+        "region": null,
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": "Toranomon Hills Forum"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/one-summit-2026/",
+        "cfp_close_date": "2026-08-24",
+        "cfp_timezone": "Asia/Tokyo",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 10000,
+        "price_currency": "JPY",
+        "cost_level": "standard",
+        "notes": "Academic ¥10,000; Government ¥16,000; Individual ¥40,000; Corporate Early Bird ¥56,000."
+      },
+      "tags": [
+        "cloud",
+        "networking",
+        "edge-computing",
+        "open-networking",
+        "open-source",
+        "linux-foundation",
+        "infrastructure"
+      ],
+      "source": "dev.events",
+      "id": "one-summit-japan-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "KCD Provence",
+      "event_url": "https://cloudnative-provence.fr/en/",
+      "start_date": "2026-12-10",
+      "end_date": "2026-12-10",
+      "delivery": "in_person",
+      "location": {
+        "city": "Aix-en-Provence",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://conference-hall.io/kcd-provence-2026",
+        "cfp_close_date": "2026-07-15",
+        "cfp_timezone": "Europe/Paris",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No pricing found on official site; unknown pricing rule applied."
+      },
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "devops",
+        "cncf",
+        "infrastructure",
+        "platform-engineering",
+        "security",
+        "observability",
+        "kcd"
+      ],
+      "source": "dev.events",
+      "id": "kcd-provence-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "CloudBrew 2026 - A two-day Microsoft Azure event",
+      "event_url": "https://www.cloudbrew.be/",
+      "start_date": "2026-12-10",
+      "end_date": "2026-12-11",
+      "delivery": "in_person",
+      "location": {
+        "city": "Mechelen",
+        "region": "Antwerp",
+        "country": "Belgium",
+        "country_code": "BE",
+        "is_online": false,
+        "venue": "Lamot, Van Beethovenstraat 8-10"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloudbrew-2026/",
+        "cfp_close_date": "2026-06-07",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No 2026 ticket page found; unknown pricing rule applied."
+      },
+      "tags": [
+        "azure",
+        "cloud",
+        "microsoft-azure",
+        "community",
+        "belgium"
+      ],
+      "source": "dev.events",
+      "id": "cloudbrew-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "IaCConf Spotlight: Designing IaC Interfaces",
+      "event_url": "https://events.iacconf.com/designing-iac-interfaces-july-2026-spotlight/",
+      "start_date": "2026-07-14",
+      "end_date": "2026-07-14",
+      "delivery": "online",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Free registration; tickets_enabled: false in event JSON."
+      },
+      "tags": [
+        "iac",
+        "terraform"
+      ],
+      "source": "iacconf.com",
+      "id": "iacconf-spotlight-iac-interfaces-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Automate STIG Compliance for Defense Agencies",
+      "event_url": "https://carahevents.carahsoft.com/Event/Register/763243-web",
+      "start_date": "2026-06-25",
+      "end_date": "2026-06-25",
+      "delivery": "online",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No fee."
+      },
+      "tags": [
+        "ansible",
+        "red-hat",
+        "devsecops",
+        "compliance",
+        "automation"
+      ],
+      "source": "carahsoft.com",
+      "id": "automate-stig-compliance-2026",
+      "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "name": "Upskill Your Open Source Skills on AWS: Accelerate Mission Outcomes",
+      "event_url": "https://carahevents.carahsoft.com/Event/Register/765997-web",
+      "start_date": "2026-06-29",
+      "end_date": "2026-06-29",
+      "delivery": "hybrid",
+      "location": {
+        "city": "Arlington",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "AWS WAS17 - Amazon Merlin Building, 510 14th St S"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No fee."
+      },
+      "tags": [
+        "openshift",
+        "ansible",
+        "red-hat",
+        "aws",
+        "cloud-native",
+        "devops"
+      ],
+      "source": "carahsoft.com",
+      "id": "upskill-aws-open-source-2026",
+      "created_at": "2026-06-19T00:00:00Z"
     }
   ]
 }
