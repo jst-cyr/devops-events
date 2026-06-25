@@ -42,7 +42,9 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     # General software dev conferences with only a minor DevOps track
     r"|accelerate\s+chicago|gotochgo\.com|vslive\.com|apiworld\.co"
     # Single-tool vendor workshops
-    r"|zeek\.org",
+    r"|zeek\.org"
+    # Hypervisor/vendor project summits
+    r"|xen[\s-]summit|xenproject",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
