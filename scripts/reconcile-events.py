@@ -43,8 +43,9 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     r"|accelerate\s+chicago|gotochgo\.com|vslive\.com|apiworld\.co"
     # Single-tool vendor workshops
     r"|zeek\.org"
-    # Hypervisor/vendor project summits
-    r"|xen[\s-]summit|xenproject",
+    # Hypervisor/vendor project summits and single-project CNCF events
+    r"|xen[\s-]summit|xenproject"
+    r"|\bdapr[\s-]day\b",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
