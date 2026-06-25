@@ -9169,6 +9169,108 @@
       "source": "carahsoft.com",
       "id": "upskill-aws-open-source-2026",
       "created_at": "2026-06-19T00:00:00Z"
+    },
+    {
+      "id": "maintainer-summit-kubecon-na-2026",
+      "name": "Maintainer Summit: KubeCon + CloudNativeCon 2026",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/features-add-ons/maintainer-summit",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-08",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": ["kubernetes", "cloud-native", "cncf", "open-source", "maintainers", "infrastructure", "containers", "devops"],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": "Utah",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Salt Palace Convention Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/maintainer-summit-na-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-19",
+        "cfp_timezone": "America/Denver",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 275,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Requires KubeCon + CloudNativeCon NA 2026 All-Access Pass. Academic $275; Individual $978; Corporate $1,798. CFP speakers receive complimentary passes."
+      },
+      "created_at": "2026-06-25T00:00:00Z"
+    },
+    {
+      "id": "owasp-appsec-days-india-2026",
+      "name": "OWASP AppSec Days India 2026",
+      "event_url": "https://india.appsecdays.org/",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": ["appsec", "owasp", "security", "application-security", "devsecops", "cybersecurity"],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": null,
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/owasp-global-appsec-india-2026-cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "Asia/Kolkata",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "cost_level": "free",
+        "notes": "Free to attend; registration at secwiser.com/owasp-appsec-days. Speakers also attend for free."
+      },
+      "created_at": "2026-06-25T00:00:00Z"
+    },
+    {
+      "id": "bsides-rdu-2026",
+      "name": "BSides RDU 2026",
+      "event_url": "https://bsidesrdu.org",
+      "start_date": "2026-12-18",
+      "end_date": "2026-12-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": ["security", "cybersecurity", "infosec", "bsides", "incident-response", "appsec", "community"],
+      "source": "dev.events",
+      "location": {
+        "city": "Raleigh",
+        "region": "North Carolina",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "NCSU McKimmon Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-rdu-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No pricing publicly listed on official site or Eventzilla registration page. BSides events are community-driven and typically free. Treated as free per unknown pricing rule."
+      },
+      "created_at": "2026-06-25T00:00:00Z"
     }
   ]
 }
