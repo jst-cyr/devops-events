@@ -2630,8 +2630,8 @@
     {
       "id": "kubecon-cloudnativecon-japan-2026-20260729",
       "name": "KubeCon + CloudNativeCon Japan 2026",
-      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan-2026",
-      "start_date": "2026-07-29",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-japan/",
+      "start_date": "2026-07-28",
       "end_date": "2026-07-30",
       "delivery": "in_person",
       "source": "dev.events",
@@ -2645,9 +2645,9 @@
       },
       "cost": {
         "is_free": false,
-        "lowest_price": 249,
-        "cost_level": "premium",
-        "notes": "KubeCon Japan 2026 confirmed rates: Corporate standard $525 USD, Individual standard $249 USD, Academic $100 USD. Source: events.linuxfoundation.org/kubecon-cloudnativecon-japan/register/",
+        "lowest_price": 100,
+        "cost_level": "standard",
+        "notes": "Academic $100; Individual late $349 (Jun 17–Jul 30); Corporate late $725. Group discounts for 5+ corporate attendees. Source: events.linuxfoundation.org/kubecon-cloudnativecon-japan/register/",
         "price_currency": "USD"
       },
       "notes": "Canonical URL extracted via explicit outbound link."
@@ -4705,10 +4705,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 275,
+        "notes": "Requires KubeCon + CloudNativeCon NA 2026 All-Access Pass. Academic $275; Individual $978 Standard / $1,278 Late; Corporate $1,798 Standard / $2,278 Late. Source: events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": false,
@@ -4739,10 +4740,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 275,
+        "notes": "Requires KubeCon + CloudNativeCon NA 2026 All-Access Pass. Academic $275; Individual $978 Standard / $1,278 Late; Corporate $1,798 Standard / $2,278 Late. Source: events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": false,
@@ -4773,10 +4775,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 275,
+        "notes": "Requires KubeCon + CloudNativeCon NA 2026 All-Access Pass. Academic $275; Individual $978 Standard / $1,278 Late; Corporate $1,798 Standard / $2,278 Late. Source: events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": false,
@@ -4807,10 +4810,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 275,
+        "notes": "Requires KubeCon + CloudNativeCon NA 2026 All-Access Pass. Academic $275; Individual $978 Standard / $1,278 Late; Corporate $1,798 Standard / $2,278 Late. Source: events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": false,
@@ -4841,10 +4845,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 275,
+        "notes": "Requires KubeCon + CloudNativeCon NA 2026 All-Access Pass. Academic $275; Individual $978 Standard / $1,278 Late; Corporate $1,798 Standard / $2,278 Late. Source: events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": false,
@@ -4913,10 +4918,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "premium",
+        "lowest_price": 595,
+        "notes": "Workshop (Nov 17 only) from €595 excl. VAT. Bronze conference (Nov 18–19) from €1,199 excl. VAT. Silver/Gold packages with accommodation available. Source: osmc.de/ticket/",
+        "price_currency": "EUR"
       },
       "cfp": {
         "has_cfp": true,
@@ -5036,7 +5042,7 @@
     },
     {
       "id": "devopsdays-portland-2026",
-      "name": "DevOpsDays Portland",
+      "name": "DevOpsdays Portland, OR",
       "event_url": "https://devopsdays.org/events/2026-portland-or/welcome/",
       "start_date": "2026-09-08",
       "end_date": "2026-09-10",
@@ -6220,9 +6226,11 @@
         "cloud-native"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "notes": "KubeCon Only Pass — Academic: $200; Individual: $679 Standard / $899 Late; Corporate: $1,499 Standard / $1,899 Late. All-Access Pass — Academic: $275; Individual: $978 Standard / $1,278 Late; Corporate: $1,798 Standard / $2,278 Late. Prices excl. Salt Lake City sales tax (8.45%). Source: events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/",
+        "lowest_price": 200,
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": true,
@@ -6551,9 +6559,11 @@
         "devops"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "premium",
+        "notes": "Early bird (until Aug 20 2026, excl. VAT): Workshop Day €479; 2-Day Pass €879; 3-Day Pass + Transformation Day €1,259; All Access €1,709. Regular rates ~40% higher. 10% group discount for 3+ tickets. Online attendance also available. Source: devopscon.io/munich",
+        "lowest_price": 479,
+        "price_currency": "EUR"
       },
       "event_type": "conference"
     },
@@ -7512,7 +7522,7 @@
     {
       "id": "open-source-summit-japan-2026",
       "name": "Open Source Summit Japan 2026",
-      "event_url": "https://events.linuxfoundation.org/open-source-summit-japan-2026",
+      "event_url": "https://events.linuxfoundation.org/open-source-summit-japan/",
       "start_date": "2026-12-07",
       "end_date": "2026-12-09",
       "delivery": "in_person",
@@ -7534,10 +7544,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published/visible on event page; checked https://events.linuxfoundation.org/open-source-summit-japan/; assumed free until confirmed"
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 160,
+        "notes": "Academic: $160; Hobbyist: $160 (limited, access code required); Attendee Early Bird (Apr 13–Oct 5): $417; Standard (Oct 6–Nov 23): $558; Late (Nov 24–Dec 9): $751. Local JPY equivalents also listed. Source: events.linuxfoundation.org/open-source-summit-japan/register/",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": true,
@@ -9178,7 +9189,16 @@
       "end_date": "2026-11-08",
       "delivery": "in_person",
       "event_type": "summit",
-      "tags": ["kubernetes", "cloud-native", "cncf", "open-source", "maintainers", "infrastructure", "containers", "devops"],
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "cncf",
+        "open-source",
+        "maintainers",
+        "infrastructure",
+        "containers",
+        "devops"
+      ],
       "source": "dev.events",
       "location": {
         "city": "Salt Lake City",
@@ -9213,7 +9233,14 @@
       "end_date": "2026-11-22",
       "delivery": "online",
       "event_type": "conference",
-      "tags": ["appsec", "owasp", "security", "application-security", "devsecops", "cybersecurity"],
+      "tags": [
+        "appsec",
+        "owasp",
+        "security",
+        "application-security",
+        "devsecops",
+        "cybersecurity"
+      ],
       "source": "dev.events",
       "location": {
         "city": null,
@@ -9247,7 +9274,15 @@
       "end_date": "2026-12-18",
       "delivery": "in_person",
       "event_type": "conference",
-      "tags": ["security", "cybersecurity", "infosec", "bsides", "incident-response", "appsec", "community"],
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "incident-response",
+        "appsec",
+        "community"
+      ],
       "source": "dev.events",
       "location": {
         "city": "Raleigh",
