@@ -54,7 +54,7 @@ EXCLUDED_FORMAT_PATTERN = re.compile(
 def _load_excluded_geographies():
     config_file = Path(__file__).parent.parent / "config" / "excluded-geographies.json"
     try:
-        with open(config_file, 'r') as f:
+        with open(config_file, 'r', encoding='utf-8') as f:
             config = json.load(f)
             all_countries = set(config.get("excluded_countries", []))
             all_countries.update(config.get("excluded_africa_countries", []))
@@ -307,7 +307,7 @@ class EventReconciler:
             return []
         
         try:
-            with open(events_file, 'r') as f:
+            with open(events_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 events = data.get("records", [])
                 print(f"[LOAD] Loaded {len(events)} existing events from {events_file}")
@@ -330,7 +330,7 @@ class EventReconciler:
             return []
         
         try:
-            with open(input_path, 'r') as f:
+            with open(input_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 # Handle both bare array and wrapped {records: [...]} format
                 events = data if isinstance(data, list) else data.get("records", [])
@@ -813,8 +813,8 @@ class EventReconciler:
             "source_run_date": self.run_date_str,
             "records": updates
         }
-        with open(output_file, 'w') as f:
-            json.dump(output, f, indent=2)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
         print(f"[WRITE] {output_file} ({len(updates)} updates)")
     
     def write_candidates_file(self, candidates: List[Dict[str, Any]]) -> None:
@@ -826,8 +826,8 @@ class EventReconciler:
             "source_run_date": self.run_date_str,
             "records": candidates
         }
-        with open(output_file, 'w') as f:
-            json.dump(output, f, indent=2)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
         print(f"[WRITE] {output_file} ({len(candidates)} candidates)")
 
     def write_overlap_review_file(self, overlap_review: List[Dict[str, Any]]) -> None:
@@ -839,8 +839,8 @@ class EventReconciler:
             "source_run_date": self.run_date_str,
             "records": overlap_review,
         }
-        with open(output_file, 'w') as f:
-            json.dump(output, f, indent=2)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
         print(f"[WRITE] {output_file} ({len(overlap_review)} overlap review records)")
     
     def run(self, input_file: Optional[Path]) -> int:
