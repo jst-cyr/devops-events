@@ -4953,7 +4953,7 @@
         "city": "Copenhagen",
         "region": null,
         "country": "Denmark",
-        "country_code": null,
+        "country_code": "DK",
         "is_online": false,
         "venue": null
       },
