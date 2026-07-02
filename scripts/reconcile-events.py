@@ -45,7 +45,7 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     r"|zeek\.org"
     # Hypervisor/vendor project summits and single-project CNCF events
     r"|xen[\s-]summit|xenproject"
-    r"|\bdapr[\s-]day\b",
+    r"|\bdapr[\s-]day\b|envoycon",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
