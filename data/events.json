@@ -1375,7 +1375,7 @@
     },
     {
       "id": "devopsdays-denver-2026",
-      "name": "DevOpsDays Denver",
+      "name": "DevOpsDays Denver 2026 (DevOpsDays Rockies)",
       "event_url": "https://devopsdays.org/events/2026-denver/welcome/",
       "start_date": "2026-09-22",
       "end_date": "2026-09-23",
@@ -1671,10 +1671,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "DevOps Midwest 2026 (Sept 16, Webster University, St. Louis, MO). Official site states \"Tickets will be on sale soon.\" Confirmed paid event, price not yet published."
+        "is_free": false,
+        "lowest_price": 149,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Early Bird ticket USD149 (through Aug 17, 2026), Regular USD199 thereafter."
       },
       "notes": "Canonical event URL resolved via redirect from tracker URL http://www.devopsmidwest.com/."
     },
@@ -4119,10 +4120,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 525,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "IRL Pass (in-person) USD525 per official registration page; Virtual Pass explicitly free."
       },
       "cfp": {
         "has_cfp": false,
@@ -4376,7 +4378,7 @@
     },
     {
       "name": "Devopsdays Istanbul 2026",
-      "event_url": "https://devopsdays.org/events/2026-istanbul",
+      "event_url": "https://devopsdays.istanbul/",
       "start_date": "2026-10-24",
       "end_date": "2026-10-24",
       "delivery": "in_person",
@@ -4400,8 +4402,8 @@
         "notes": "Pricing not published yet; assumed free until confirmed."
       },
       "cfp": {
-        "has_cfp": false,
-        "cfp_url": null,
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopdays-istanbul-2026/cfp",
         "cfp_open_date": null,
         "cfp_close_date": null,
         "cfp_timezone": null,
@@ -5398,9 +5400,11 @@
         "devops"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Early Bird USD49 tier (of USD49/99/179 tiered pricing) per Linux Foundation registration page for KubeCon+CloudNativeCon Japan co-located event."
       },
       "event_type": "conference"
     },
@@ -5505,9 +5509,11 @@
         "security"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 20,
+        "price_currency": "GBP",
+        "cost_level": "budget",
+        "notes": "General Admission GBP20 via Eventbrite, includes talks/food."
       },
       "event_type": "conference"
     },
@@ -6959,9 +6965,11 @@
         "cfp_status": "unknown"
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+        "is_free": false,
+        "lowest_price": 50,
+        "price_currency": "AUD",
+        "cost_level": "budget",
+        "notes": "Standard Edition ticket AUD50 via Humanitix."
       },
       "notes": null
     },
@@ -7033,9 +7041,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+        "is_free": false,
+        "lowest_price": 119,
+        "price_currency": "AUD",
+        "cost_level": "standard",
+        "notes": "Student ticket AUD119 (lowest tier), General AUD169, via Humanitix."
       },
       "notes": null
     },
