@@ -9306,6 +9306,372 @@
         "notes": "No pricing publicly listed on official site or Eventzilla registration page. BSides events are community-driven and typically free. Treated as free per unknown pricing rule."
       },
       "created_at": "2026-06-25T00:00:00Z"
+    },
+    {
+      "id": "bsides-bristol-2026",
+      "name": "BSides Bristol",
+      "event_url": "https://bsidesbristol.org.uk/",
+      "start_date": "2026-08-21",
+      "end_date": "2026-08-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Bristol",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No pricing published/confirmed on site or Eventbrite; assumed free per unknown-pricing rule."
+      },
+      "notes": "Canonical URL verified live, no redirect needed.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-greenville-2026",
+      "name": "BSides Greenville",
+      "event_url": "https://www.bsidesgreenville.org/",
+      "start_date": "2026-08-29",
+      "end_date": "2026-08-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Greenville",
+        "region": "South Carolina",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLScaeJ9ytj3bdbz2yV-2Bfv9y2_QfhjgKXi9Xfyi36XbjggqEA/viewform?usp=header",
+        "cfp_close_date": "2026-06-29",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 15,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Pay What You Want ticket, suggested minimum $15, via Eventbrite."
+      },
+      "notes": "Canonical URL verified live, no redirect needed.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-frankfurt-2026",
+      "name": "BSides Frankfurt",
+      "event_url": "https://bsidesfrankfurt.org/",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Frankfurt",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.bsidesfrankfurt.org",
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 36,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Student rate EUR36 (down from EUR72), Standard EUR72, via tickets.bsidesfrankfurt.org."
+      },
+      "notes": "Canonical URL verified live, no redirect needed.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-montreal-2026",
+      "name": "BSides Montreal",
+      "event_url": "https://bsidesmtl.ca/",
+      "start_date": "2026-09-19",
+      "end_date": "2026-09-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Montreal",
+        "region": "Quebec",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/bsides-montr-al-2026/cfp",
+        "cfp_close_date": "2026-07-06",
+        "cfp_timezone": "UTC",
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No ticket price published on site or Eventbrite."
+      },
+      "notes": "Canonical URL confirmed live, no redirect.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-canberra-2026",
+      "name": "BSides Canberra",
+      "event_url": "https://bsidescbr.com.au/",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Canberra",
+        "region": "Australian Capital Territory",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.bsidescbr.com.au/bsides-canberra-2026/cfp",
+        "cfp_close_date": "2026-06-30",
+        "cfp_timezone": "Australia/Sydney",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 75,
+        "price_currency": "AUD",
+        "cost_level": "budget",
+        "notes": "Student AUD75, General AUD200 via Humanitix."
+      },
+      "notes": "Canonical URL confirmed live, no redirect.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-tallinn-2026",
+      "name": "BSides Tallinn",
+      "event_url": "https://tallinn.bsides.ee/",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Tallinn",
+        "region": null,
+        "country": "Estonia",
+        "country_code": "EE",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/bsides-tallinn-2026/cfp",
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "Europe/Tallinn",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 85,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Community EUR85, Business EUR250 per official site."
+      },
+      "notes": "Canonical URL confirmed live, no redirect.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-vi-2026",
+      "name": "BSides VI",
+      "event_url": "https://bsidesvi.com/",
+      "start_date": "2026-09-25",
+      "end_date": "2026-09-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Victoria",
+        "region": "British Columbia",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsidesvi.com/cfp",
+        "cfp_close_date": "2026-08-14",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "No pricing disclosed on site or Eventbrite; assumed free per unknown-pricing rule."
+      },
+      "notes": "Canonical URL verified live, no redirect needed.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "bsides-peoria-2026",
+      "name": "BSides Peoria 2026",
+      "event_url": "https://bsidespeoria.com/",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Peoria",
+        "region": "Illinois",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-peoria-2026/",
+        "cfp_open_date": "2026-06-27",
+        "cfp_close_date": "2026-08-31",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "upcoming"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "2026 pricing not yet published; site shows stale 2023 tiers ($15-$30)."
+      },
+      "notes": "Canonical URL via web search corroboration (dev.events page broken). Venue: Bradley University, Peoria, IL.",
+      "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "malta-aws-community-day-2026",
+      "name": "Malta AWS Community day",
+      "event_url": "https://www.awscommunityday.mt/",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-16",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud",
+        "aws",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "St. Julian's",
+        "region": null,
+        "country": "Malta",
+        "country_code": "MT",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/maltaawscommunityday-2026",
+        "cfp_close_date": "2026-07-15",
+        "cfp_timezone": "UTC+02:00",
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Registration not yet open per official site; no ticket price published."
+      },
+      "notes": "Canonical URL via web search corroboration (dev.events page broken).",
+      "created_at": "2026-07-02T00:00:00Z"
     }
   ]
 }
