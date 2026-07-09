@@ -36,6 +36,14 @@ const EXCLUDED_COUNTRIES = new Set(geographiesConfig.excluded_countries);
 const EXCLUDED_AFRICA_COUNTRIES = new Set(geographiesConfig.excluded_africa_countries);
 const EXCLUDED_GEO_TOKENS = geographiesConfig.excluded_geo_tokens;
 
+// Normalize a URL for equality comparison so trivial differences (case,
+// trailing slashes) don't defeat duplicate detection. e.g. "example.com" and
+// "example.com/" collapse to the same key.
+function normalizeUrl(url) {
+  if (!url) return "";
+  return String(url).trim().toLowerCase().replace(/\/+$/, "");
+}
+
 function resolveCountry(event) {
   const countryRaw = (event.country || "").trim();
   const cityRaw = (event.city || "").trim();
@@ -171,9 +179,9 @@ if (existsSync(candidatesPath)) {
   if (candidatesJson.records) allRecords.push(...candidatesJson.records);
 }
 
-const existingUrls = new Set(allRecords.map((r) => r.event_url));
+const existingUrls = new Set(allRecords.map((r) => normalizeUrl(r.event_url)));
 const existingCfpUrls = new Set(
-  allRecords.filter((r) => r.cfp?.cfp_url).map((r) => r.cfp.cfp_url),
+  allRecords.filter((r) => r.cfp?.cfp_url).map((r) => normalizeUrl(r.cfp.cfp_url)),
 );
 const existingNames = new Set(allRecords.map((r) => r.name.toLowerCase()));
 
@@ -183,8 +191,8 @@ const covered = [];
 const nameOnly = [];
 
 for (const e of inWindow) {
-  const urlMatch = e.event_url && existingUrls.has(e.event_url);
-  const cfpUrlMatch = e.cfp_url && existingCfpUrls.has(e.cfp_url);
+  const urlMatch = e.event_url && existingUrls.has(normalizeUrl(e.event_url));
+  const cfpUrlMatch = e.cfp_url && existingCfpUrls.has(normalizeUrl(e.cfp_url));
   const nameMatch = existingNames.has(e.name.toLowerCase());
 
   if (urlMatch || cfpUrlMatch) {
@@ -253,7 +261,7 @@ const deduped = missing
   })
   .sort((a, b) => a.cfp_close.localeCompare(b.cfp_close))
   .filter((e) => {
-    const key = e.cfp_url || `${e.name}::${e.event_url}`;
+    const key = normalizeUrl(e.cfp_url) || `${e.name}::${normalizeUrl(e.event_url)}`;
     if (seenCfpUrls.has(key)) return false;
     seenCfpUrls.set(key, true);
     return true;
