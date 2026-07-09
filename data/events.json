@@ -9808,6 +9808,405 @@
       },
       "notes": "Paid in-person developer conference; 2-day workshops + 3-day conference. Pricing supplied by prior enrichment pass.",
       "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "kube-auto-day-japan-2026",
+      "name": "KubeAuto Day Japan",
+      "event_url": "https://kubeauto.day/japan",
+      "start_date": "2026-07-28",
+      "end_date": "2026-07-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Yokohama",
+        "region": "Kanagawa",
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": "The Wharf House Yamashita Koen"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Official page (kubeauto.day/japan) states 'Free · registration required'."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "automation",
+        "finops",
+        "docker"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link. Co-located with KubeCon Japan 2026.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "owasp-new-zealand-day-2026",
+      "name": "OWASP New Zealand Day 2026",
+      "event_url": "https://appsec.org.nz/conference/",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Auckland",
+        "region": "Auckland",
+        "country": "New Zealand",
+        "country_code": "NZ",
+        "is_online": false,
+        "venue": "Sir Owen G. Glenn Building, University of Auckland"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 25,
+        "price_currency": "NZD",
+        "cost_level": "budget",
+        "notes": "Standard registration NZD $25 (incl GST); students free. Humanitix registration. Pre-conf training Sep 1-2, main conf Sep 3-4."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/owaspnz2026/cfp",
+        "cfp_close_date": "2026-07-25",
+        "cfp_status": "closing_soon",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "security",
+        "cybersecurity",
+        "appsec",
+        "owasp"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link. In-person only.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "aws-community-day-italy-2026",
+      "name": "AWS Community Day Italy 2026",
+      "event_url": "https://www.awscommunityday.it/",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Rome",
+        "region": "Lazio",
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not published; assumed free (AWS Community Days typically free)."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://conference-hall.io/aws-community-day-italy-2026",
+        "cfp_close_date": null,
+        "cfp_status": "open",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "aws",
+        "cloud",
+        "community"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link. Official date 2026-10-02 (corrected from dev.events hint 2026-09-03). CFP open, no close date.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "baltic-connect-riga-2026",
+      "name": "Baltic Connect - Riga",
+      "event_url": "https://luma.com/dryj7skm",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Riga",
+        "region": null,
+        "country": "Latvia",
+        "country_code": "LV",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Registration via Luma with host approval; no ticket price listed. Community event."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "cloud",
+        "aws",
+        "devops",
+        "community"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link. AWS-focused cloud community event (cloud adoption, multicloud, DevOps, FinOps, practical AI on AWS).",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "cloud-native-amsterdam-2026",
+      "name": "Cloud Native Amsterdam",
+      "event_url": "https://community.cncf.io/cloud-native-amsterdam/",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "location": {
+        "city": "Amsterdam",
+        "region": "North Holland",
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "CNCF community group event; no paid ticketing found. Assumed free."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "cloud-native",
+        "cloud",
+        "kubernetes",
+        "devops"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL derived from CNCF community group matching event name. Talk proposals via email, no CFP URL/deadline.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "german-owasp-day-2026",
+      "name": "German OWASP Day 2026",
+      "event_url": "https://god.owasp.de/2026/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Karlsruhe",
+        "region": "Baden-Württemberg",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "IHK Haus der Wirtschaft"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Ticket prices not exposed (GlueUp 403); unknown-pricing rule applied."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://god.owasp.de/2026/cfp.html",
+        "cfp_close_date": "2026-06-21",
+        "cfp_status": "closed",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "security",
+        "appsec",
+        "owasp",
+        "cybersecurity"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "promcon-europe-2026",
+      "name": "PromCon Europe 2026",
+      "event_url": "https://promcon.io/2026-munich/",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Munich",
+        "region": "Bavaria",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Google Munich"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 45,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Academic early-bird EUR45; general early-bird EUR130, standard EUR170, late EUR215. Source promcon.io."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/promcon-eu-2026",
+        "cfp_close_date": "2026-07-13",
+        "cfp_status": "closing_soon",
+        "cfp_timezone": "Europe/Berlin"
+      },
+      "tags": [
+        "observability",
+        "monitoring",
+        "prometheus",
+        "cloud-native",
+        "devops"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link. Prometheus monitoring conference.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "devopsdays-istanbul-2026",
+      "name": "Devopsdays Istanbul 2026",
+      "event_url": "https://devopsdays.org/events/2026-istanbul/welcome/",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Istanbul",
+        "region": null,
+        "country": "Türkiye",
+        "country_code": "TR",
+        "is_online": false,
+        "venue": "Dedeman Bostanci Hotel & Convention Center"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not published on devopsdays.org / Kommunity pages; unknown-pricing rule applied."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopdays-istanbul-2026/cfp",
+        "cfp_close_date": "2026-06-30",
+        "cfp_status": "closed",
+        "cfp_timezone": "Europe/Istanbul"
+      },
+      "tags": [
+        "devops"
+      ],
+      "source": "dev.events",
+      "notes": "Canonical URL extracted via explicit outbound link.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "redhat-swiss-dev-confederation-2026",
+      "name": "3rd Swiss Dev Confederation (Red Hat)",
+      "event_url": "https://reg.experiences.redhat.com/flow/redhat/3624601/redhatfieldeventspreregnoappform/page/landingregistrationpage",
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Schlieren",
+        "region": "Zurich",
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Free registration."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSdNLe537nk6y2SKIFcMKms331uJltZd3o8FSaSDSxvwUBFIjA/viewform",
+        "cfp_close_date": null,
+        "cfp_status": "open",
+        "cfp_timezone": null
+      },
+      "tags": [
+        "redhat",
+        "developer",
+        "cloud-native"
+      ],
+      "source": "redhat.com",
+      "notes": "Phase 4. Red Hat developer-focused technical conference. CFP is a Google Form (paper submission) linked from the event site; no close date published there yet.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "everything-open-2027",
+      "name": "Everything Open 2027",
+      "event_url": "https://2027.everythingopen.au/",
+      "start_date": "2027-01-20",
+      "end_date": "2027-01-22",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "location": {
+        "city": "Brisbane",
+        "region": "Queensland",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": "QUT Gardens Point"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": "AUD",
+        "cost_level": "free",
+        "notes": "Ticket tiers listed but prices TBC; unknown-pricing rule applied."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://2027.everythingopen.au/programme/specialist-tracks/",
+        "cfp_close_date": "2026-07-13",
+        "cfp_status": "closing_soon",
+        "cfp_timezone": "Australia/Brisbane"
+      },
+      "tags": [
+        "open-source",
+        "linux",
+        "sysadmin",
+        "infrastructure",
+        "devops",
+        "community"
+      ],
+      "source": "everythingopen.au",
+      "notes": "USER-FLAGGED (manually added post-reconcile). Linux Australia (successor to linux.conf.au). Event 20-22 Jan 2027 falls just past the 180-day event window (ends 2027-01-04) so reconcile-events.py auto-skipped it, but it QUALIFIES via CFP: Specialist Track CFP closes 2026-07-13 (within the 56-day CFP window). Validated relevant (Linux/open-source/infrastructure). CFP is imminent.",
+      "created_at": "2026-07-09T00:00:00Z"
     }
   ]
 }
