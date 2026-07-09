@@ -113,6 +113,18 @@
     "zimbabwe"
   ],
   "excluded_geo_tokens": [
+    "shanghai",
+    "beijing",
+    "shenzhen",
+    "guangzhou",
+    "hangzhou",
+    "chengdu",
+    "wuhan",
+    "nanjing",
+    "suzhou",
+    "xian",
+    "tianjin",
+    "chongqing",
     "brasov",
     "rio de janeiro",
     "recife",
