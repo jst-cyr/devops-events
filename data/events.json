@@ -9682,6 +9682,132 @@
       },
       "notes": "Canonical URL via web search corroboration (dev.events page broken).",
       "created_at": "2026-07-02T00:00:00Z"
+    },
+    {
+      "id": "data-streaming-summit-2026",
+      "name": "Data Streaming Summit 2026: The Data Streaming + Agent Infra Conference",
+      "event_url": "https://datastreamingsummit.com/",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "data-streaming",
+        "kafka",
+        "real-time",
+        "ai-infrastructure",
+        "cloud-native"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/data-streaming-summit-san-francisco-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-18",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Pricing not published; official page directs to a registration waitlist. Assumed free until confirmed (pricing research performed 2026-07-09)."
+      },
+      "notes": "Canonical URL resolved from datastreaming-summit.org to datastreamingsummit.com. In-person conference on data streaming and agent/AI infrastructure (Apache Pulsar/Kafka ecosystem).",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "serverlessdays-cardiff-2026",
+      "name": "ServerlessDays Cardiff 2026",
+      "event_url": "https://cardiff.serverlessdays.io/",
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-21",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "serverless",
+        "cloud-native",
+        "cloud-security",
+        "finops",
+        "devops"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "Cardiff",
+        "region": "Wales",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "DEPOT, Unit 8 Curran Road (Off Dumballs Road), Cardiff, CF10 5DF"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://papercall.io/cfps/6721/submissions/new",
+        "cfp_open_date": "2026-06-19",
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Early-bird tickets referenced as on sale from 2026-06-26 but no price published on the official page. Assumed free until confirmed (pricing research performed 2026-07-09)."
+      },
+      "notes": "Single-track in-person ServerlessDays community event. Themes: serverless, GenAI, digital sovereignty, cloud financial management, cloud security.",
+      "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "id": "ndc-london-2027",
+      "name": "NDC London 2027",
+      "event_url": "https://ndclondon.com/",
+      "start_date": "2027-01-25",
+      "end_date": "2027-01-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "software-development",
+        "devops",
+        "dotnet",
+        "cloud",
+        "agile"
+      ],
+      "source": "adatosystems.com",
+      "location": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/ndc-london-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-30",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 850,
+        "price_currency": "GBP",
+        "cost_level": "premium",
+        "notes": "Conference Pass early-bird from £850 ex-VAT (regular £1,050; All-Access £2,190; workshops £1,450). Early bird ends 2 October; +20% VAT applies."
+      },
+      "notes": "Paid in-person developer conference; 2-day workshops + 3-day conference. Pricing supplied by prior enrichment pass.",
+      "created_at": "2026-07-09T00:00:00Z"
     }
   ]
 }
