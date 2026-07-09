@@ -2283,10 +2283,12 @@
       "event_url": "https://cloudxconf.com/",
       "start_date": "2026-09-01",
       "end_date": "2026-09-03",
-      "delivery": "in_person",
+      "delivery": "hybrid",
       "event_type": "conference",
       "tags": [
-        "cloud"
+        "cloud",
+        "devops",
+        "infrastructure"
       ],
       "source": "dev.events",
       "location": {
@@ -2300,10 +2302,10 @@
       "notes": "Canonical URL extracted via explicit outbound link.",
       "cost": {
         "is_free": false,
-        "lowest_price": 610,
+        "lowest_price": 910,
         "price_currency": "USD",
         "cost_level": "premium",
-        "notes": "Registration page shows tiered pricing by date: PRO Pass $610-$1,215, PREMIUM Pass $1,325-$2,650. Discounts: 25% off groups of 3+, 30% off student/government. Via Eventbrite."
+        "notes": "PRO Pass (3-day) tiered early-bird via cloudxconf.com/register; current lowest available tier as of 2026-07-09 is $910 (deadline Jul 24). Earlier tiers $610/$670/$730 (Apr 10/May 8/Jun 26) have passed; rises to $1,095 (Aug 31) and $1,215 (Sep 3). PREMIUM/VIP pass from $1,325. OPEN limited-access pass on sale Jul 20 (price TBA). Discounts: 25% group of 3+, 30% student, 30% government."
       }
     },
     {
@@ -9693,10 +9695,11 @@
       "event_type": "conference",
       "tags": [
         "data-streaming",
+        "streaming-infrastructure",
         "kafka",
-        "real-time",
-        "ai-infrastructure",
-        "cloud-native"
+        "flink",
+        "pulsar",
+        "ai-infrastructure"
       ],
       "source": "adatosystems.com",
       "location": {
@@ -9705,14 +9708,14 @@
         "country": "United States",
         "country_code": "US",
         "is_online": false,
-        "venue": null
+        "venue": "Hotel Nikko"
       },
       "cfp": {
         "has_cfp": true,
         "cfp_url": "https://sessionize.com/data-streaming-summit-san-francisco-2026",
         "cfp_open_date": null,
         "cfp_close_date": "2026-07-18",
-        "cfp_timezone": null,
+        "cfp_timezone": "America/Los_Angeles",
         "cfp_status": "closing_soon"
       },
       "cost": {
