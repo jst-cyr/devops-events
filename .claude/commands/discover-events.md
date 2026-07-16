@@ -3,9 +3,20 @@ description: Run the full 7-phase event discovery + reconciliation pipeline for 
 argument-hint: [YYYY-MM-DD]  (defaults to today)
 ---
 
-You are the orchestrator for the `devops-events` discovery pipeline.
+You are the orchestrator for the `devops-events` discovery pipeline. This is the **weekly refresh**:
+the user typically triggers it with a message like *"another week has gone by, time to update the
+events — crawl our sources, de-dupe, evaluate for fit, I'll review the files after."* Treat any such
+phrasing as a request to run this command.
 
 **Run date:** `$1` — if empty, use today's date from session context. Call it `<DATE>` below.
+
+**Ad-hoc sources (optional):** If the user pasted one or more event URLs into their message ("someone
+sent me this event…", "also check this CFP…"), treat each as an extra Phase-4 source: enrich and
+validate it alongside the crawled sources, subject to the same filters. Note it in the final summary.
+
+**This run stops at candidate files for the user's review — it never merges into `data/events.json`.**
+See "Review handoff" at the end. Merging is the user's deliberate follow-up via `/apply-candidates`
+and `/apply-updates`.
 
 Read [AGENTS.md](../../AGENTS.md) and
 [docs/prompt-templates/events-source-analysis-agent-prompt.md](../../docs/prompt-templates/events-source-analysis-agent-prompt.md)
@@ -35,6 +46,23 @@ Read `data/dev-events-<DATE>.json`. Apply the inclusion/exclusion and geographic
 AGENTS.md (Phase 2) and the prompt template. Produce a shortlist of net-new, relevant,
 geographically eligible events, deduped against `data/events.json`. Record the filtering counts
 (`total_extracted`, `excluded_geography`, `excluded_relevance`, `already_tracked`, `shortlisted`).
+
+**Durable exclusions (recurring — apply every run):**
+
+- **Geography** comes from [config/excluded-geographies.json](../../config/excluded-geographies.json).
+  If a new out-of-scope country appears in the shortlist (past examples: China, Kazakhstan, Nigeria,
+  Dominican Republic), add it to that config *and* remove it from the candidates — don't just delete
+  it this once. For borderline geographies, **flag them for the user rather than silently including**.
+- **Single-project / single-vendor / single-tool events** (past examples: SwampUP, KubeVirt,
+  OpenTofu Day, EnvoyCon, Dapr Day, Xen Summit, P99 Conf, IBM TechXchange, vslive.com, API World,
+  Accelerate Chicago) are out of scope and are filtered durably by the `EXCLUDED_TOPIC_PATTERN`
+  regex in [scripts/reconcile-events.py](../../scripts/reconcile-events.py) (applied in Phase 6 via
+  `is_excluded_event`). When the user rejects a *new* recurring brand during review, **add it to
+  that regex** — prefer a durable key (the event's domain such as `vslive.com`, or the project
+  name such as `kubevirt`) so `<name> 2027` doesn't resurface next year. Then re-run
+  `reconcile-events.py` so it drops from the candidates. This is the sanctioned way to extend
+  exclusions; it is not an unrequested script change.
+- When in doubt on relevance, **flag for review — do not silently include.**
 
 ## Phase 3 — Enrichment (parallel subagents)
 
@@ -77,6 +105,17 @@ python scripts/reconcile-events.py --run-date <DATE> --input-file data/validated
 Produces `data/events-candidates.json`, `data/events-updates.json`, and
 `data/events-overlap-review.json`.
 
+**After reconciliation, run these recurring checks (the user asks for both most weeks):**
+
+1. **Candidate overlap audit** — check `data/cfp-candidates.json` against
+   `data/events-candidates.json` for the same event appearing in both (normalize `event_url` by
+   lowercasing and stripping the trailing `/`; also compare `name + start_date + country`). Report
+   any overlaps and merge/deduplicate them.
+2. **Reclassify already-tracked events as updates** — if a candidate already exists in
+   `data/events.json`, it should not be re-inserted as a new candidate. Move it to
+   `data/events-updates.json` (with `target.dataset = "events"`) capturing only the changed fields,
+   and remove it from `data/events-candidates.json`.
+
 ## Phase 7 — Cost refresh (agent judgment)
 
 For existing `data/events.json` records with missing or free-marked cost, verify pricing per
@@ -88,4 +127,20 @@ evidence-backed cost changes to `data/events-updates.json` with `target.dataset 
 Produce the markdown summary required by the prompt template ("Required outputs" + "Quality
 checks"): per-source counts (`discovered`, `filtered`, `matched`, `new`, `failed`), the dev.events
 Phase-2 counts, an overlap audit for `events-candidates.json`, and the run status (mark
-incomplete if any phase was blocked). Confirm which data files were written.
+incomplete if any phase was blocked). Confirm which data files were written, and confirm the changes
+were actually saved to disk (the user has been burned by unsaved changes — verify, don't assume).
+
+## Review handoff — STOP here
+
+Do **not** merge into `data/events.json`. This command ends by producing candidate files for the
+user's manual review. In the summary, tell the user their next steps:
+
+1. Review `data/events-candidates.json` and `data/cfp-candidates.json`; delete anything unwanted.
+   Call out any borderline geographies, or single-project/vendor/tool events, that were flagged for
+   their decision.
+2. When ready, they run `/apply-candidates` to merge the reviewed candidates into `data/events.json`.
+3. Then `/apply-updates` to apply the field-level patches in `data/events-updates.json`.
+
+If the user rejects an event during review for a reason that will recur (out-of-scope geography, a
+single-project/vendor/tool brand, an annual event that shouldn't return next year), persist that as a
+durable exclusion (see Phase 2) rather than a one-off deletion.
