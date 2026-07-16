@@ -10210,6 +10210,386 @@
       "source": "everythingopen.au",
       "notes": "USER-FLAGGED (manually added post-reconcile). Linux Australia (successor to linux.conf.au). Event 20-22 Jan 2027 falls just past the 180-day event window (ends 2027-01-04) so reconcile-events.py auto-skipped it, but it QUALIFIES via CFP: Specialist Track CFP closes 2026-07-13 (within the 56-day CFP window). Validated relevant (Linux/open-source/infrastructure). CFP is imminent.",
       "created_at": "2026-07-09T00:00:00Z"
+    },
+    {
+      "name": "DevOpsDays Philadelphia",
+      "event_url": "https://devopsdays.org/events/2026-philadelphia/welcome/",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "source": "dev.events",
+      "tags": [
+        "devops"
+      ],
+      "location": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; registration page placeholder only. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://devopsdays.org/events/2026-philadelphia/propose/",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. CFP deadline TBD; not inferred from event date.",
+      "id": "devopsdays-philadelphia-2026"
+    },
+    {
+      "name": "DevOpsDays Boston",
+      "event_url": "https://devopsdays.org/events/2026-boston/welcome/",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "source": "dev.events",
+      "tags": [
+        "devops"
+      ],
+      "location": {
+        "city": "Boston",
+        "region": "Massachusetts",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Microsoft NERD Center, 1 Memorial Drive, Cambridge, MA"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://devopsdays.org/events/2026-boston/welcome/",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. Welcome page shows CFP OPEN, no Boston-specific deadline.",
+      "id": "devopsdays-boston-2026"
+    },
+    {
+      "name": "DevOpsDays Warsaw",
+      "event_url": "https://devopsdays.org/events/2026-warsaw/welcome/",
+      "start_date": "2026-11-23",
+      "end_date": "2026-11-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "source": "dev.events",
+      "tags": [
+        "devops"
+      ],
+      "location": {
+        "city": "Warsaw",
+        "region": "Masovian",
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": "Sound Garden Hotel"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://devopsdays.org/events/2026-warsaw/propose/",
+        "cfp_open_date": "2026-07-07",
+        "cfp_close_date": "2026-08-30",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. CFP open, closes 2026-08-30.",
+      "id": "devopsdays-warsaw-2026"
+    },
+    {
+      "name": "AWS Community Day NL 2026",
+      "event_url": "https://awscommunityday.nl/2026/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "source": "dev.events",
+      "tags": [
+        "aws",
+        "cloud",
+        "community"
+      ],
+      "location": {
+        "city": "Utrecht",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "100% sponsor-funded; free to attend (pre-registration). Confirmed on official site."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://awscommunityday.nl/2026/cfp/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "Europe/Amsterdam",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Canonical URL resolved via search to official site. CFP closes 2026-07-31 (closing soon).",
+      "id": "aws-community-day-nl-2026"
+    },
+    {
+      "name": "AWS Community Day 2026 Switzerland",
+      "event_url": "https://www.awsug.ch/",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "source": "dev.events",
+      "tags": [
+        "aws",
+        "cloud",
+        "cloud-native",
+        "serverless",
+        "community"
+      ],
+      "location": {
+        "city": "Dietlikon",
+        "region": "Zurich",
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": "Pathé Dietlikon, Moorstrasse 2, 8305 Dietlikon"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 12,
+        "price_currency": "CHF",
+        "cost_level": "budget",
+        "notes": "Blind Bird 12 CHF (until 2026-08-10), Early Bird 19 CHF, Regular 42 CHF. Source tickets.awsug.ch/event/acd2026."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/aws-community-day-2026-switzerland/",
+        "cfp_open_date": "2026-07-07",
+        "cfp_close_date": "2026-08-10",
+        "cfp_timezone": "Europe/Zurich",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL resolved via search to official AWS UG Switzerland site. CFP open, closes 2026-08-10.",
+      "id": "aws-community-day-2026-switzerland-2026"
+    },
+    {
+      "name": "OpenFest 2026",
+      "event_url": "https://www.openfest.org/2026/en/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "open-source",
+        "free-software",
+        "open-culture"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Sofia",
+        "region": null,
+        "country": "Bulgaria",
+        "country_code": "BG",
+        "is_online": false,
+        "venue": "Interpred Convention Center (INTERPRED WTC Sofia), 36 Dragan Tsankov Street"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "OpenFest is historically a free community open-source festival. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.openfest.org/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-01",
+        "cfp_timezone": "Europe/Sofia",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL resolved via search to official site. CFP open, closes 2026-10-01.",
+      "id": "openfest-2026"
+    },
+    {
+      "name": "Code Europe 2026",
+      "event_url": "https://codeeurope.pl",
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-15",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "source": "dev.events",
+      "location": {
+        "city": "Warsaw",
+        "region": "Masovian",
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": true,
+        "venue": "Stadion Legii"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Tiered rising pools; lowest observed EUR 49 (student/Day-1 online pass). No free option."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://codeeurope.pl/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-06-30",
+        "cfp_timezone": "CEST",
+        "cfp_status": "closed"
+      },
+      "tags": [
+        "devops",
+        "cloud",
+        "platform-engineering",
+        "cloud-native",
+        "kubernetes",
+        "ai",
+        "software-architecture"
+      ],
+      "notes": "Canonical URL extracted via explicit outbound link. Hybrid: Day 1 online, Day 2 in-person Warsaw. Tracks incl Cloud/DevOps/Platform Eng. CFP closed 2026-06-30.",
+      "id": "code-europe-2026"
+    },
+    {
+      "name": "Tech Show Paris 2026",
+      "event_url": "https://www.techshowparis.fr",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "source": "dev.events",
+      "location": {
+        "city": "Paris",
+        "region": "Ile-de-France",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "Paris Expo Porte de Versailles, Hall 5"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free for IT decision-makers from end-user orgs (single badge across 5 co-located shows). Solution/service-provider commercial roles pay fees."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.techshowparis.fr/programme/devenir-conferencier",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "tags": [
+        "cloud",
+        "devops",
+        "security",
+        "cloud-native",
+        "data",
+        "ai",
+        "infrastructure"
+      ],
+      "notes": "Canonical URL extracted via explicit outbound link. Umbrella of 5 sub-expos incl DevOps Live + Cloud & AI Infrastructure + Cloud & Cyber Security. DATE CORRECTED to 2026-11-18/19 (dev.events had Oct).",
+      "id": "tech-show-paris-2026"
+    },
+    {
+      "name": "AI Infrastructure Field Day 6",
+      "event_url": "https://techfieldday.com/event/aiifd6/",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-05",
+      "delivery": "hybrid",
+      "event_type": "other",
+      "tags": [
+        "ai-infrastructure",
+        "infrastructure",
+        "cloud"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "San Jose",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": true,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Invite-only delegate event, no attendee ticket; sessions livestreamed free."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Phase-4 techfieldday.com. AI *infrastructure* focus. Invite-only. FLAG: invite-only format.",
+      "id": "ai-infrastructure-field-day-6-2026"
+    },
+    {
+      "name": "Tech Field Day at KubeCon North America 2026",
+      "event_url": "https://techfieldday.com/event/kubecon26/",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-11",
+      "delivery": "in_person",
+      "event_type": "other",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "infrastructure"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": "Salt Lake City",
+        "region": "Utah",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Salt Palace Convention Center"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Tech Field Day Extra alongside KubeCon NA; no separate ticket."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Phase-4 techfieldday.com. Co-located w/ KubeCon NA 2026. FLAG: invite-only format.",
+      "id": "tech-field-day-at-kubecon-north-america-2026"
     }
   ]
 }
