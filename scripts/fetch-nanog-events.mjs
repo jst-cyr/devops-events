@@ -9,7 +9,7 @@
 // Output: data/nanog-events-<date>.json
 
 import { writeFileSync } from "node:fs";
-import { get as httpsGet } from "node:https";
+import { fetchText } from "./lib/browser-fetch.mjs";
 
 const SOURCE = "nanog.org";
 const MIRROR_PREFIX = "https://r.jina.ai/http://nanog.org";
@@ -39,32 +39,10 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function fetchText(url) {
-  return new Promise((resolve, reject) => {
-    const req = httpsGet(
-      url,
-      { headers: { "User-Agent": "Mozilla/5.0 (compatible; devops-events-bot/1.0)" } },
-      (res) => {
-        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-          return resolve(fetchText(new URL(res.headers.location, url).href));
-        }
-        if (res.statusCode !== 200) {
-          return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
-        }
-
-        const chunks = [];
-        res.on("data", (chunk) => chunks.push(chunk));
-        res.on("end", () => resolve(Buffer.concat(chunks).toString("utf-8")));
-      }
-    );
-
-    req.on("error", reject);
-    req.setTimeout(30_000, () => {
-      req.destroy();
-      reject(new Error(`Timeout fetching ${url}`));
-    });
-  });
-}
+// fetchText is imported from ./lib/browser-fetch.mjs: it tries node https first
+// and transparently falls back to curl.exe with a full browser header set +
+// browser TLS fingerprint when a host blocks automated clients (nanog.org
+// returns 403 to node's https even with browser headers; curl.exe passes).
 
 function parseMonthDate(dateText) {
   const parsed = new Date(`${dateText} UTC`);
