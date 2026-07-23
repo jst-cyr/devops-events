@@ -3965,8 +3965,11 @@
         "cfp_status": "unknown"
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free"
+        "is_free": false,
+        "lowest_price": 39.99,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Manual cost check (2026-07-23): early-bird tickets available at €39.99 via the Eventbrite checkout (https://www.eventbrite.nl/e/dutch-cloud-native-day-2026-tickets-1988815582946). Price is rendered client-side by Eventbrite's JS widget, so the automated static-HTML fetch could not see it; confirmed by a human in-browser. Workshop tickets go on sale after the workshop programme is announced. No-refunds policy; sponsored diversity tickets on request."
       }
     },
     {
