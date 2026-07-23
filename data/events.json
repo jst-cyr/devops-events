@@ -10639,10 +10639,11 @@
       "delivery": "in_person",
       "location": {
         "city": "Kansas City",
-        "region": "MO",
+        "region": "Missouri",
         "country": "United States",
         "country_code": "US",
-        "is_online": false
+        "is_online": false,
+        "venue": "Andretti Indoor Karting, Overland Park, Kansas"
       },
       "cfp": {
         "has_cfp": false,
@@ -10675,10 +10676,11 @@
       "delivery": "in_person",
       "location": {
         "city": "Pittsburgh",
-        "region": "PA",
+        "region": "Pennsylvania",
         "country": "United States",
         "country_code": "US",
-        "is_online": false
+        "is_online": false,
+        "venue": "Hofbräuhaus, Pittsburgh, Pennsylvania"
       },
       "cfp": {
         "has_cfp": false,
@@ -10711,10 +10713,11 @@
       "delivery": "in_person",
       "location": {
         "city": "Omaha",
-        "region": "NE",
+        "region": "Nebraska",
         "country": "United States",
         "country_code": "US",
-        "is_online": false
+        "is_online": false,
+        "venue": "Smash Park, La Vista, Nebraska"
       },
       "cfp": {
         "has_cfp": false,
@@ -10747,10 +10750,11 @@
       "delivery": "in_person",
       "location": {
         "city": "St. Louis",
-        "region": "MO",
+        "region": "Missouri",
         "country": "United States",
         "country_code": "US",
-        "is_online": false
+        "is_online": false,
+        "venue": "Chicken & Pickle, St.Charles, Missouri"
       },
       "cfp": {
         "has_cfp": false,
@@ -10783,10 +10787,11 @@
       "delivery": "in_person",
       "location": {
         "city": "Philadelphia",
-        "region": "PA",
+        "region": "Pennsylvania",
         "country": "United States",
         "country_code": "US",
-        "is_online": false
+        "is_online": false,
+        "venue": "Conshohocken Brewing Co., King of Prussia, Pennsylvania"
       },
       "cfp": {
         "has_cfp": false,
