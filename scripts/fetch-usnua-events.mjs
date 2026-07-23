@@ -129,18 +129,24 @@ function parseUsnuaDate(raw) {
 
 /**
  * Extract all upcoming event URLs from the usnua.com homepage HTML.
- * usnua.com serves absolute URLs like:
- *   https://www.usnua.com/mnnug-spring-event-2026?hsLang=en
- * associated with RSVP buttons in the Upcoming Events section.
  *
- * Strategy: find all absolute usnua.com hrefs that match the year-slug
- * pattern (e.g. *-202X), deduplicate, and strip tracking params.
+ * As of the 2026 site rearchitecture, usnua.com renders upcoming events as
+ * inline cards on the homepage (no separate listing page). Each event card's
+ * RSVP button links to a detail page under the /live/ path, e.g.:
+ *   https://www.usnua.com/live/panug-pittsburgh-inaugural-event-2026?hsLang=en
+ *   https://www.usnua.com/live/monug-st.-louis-fall-event-2026   (note the "." in the slug)
+ * Non-event nav cards (about-us, community, membership) have no /live/ segment
+ * and no -YYYY suffix, so requiring both cleanly excludes them.
+ *
+ * Strategy: find absolute usnua.com /live/ hrefs ending in a year-slug
+ * (e.g. -2026), deduplicate, and strip tracking params.
  */
 function extractEventLinks(html) {
   const urls = new Set();
 
-  // Match absolute usnua.com links with year-slug patterns (e.g. -2026, -2027)
-  const re = /href="(https:\/\/www\.usnua\.com\/[a-z0-9][a-z0-9-]*-202\d[^"]*)"/gi;
+  // /live/<slug>-YYYY. Slug may contain dots (e.g. "st.-louis"), so the char
+  // class includes ".". The trailing "-20\d\d" (event year) excludes nav links.
+  const re = /href="(https:\/\/www\.usnua\.com\/live\/[a-z0-9][a-z0-9.-]*-20\d\d[^"]*)"/gi;
   let m;
   while ((m = re.exec(html)) !== null) {
     // Strip query params (e.g. ?hsLang=en) to get the canonical event URL
@@ -239,12 +245,16 @@ function parseDetailPage(html, _eventUrl) {
 
 /**
  * Build a slug-based event ID from a full usnua.com URL.
- * e.g. "https://www.usnua.com/mnnug-spring-event-2026" → "usnua-mnnug-spring-event-2026"
+ * The current site nests event pages under /live/; strip that prefix so IDs
+ * stay in the historical "usnua-<slug>" form (keeps dedup stable against
+ * previously-tracked events.json records).
+ * e.g. "https://www.usnua.com/live/monug-st.-louis-fall-event-2026"
+ *        → "usnua-monug-st.-louis-fall-event-2026"
  */
 function buildEventId(url) {
   try {
     const path = new URL(url).pathname;
-    return "usnua-" + path.replace(/^\//, "").replace(/[?#].*$/, "");
+    return "usnua-" + path.replace(/^\//, "").replace(/^live\//, "").replace(/[?#].*$/, "");
   } catch {
     return "usnua-" + url.replace(/.*\//, "");
   }
