@@ -10810,6 +10810,80 @@
         "cost_level": "free",
         "notes": "NANOG regional NUG meetups are free to attend (registration required). Confirmed 2026-07-23."
       }
+    },
+    {
+      "id": "usnua-nynug-buffalo-summer-event-2026",
+      "name": "(NY)NUG Buffalo Summer Event 2026",
+      "event_url": "https://www.usnua.com/live/nynug-buffalo-summer-event-2026",
+      "start_date": "2026-08-13",
+      "end_date": "2026-08-13",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Orchard Park",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Wayland Brewing Company",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community NUG meetup. No ticket pricing on event page (USNUA, checked 2026-07-23)."
+      },
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup, sourced from usnua.com (the canonical NUG source; scripts/fetch-usnua-events.mjs). Net-new this cycle — not surfaced by the nanog.org Phase-4 crawl."
+    },
+    {
+      "id": "usnua-mnnug-summer-event-2026",
+      "name": "(MN)NUG Summer Event 2026",
+      "event_url": "https://www.usnua.com/live/mnnug-summer-event-2026",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-19",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "St Paul",
+        "region": "Minnesota",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Urban Growler",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community NUG meetup. No ticket pricing on event page (USNUA, checked 2026-07-23)."
+      },
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup, sourced from usnua.com (the canonical NUG source; scripts/fetch-usnua-events.mjs). Net-new this cycle — not surfaced by the nanog.org Phase-4 crawl."
     }
   ]
 }
