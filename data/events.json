@@ -10593,6 +10593,223 @@
       },
       "notes": "Phase-4 techfieldday.com. Co-located w/ KubeCon NA 2026. FLAG: invite-only format.",
       "id": "tech-field-day-at-kubecon-north-america-2026"
+    },
+    {
+      "name": "Linux Day Milano",
+      "event_url": "https://linuxdaymilano.org/",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "location": {
+        "city": "Milan",
+        "region": "Lombardy",
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Italy's free national GNU/Linux event; no ticket price (checked 2026-07-23)."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://survey.linux.it/index.php/831181?lang=it",
+        "cfp_close_date": "2026-09-20",
+        "cfp_timezone": "Europe/Rome",
+        "cfp_status": "open"
+      },
+      "tags": [
+        "linux",
+        "open-source",
+        "free-software",
+        "community"
+      ],
+      "source": "dev.events",
+      "notes": "Free Linux community event, Politecnico di Milano.",
+      "id": "linux-day-milano-2026-10-24",
+      "event_type": "conference"
+    },
+    {
+      "name": "(MO)NUG - Kansas City Summer Event 2026",
+      "event_url": "https://nanog.org/events/monug-kansas-city-summer-event-2026/",
+      "start_date": "2026-07-23",
+      "end_date": "2026-07-23",
+      "delivery": "in_person",
+      "location": {
+        "city": "Kansas City",
+        "region": "MO",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "nanog.org",
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup. Content gate completed by fetching nanog.org with full browser headers (bare UA gets 403; Chrome UA + Accept/Referer/Sec-Fetch-Mode + --compressed returns 200). Confirmed network-operations focus (presentations/agenda, not purely social). Short evening meetup.",
+      "id": "mo-nug-kansas-city-summer-event-2026-2026-07-23",
+      "event_type": "meetup",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "NANOG regional NUG meetups are free to attend (registration required). Confirmed 2026-07-23."
+      }
+    },
+    {
+      "name": "(PA)NUG Pittsburgh Inaugural Event 2026",
+      "event_url": "https://nanog.org/events/panug-pittsburgh-inaugural-event-2026/",
+      "start_date": "2026-07-23",
+      "end_date": "2026-07-23",
+      "delivery": "in_person",
+      "location": {
+        "city": "Pittsburgh",
+        "region": "PA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "nanog.org",
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup. Content gate completed by fetching nanog.org with full browser headers (bare UA gets 403; Chrome UA + Accept/Referer/Sec-Fetch-Mode + --compressed returns 200). Confirmed network-operations focus (presentations/agenda, not purely social). Short evening meetup.",
+      "id": "pa-nug-pittsburgh-inaugural-event-2026-2026-07-23",
+      "event_type": "meetup",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "NANOG regional NUG meetups are free to attend (registration required). Confirmed 2026-07-23."
+      }
+    },
+    {
+      "name": "(NE)NUG Omaha Summer Event 2026",
+      "event_url": "https://nanog.org/events/nenug-omaha-summer-event-2026/",
+      "start_date": "2026-08-06",
+      "end_date": "2026-08-06",
+      "delivery": "in_person",
+      "location": {
+        "city": "Omaha",
+        "region": "NE",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "nanog.org",
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup. Content gate completed by fetching nanog.org with full browser headers (bare UA gets 403; Chrome UA + Accept/Referer/Sec-Fetch-Mode + --compressed returns 200). Confirmed network-operations focus (presentations/agenda, not purely social). Short evening meetup.",
+      "id": "ne-nug-omaha-summer-event-2026-2026-08-06",
+      "event_type": "meetup",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "NANOG regional NUG meetups are free to attend (registration required). Confirmed 2026-07-23."
+      }
+    },
+    {
+      "name": "(MO)NUG - St. Louis Fall Event 2026",
+      "event_url": "https://nanog.org/events/monug-st-louis-fall-event-2026/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-23",
+      "delivery": "in_person",
+      "location": {
+        "city": "St. Louis",
+        "region": "MO",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "nanog.org",
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup. Content gate completed by fetching nanog.org with full browser headers (bare UA gets 403; Chrome UA + Accept/Referer/Sec-Fetch-Mode + --compressed returns 200). Confirmed network-operations focus (presentations/agenda, not purely social). Short evening meetup.",
+      "id": "mo-nug-st-louis-fall-event-2026-2026-09-23",
+      "event_type": "meetup",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "NANOG regional NUG meetups are free to attend (registration required). Confirmed 2026-07-23."
+      }
+    },
+    {
+      "name": "(PA)NUG Philadelphia Fall Event 2026",
+      "event_url": "https://nanog.org/events/panug-philadelphia-fall-event-2026/",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-14",
+      "delivery": "in_person",
+      "location": {
+        "city": "Philadelphia",
+        "region": "PA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "tags": [
+        "network-engineering",
+        "network-operations",
+        "networking",
+        "regional-meetup"
+      ],
+      "source": "nanog.org",
+      "notes": "Regional NANOG User Group (NUG) network-operator meetup. Content gate completed by fetching nanog.org with full browser headers (bare UA gets 403; Chrome UA + Accept/Referer/Sec-Fetch-Mode + --compressed returns 200). Confirmed network-operations focus (presentations/agenda, not purely social). Short evening meetup.",
+      "id": "pa-nug-philadelphia-fall-event-2026-2026-10-14",
+      "event_type": "meetup",
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "NANOG regional NUG meetups are free to attend (registration required). Confirmed 2026-07-23."
+      }
     }
   ]
 }
