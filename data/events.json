@@ -4037,7 +4037,8 @@
         "cfp_status": "unknown"
       },
       "notes": "Cloud community event series across the Baltics (Estonia, Latvia, Lithuania). Topics: cloud migrations, DevOps, AI adoption.",
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "baltic-connect-tallinn-2026"
     },
     {
       "name": "Mastering GitOps",
@@ -4071,7 +4072,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "mastering-gitops-2026"
     },
     {
       "id": "usnua-ohnug-cleveland-summer-event-2026",
@@ -4140,7 +4142,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "tailscaleup-2026"
     },
     {
       "name": "Observability 2026",
@@ -4174,7 +4177,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "observability-2026"
     },
     {
       "name": "AI Infra Summit",
@@ -4208,7 +4212,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "ai-infra-summit-2026"
     },
     {
       "name": "meshcloud Con '26",
@@ -4242,7 +4247,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "meshcloud-con-26-2026"
     },
     {
       "name": "Devopsdays Halifax",
@@ -4276,7 +4282,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "devopsdays-halifax-2026"
     },
     {
       "name": "NIC 2026",
@@ -4310,7 +4317,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "nic-2026"
     },
     {
       "name": "ServerlessDays 2026",
@@ -4379,43 +4387,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
-    },
-    {
-      "name": "Devopsdays Istanbul 2026",
-      "event_url": "https://devopsdays.istanbul/",
-      "start_date": "2026-10-24",
-      "end_date": "2026-10-24",
-      "delivery": "in_person",
-      "event_type": "conference",
-      "tags": [
-        "devops"
-      ],
-      "source": "dev.events",
-      "location": {
-        "city": "Istanbul",
-        "region": null,
-        "country": "Turkey",
-        "country_code": "TR",
-        "is_online": false,
-        "venue": null
-      },
-      "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
-      },
-      "cfp": {
-        "has_cfp": true,
-        "cfp_url": "https://talks.devopsdays.org/devopdays-istanbul-2026/cfp",
-        "cfp_open_date": null,
-        "cfp_close_date": null,
-        "cfp_timezone": null,
-        "cfp_status": "unknown"
-      },
-      "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "cloud-native-days-poland-2026"
     },
     {
       "name": "Cloud Native Days Norway",
@@ -4449,7 +4422,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "cloud-native-days-norway-2026"
     },
     {
       "name": "PlatformCon Live Day Sydney",
@@ -4483,7 +4457,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "platformcon-live-day-sydney-2026"
     },
     {
       "name": "Security Field Day 16",
@@ -4522,7 +4497,8 @@
         "cfp_status": "unknown"
       },
       "notes": "Enterprise security focus: SASE, cybersecurity operations. Source: techfieldday.com/event/xfd16/",
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "security-field-day-16-2026"
     },
     {
       "name": "Cloud Native Summit - APAC 2026",
@@ -4556,7 +4532,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "cloud-native-summit-apac-2026"
     },
     {
       "name": "SREday Amsterdam 2026 Q4",
@@ -4590,7 +4567,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "sreday-amsterdam-2026-q4"
     },
     {
       "name": "Platform Engineering 2026",
@@ -4624,7 +4602,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "platform-engineering-2026"
     },
     {
       "name": "Texas Linux Fest",
@@ -4658,7 +4637,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "texas-linux-fest-2026"
     },
     {
       "name": "CloudCon SYD 2026",
@@ -4692,7 +4672,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "cloudcon-syd-2026"
     },
     {
       "name": "Open Source SecurityCon North America",
@@ -4727,7 +4708,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "open-source-securitycon-north-america-2026"
     },
     {
       "name": "Cloud Native AI & Inference Day North America",
@@ -4762,7 +4744,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "cloud-native-ai-and-inference-day-north-america-2026"
     },
     {
       "name": "Platform Engineering Day North America",
@@ -4797,7 +4780,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "platform-engineering-day-north-america-2026"
     },
     {
       "name": "Observability Day North America",
@@ -4832,7 +4816,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "observability-day-north-america-2026"
     },
     {
       "name": "Kubernetes on Edge Day North America",
@@ -4867,7 +4852,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "kubernetes-on-edge-day-north-america-2026"
     },
     {
       "name": "CLC 26",
@@ -4901,7 +4887,8 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "clc-26-2026"
     },
     {
       "name": "Open Source Monitoring Conference (OSMC) 2026",
@@ -4940,7 +4927,8 @@
         "cfp_status": "open"
       },
       "notes": "CFP closes Jun 30. Included because CFP is within 56-day window. Open source monitoring: Icinga, Nagios, Zabbix, Grafana, Prometheus.",
-      "last_verified_at": "2026-05-15T00:00:00Z"
+      "last_verified_at": "2026-05-15T00:00:00Z",
+      "id": "open-source-monitoring-conference-osmc-2026"
     },
     {
       "id": "cfp-candidate-cloud-native-denmark",
@@ -10889,6 +10877,88 @@
         "notes": "Free to attend; vendor-sponsored community NUG meetup. No ticket pricing on event page (USNUA, checked 2026-07-23)."
       },
       "notes": "Regional NANOG User Group (NUG) network-operator meetup, sourced from usnua.com (the canonical NUG source; scripts/fetch-usnua-events.mjs). Net-new this cycle — not surfaced by the nanog.org Phase-4 crawl."
+    },
+    {
+      "name": "SREday San Francisco 2026 Q4",
+      "event_url": "https://sreday.com/2026-san-francisco-q4/",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Harness.io SF HQ, 55 Stockton St, San Francisco, CA 94108"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Tiered in-person tickets confirmed via Luma pricing API 2026-07-23 (all USD, in-person only): Student/Job Seeker $49 (restricted), Self-funding $99, Early Bird General Admission $199 (until 2026-08-31), General Admission $299, plus a free approval-gated Community Hero tier. lowest_price reflects the lowest published purchasable ticket ($49 Student/Job Seeker); lowest general admission is $199 early bird / $299 regular. Source: https://api.lu.ma/url?url=sreday-san-francisco-2026-Q4 (registration via https://luma.com/event/evt-ygJpk1HZJ2lU7Xm)."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-san-francisco-q4",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
+      },
+      "tags": [
+        "sre",
+        "reliability",
+        "observability",
+        "devops"
+      ],
+      "source": "sreday.com",
+      "notes": "Canonical URL confirmed loading (official SREday page, not dev.events). Registration handled via Luma (https://luma.com/event/evt-ygJpk1HZJ2lU7Xm). Dedicated Site Reliability Engineering conference; clearly in scope. CFP close date not published in any fetchable form (cfp.ninja JS-rendered; Luma exposes no CFP deadline) — status open, close date unknown.",
+      "id": "sreday-san-francisco-2026-q4-2026-10-02",
+      "timezone": "America/Los_Angeles",
+      "last_verified_at": "2026-07-23T00:00:00Z"
+    },
+    {
+      "name": "DDD Perth",
+      "event_url": "https://dddperth.com/",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-03",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "Perth",
+        "region": "Western Australia",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": "Optus Stadium"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing research performed 2026-07-23 but no definitive 2026 price is published. DDD Perth is a deliberately low-cost/subsidised community non-profit conference (historically ~AUD $50; sponsors keep tickets affordable; ticket covers entry, food and coffee). The /tickets page (https://dddperth.com/tickets) renders only 'Loading ticket form...' and loads a JavaScript-embedded Tito widget; the Tito checkout (https://ti.to/dddperth/2026) exposes no price to a non-JS fetch; the FAQ (https://dddperth.com/faq) cites affordability and financial-assistance tickets but no dollar figure; 10times returned HTTP 403; web searches surfaced no published 2026 amount. Recorded as free-until-confirmed per data-model Unknown pricing rule. Currency, when published, is AUD."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://dddperth.com/call-for-presentations",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "tags": [
+        "software-development",
+        "devops",
+        "cloud",
+        "community"
+      ],
+      "source": "dddperth.com",
+      "notes": "Added at user request (ad-hoc source). One-day community software conference at Optus Stadium, Perth (Sat 2026-10-03). Canonical URL confirmed via direct fetch (loads, shows 3 Oct 2026 at Optus Stadium). CFP CLOSED; event in agenda-voting phase, agenda published 24 Aug 2026. RELEVANCE CAVEAT for scope: broad general-developer conference (audience-voted agenda) with only minority DevOps/SRE/platform/observability content — low-to-moderate relevance to a strictly DevOps feed. Included per explicit user request.",
+      "id": "ddd-perth-2026-10-03",
+      "last_verified_at": "2026-07-23T00:00:00Z"
     }
   ]
 }
