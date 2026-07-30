@@ -2476,10 +2476,11 @@
       },
       "notes": "Canonical URL manually resolved; dev.events detail page timed out during enrichment. Topics: GitOps, Kubernetes, CI/CD, SRE, DevOps.",
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published yet; assumed free until confirmed"
+        "cost_level": "budget",
+        "notes": "Paid event confirmed 2026-07-30. FAQ references keeping 'the entry price low' and a student '50% discount off the regular ticket price'; girlcode.dev lists 'GIRLCODE25' for 25% off tickets. Exact price behind a JS ticketing widget (not in crawlable HTML). Currency EUR (Hamburg). cost_level=budget by judgement; exact lowest_price unresolved. Previously marked free in error.",
+        "price_currency": "EUR"
       }
     },
     {
@@ -4198,10 +4199,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "standard",
+        "lowest_price": 447,
+        "notes": "Checked https://ai-infra-summit.com/2026-registration on 2026-07-30 (canonical resolves from aihwedgesummit.com via 302). Paid: Expo $447-$547; Full-Access $2,697-$3,297; VIP and Start-Up rates also offered. Lowest generally-purchasable ticket = Expo $447 (standard). A FREE 'Enterprise End-User' ticket exists but is gated (enterprise end-users / hyperscaler technical roles only, eligibility-verified); free Press ticket requires accreditation. General attendance is paid, so is_free=false. Previously marked free in error.",
+        "price_currency": "USD"
       },
       "cfp": {
         "has_cfp": false,
@@ -5640,9 +5642,11 @@
         "sysadmin"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "cost_level": "budget",
+        "notes": "Verified 2026-07-30 on official ticketing page https://tickets.eurobsdcon.org/eurobsdcon/brussels/ (Pretix). Paid conference incl. 21% VAT: Conference Student Limited Offer EUR 30 (14 available, subsidized), Conference Student EUR 75, Conference Individual EUR 265, Conference Business EUR 375. lowest_price = EUR 30 limited student; standard individual EUR 265. Previously marked free in error.",
+        "lowest_price": 30,
+        "price_currency": "EUR"
       },
       "event_type": "conference"
     },
@@ -7263,13 +7267,13 @@
         "cfp_url": "https://sessionize.com/owasp-global-appsec-us-2026-cfp-SF/",
         "cfp_close_date": "2026-06-29",
         "cfp_timezone": "America/Los_Angeles",
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
+        "is_free": false,
+        "cost_level": "premium",
         "lowest_price": null,
-        "notes": "Pricing not published/visible; canonical registration page https://owasp.glueup.com/event/owasp-2026-global-appsec-usa-san-francisco-ca-167174 returned HTTP 403 to automated fetch; assumed free until confirmed"
+        "notes": "Registration is 'Not Free' per event listing; GlueUp registration returned HTTP 403 so exact ticket price not extractable. Training Nov 2-4, conference Nov 5-6 are separate paid tickets. cost_level=premium by judgement for OWASP flagship."
       },
       "notes": "Canonical glueup page blocked (HTTP 403) to automated fetch; classified relevant based on OWASP Global AppSec being a well-known application security conference. CFP not verifiable.",
       "last_verified_at": "2026-06-11T00:00:00Z"
@@ -7516,10 +7520,11 @@
         "cfp_status": "closed"
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published/visible; checked https://2026.allthingsopen.org/ (Early Bird Special and 'Get Half Off Select Tickets' mentioned but no numeric price disclosed); assumed free until confirmed"
+        "is_free": false,
+        "cost_level": "budget",
+        "lowest_price": 25,
+        "notes": "General-admission passes start around USD 25-27; early-bird 50%-off tiers closed June 12/13, 2026. Register page 403 to automated fetch; lowest approximated from published starting price.",
+        "price_currency": "USD"
       }
     },
     {
@@ -10020,11 +10025,11 @@
         "venue": "IHK Haus der Wirtschaft"
       },
       "cost": {
-        "is_free": true,
+        "is_free": false,
         "lowest_price": null,
-        "price_currency": null,
-        "cost_level": "free",
-        "notes": "Ticket prices not exposed (GlueUp 403); unknown-pricing rule applied."
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Tickets page says 'Not Free'; GlueUp shop returned 403 so exact price unavailable. Diversity PreCon free with conference ticket."
       },
       "cfp": {
         "has_cfp": true,
