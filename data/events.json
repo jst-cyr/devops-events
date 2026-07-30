@@ -10964,6 +10964,476 @@
       "notes": "Added at user request (ad-hoc source). One-day community software conference at Optus Stadium, Perth (Sat 2026-10-03). Canonical URL confirmed via direct fetch (loads, shows 3 Oct 2026 at Optus Stadium). CFP CLOSED; event in agenda-voting phase, agenda published 24 Aug 2026. RELEVANCE CAVEAT for scope: broad general-developer conference (audience-voted agenda) with only minority DevOps/SRE/platform/observability content — low-to-moderate relevance to a strictly DevOps feed. Included per explicit user request.",
       "id": "ddd-perth-2026-10-03",
       "last_verified_at": "2026-07-23T00:00:00Z"
+    },
+    {
+      "name": "Tulsa AWS Community Day",
+      "event_url": "https://awsdaytulsa.com/",
+      "start_date": "2026-08-22",
+      "end_date": "2026-08-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud",
+        "security",
+        "ai",
+        "cloud-native"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Tulsa",
+        "region": "Oklahoma",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "OSU-Tulsa Conference Center"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published; Luma registration with no ticket price shown. Assumed free until confirmed (community-led AWS Community Day)."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/tulsa-aws-community-day/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Canonical URL resolved via official event website (dev.events detail page server error). CFP closes 2026-07-31 CDT.",
+      "id": "tulsa-aws-community-day-2026"
+    },
+    {
+      "name": "DevOpsDays Jakarta",
+      "event_url": "https://devopsdays.org/events/2026-jakarta/welcome/",
+      "start_date": "2026-08-27",
+      "end_date": "2026-08-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "cloud-native",
+        "platform",
+        "sre"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Jakarta",
+        "region": "Jakarta",
+        "country": "Indonesia",
+        "country_code": "ID",
+        "is_online": false,
+        "venue": "Samisara Grand Ballroom, Sopo Del Tower"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://devopsdays.org/events/2026-jakarta/propose/",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "upcoming"
+      },
+      "notes": "Canonical URL resolved via DevOpsDays convention (dev.events detail page failed). Dedicated site https://devopsdaysjkt.org/.",
+      "id": "devopsdays-jakarta-2026"
+    },
+    {
+      "name": "#nobullshit.camp 2026",
+      "event_url": "https://nobullshit.camp/",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform",
+        "cloud-native",
+        "kubernetes",
+        "leadership"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Bratislava",
+        "region": null,
+        "country": "Slovakia",
+        "country_code": "SK",
+        "is_online": false,
+        "venue": "Nová Cvernovka"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Tiered: Early Bird EUR 49, Regular EUR 99, Late EUR 149."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL via explicit outbound 'conference website' link. Speakers predetermined; no CFP.",
+      "id": "nobullshit-camp-2026"
+    },
+    {
+      "name": "Cloud Native Münster",
+      "event_url": "https://community.cncf.io/cloud-native-munster/",
+      "start_date": "2026-09-22",
+      "end_date": "2026-09-22",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "platform-engineering",
+        "iac",
+        "observability",
+        "cncf"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Münster",
+        "region": "North Rhine-Westphalia",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Explicitly free community meetup with catering; no fee. CNCF community chapter."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-munster/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-15",
+        "cfp_timezone": "Europe/Berlin",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL via CNCF community chapter page (dev.events server error). CNCF chapter meetup, CFP open.",
+      "id": "cloud-native-munster-2026"
+    },
+    {
+      "name": "OWASP LASCON 2026",
+      "event_url": "https://lascon.org/",
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "appsec",
+        "owasp",
+        "infosec",
+        "devsecops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Austin",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Norris Conference Centers - Austin"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing defers to Eventbrite; no price tiers exposed. Normally paid AppSec conf. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://lascon.org/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL to official site (dev.events outbound was an unrelated ad). Conf Oct 29-30, pre-conference workshop day Oct 27-28. OWASP Austin AppSec conference.",
+      "id": "owasp-lascon-2026"
+    },
+    {
+      "name": "ALASCA Summit 2026",
+      "event_url": "https://alasca.cloud/en/alasca-summit-2026/",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-04",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "open-source",
+        "cloud-native",
+        "cloud",
+        "openstack",
+        "openinfra",
+        "sovereign-cloud",
+        "infrastructure"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Dresden",
+        "region": "Saxony",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Mighty Twice Hotel, Königsbrücker Straße 121A, 01099 Dresden"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official page states registration is 'free of charge'."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://alasca.cloud/en/alasca-summit-2026/alasca-summit-2026-programme/alasca-summit-2026-call-for-contributions/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Canonical URL via ALASCA organizer site (dev.events server error). Sovereign/operable cloud infra (OpenStack/OpenInfra); CfC closes 2026-07-31.",
+      "id": "alasca-summit-2026"
+    },
+    {
+      "name": "OWASP BeNeLux Days 2026",
+      "event_url": "https://2026.owaspbenelux.eu/",
+      "start_date": "2026-11-26",
+      "end_date": "2026-11-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "appsec",
+        "owasp",
+        "infosec",
+        "devsecops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Utrecht",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Conference day (Nov 26) free w/ registration; Training day (Nov 27) 50 EUR. Lowest attendable price 0 EUR (free conference day)."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL via official conference site (dev.events server error). OWASP AppSec/DevSecOps conference.",
+      "id": "owasp-benelux-days-2026"
+    },
+    {
+      "name": "SREday Warsaw 2026 Q4",
+      "event_url": "https://sreday.com/2026-warsaw-q4/",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "devops",
+        "cloud",
+        "reliability",
+        "platform"
+      ],
+      "source": "sreday.com",
+      "location": {
+        "city": "Warsaw",
+        "region": "Masovian Voivodeship",
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": "Google for Startups Campus (Centrum Praskie Koneser, Plac Konesera 10, 03-736 Warsaw)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published on event page or Luma; SREday editions typically paid — re-verify when tickets go live. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-warsaw-q4",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-03",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Phase 4 supplemental (sreday.com). Canonical URL resolves directly. SRE/DevOps/Cloud conference.",
+      "id": "sreday-warsaw-2026-q4"
+    },
+    {
+      "name": "SREday Dallas 2026 Q4",
+      "event_url": "https://sreday.com/2026-dallas-q4/",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "devops",
+        "cloud",
+        "observability",
+        "platform"
+      ],
+      "source": "sreday.com",
+      "location": {
+        "city": "Dallas",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "evolv consulting (15950 Dallas Pkwy #700, Dallas, TX 75248)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Paid; Luma lists Early Bird/General Admission (Corporate), Student/Job Seeker, and free approval-based Community Hero tiers. Dollar amounts not published."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-dallas-q4",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Phase 4 supplemental (sreday.com). Canonical URL resolves directly. SRE/DevOps/Cloud conference.",
+      "id": "sreday-dallas-2026-q4"
+    },
+    {
+      "id": "usnua-kynug-lexington-fall-event-2026",
+      "name": "(KY)NUG - LEXINGTON FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/kynug-lexington-fall-event-2026",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-01",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Lexington",
+        "region": "Kentucky",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-wanug-fall-event-2026",
+      "name": "(WA)NUG - FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/wanug-fall-event-2026",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Seattle",
+        "region": "Washington",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Fremont Brewing",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "name": "The Nordic APIs UnConference",
+      "event_url": "https://nordicapis.com/events/napis-unconference-2026/",
+      "start_date": "2026-10-12",
+      "end_date": "2026-10-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "api",
+        "api-security",
+        "ai"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Stockholm",
+        "region": null,
+        "country": "Sweden",
+        "country_code": "SE",
+        "is_online": false,
+        "venue": "Clarion Hotel Stockholm"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 105,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "UnConference-only early-bird EUR 105 (early bird ends Aug 24); Summit & UnConference bundle EUR 695."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL via official organizer site (dev.events server error). Unconference format; no traditional CFP.",
+      "id": "the-nordic-apis-unconference-2026"
     }
   ]
 }
