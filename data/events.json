@@ -7866,6 +7866,674 @@
       "last_verified_at": "2026-08-14T00:00:00Z",
       "created_at": "2026-08-14T00:00:00Z",
       "updated_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "bsides-ics-downunder-2026",
+      "name": "BSidesICSDownUnder",
+      "event_url": "https://bsidesicsdownunder.com/",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "ics-ot"
+      ],
+      "source": "BSides global calendar",
+      "location": {
+        "city": "Melbourne",
+        "region": "Victoria",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false,
+        "venue": "Monash College (Docklands)"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 50,
+        "price_currency": "AUD",
+        "cost_level": "budget",
+        "notes": "Verified 2026-08-14 on official Humanitix ticketing page: General Admission Release 1 AUD 100 + fee; Asset Operator AUD 75 + fee; Student AUD 50 + fee. Lowest publicly available ticket = AUD 50 (Student)."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL located via web search since bsides.org listing had no outbound link/iframe; confirmed against bsidesicsdownunder.com (matching founders, Melbourne dates, Dragos APAC forum co-location). Official site confirms dates 2026-08-28 to 2026-08-29 (slightly differs from bsides.org's stated 08-28 to 08-30 range). No CFP found; speaker lineup already finalized.",
+      "timezone": "Australia/Melbourne",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "bsidesnepa-2026",
+      "name": "BSidesNEPA (Northeast Pennsylvania)",
+      "event_url": "https://bsidesnepa.org/",
+      "start_date": "2026-09-12",
+      "end_date": "2026-09-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Wilkes-Barre",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Wilkes University, 84 W South St, Wilkes-Barre, PA 18766, United States"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No explicit pricing published. Checked registration page (returned an inconsistent registration-closed state despite the future date) and official site (directs to Eventzilla with no listed price). Assumed free per unknown-pricing rule; checked 2026-08-14."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSepHgN_jTkGcjJD6GTrbjem0vHNE5PI1da011yi2AI7vKOTiA/viewform",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-12",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "bsides.org listing page contains no outbound link/iframe; canonical URL resolved via web search to the event's own official website bsidesnepa.org, which confirms a single-day event (Sat Sept 12, 2026) at Wilkes University.",
+      "timezone": "America/New_York",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "bsides-st-johns-2026",
+      "name": "BSides St. John's",
+      "event_url": "https://www.bsidesstjohns.com/",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devops",
+        "sysadmin"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "St. John's",
+        "region": "Newfoundland and Labrador",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": "Holiday Inn St. John's Conference Centre (180 Portugal Cove Rd)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Confirmed free via official Eventbrite registration page, checked 2026-08-14: event listed as 'Free', single 'Reserve a spot' registration type, no paid tiers."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.bsidesstjohns.com/call-for-papers/",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. CFP page states 'Our 2026 Call for Papers is now CLOSED!' with no specific dates published. Source listing showed a two-day range but canonical site consistently describes a single-day event on 2026-09-17.",
+      "timezone": "America/St_Johns",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "bsides-houston-2026",
+      "name": "BSides Houston",
+      "event_url": "https://houstonbsides.org/",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "security",
+        "sre"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Ticket sales run via SimpleTix but no explicit prices are published on the site as of 2026-08-14 (only that it is a non-profit keeping tickets 'affordable' with scholarship tickets available). Pricing unconfirmed; assumed free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://houstonbsides.org/cfp/",
+        "cfp_open_date": "2026-07-01",
+        "cfp_close_date": "2026-08-15",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link from bsides.org listing page. Venue not yet announced as of 2026-08-14.",
+      "timezone": "America/Chicago",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "bsides-bsidesct-fairfield-ct-usa",
+      "name": "BSidesCT",
+      "event_url": "https://bsidesct.org/",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Fairfield",
+        "region": "Connecticut",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Fairfield University"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSewYroZ3UvaQypHdazJSo7x4F-SkL4Fjyd6xT9_axnodlSqHg/viewform",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No ticket price published on official site or linked Eventbrite page as of 2026-08-14. Assumed free until confirmed."
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. Source calendar flagged the event as unconfirmed and listed dates 09-26 to 09-27; official site confirms it as a single-day conference on Sept 26, 2026, no cancellation notice.",
+      "timezone": "America/New_York",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "bsides-krakow-2026",
+      "name": "BSides Kraków",
+      "event_url": "https://bsideskrakow.pl/",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Kraków",
+        "region": "Małopolskie",
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": "Wydział Informatyki, AGH, D-17, 21 Kawiory, 30-055 Kraków"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Official ticket pricing page returned HTTP 403 on 2026-08-14; Eventbrite listing did not display an explicit price; third-party summary indicated tickets are free with limited availability. Treated as free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-krakow-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-31",
+        "cfp_timezone": "Europe/Warsaw",
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link (bsides.org listing 'View Venue Website' link). Sessionize CFP describes a workshop day (Sep 26) plus main conference (Sep 27).",
+      "timezone": "Europe/Warsaw",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "serverlessdays-tokyo-2026",
+      "name": "ServerlessDays Tokyo 2026",
+      "event_url": "https://tokyo.serverlessdays.io/",
+      "start_date": "2026-09-19",
+      "end_date": "2026-09-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "serverless",
+        "cloud-native",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Tokyo",
+        "region": "Tokyo",
+        "country": "Japan",
+        "country_code": "JP",
+        "is_online": false,
+        "venue": "Bellesalle Shinjuku Minamiguchi (Day 1); docomo R&D OPEN LAB ODAIBA (Day 2 workshop)"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "connpass registration page lists a free 'Regular Participation' ticket (400 capacity) as the general-admission option; an optional ¥10,000 'Individual Sponsor' ticket also exists but is voluntary. Checked 2026-08-14."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSffLBIOqRiKqJmLxXpSCgDYu0gk5wNRnv2N-o95ZYfORd-7yw/viewform",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-07-31",
+        "cfp_timezone": "Asia/Tokyo",
+        "cfp_status": "closed"
+      },
+      "notes": "dev.events detail page returned a persistent server error, so canonical URL was resolved via independent web search and verified by matching event name, dates, and venues against both the official site and the linked connpass registration page.",
+      "timezone": "Asia/Tokyo",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "flock-26-autonomous-production-ops-summit-2026",
+      "name": "Flock '26: The Autonomous Production Ops Summit",
+      "event_url": "https://www.goflock.ai/",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-14",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "devops",
+        "sre",
+        "platform-engineering",
+        "ai",
+        "observability"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Julia Morgan Ballroom, Merchants Exchange, San Francisco"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "No ticket price published; registration is invitation-only via a request form (site states seating is 'limited and curated'). Applying unknown-pricing rule: assumed free until confirmed otherwise."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.goflock.ai/call-for-papers",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-31",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "dev.events detail page returned a server-side error with no usable outbound link; canonical URL cross-verified independently via goflock.ai (name, date, venue, CFP all match). Event by NeuBird AI; targets SREs, platform engineers, infrastructure engineers.",
+      "timezone": "America/Los_Angeles",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "cloudflare-connect-san-francisco-2026",
+      "name": "Cloudflare Connect",
+      "event_url": "https://www.cloudflare.com/connect/",
+      "start_date": "2026-10-19",
+      "end_date": "2026-10-21",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud",
+        "networking",
+        "security",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Moscone West"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 595,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Checked https://www.cloudflare.com/connect/ and https://www.cloudflare.com/connect/faq/ on 2026-08-14: Conference Pass $595 USD (registration at https://events.www.cloudflare.com/connect2026/begin); optional Cloudflare University add-on $495 USD; $100 discount for government/military/nonprofit/education attendees."
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. Vendor conference; no CFP/call-for-speakers program found on official site or FAQ as of 2026-08-14.",
+      "timezone": "America/Los_Angeles",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "saintcon-2026",
+      "name": "SAINTCON 2026",
+      "event_url": "https://saintcon.org/",
+      "start_date": "2026-10-26",
+      "end_date": "2026-10-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "conference"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Provo",
+        "region": "Utah",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Utah Valley Convention Center"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 250,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "saintcon.org states tickets range $250-$350; checked 2026-08-14."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/saintcon2026",
+        "cfp_open_date": "2026-05-18",
+        "cfp_close_date": "2026-06-13",
+        "cfp_timezone": "America/Denver",
+        "cfp_status": "closed"
+      },
+      "notes": "dev.events detail page failed to render (client-side error). Canonical URL resolved via independent web search and cross-verified against saintcon.org (matching name, dates, and Provo, UT venue).",
+      "timezone": "America/Denver",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "spiceworld-2026",
+      "name": "SpiceWorld 2026",
+      "event_url": "https://www.spiceworks.com/spiceworld",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "it-ops",
+        "sysadmin",
+        "cloud-infrastructure"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Austin",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "AT&T Hotel and Conference Center"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published on the canonical page (direct fetch blocked); checked Sessionize, CFP Radar, 10times, and BusinessWire coverage — no explicit ticket pricing found. Assumed free until confirmed per unknown pricing rule (checked 2026-08-14)."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/spiceworld-2026/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-05-01",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link; cross-verified via cfpradar.dev, sessionize.com, and 10times.com.",
+      "timezone": "America/Chicago",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "sreday-nyc-2026-q4",
+      "name": "SREday NYC 2026 Q4",
+      "event_url": "https://sreday.com/2026-nyc-q4/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "location": {
+        "city": "New York",
+        "region": "New York",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Datadog NYC HQ, The New York Times Building, 620 8th Avenue, New York, NY 10018"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Confirmed via Luma registration for this event (checked 2026-08-14): single 'Standard' ticket tier, is_free=true. Registration via https://luma.com/event/evt-AmgfC3bkhRQZDnb."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2026-nyc-q4",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "tags": [
+        "sre",
+        "reliability",
+        "devops",
+        "observability",
+        "cloud"
+      ],
+      "source": "phase4:sreday.com",
+      "notes": "Canonical URL confirmed as the official SREday event page, matching the established SREday city-quarter site pattern used across other verified SREday records. CFP hosted on cfp.ninja (JS-rendered; no specific close date exposed at check time).",
+      "timezone": "America/New_York",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "cfgmgmtcamp-ghent-2027",
+      "name": "Config Management Camp Ghent 2027",
+      "event_url": "https://cfgmgmtcamp.org/ghent2027/",
+      "start_date": "2027-02-01",
+      "end_date": "2027-02-03",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "configuration-management",
+        "puppet",
+        "infrastructure-as-code"
+      ],
+      "source": "phase4:cfgmgmtcamp.org",
+      "location": {
+        "city": "Ghent",
+        "region": null,
+        "country": "Belgium",
+        "country_code": "BE",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Event page (https://cfgmgmtcamp.org/ghent2027/) explicitly describes the event as 'a free open source event'; checked 2026-08-14."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.cfgmgmtcamp.org/ghent2027/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-20",
+        "cfp_timezone": "CET",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL confirmed by direct fetch. CFP deadline listed as 2026-09-20 23:59 CET.",
+      "timezone": "Europe/Brussels",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "developerweek-2027-santa-clara",
+      "name": "DeveloperWeek 2027",
+      "event_url": "https://www.developerweek.com/conference/",
+      "start_date": "2027-02-09",
+      "end_date": "2027-02-11",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "sre",
+        "platform-engineering",
+        "aiops",
+        "kubernetes",
+        "cloud-native"
+      ],
+      "source": "phase4:developerweek.com",
+      "location": {
+        "city": "Santa Clara",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Santa Clara Convention Center"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official registration page returned HTTP 403 to automated fetch; exact 2027 ticket pricing could not be confirmed from an official source. Third-party sources referenced unconfirmed historical tier ranges and a promotional free limited-access 'OPEN Pass'. Assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/opsworld-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-18",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
+      },
+      "notes": "Includes the OpsWorld track (AIOps, Kubernetes/cloud infra, production reliability for DevOps/SRE/platform engineering) alongside AI DevWorld, ProductWorld, DevExec World. Canonical URL confirmed via direct site crawl matching prior archived record developerweek-2026-san-jose. Delivery set to hybrid based on multiple sources describing livestreamed virtual attendance alongside in-person seats.",
+      "timezone": "America/Los_Angeles",
+      "last_verified_at": "2026-08-14T00:00:00Z"
+    },
+    {
+      "id": "usnua-ctnug-fall-event-2026",
+      "name": "(CT)NUG - FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/ctnug-fall-event-2026",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-ornug-fall-event-2026",
+      "name": "(OR)NUG - FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/ornug-fall-event-2026",
+      "start_date": "2026-09-30",
+      "end_date": "2026-09-30",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Lucky Labrador",
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-minug-detroit-fall-event-2026",
+      "name": "(MI)NUG - DETROIT FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/minug-detroit-fall-event-2026",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Royal Oak",
+        "region": "Michigan",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
     }
   ]
 }
