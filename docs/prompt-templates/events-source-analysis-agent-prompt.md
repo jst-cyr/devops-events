@@ -298,9 +298,9 @@ Produce these outputs:
 
 - Build from CFP tracker records in 56-day CFP window missing from both `data/events.json` and `data/events-candidates.json`.
 - Include filter (case-insensitive across name/event_url/cfp_url):
-  - `devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|llmday|apidays`
+  - `devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|apidays`
 - Exclude filter (case-insensitive across name/event_url/cfp_url):
-   - `greenio|green-io|sustainability|sustainable|power\s+platform|microsoft\s+power\s+platform`
+   - `greenio|green-io|sustainability|sustainable|power\s+platform|microsoft\s+power\s+platform|llmday`
 - Sort: `cfp_close_date` asc, then `name` asc.
 - Add:
   - `rank` (1..n)

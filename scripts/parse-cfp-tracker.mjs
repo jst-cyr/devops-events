@@ -28,9 +28,9 @@ const CITY_COUNTRY_LOOKUP = JSON.parse(readFileSync(cityLookupPath, "utf8"));
 
 const WINDOW_DAYS = 56;
 const KEYWORD_PATTERN =
-  /devops|sreday|srecon|o11y|observability|cloud native|cloudnative|kubecon|kcd|kubernetes|serverless|platform|llmday|apidays|ndc|network|nanog|netdevops|monitoring|infrastructure|infra/i;
+  /devops|sreday|srecon|o11y|observability|cloud native|cloudnative|kubecon|kcd|kubernetes|serverless|platform|apidays|ndc|network|nanog|netdevops|monitoring|infrastructure|infra/i;
 const EXCLUDED_TOPIC_PATTERN = /\bdatabase\b|postgres|postgresql|mysql|mongodb|data platform|data engineering|automotive|\bagl\b|power\s+platform|microsoft\s+power\s+platform/i;
-const EXCLUDED_BRAND_PATTERN = /green\s*-?\s*io|greenio|sustainability|sustainable/i;
+const EXCLUDED_BRAND_PATTERN = /green\s*-?\s*io|greenio|sustainability|sustainable|llmday/i;
 
 const EXCLUDED_COUNTRIES = new Set(geographiesConfig.excluded_countries);
 const EXCLUDED_AFRICA_COUNTRIES = new Set(geographiesConfig.excluded_africa_countries);
