@@ -7821,6 +7821,46 @@
       },
       "notes": "Canonical URL via official organizer site (dev.events server error). Unconference format; no traditional CFP.",
       "id": "the-nordic-apis-unconference-2026"
+    },
+    {
+      "id": "apidays-london-2026",
+      "name": "apidays London",
+      "event_url": "https://www.apidays.global/events/london",
+      "start_date": "2026-09-30",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "api"
+      ],
+      "source": "www.apidays.global",
+      "location": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "Convene Sancroft, St. Paul's"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published on the public event page as of 2026-08-14; the ticket purchase flow (ticket.apidays.global -> portal.joinfost.io) is JS-rendered and returned HTTP 403 to automated fetch, so exact tiers could not be confirmed. Sibling apidays events (e.g. apidays Munich: EUR 599-1199) are consistently premium-priced, so this event is very likely NOT actually free -- flagging for manual price verification rather than fabricating a number. Unknown-pricing rule applied per data model pending confirmation."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://apidays.typeform.com/to/ILJeAaV8",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-29",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Promoted from CFP tracker candidate (cfp-candidates.json) per user request 2026-08-14. Event theme: 'The Zero-Click Economy: Orchestrating Agentic Finance and Embedded Invisible Banking' -- API monetization, security, AI-driven automation, agentic API consumption (100+ sessions, 3,000+ attendees expected). CFP close date sourced from AdatoSystems CFP tracker snapshot; not independently re-confirmed via the primary Typeform CFP page (deadline text not exposed in fetched content), but no contradicting evidence was found either.",
+      "timezone": "Europe/London",
+      "last_verified_at": "2026-08-14T00:00:00Z",
+      "created_at": "2026-08-14T00:00:00Z",
+      "updated_at": "2026-08-14T00:00:00Z"
     }
   ]
 }
