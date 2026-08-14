@@ -2643,9 +2643,11 @@
         "sysadmin"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 160,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Verified 2026-08-14 at https://events.linuxfoundation.org/sel4-summit/register/: registration is paid, not free as previously assumed. Standard rates (Aug 1-Sep 3, 2026): Student $160 USD, Hobbyist $280 USD, Professional Member $760 USD, Professional Non-Member $920 USD. Lowest available price is the $160 USD student rate (requires academic ID)."
       },
       "event_type": "conference"
     },
@@ -2832,9 +2834,11 @@
         "aws"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 25,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Checked https://awscommunity.eu/ (links to Eventbrite for 'Get Tickets') and the Eventbrite listing on 2026-08-14. Eventbrite tickets start at EUR 25; event page does not state the event is free. Previous 'assumed free' status was outdated."
       },
       "event_type": "conference"
     },
@@ -4592,11 +4596,11 @@
         "cfp_status": "closed"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "price_currency": null,
-        "cost_level": "free",
-        "notes": "Pricing not published on event page; unknown pricing rule applied."
+        "is_free": false,
+        "lowest_price": 18.25,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Verified 2026-08-14 via https://appsecdays.pt/tickets/ and Eventbrite: conference day (Sep 24) tickets start at EUR 18.25 (student, no lunch) / EUR 32.67 (general, no lunch), rising to EUR 42.28 with lunch; separate paid workshops on Sep 23 range EUR 95-435; prices exclude Eventbrite fees and VAT. Not free as previously assumed."
       },
       "tags": [
         "security",
@@ -7376,10 +7380,11 @@
         "venue": "OSU-Tulsa Conference Center"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not published; Luma registration with no ticket price shown. Assumed free until confirmed (community-led AWS Community Day)."
+        "is_free": false,
+        "lowest_price": 10,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Registration page (https://luma.com/rroisfna, linked from awsdaytulsa.com) confirms a paid Standard ticket priced at $10.00 USD (open, 71 spots remaining). Checked 2026-08-14. Previous 'assumed free' note was outdated."
       },
       "cfp": {
         "has_cfp": true,
