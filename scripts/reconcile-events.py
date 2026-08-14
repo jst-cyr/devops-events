@@ -38,14 +38,16 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     r"|\bmessage\s+queue\b|\bmessaging\s+system\b|\bmqsummit\b"
     r"|\bfunctional\s+programming\b|\blambda\s+world\b"
     # Explicitly rejected events (vendor-specific, single-project, or out-of-scope)
-    r"|argocon|swampup\.jfrog\.com|api-platform\.com|opensearchcon|kcpcon|kubevirt|p99conf\.io|ibm\.com/events/techxchange|opentofu[\s-]day|openshift"
+    r"|argocon|swampup\.jfrog\.com|api-platform\.com|opensearchcon|kcpcon|kubevirt|p99conf\.io|ibm\.com/events/techxchange|opentofu[\s-]day|openshift|elastic\{?on\}?"
     # General software dev conferences with only a minor DevOps track
     r"|accelerate\s+chicago|gotochgo\.com|vslive\.com|apiworld\.co"
     # Single-tool vendor workshops
     r"|zeek\.org"
     # Hypervisor/vendor project summits and single-project CNCF events
     r"|xen[\s-]summit|xenproject"
-    r"|\bdapr[\s-]day\b|envoycon",
+    r"|\bdapr[\s-]day\b|envoycon"
+    # Single-platform (non-infra) vendor ecosystem events
+    r"|devopsdreamin",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
