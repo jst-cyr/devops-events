@@ -8579,6 +8579,366 @@
       "last_verified_at": "2026-08-28T00:00:00Z",
       "created_at": "2026-08-28T00:00:00Z",
       "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "ndc-security-2027",
+      "name": "NDC Security 2027",
+      "event_url": "https://ndcsecurity.com",
+      "start_date": "2027-02-15",
+      "end_date": "2027-02-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devsecops",
+        "appsec",
+        "cloud-native"
+      ],
+      "source": "cfp_tracker_upgrade",
+      "location": {
+        "city": "Oslo",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false,
+        "venue": "Radisson Blu Scandinavia Hotel"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 8490,
+        "price_currency": "NOK",
+        "cost_level": "premium",
+        "notes": "Early Bird 1-Day Conference Pass 8,490 NOK (regular 10,990 NOK), excl. 25% VAT."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/ndc-security-2027",
+        "cfp_close_date": "2026-10-18",
+        "cfp_status": "open"
+      },
+      "notes": "Part of NDC Conferences family; DevSecOps/AppSec/Cloud-Native/Kubernetes-supply-chain content with developer/ops crossover, not a generic pen-test con. Previously only in cfp-candidates.json; upgraded to full event candidate since start_date falls within the 180-day window.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "conf42-mlops-2026",
+      "name": "Conf42: MLOps 2026",
+      "event_url": "https://www.conf42.com/mlops2026",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-19",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "mlops",
+        "ml-infrastructure",
+        "ai",
+        "observability",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": null,
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "No paid pricing found; Conf42 editions are consistently free-to-attend online events."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/conf42-mlops-2026",
+        "cfp_close_date": "2026-10-19",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "notes": "Content is production ML infrastructure/operations (deployment automation, monitoring, model-serving), not general data science theory.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "platformcon-live-day-san-francisco-2027",
+      "name": "PlatformCon Live Day San Francisco",
+      "event_url": "https://sanfrancisco.platformcon.com/",
+      "start_date": "2027-02-24",
+      "end_date": "2027-02-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform-engineering",
+        "kubernetes",
+        "sre",
+        "agentic-ai"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Convene, 100 Stockton St, San Francisco, CA"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 99,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Super Early Bird $99 USD; General Admission $499 USD."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/platformcon-live-day-san-francisco/",
+        "cfp_close_date": "2026-10-04",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL independently verified via web search (dev.events page broken).",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "bsides-manila-2026",
+      "name": "BSidesManila",
+      "event_url": "https://www.bsidesmanila.org/",
+      "start_date": "2026-08-30",
+      "end_date": "2026-08-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security"
+      ],
+      "source": "bsides.org iCal feed",
+      "location": {
+        "city": "Makati City",
+        "region": "Metro Manila",
+        "country": "Philippines",
+        "country_code": "PH",
+        "is_online": false,
+        "venue": "ITSDI Headquarters"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 300,
+        "price_currency": "PHP",
+        "cost_level": "budget",
+        "notes": "Ticket price PHP 300 per Manila Times launch coverage; official site returned HTTP 403 to automated fetch."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Inaugural BSides Philippines chapter event.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "bsides-jacksonville-2027",
+      "name": "BSides Jacksonville",
+      "event_url": "https://www.bsidesjax.org/",
+      "start_date": "2027-02-19",
+      "end_date": "2027-02-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devops",
+        "sre"
+      ],
+      "source": "bsides.org iCal feed",
+      "location": {
+        "city": "Jacksonville",
+        "region": "Florida",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "The Jessie"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official ticketing page states pricing publishes when registration goes live; free path for volunteers/veterans/students confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.bsidesjax.org/cfp/",
+        "cfp_close_date": "2026-12-21",
+        "cfp_status": "open"
+      },
+      "notes": "iCal feed date (2026-09-11) was stale; official site confirms event rescheduled to 2027-02-19/20.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "bsides-manchester-2026",
+      "name": "BSides Manchester: Ground Truth",
+      "event_url": "https://bsidesmcr.org.uk/",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "security",
+        "appsec",
+        "devsecops",
+        "ctf"
+      ],
+      "source": "bsides.org iCal feed",
+      "location": {
+        "city": "Manchester",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "GM Digital Security Hub (DiSH), 47 Lloyd Street, Manchester M2 5LE"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Eventbrite registration confirms free admission, capacity limited."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Single-evening panel + optional CTF event, not a multi-day conference.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "bsides-saskatoon-2026",
+      "name": "BSides Saskatoon",
+      "event_url": "https://bsidesyxe.ca/",
+      "start_date": "2026-09-28",
+      "end_date": "2026-09-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec"
+      ],
+      "source": "bsides.org iCal feed",
+      "location": {
+        "city": "Saskatoon",
+        "region": "Saskatchewan",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": "The Glen at Crossmount"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No explicit ticket price published on official site or Eventbrite listing as of 2026-08-28; assumed free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.papercall.io/bsidesyxe2026",
+        "cfp_close_date": "2026-07-31",
+        "cfp_status": "closed"
+      },
+      "notes": "BSides community security conference — explicitly in-scope per pipeline inclusion rule.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "kcd-florida-2026",
+      "name": "KCD Florida 2026",
+      "event_url": "https://community2.cncf.io/events/details/cncf-kcd-florida-presents-kcd-florida-2026-miami/",
+      "start_date": "2026-12-11",
+      "end_date": "2026-12-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "kubernetes",
+        "cloud-native",
+        "sre",
+        "platform-engineering"
+      ],
+      "source": "adatosystems_cfp_tracker",
+      "location": {
+        "city": "Miami",
+        "region": "Florida",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Miami Beach Convention Center"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No explicit ticket price found on CNCF community registration page as of 2026-08-28; assumed free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/kcd-florida-2026/",
+        "cfp_close_date": "2026-09-06",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Kubernetes Community Day Florida; canonical page hosted on CNCF community platform.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "conf42-finops-2027",
+      "name": "Conf42: FinOps 2027",
+      "event_url": "https://www.conf42.com/finops2027",
+      "start_date": "2027-02-04",
+      "end_date": "2027-02-04",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "finops",
+        "cloud",
+        "cost-management",
+        "devops"
+      ],
+      "source": "user_supplied_correction",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Confirmed via event page JSON-LD offer: price 0 USD. Conf42 events are historically free to attend."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/conf42-finops-2027",
+        "cfp_close_date": null,
+        "cfp_status": "open"
+      },
+      "notes": "Corrects a broken dev.events listing originally logged in events-issues.json as missing_canonical_url; user supplied the correct canonical URL. CFP platform is cfp.ninja (JS SPA); close date could not be scraped but page labels CFP as open. Content is cloud cost management/FinOps practices for engineering teams, in scope per DevOps/SRE/cloud-infra criteria.",
+      "last_verified_at": "2026-08-28T00:00:00Z",
+      "created_at": "2026-08-28T00:00:00Z",
+      "updated_at": "2026-08-28T00:00:00Z"
     }
   ]
 }
