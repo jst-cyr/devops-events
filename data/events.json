@@ -2788,32 +2788,6 @@
       "event_type": "conference"
     },
     {
-      "name": "BSidesDen 2026",
-      "start_date": "2026-09-11",
-      "end_date": "2026-09-11",
-      "location": {
-        "city": "Denver",
-        "region": null,
-        "country": "United States",
-        "is_online": false,
-        "country_code": "US"
-      },
-      "event_url": "https://www.bsidesden.org/",
-      "notes": null,
-      "id": "bsidesden-2026",
-      "source": "dev.events",
-      "delivery": "in_person",
-      "tags": [
-        "security"
-      ],
-      "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
-      },
-      "event_type": "conference"
-    },
-    {
       "name": "AWS Community Day CEE 2026",
       "start_date": "2026-09-17",
       "end_date": "2026-09-17",
