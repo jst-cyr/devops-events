@@ -8978,6 +8978,843 @@
       "last_verified_at": "2026-09-11T00:00:00Z",
       "created_at": "2026-09-11T00:00:00Z",
       "updated_at": "2026-09-11T00:00:00Z"
+    },
+    {
+      "id": "azure-tour-sevilla-2026",
+      "name": "Azure Tour 2026 Sevilla",
+      "event_url": "https://globalazure.es/proximas-ediciones/azure-tour-sevilla-2026/",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "Azure",
+        "Cloud",
+        "Microsoft"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Sevilla",
+        "region": "Andalusia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "Espacio RES (Fundación RES)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Eventbrite registration exists (proceeds to charity) but no price extractable from fetched content."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/azure-tour-2026-sevilla",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-06",
+        "cfp_timezone": "CEST",
+        "cfp_status": "closed"
+      },
+      "notes": "Corrected canonical URL from generic Global Azure Spain hub to the Sevilla-specific subpage."
+    },
+    {
+      "id": "aws-community-day-2026-ai-edition-sf",
+      "name": "AWS Community Day 2026 - AI Edition",
+      "event_url": "https://aws-aicd.com/",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud",
+        "ai",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "CA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "AWS Builder Loft, 525 Market St, Floor 2, San Francisco, CA 94105"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No ticket price published; registration via Cvent login wall does not expose pricing."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://aws-aicd.com/call-for-presentations",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-01",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Date corrected from dev.events (Oct 14) to official Oct 13."
+    },
+    {
+      "id": "kubeauto-day-berlin-2026",
+      "name": "KubeAuto Day Berlin",
+      "event_url": "https://kubeauto.day/berlin",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-15",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "kubernetes",
+        "platform-engineering",
+        "finops",
+        "automation",
+        "cloud-native"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "Alte Turnhalle, Holteistraße 6-9, 10245 Berlin"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free to attend per event page; registration via Luma."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "KubeAuto refers to Kubernetes automation/platform-engineering (unrelated to the automobile industry)."
+    },
+    {
+      "id": "linux-day-prato-2026",
+      "name": "Linux Day Prato 2026",
+      "event_url": "https://day.linux.prato.it/",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "linux",
+        "open-source",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Prato",
+        "region": "Tuscany",
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": "Prisma Prato, Via Galcianese 34, 59100 Prato (PO)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official site states 'Free Entry!'."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://day.linux.prato.it/cfp/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-15",
+        "cfp_timezone": "Europe/Rome",
+        "cfp_status": "closing_soon"
+      },
+      "notes": null
+    },
+    {
+      "id": "sev0-san-francisco-2026",
+      "name": "SEV0 San Francisco 2026",
+      "event_url": "https://www.sev0.com/",
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "SRE",
+        "reliability",
+        "incident-response",
+        "on-call"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "SFJAZZ"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 199,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Standard ticket $199 through September."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLScuszxBfoVXklJrOx8laGPnGhME8r_VypLxwwIY5B5Lyyt6Vg/viewform",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "SEV0 is a two-city 2026 series (SF + London); this record is the SF leg."
+    },
+    {
+      "id": "aws-community-day-jakarta-2026",
+      "name": "AWS Community Day Jakarta 2026",
+      "event_url": "https://jakarta.awscommunity.id/comday-26",
+      "start_date": "2026-10-31",
+      "end_date": "2026-10-31",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "aws",
+        "cloud",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Jakarta",
+        "region": "Jakarta Barat",
+        "country": "Indonesia",
+        "country_code": "ID",
+        "is_online": false,
+        "venue": "BINUS Anggrek, Jakarta Barat"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No ticket pricing published."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null
+    },
+    {
+      "id": "ubuntu-summit-26-10",
+      "name": "Ubuntu Summit 26.10",
+      "event_url": "https://ubuntu.com/summit",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-13",
+      "delivery": "hybrid",
+      "event_type": "summit",
+      "tags": [
+        "linux",
+        "ubuntu",
+        "open-source",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": null,
+        "is_online": true,
+        "venue": "Remote-first; physical anchor in London with worldwide watch parties"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official page states the Summit is completely free to attend online."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://ubu.link/ubuntusummit-cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Corrected delivery from dev.events 'online' to hybrid (remote-first with in-person anchor)."
+    },
+    {
+      "id": "kubeauto-day-las-vegas-2026",
+      "name": "KubeAuto Day Las Vegas",
+      "event_url": "https://kubeauto.day/las-vegas",
+      "start_date": "2026-11-29",
+      "end_date": "2026-11-29",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "kubernetes",
+        "automation",
+        "platform-engineering",
+        "finops",
+        "cloud-native",
+        "cncf"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Las Vegas",
+        "region": "Nevada",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Rockhouse, 3377 S Las Vegas Blvd, Las Vegas, NV 89109"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Event page states free to attend."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null
+    },
+    {
+      "id": "conf42-devops-2027",
+      "name": "Conf42: DevOps 2027",
+      "event_url": "https://www.conf42.com/devops2027",
+      "start_date": "2027-01-21",
+      "end_date": "2027-01-21",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "DevOps",
+        "online conference"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Conf42 subscribe-for-free registration."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/conf42-devops-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": null
+    },
+    {
+      "id": "opsworld-2027",
+      "name": "OpsWorld 2027",
+      "event_url": "https://www.developerweek.com/opsworld",
+      "start_date": "2027-02-09",
+      "end_date": "2027-02-11",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "sre",
+        "kubernetes",
+        "docker",
+        "ci-cd",
+        "platform-engineering"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Santa Clara",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Santa Clara Convention Center"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Registration pages 403-blocked; no verified pricing found."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/opsworld-2027",
+        "cfp_open_date": "2026-06-19",
+        "cfp_close_date": "2026-09-18",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Co-located track within DeveloperWeek 2027 Santa Clara."
+    },
+    {
+      "id": "conf42-sre-2027",
+      "name": "Conf42: Site Reliability Engineering (SRE) 2027",
+      "event_url": "https://www.conf42.com/sre2027",
+      "start_date": "2027-03-04",
+      "end_date": "2027-03-04",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "SRE",
+        "site-reliability-engineering",
+        "devops",
+        "observability",
+        "chaos-engineering"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Conf42 subscribe-for-free registration."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/conf42-sre-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": null
+    },
+    {
+      "id": "conf42-featureflags-2026",
+      "name": "Conf42: Feature Flags 2026",
+      "event_url": "https://www.conf42.com/featureflags2026",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-15",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "feature-flags",
+        "devops",
+        "software-delivery",
+        "continuous-delivery"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Online"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Conf42 subscribe-for-free registration."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/conf42-featureflags-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": null
+    },
+    {
+      "id": "plnog-krakow-2026",
+      "name": "PLNOG Kraków 2026",
+      "event_url": "https://plnog.pl/",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-16",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "networking",
+        "infrastructure",
+        "automation",
+        "sre",
+        "service-reliability"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Krakow",
+        "region": null,
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 1249,
+        "price_currency": "PLN",
+        "cost_level": "standard",
+        "notes": "Standard (1st round) ticket 1,249 PLN (~$310 USD)."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Polish Network Operators Group conference; network automation/reliability focus."
+    },
+    {
+      "id": "cisco-live-2027-london",
+      "name": "Cisco Live 2027 London",
+      "event_url": "https://www.ciscolive.com/emea.html",
+      "start_date": "2027-02-08",
+      "end_date": "2027-02-12",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "cisco",
+        "networking",
+        "it-infrastructure",
+        "cloud",
+        "security"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "ExCeL London"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 950,
+        "price_currency": "GBP",
+        "cost_level": "premium",
+        "notes": "Explorer pass early bird GBP 950 + VAT; free keynote broadcast Feb 9-11 separately available."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": null
+    },
+    {
+      "id": "nanog-99",
+      "name": "NANOG 99",
+      "event_url": "https://nanog.org/events/nanog-99/",
+      "start_date": "2027-02-22",
+      "end_date": "2027-02-24",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "nanog.org",
+      "location": {
+        "city": "Boston",
+        "region": "MA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 100,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "Published NANOG conference rates show early in-person pricing from $775 USD, student pricing from $100 USD."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Participation mode sourced from NANOG's upcoming events listing. Hosted by TOWARDEX. Manually discovered/enriched after scripts/fetch-nanog-events.mjs returned 0 records this run (see events-issues.json)."
+    },
+    {
+      "id": "usnua-nmnug-inaugural-event-2026",
+      "name": "ABQNOG + (NM)NUG: MAKE IT A DAY OF NETWORKING!",
+      "event_url": "https://www.usnua.com/live/nmnug-inaugural-event-2026",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Albuquerque",
+        "region": "New Mexico",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-innug-summer-event-2026",
+      "name": "(IN)NUG - SUMMER EVENT 2026",
+      "event_url": "https://www.usnua.com/live/innug-summer-event-2026",
+      "start_date": "2026-09-17",
+      "end_date": "2026-09-17",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-vanug-reston-fall-event-2026",
+      "name": "(VA)NUG - RESTON FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/vanug-reston-fall-event-2026",
+      "start_date": "2026-09-24",
+      "end_date": "2026-09-24",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Reston",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "usnua-ohnug-columbus-fall-event-2026",
+      "name": "(OH)NUG - COLUMBUS FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/ohnug-columbus-fall-event-2026",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Gahanna",
+        "region": "Ohio",
+        "country": "United States",
+        "country_code": "US",
+        "venue": null,
+        "is_online": false
+      },
+      "cfp": {
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event. No ticket pricing on event page."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsidesdenver-4",
+      "name": "BSides Denver",
+      "event_url": "https://bsidesden.org/",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Denver",
+        "region": "Colorado",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "BSidesDenver, Denver, CO, USA"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": "Unconfirmed"
+    },
+    {
+      "id": "bsides-bsidesatlanta-atlanta-ga-usa",
+      "name": "BSides Atlanta",
+      "event_url": "https://www.bsidesatl.info/",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-03",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "BSidesAtlanta, Atlanta, GA, USA"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": null
+    },
+    {
+      "id": "bsides-bsides-toronto",
+      "name": "BSides Toronto",
+      "event_url": "https://www.bsidesto.ca/",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Toronto",
+        "region": "Ontario",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": "Toronto Metropolitan University, George Vari Engineering and Computer Science building"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
+      },
+      "notes": "BSides Toronto is underway with planning for our 13th annual event this year. It will be held over 2 days of Saturday October 3rd and Sunday October 4th at the Toronto Metropolitan University in their George Vari Engineering and Computer Science building. This is immediately preceding the SecTor conference. Our CFP will be going live at the beginning of June and our call for sponsorship will be going out shortly."
     }
   ]
 }
