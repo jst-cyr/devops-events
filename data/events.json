@@ -8939,6 +8939,45 @@
       "last_verified_at": "2026-08-28T00:00:00Z",
       "created_at": "2026-08-28T00:00:00Z",
       "updated_at": "2026-08-28T00:00:00Z"
+    },
+    {
+      "id": "devopsdays-brasilia-2026",
+      "name": "DevOpsDays Brasília 2026",
+      "event_url": "https://devopsdays.org/events/2026-brasilia/welcome/",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-14",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Brasília",
+        "region": "Distrito Federal",
+        "country": "Brazil",
+        "country_code": "BR",
+        "is_online": false,
+        "venue": "Fenix Eventos"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not published on devopsdays.org as of 2026-09-11; unknown-pricing rule applied."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/devops-days-braslia-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-09-17",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      },
+      "notes": "Promoted from data/cfp-candidates.json (adatosystems CFP tracker) after user review 2026-09-11. Official devopsdays.org page lists the event date as Saturday, Nov 14, 2026 (candidate tracker had listed Nov 13); date corrected to the canonical source.",
+      "timezone": "America/Sao_Paulo",
+      "last_verified_at": "2026-09-11T00:00:00Z",
+      "created_at": "2026-09-11T00:00:00Z",
+      "updated_at": "2026-09-11T00:00:00Z"
     }
   ]
 }
