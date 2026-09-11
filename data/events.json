@@ -1045,7 +1045,7 @@
     },
     {
       "id": "devsecops-2026-20261015",
-      "name": "DevSecOps 2026",
+      "name": "Conf42: DevSecOps 2026",
       "event_url": "https://www.conf42.com/devsecops2026",
       "start_date": "2026-10-15",
       "end_date": "2026-10-15",
@@ -1641,7 +1641,7 @@
       "id": "nic-2026"
     },
     {
-      "name": "ServerlessDays 2026",
+      "name": "ServerlessDays Milano 2026",
       "event_url": "https://milan.serverlessdays.io/",
       "start_date": "2026-10-13",
       "end_date": "2026-10-13",
@@ -1891,7 +1891,7 @@
       "id": "sreday-amsterdam-2026-q4"
     },
     {
-      "name": "Platform Engineering 2026",
+      "name": "Conf42: Platform Engineering 2026",
       "event_url": "https://www.conf42.com/platform2026",
       "start_date": "2026-11-05",
       "end_date": "2026-11-05",
@@ -3993,7 +3993,7 @@
     },
     {
       "id": "conf42-chaos-engineering-2026",
-      "name": "Chaos Engineering 2026",
+      "name": "Conf42: Chaos Engineering 2026",
       "event_url": "https://www.conf42.com/ce2026",
       "start_date": "2026-12-03",
       "end_date": "2026-12-03",
@@ -8861,7 +8861,7 @@
     },
     {
       "id": "kcd-florida-2026",
-      "name": "KCD Florida 2026",
+      "name": "KCD Florida 2026 - Miami",
       "event_url": "https://community2.cncf.io/events/details/cncf-kcd-florida-presents-kcd-florida-2026-miami/",
       "start_date": "2026-12-11",
       "end_date": "2026-12-11",
