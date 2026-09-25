@@ -9789,6 +9789,49 @@
         "notes": "BSides events are community-run security conferences; pricing often free or sponsor-supported unless posted otherwise."
       },
       "notes": "BSides Toronto is underway with planning for our 13th annual event this year. It will be held over 2 days of Saturday October 3rd and Sunday October 4th at the Toronto Metropolitan University in their George Vari Engineering and Computer Science building. This is immediately preceding the SecTor conference. Our CFP will be going live at the beginning of June and our call for sponsorship will be going out shortly."
+    },
+    {
+      "id": "srecon27-americas",
+      "name": "SREcon27 Americas",
+      "event_url": "https://www.usenix.org/conference/srecon27americas",
+      "start_date": "2027-04-12",
+      "end_date": "2027-04-14",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "sre",
+        "site-reliability",
+        "systems",
+        "devops",
+        "reliability-engineering",
+        "usenix"
+      ],
+      "source": "usenix.org",
+      "location": {
+        "city": "Seattle",
+        "region": "Washington",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "The Sheraton Grand Seattle, 1400 6th Ave, Seattle, WA 98101"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 625,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "2027 pricing not yet published. Estimate carried forward from SREcon26 Americas registration rates (checked usenix.org/conference/srecon26americas/registration-information): Early Bird student $625 (lowest tier), standard early-bird $950, standard $1,100, late $1,300. Re-verify once SREcon27 Americas registration opens."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.usenix.org/conference/srecon27americas/call-for-participation",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-11-19",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
+      },
+      "notes": "Discovered via adatosystems CFP tracker; event falls outside the 180-day discovery window but CFP close date fell within the 56-day CFP window. Venue and dates confirmed directly on usenix.org.",
+      "updated_at": "2026-09-25T12:54:02.773Z"
     }
   ]
 }
