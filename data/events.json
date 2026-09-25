@@ -9305,7 +9305,7 @@
     },
     {
       "id": "opsworld-2027",
-      "name": "OpsWorld 2027",
+      "name": "DeveloperWeek OpsWorld 2027",
       "event_url": "https://www.developerweek.com/opsworld",
       "start_date": "2027-02-09",
       "end_date": "2027-02-11",
@@ -9342,7 +9342,8 @@
         "cfp_timezone": "America/Los_Angeles",
         "cfp_status": "closing_soon"
       },
-      "notes": "Co-located track within DeveloperWeek 2027 Santa Clara."
+      "notes": "Co-located track within DeveloperWeek 2027 Santa Clara.",
+      "updated_at": "2026-09-25T12:56:50.164Z"
     },
     {
       "id": "conf42-sre-2027",
