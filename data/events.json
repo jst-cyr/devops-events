@@ -8579,6 +8579,658 @@
       },
       "notes": "Discovered via adatosystems CFP tracker; event falls outside the 180-day discovery window but CFP close date fell within the 56-day CFP window. Venue and dates confirmed directly on usenix.org.",
       "updated_at": "2026-09-25T12:54:02.773Z"
+    },
+    {
+      "id": "22nd-linux-autumn-2026",
+      "name": "22nd Linux Autumn",
+      "event_url": "https://jesien.org/2026/en/",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "linux",
+        "devops",
+        "sysadmin",
+        "open-source",
+        "ci-cd",
+        "infrastructure",
+        "security"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Kraków",
+        "region": null,
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": "Hotel Kolna"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://plug.confreg.pl/events/78",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-08-16",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL resolved via web search after dev.events page render error; confirmed via name/date/venue match.",
+      "created_at": "2026-09-25T13:08:00.099Z",
+      "updated_at": "2026-09-25T13:08:00.100Z"
+    },
+    {
+      "id": "kubeauto-day-north-america-2026",
+      "name": "KubeAuto Day North America",
+      "event_url": "https://kubeauto.day/north-america",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "platform-engineering",
+        "finops",
+        "ci-cd"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Salt Lake City",
+        "region": "Utah",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Clark Planetarium"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official page states 'Free to attend'; co-located with KubeCon NA 2026 but standalone registration."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://kubeauto.day/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-11",
+        "cfp_timezone": "unknown",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL resolved via web search after dev.events page error; sibling series to existing tracked KubeAuto Day Berlin/Japan/Las Vegas.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "devopsdays-islamabad-2026",
+      "name": "DevOpsDays Islamabad 2026",
+      "event_url": "https://www.devopsdays.pk",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "devopsdays",
+        "sre",
+        "devsecops",
+        "mlops",
+        "cloud-native"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Islamabad",
+        "region": null,
+        "country": "Pakistan",
+        "country_code": "PK",
+        "is_online": false,
+        "venue": "To Be Announced"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not published yet; assumed free until confirmed."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://docs.google.com/forms/d/e/1FAIpQLSey0iuzln3Dk3Qy_7dDL3-CsGm0U72DPlXbBe9jxlLfeI51uQ/viewform",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": "PKT",
+        "cfp_status": "unknown"
+      },
+      "notes": "Date corrected from dev.events seed (Nov 25) to canonical site date (Nov 21) per enrichment. Organized by Cloud Native Islamabad and Cloud Native Security Pakistan.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "observability-day-europe-2027",
+      "name": "Observability Day Europe",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/observability-day/",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "observability",
+        "cloud-native",
+        "kubecon",
+        "cncf",
+        "co-located-event"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "Barcelona International Convention Centre (CCIB)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Bundled into KubeCon Europe 2027 All-Access pass; 2027 pricing not yet published."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cfp-colocated-events/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-18",
+        "cfp_timezone": "CEST",
+        "cfp_status": "open"
+      },
+      "notes": "CNCF co-located day at KubeCon+CloudNativeCon Europe 2027; sibling to existing tracked Observability Day North America.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "kubernetes-on-edge-day-europe-2027",
+      "name": "Kubernetes on Edge Day Europe",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/kubernetes-on-edge-day/",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-15",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "kubernetes",
+        "edge-computing",
+        "cloud-native",
+        "cncf",
+        "kubecon"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "CCIB"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Bundled into KubeCon Europe 2027 All-Access pass; 2027 pricing not yet published."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cfp-colocated-events/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-18",
+        "cfp_timezone": "CEST",
+        "cfp_status": "open"
+      },
+      "notes": "CNCF co-located day at KubeCon+CloudNativeCon Europe 2027; sibling to existing tracked Kubernetes on Edge Day North America.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "platform-engineering-day-europe-2027",
+      "name": "Platform Engineering Day Europe",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/platform-engineering-day/",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform-engineering",
+        "cloud-native",
+        "kubernetes",
+        "cncf",
+        "co-located-event"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "CCIB"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Bundled into KubeCon Europe 2027 All-Access pass; 2027 pricing not yet published."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cncf-hosted-co-located-events-europe-2027/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-18",
+        "cfp_timezone": "CEST",
+        "cfp_status": "open"
+      },
+      "notes": "CNCF co-located day at KubeCon+CloudNativeCon Europe 2027; sibling to existing tracked Platform Engineering Day North America.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "devsecops-2027",
+      "name": "DevSecOps 2027",
+      "event_url": "https://www.conf42.com/devsecops2027",
+      "start_date": "2027-03-18",
+      "end_date": "2027-03-18",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "devsecops",
+        "security",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "Conf42 online platform / YouTube premiere"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Confirmed free via explicit page wording."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/conf42-devsecops-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "Conf42 recurring virtual conference series; sibling to existing tracked Conf42: DevOps / Conf42: SRE editions.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "cloud-native-ai-inference-day-europe-2027",
+      "name": "Cloud Native AI + Inference Day Europe",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cloud-native-ai-inference-day-europe",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "ai-infrastructure",
+        "inference",
+        "mlops",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Bundled into KubeCon Europe 2027 All-Access pass; 2027 pricing not yet published."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cfp-colocated-events/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-18",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "notes": "CNCF co-located day at KubeCon+CloudNativeCon Europe 2027. Content confirmed genuine cloud-native AI-inference infrastructure focus, not generic AI marketing.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "qcon-san-francisco-2026",
+      "name": "QCon San Francisco 2026",
+      "event_url": "https://qconsf.com/",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform-engineering",
+        "sre",
+        "distributed-systems",
+        "cloud-native",
+        "software-architecture"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Hyatt Regency Embarcadero"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 2955,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Conference-only 3-day pass early bird $2,955. Checked qconsf.com/registration/event/nov2026 2026-09-24."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Curated/invited-speaker model, no traditional CFP. Confirmed dedicated Platform Engineering, Resilience Engineering (SRE), and Distributed Systems in Production tracks alongside general software architecture content.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "bsides-newcastle-2026",
+      "name": "BSides Newcastle 2026",
+      "event_url": "https://bsidesnewcastle.org/",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Newcastle upon Tyne",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "Star and Shadow Community Cinema"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 15,
+        "price_currency": "GBP",
+        "cost_level": "budget",
+        "notes": "General admission £15; free student places available."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/boncl2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-23",
+        "cfp_timezone": "Europe/London",
+        "cfp_status": "open"
+      },
+      "notes": "Discovered via dev.events, canonicalized to official BSides Newcastle site.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "bsides-rocket-city-2027",
+      "name": "BSides Rocket City",
+      "event_url": "https://bsidesrocketcity.org/",
+      "start_date": "2027-03-20",
+      "end_date": "2027-03-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Huntsville",
+        "region": "Alabama",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Calhoun Community College"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": "USD",
+        "cost_level": "free"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-rocket-city2007/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-12-31",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "open"
+      },
+      "notes": "Discovered via dev.events, canonicalized to official BSides Rocket City (Huntsville, AL) site.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "fosdem-2027",
+      "name": "FOSDEM 2027",
+      "event_url": "https://fosdem.org/2027/",
+      "start_date": "2027-01-30",
+      "end_date": "2027-01-31",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "open-source",
+        "infrastructure",
+        "cloud-native",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Brussels",
+        "region": null,
+        "country": "Belgium",
+        "country_code": "BE",
+        "is_online": false,
+        "venue": "ULB Solbosch campus"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free attendance, no registration required, per long-standing FOSDEM policy."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.fosdem.org/fosdem-2027-call-for-devrooms/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "upcoming"
+      },
+      "notes": "Per-devroom CFP process; 2026 edition confirmed dedicated Containers/Kubernetes-monitoring devroom content, expected to recur in 2027.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "usnua-ohnug-cincinnati-fall-event-2026",
+      "name": "(OH)NUG - CINCINNATI FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/ohnug-cincinnati-fall-event-2026",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Milford",
+        "region": "Ohio",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Little Miami Brewing Company",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event."
+      },
+      "notes": null,
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "usnua-txnug-dallas-fall-event-2026",
+      "name": "(TX)NUG - DALLAS FALL EVENT 2026",
+      "event_url": "https://www.usnua.com/live/txnug-dallas-fall-event-2026",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "delivery": "in_person",
+      "event_type": "user_group",
+      "tags": [
+        "networking",
+        "network-engineering"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "Farmers Branch",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "venue": "Bank Head Brewing",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend; vendor-sponsored community event."
+      },
+      "notes": null,
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "bsides-bsidespdx-4",
+      "name": "BSides PDX",
+      "event_url": "https://bsidespdx.org/",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "BSidesPortland, Portland, OR, USA"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Community-run security conference; assumed free unless posted otherwise."
+      },
+      "notes": null,
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "post-quantum-cryptography-readiness-tech-day-2026",
+      "name": "Post-Quantum Cryptography Readiness Tech Day",
+      "event_url": "https://carahevents.carahsoft.com/Event/Register/818964-web",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-29",
+      "delivery": "in_person",
+      "event_type": "workshop",
+      "tags": [
+        "security",
+        "automation",
+        "infrastructure",
+        "devops",
+        "cryptography"
+      ],
+      "source": "carahsoft.com",
+      "location": {
+        "city": "Austin",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "IBM Innovation Center"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Hosted by IBM, Red Hat, HashiCorp. Verified agenda covers cryptographic-agility automation and PKI/security lifecycle management.",
+      "created_at": "2026-09-25T13:08:00.101Z",
+      "updated_at": "2026-09-25T13:08:00.101Z"
     }
   ]
 }
