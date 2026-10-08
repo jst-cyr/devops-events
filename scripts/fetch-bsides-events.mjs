@@ -134,13 +134,6 @@ function addDays(dateStr, days) {
   return d.toISOString().slice(0, 10);
 }
 
-function toIsoDateUTC(value) {
-  if (!value) return null;
-  const d = new Date(value);
-  if (Number.isNaN(d.getTime())) return null;
-  return d.toISOString().slice(0, 10);
-}
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }

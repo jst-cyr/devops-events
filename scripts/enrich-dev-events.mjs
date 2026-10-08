@@ -176,7 +176,7 @@ function extractCanonicalUrl(html, devEventsUrl) {
   return null;
 }
 
-function isValidCanonicalUrl(url, devEventsUrl) {
+function isValidCanonicalUrl(url) {
   if (!url || !url.startsWith("https://")) return false;
   if (url.includes("dev.events")) return false;
   if (url.startsWith("javascript:")) return false;

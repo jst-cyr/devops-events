@@ -17,7 +17,6 @@ import { get as httpsGet } from "node:https";
 // ---------------------------------------------------------------------------
 
 const WINDOW_DAYS = 180;
-const PAGE_SIZE_GUESS = 30; // approximate events per page; used for safety cap
 const MAX_PAGES = 100;
 const DELAY_MS = 1200; // polite pause between requests
 
@@ -184,7 +183,6 @@ function hasNextPage(html, currentPage) {
 async function main() {
   const allEvents = new Map(); // slug → event record, deduplicates across pages
   let page = 1;
-  let totalFetched = 0;
 
   while (page <= MAX_PAGES) {
     const url = `https://dev.events/?startDate=${startDate}&endDate=${endDate}&page=${page}`;
@@ -232,8 +230,6 @@ async function main() {
         },
       });
     }
-
-    totalFetched += events.length;
 
     // Check for next page
     if (!hasNextPage(html, page)) {

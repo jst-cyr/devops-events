@@ -57,6 +57,9 @@ function DeliveryIcon({ item }: { item: EventListItem }) {
   const normalizedCountryCode = (item.location.country_code ?? "").trim().toUpperCase();
   const countryLabel = item.location.country || normalizedCountryCode || "Unknown location";
   const FlagIcon = getFlagComponent(normalizedCountryCode);
+  const flagElement = FlagIcon
+    ? FlagIcon({ className: "h-4 w-6 rounded-[2px]", "aria-hidden": "true" })
+    : null;
 
   if (item.delivery === "online") {
     return (
@@ -67,10 +70,10 @@ function DeliveryIcon({ item }: { item: EventListItem }) {
   }
 
   if (item.delivery === "in_person") {
-    if (FlagIcon) {
+    if (flagElement) {
       return (
         <span className="inline-flex items-center" role="img" aria-label={`In-person event in ${countryLabel}`}>
-          <FlagIcon className="h-4 w-6 rounded-[2px]" aria-hidden="true" />
+          {flagElement}
         </span>
       );
     }
@@ -84,7 +87,7 @@ function DeliveryIcon({ item }: { item: EventListItem }) {
 
   return (
     <span className="inline-flex items-center gap-1" role="img" aria-label={`Hybrid event in ${countryLabel}`}>
-      {FlagIcon ? <FlagIcon className="h-4 w-6 rounded-[2px]" aria-hidden="true" /> : <Globe className="h-4 w-4" aria-hidden="true" />}
+      {flagElement ?? <Globe className="h-4 w-4" aria-hidden="true" />}
       <Globe className="h-4 w-4" aria-hidden="true" />
     </span>
   );

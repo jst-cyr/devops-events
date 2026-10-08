@@ -305,7 +305,7 @@ if (issues.length > 0) {
   let existingIssues = { records: [] };
   try {
     existingIssues = JSON.parse(fs.readFileSync(issuesPath, 'utf-8'));
-  } catch (e) { /* file may not exist */ }
+  } catch { /* file may not exist */ }
   existingIssues.records.push(...issues);
   fs.writeFileSync(issuesPath, JSON.stringify(existingIssues, null, 2) + '\n', 'utf-8');
   console.log(`Appended ${issues.length} enrichment issues to ${issuesPath}`);

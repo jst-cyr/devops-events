@@ -103,7 +103,7 @@ if (errorRecords.length > 0) {
   let existingIssues = { records: [] };
   try {
     existingIssues = JSON.parse(fs.readFileSync(issuesPath, 'utf-8'));
-  } catch (e) { /* file may not exist */ }
+  } catch { /* file may not exist */ }
 
   const newIssues = errorRecords.map(r => ({
     source: r.source || (r.id?.startsWith('bsides-') ? 'bsides.org' : 'unknown'),

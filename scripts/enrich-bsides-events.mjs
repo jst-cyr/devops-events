@@ -221,7 +221,7 @@ function inferLocationFromName(eventName, eventId, baseLocation = {}) {
 /**
  * Extract cost information from website
  */
-function extractCost(html, eventName) {
+function extractCost(html) {
   const cost = {
     is_free: null,
     lowest_price: null,
@@ -305,7 +305,7 @@ function extractCost(html, eventName) {
 /**
  * Extract CFP information from website
  */
-function extractCFP(html, eventName) {
+function extractCFP(html) {
   const cfp = {
     has_cfp: false,
     cfp_url: null,
@@ -322,7 +322,7 @@ function extractCFP(html, eventName) {
     { name: 'confab', regex: /https?:\/\/(?:www\.)?confab\.com\/[^\s"'<>]+/i },
   ];
 
-  for (const { name, regex } of cfpPlatforms) {
+  for (const { regex } of cfpPlatforms) {
     const match = html.match(regex);
     if (match) {
       cfp.has_cfp = true;

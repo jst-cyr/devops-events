@@ -15,7 +15,7 @@ function normalizeUrl(url) {
     let normalized = `${parsed.hostname}${parsed.pathname}`;
     normalized = normalized.toLowerCase().replace(/\/$/, '');
     return normalized;
-  } catch (e) {
+  } catch {
     return url.toLowerCase().replace(/\/$/, '');
   }
 }

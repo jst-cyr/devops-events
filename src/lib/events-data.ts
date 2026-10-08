@@ -154,10 +154,6 @@ function filterRecordsByCostLevel(records: EventRecord[], costLevel?: CostLevel)
   return records.filter((record) => resolveCostLevel(record) === costLevel);
 }
 
-function filterByFreeEvents(records: EventRecord[]): EventRecord[] {
-  return records.filter((record) => record.cost?.is_free === true);
-}
-
 export async function getAvailableLocations(source: DashboardDataSource = "events"): Promise<string[]> {
   const records = await getAllRecords(source);
 

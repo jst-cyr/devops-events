@@ -166,7 +166,7 @@ function extractEventLinks(html) {
  * e.g.
  *   Wooden Hill Brewing Company 7421 Bush Lake Road Edina, MN 55439
  */
-function parseDetailPage(html, _eventUrl) {
+function parseDetailPage(html) {
   // ---- Name: first h1 ----
   const h1Match = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
   const name = h1Match ? stripTags(h1Match[1]) : null;
