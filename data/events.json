@@ -9231,6 +9231,95 @@
       "notes": "Hosted by IBM, Red Hat, HashiCorp. Verified agenda covers cryptographic-agility automation and PKI/security lifecycle management.",
       "created_at": "2026-09-25T13:08:00.101Z",
       "updated_at": "2026-09-25T13:08:00.101Z"
+    },
+    {
+      "id": "platformday-san-francisco-2026-q4",
+      "name": "PLATFORMday San Francisco 2026 Q4",
+      "event_url": "https://platformday.com/2026-san-francisco-q4/",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform-engineering",
+        "devops",
+        "kubernetes",
+        "apis",
+        "devex"
+      ],
+      "source": "cfp-tracker",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Sentry HQ, 45 Fremont Street, 8th Floor, San Francisco, CA 94105"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/platformday-2026-san-francisco-q4",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-09",
+        "cfp_timezone": null,
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No pricing disclosed on official event page or Luma registration page (JS-rendered, checked 2026-10-08); unknown-pricing rule applied pending manual confirmation."
+      },
+      "notes": "Platform engineering community conference (~9 confirmed speakers from Amazon, Faros, IBM, Kraken, PagerDuty, Sentry, Splunk/Cisco, Wipro); 2 tracks, 100+ attendees expected.",
+      "last_verified_at": "2026-10-08T20:23:39.912Z",
+      "created_at": "2026-10-08T20:23:39.912Z",
+      "updated_at": "2026-10-08T20:23:39.912Z"
+    },
+    {
+      "id": "maintainer-summit-kubecon-eu-2027",
+      "name": "Maintainer Summit: KubeCon + CloudNativeCon Europe 2027",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/features-add-ons/maintainer-summit/",
+      "start_date": "2027-03-14",
+      "end_date": "2027-03-14",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "kubernetes",
+        "cloud-native",
+        "cncf",
+        "open-source",
+        "maintainers",
+        "infrastructure",
+        "containers",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "Fira Gran Via | North Access, Carrer del Foc, 37, 08038 Barcelona"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/maintainer-summit-eu-2027/",
+        "cfp_open_date": "2026-09-23",
+        "cfp_close_date": "2026-12-01",
+        "cfp_timezone": "Central European Time (UTC+1)",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "2027 KubeCon+CloudNativeCon Europe ticket pricing not yet published as of 2026-10-08. Attendance requires paid KubeCon+CloudNativeCon Europe 2027 registration, except accepted CFP speakers who receive a complimentary All-Access pass. Unknown-pricing rule applied pending published ticket prices."
+      },
+      "notes": "Pre-conference co-located day at KubeCon + CloudNativeCon Europe 2027 (Mar 15-18). No virtual attendance option. CFP eligibility: TOC Representative / Graduated Project Maintainer-Org Member / TAG Chair-Tech Lead-WG Lead / Incubating Project Maintainer.",
+      "last_verified_at": "2026-10-08T20:23:39.912Z",
+      "created_at": "2026-10-08T20:23:39.912Z",
+      "updated_at": "2026-10-08T20:23:39.912Z"
     }
   ]
 }
