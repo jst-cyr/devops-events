@@ -871,16 +871,17 @@
         "has_cfp": true,
         "cfp_url": "https://talks.devopsdays.org/devopsdays-barcelona-2026/cfp",
         "cfp_open_date": null,
-        "cfp_close_date": "2026-06-15",
+        "cfp_close_date": "2026-06-22",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "cost": {
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
         "notes": "Pricing not published yet; assumed free until confirmed"
-      }
+      },
+      "updated_at": "2026-10-08T20:26:30.319Z"
     },
     {
       "id": "sreday-london-q3-2026",
@@ -5611,10 +5612,11 @@
         "cfp_open_date": null,
         "cfp_close_date": null,
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "notes": "Canonical URL extracted via explicit outbound link. Welcome page shows CFP OPEN, no Boston-specific deadline.",
-      "id": "devopsdays-boston-2026"
+      "id": "devopsdays-boston-2026",
+      "updated_at": "2026-10-08T20:26:30.319Z"
     },
     {
       "name": "DevOpsDays Warsaw",
@@ -5647,10 +5649,11 @@
         "cfp_open_date": "2026-07-07",
         "cfp_close_date": "2026-08-30",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "notes": "Canonical URL extracted via explicit outbound link. CFP open, closes 2026-08-30.",
-      "id": "devopsdays-warsaw-2026"
+      "id": "devopsdays-warsaw-2026",
+      "updated_at": "2026-10-08T20:26:30.319Z"
     },
     {
       "name": "AWS Community Day NL 2026",
@@ -6395,10 +6398,11 @@
         "cfp_open_date": null,
         "cfp_close_date": "2026-09-03",
         "cfp_timezone": null,
-        "cfp_status": "open"
+        "cfp_status": "closed"
       },
       "notes": "Phase 4 supplemental (sreday.com). Canonical URL resolves directly. SRE/DevOps/Cloud conference.",
-      "id": "sreday-warsaw-2026-q4"
+      "id": "sreday-warsaw-2026-q4",
+      "updated_at": "2026-10-08T20:26:30.319Z"
     },
     {
       "name": "SREday Dallas 2026 Q4",
@@ -7102,13 +7106,14 @@
         "has_cfp": true,
         "cfp_url": "https://cfp.cfgmgmtcamp.org/ghent2027/cfp",
         "cfp_open_date": null,
-        "cfp_close_date": "2026-09-20",
+        "cfp_close_date": "2026-10-20",
         "cfp_timezone": "CET",
-        "cfp_status": "open"
+        "cfp_status": "closing_soon"
       },
       "notes": "Canonical URL confirmed by direct fetch. CFP deadline listed as 2026-09-20 23:59 CET.",
       "timezone": "Europe/Brussels",
-      "last_verified_at": "2026-08-14T00:00:00Z"
+      "last_verified_at": "2026-08-14T00:00:00Z",
+      "updated_at": "2026-10-08T20:26:30.319Z"
     },
     {
       "id": "developerweek-2027-santa-clara",
@@ -7429,8 +7434,8 @@
       "id": "bsides-manila-2026",
       "name": "BSidesManila",
       "event_url": "https://www.bsidesmanila.org/",
-      "start_date": "2026-08-30",
-      "end_date": "2026-08-30",
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17",
       "delivery": "in_person",
       "event_type": "conference",
       "tags": [
@@ -7438,7 +7443,7 @@
       ],
       "source": "bsides.org iCal feed",
       "location": {
-        "city": "Makati City",
+        "city": "Manila",
         "region": "Metro Manila",
         "country": "Philippines",
         "country_code": "PH",
@@ -7461,7 +7466,7 @@
       "notes": "Inaugural BSides Philippines chapter event.",
       "last_verified_at": "2026-08-28T00:00:00Z",
       "created_at": "2026-08-28T00:00:00Z",
-      "updated_at": "2026-08-28T00:00:00Z"
+      "updated_at": "2026-10-08T20:26:30.318Z"
     },
     {
       "id": "bsides-jacksonville-2027",
@@ -8274,11 +8279,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": false,
-        "lowest_price": 100,
+        "is_free": true,
+        "lowest_price": null,
         "price_currency": "USD",
-        "cost_level": "standard",
-        "notes": "Published NANOG conference rates show early in-person pricing from $775 USD, student pricing from $100 USD."
+        "cost_level": "free",
+        "notes": "Registration and pricing not yet published as of 2026-10-08; NANOG's own event page states 'Stay tuned for details on registration and presentation submissions!'. Previous cost figures appear to have been copied from a different NANOG edition (identical boilerplate text as NANOG 98)."
       },
       "cfp": {
         "has_cfp": false,
@@ -8288,7 +8293,8 @@
         "cfp_timezone": null,
         "cfp_status": "unknown"
       },
-      "notes": "Participation mode sourced from NANOG's upcoming events listing. Hosted by TOWARDEX. Manually discovered/enriched after scripts/fetch-nanog-events.mjs returned 0 records this run (see events-issues.json)."
+      "notes": "Participation mode sourced from NANOG's upcoming events listing. Hosted by TOWARDEX. Manually discovered/enriched after scripts/fetch-nanog-events.mjs returned 0 records this run (see events-issues.json).",
+      "updated_at": "2026-10-08T20:26:30.319Z"
     },
     {
       "id": "usnua-nmnug-inaugural-event-2026",
