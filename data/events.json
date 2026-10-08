@@ -9326,6 +9326,868 @@
       "last_verified_at": "2026-10-08T20:23:39.912Z",
       "created_at": "2026-10-08T20:23:39.912Z",
       "updated_at": "2026-10-08T20:23:39.912Z"
+    },
+    {
+      "id": "kubeauto-day-paris-2026-10-08",
+      "name": "KubeAuto Day Paris",
+      "event_url": "https://kubeauto.day/paris",
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Paris",
+        "region": null,
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false,
+        "venue": "La Bellevilloise, 19-21 Rue Boyer, 75020 Paris, France"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free to attend per official site."
+      },
+      "notes": "Canonical URL resolved via web search (dev.events page broken).",
+      "created_at": "2026-10-08T20:35:55.837Z",
+      "updated_at": "2026-10-08T20:35:55.837Z",
+      "last_verified_at": "2026-10-08T20:35:55.837Z"
+    },
+    {
+      "id": "containerdays-ai-context-london-2027-2027-02-10",
+      "name": "ContainerDays & AI Context London 2027",
+      "event_url": "https://containerdays.io/containerdays-london-2027/",
+      "start_date": "2027-02-10",
+      "end_date": "2027-02-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/london-containerdays-and-ai-context-2027/",
+        "cfp_close_date": "2026-12-01",
+        "cfp_timezone": "CET",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 99,
+        "price_currency": "GBP",
+        "cost_level": "standard",
+        "notes": "Student Pass GBP99 lowest tier; Early Bird Individual GBP499."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "containerdays-ai-context-warsaw-2027-2027-02-23",
+      "name": "ContainerDays | AI Context Warsaw 2027",
+      "event_url": "https://containerdays.io/containerdays-warsaw-2027/",
+      "start_date": "2027-02-23",
+      "end_date": "2027-02-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Warsaw",
+        "region": null,
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/containerdays-ai-context-warsaw-2027",
+        "cfp_close_date": "2026-12-15",
+        "cfp_timezone": "CET",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 125.21,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Crazy Bird Individual ticket lowest general-admission tier."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "devopsdays-los-angeles-2027-04-02",
+      "name": "Devopsdays Los Angeles",
+      "event_url": "https://devopsdays.org/events/2027-los-angeles/welcome/",
+      "start_date": "2027-04-02",
+      "end_date": "2027-04-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Pasadena",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Pasadena Convention Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.socallinuxexpo.org/scale/24x/cfp",
+        "cfp_close_date": "2026-11-01",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 30,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Co-located with SCaLE 24x; Expo Pass $30 lowest tier."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "powershell-summit-2027-2027-04-05",
+      "name": "PowerShell Summit 2027",
+      "event_url": "https://powershellsummit.org/",
+      "start_date": "2027-04-05",
+      "end_date": "2027-04-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Orlando",
+        "region": "Florida",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Sheraton Lake Buena Vista"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 1299,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Early bird General Admission $1,299."
+      },
+      "notes": "Relevance confirmed: 'PowerShell + DevOps Global Summit' targeting PowerShell/DevOps professionals, Windows/sysadmin automation content.",
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "bsides-hampton-roads-2026-10-09",
+      "name": "BSides Hampton Roads",
+      "event_url": "https://bsideshamptonroads.org/",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-10",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Norfolk",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsideshamptonroads.org/cfp",
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 55,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "General Admission $55 via Humanitix."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "bsides-ot-paris-2026-10-22",
+      "name": "BSides OT Paris",
+      "event_url": "https://www.bsides-ot.fr/",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "country_code": "FR",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.bsides-ot.fr/",
+        "cfp_close_date": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No pricing disclosed; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "bsides-g-teborg-2026-10-23",
+      "name": "BSides Göteborg",
+      "event_url": "https://bsidesgbg.com/",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Göteborg",
+        "region": "Västra Götaland",
+        "country": "Sweden",
+        "country_code": "SE",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Low-confidence data; canonical site is JS SPA, details sourced from aggregators."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "bsides-tc-twin-cities-2026-10-23",
+      "name": "BSides TC (Twin Cities)",
+      "event_url": "https://bsidestc.org/",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Minneapolis",
+        "region": "Minnesota",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsidestc.org/call-for-proposals/",
+        "cfp_close_date": "2026-09-10",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 30,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "General Admission $30 via Humanitix."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.838Z",
+      "updated_at": "2026-10-08T20:35:55.838Z",
+      "last_verified_at": "2026-10-08T20:35:55.838Z"
+    },
+    {
+      "id": "bsides-tirana-2026-10-23",
+      "name": "BSides Tirana",
+      "event_url": "https://bsidestirana.al",
+      "start_date": "2026-10-23",
+      "end_date": "2026-10-23",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Tirana",
+        "region": null,
+        "country": "Albania",
+        "country_code": "AL",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-tirana-2026",
+        "cfp_close_date": "2026-08-15",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free community event per historical pattern."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-cambridgema-2026-10-25",
+      "name": "BSides CambridgeMA",
+      "event_url": "https://bsidescambridgema.org/",
+      "start_date": "2026-10-25",
+      "end_date": "2026-10-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Somerville",
+        "region": "MA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "cost_level": "free",
+        "notes": "Explicitly free for all participants per official site."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-fredericton-2026-10-27",
+      "name": "BSides Fredericton",
+      "event_url": "https://www.bsidesfredericton.ca/",
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Fredericton",
+        "region": "New Brunswick",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No pricing/CFP published yet; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-lisbon-2026-2026-10-29",
+      "name": "BSides Lisbon 2026",
+      "event_url": "https://bsideslisbon.org/",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Lisbon",
+        "region": null,
+        "country": "Portugal",
+        "country_code": "PT",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not disclosed; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-oslo-2026-10-29",
+      "name": "BSides Oslo",
+      "event_url": "https://bsidesoslo.no/",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-29",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Oslo",
+        "region": null,
+        "country": "Norway",
+        "country_code": "NO",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 777,
+        "price_currency": "NOK",
+        "cost_level": "budget",
+        "notes": "777 NOK full access per official site."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-barcelona-2026-10-30",
+      "name": "BSides Barcelona",
+      "event_url": "https://bsides.barcelona/",
+      "start_date": "2026-10-30",
+      "end_date": "2026-10-30",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Minimal placeholder site; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-nova-2026-10-30",
+      "name": "BSides NoVA",
+      "event_url": "https://www.bsidesnova.org/",
+      "start_date": "2026-10-30",
+      "end_date": "2026-10-31",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Arlington",
+        "region": "Virginia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsidesnova-2026",
+        "cfp_close_date": "2026-09-01",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not disclosed; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-bournemouth-2026-11-07",
+      "name": "BSides Bournemouth",
+      "event_url": "https://bsides-bournemouth.org/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Bournemouth",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not disclosed; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-charleston-2026-11-07",
+      "name": "BSides Charleston",
+      "event_url": "https://bsidescharleston.org/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Charleston",
+        "region": "SC",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsidescharleston.org/cfp",
+        "cfp_close_date": "2026-09-01",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 25.5,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Zeffy ticketing $25.50 general admission."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-munich-2026-11-07",
+      "name": "BSides Munich",
+      "event_url": "https://2026.bsidesmunich.org/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Munich",
+        "region": "Bavaria",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://2026.bsidesmunich.org/cfp",
+        "cfp_close_date": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free main conference day; paid workshop day EUR19/workshop."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "bsides-sydney-2026-11-07",
+      "name": "BSides Sydney",
+      "event_url": "https://bsides.sydney/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Meadowbank",
+        "region": "New South Wales",
+        "country": "Australia",
+        "country_code": "AU",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsides.sydney/cfp/",
+        "cfp_close_date": "2026-07-15",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 50,
+        "price_currency": "AUD",
+        "cost_level": "budget",
+        "notes": "Student ticket AUD50 lowest tier."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "sreday-warsaw-2027-q1-2027-02-24",
+      "name": "SREday Warsaw 2027 Q1",
+      "event_url": "https://sreday.com/2027-warsaw-q1/",
+      "start_date": "2027-02-24",
+      "end_date": "2027-02-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "phase4-supplemental",
+      "location": {
+        "city": "Warsaw",
+        "region": null,
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2027-warsaw-q1",
+        "cfp_close_date": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No pricing found; unknown-pricing rule."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "cloud-field-day-27-2027-03-03",
+      "name": "Cloud Field Day 27",
+      "event_url": "https://techfieldday.com/event/cfd27/",
+      "start_date": "2027-03-03",
+      "end_date": "2027-03-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [],
+      "source": "phase4-supplemental",
+      "location": {
+        "city": "Silicon Valley",
+        "region": "CA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Invite-only delegate briefing model."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "devops-experience-conf-2026-10-15",
+      "name": "DevOps Experience Conf'",
+      "event_url": "https://info.kaliop.com/devops-experience-conf",
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-15",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform-engineering",
+        "observability",
+        "kubernetes",
+        "sovereign-cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "price_currency": null,
+        "cost_level": "free",
+        "notes": "Event page explicitly states the conference is free and online (\"la conférence est gratuite et en ligne\"); registration is email-capture only, no paid tiers."
+      },
+      "notes": "Half-day (09:30-12:00) virtual DevOps event organized by Kaliop (French digital consulting agency), delivered via YouTube live link. Curated speaker lineup (Kaliop experts/clients), no open CFP. Agenda covers sovereign cloud deployment/compliance, infrastructure observability and cost management, platform engineering, Kubernetes/application performance, and AI in DevOps operations -- substantive technical content, passed Phase 5 content validation. Originally flagged as missing_canonical_url (dev.events page broken); user supplied the real canonical URL.",
+      "created_at": "2026-10-08T20:35:55.839Z",
+      "updated_at": "2026-10-08T20:35:55.839Z",
+      "last_verified_at": "2026-10-08T20:35:55.839Z"
     }
   ]
 }
