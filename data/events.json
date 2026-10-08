@@ -10188,6 +10188,119 @@
       "created_at": "2026-10-08T20:35:55.839Z",
       "updated_at": "2026-10-08T20:35:55.839Z",
       "last_verified_at": "2026-10-08T20:35:55.839Z"
+    },
+    {
+      "id": "incontro-devops-italia-idi-2027-2027-03-08",
+      "name": "Incontro DevOps Italia (IDI) 2027",
+      "event_url": "https://www.incontrodevops.it",
+      "start_date": "2027-03-08",
+      "end_date": "2027-03-09",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [],
+      "source": "dev.events",
+      "location": {
+        "city": "Bologna",
+        "region": "Emilia-Romagna",
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/incontro-devops-italia-idi-2027/",
+        "cfp_close_date": "2026-12-13",
+        "cfp_timezone": "Europe/Rome",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 99,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Very-early-bird bundle ticket EUR99+VAT."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:36:17.744Z",
+      "updated_at": "2026-10-08T20:36:17.744Z",
+      "last_verified_at": "2026-10-08T20:36:17.744Z"
+    },
+    {
+      "id": "bsides-augusta-2026-10-24",
+      "name": "BSides Augusta",
+      "event_url": "https://bsidesaugusta.org/",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Augusta",
+        "region": "GA",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/bsidesaugusta-2026/cfp",
+        "cfp_close_date": "2026-07-13",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 35,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "General Admission tiers $35-$45 via Eventbrite."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:36:17.745Z",
+      "updated_at": "2026-10-08T20:36:17.745Z",
+      "last_verified_at": "2026-10-08T20:36:17.745Z"
+    },
+    {
+      "id": "bsides-dfw-2026-11-07",
+      "name": "BSides DFW",
+      "event_url": "https://bsidesdfw.com/",
+      "start_date": "2026-11-07",
+      "end_date": "2026-11-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "community",
+        "bsides"
+      ],
+      "source": "bsides.org",
+      "location": {
+        "city": "Arlington",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-dfw-2026",
+        "cfp_close_date": "2026-09-05",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": 0,
+        "cost_level": "free",
+        "notes": "Explicitly free unconference."
+      },
+      "notes": null,
+      "created_at": "2026-10-08T20:36:17.745Z",
+      "updated_at": "2026-10-08T20:36:17.745Z",
+      "last_verified_at": "2026-10-08T20:36:17.745Z"
     }
   ]
 }
