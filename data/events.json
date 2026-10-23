@@ -1584,7 +1584,15 @@
       "end_date": "2026-11-05",
       "delivery": "online",
       "event_type": "conference",
-      "tags": [],
+      "tags": [
+        "platform-engineering",
+        "devops",
+        "kubernetes",
+        "cloud-native",
+        "observability",
+        "sre",
+        "internal-developer-platform"
+      ],
       "source": "dev.events",
       "location": {
         "city": null,
