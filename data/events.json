@@ -10301,6 +10301,49 @@
       "created_at": "2026-10-08T20:36:17.745Z",
       "updated_at": "2026-10-08T20:36:17.745Z",
       "last_verified_at": "2026-10-08T20:36:17.745Z"
+    },
+    {
+      "id": "cloud-native-valencia-2026-11",
+      "name": "Cloud Native Valencia",
+      "event_url": "https://cloudnativevalencia.com",
+      "start_date": "2026-11-25",
+      "end_date": "2026-11-25",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "cloud-native",
+        "kubernetes",
+        "devops",
+        "sre",
+        "platform-engineering"
+      ],
+      "source": "cfp_tracker",
+      "location": {
+        "city": "Valencia",
+        "region": null,
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": "The Terminal Hub"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/cloud-native-valencia-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-29",
+        "cfp_timezone": "Europe/Madrid",
+        "cfp_status": "closing_soon"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "CNCF community meetup group; no ticket pricing published. Assumed free until confirmed otherwise."
+      },
+      "notes": null,
+      "created_at": "2026-10-23T00:00:00Z",
+      "updated_at": "2026-10-23T00:00:00Z",
+      "last_verified_at": "2026-10-23T00:00:00Z"
     }
   ]
 }
