@@ -25,9 +25,10 @@ async function loadRouteWithMock() {
   }
 }
 
+vi.unmock("@/lib/events-data")
+
 afterEach(() => {
   vi.resetModules()
-  vi.unmock("@/lib/events-data")
 })
 
 describe("/api/events route", () => {

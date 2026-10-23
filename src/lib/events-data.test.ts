@@ -70,9 +70,10 @@ async function loadModuleWithSourceData(eventsRecords: EventRecord[], candidateR
   }
 }
 
+vi.unmock("node:fs/promises")
+
 afterEach(() => {
   vi.resetModules()
-  vi.unmock("node:fs/promises")
 })
 
 describe("getDashboardFeed", () => {
