@@ -47,7 +47,9 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     r"|xen[\s-]summit|xenproject"
     r"|\bdapr[\s-]day\b|envoycon"
     # Single-platform (non-infra) vendor ecosystem events
-    r"|devopsdreamin",
+    r"|devopsdreamin"
+    # Community/municipal broadband networks, not IT/infra networking
+    r"|cncon\.org",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(

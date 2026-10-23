@@ -300,7 +300,7 @@ Produce these outputs:
 - Include filter (case-insensitive across name/event_url/cfp_url):
   - `devops|sreday|o11y|observability|cloud native|kcd|kubernetes|platform|apidays`
 - Exclude filter (case-insensitive across name/event_url/cfp_url):
-   - `greenio|green-io|sustainability|sustainable|power\s+platform|microsoft\s+power\s+platform|llmday`
+   - `greenio|green-io|sustainability|sustainable|power\s+platform|microsoft\s+power\s+platform|llmday|cncon\.org`
 - Sort: `cfp_close_date` asc, then `name` asc.
 - Add:
   - `rank` (1..n)
