@@ -10352,6 +10352,1127 @@
       "created_at": "2026-10-23T00:00:00Z",
       "updated_at": "2026-10-23T00:00:00Z",
       "last_verified_at": "2026-10-23T00:00:00Z"
+    },
+    {
+      "id": "azure-day-poland-2027",
+      "name": "AzureDay Poland 2027",
+      "event_url": "https://azureday.pl",
+      "start_date": "2027-03-11",
+      "end_date": "2027-03-11",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "azure",
+        "cloud",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Warsaw",
+        "region": "Mazowieckie",
+        "country": "Poland",
+        "country_code": "PL",
+        "is_online": false,
+        "venue": "Airport Hotel Okęcie, Warsaw"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 499,
+        "price_currency": "PLN",
+        "cost_level": "standard",
+        "notes": "Early Bird 499 PLN until 2026-10-15; Regular 699 PLN; Last Call 899 PLN."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/azureday-poland-2027",
+        "cfp_open_date": "2026-08-31",
+        "cfp_close_date": "2026-11-30",
+        "cfp_timezone": "Europe/Warsaw",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. 10th edition; tracks include Dev & DevOps."
+    },
+    {
+      "id": "linux-day-modena-2026",
+      "name": "Linux Day Modena 2026",
+      "event_url": "https://makeitmodena.comune.modena.it/makeitmodena/eventi/24-ottobre-2026-linux-day",
+      "start_date": "2026-10-24",
+      "end_date": "2026-10-24",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "linux",
+        "open-source",
+        "foss",
+        "cybersecurity",
+        "docker"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Modena",
+        "region": "Emilia-Romagna",
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": "Dipartimento di Ingegneria \"Enzo Ferrari\", UNIMORE, Modena"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Official page states participation is free; some labs require free Eventbrite registration."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://makeitmodena.comune.modena.it/makeitmodena/eventi/cfp-linux-day-ottobre-2026",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL resolved via national Linux Day Italia index cross-reference (dev.events page had no usable outbound link). Part of nationwide decentralized Linux Day Italia network."
+    },
+    {
+      "id": "kcd-washington-dc-2027",
+      "name": "KCD Washington DC",
+      "event_url": "https://community2.cncf.io/events/details/cncf-kcd-washington-dc-presents-kcd-washington-dc-2026",
+      "start_date": "2027-04-13",
+      "end_date": "2027-04-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "kubernetes",
+        "cloud-native",
+        "sre"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Washington",
+        "region": "District of Columbia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "American Red Cross Hall of Service, Washington, DC"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Labeled 'KCD Paid Event' but no explicit pricing published. Assumed free per unknown-pricing rule."
+      },
+      "notes": "Canonical URL extracted via explicit outbound link + redirect chain. Rescheduled from Sept 2026 to single-day April 13, 2027 (end_date corrected from task's 2027-04-14); date may still change per CNCF page."
+    },
+    {
+      "id": "igloo-conf-2027",
+      "name": "IglooConf 2027",
+      "event_url": "https://iglooconf.fi/",
+      "start_date": "2027-02-04",
+      "end_date": "2027-02-05",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "azure",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Helsinki",
+        "region": null,
+        "country": "Finland",
+        "country_code": "FI",
+        "is_online": false,
+        "venue": "Scandic Park Helsinki"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/iglooconf-2027",
+        "cfp_open_date": "2026-08-26",
+        "cfp_close_date": "2026-09-30",
+        "cfp_timezone": "Europe/Helsinki",
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 300,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "EUR 300 (early bird) to EUR 550 (regular) per Sessionize listing; free livestream also available."
+      },
+      "notes": "Canonical URL resolved via Sessionize cross-reference (dev.events page server error). 7th edition, Finland Azure User Group."
+    },
+    {
+      "id": "bsides-tirol-2027",
+      "name": "BSides Tirol",
+      "event_url": "https://www.bsides.tirol",
+      "start_date": "2027-02-25",
+      "end_date": "2027-02-25",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devsecops",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Innsbruck",
+        "region": "Tyrol",
+        "country": "Austria",
+        "country_code": "AT",
+        "is_online": false,
+        "venue": "Wirtschaftskammer Tirol (WKO Tirol), Innsbruck"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://event.bsides.tirol/bsides-tirol-2027/cfp",
+        "cfp_close_date": "2026-11-15",
+        "cfp_timezone": "CET",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null
+      },
+      "notes": "Canonical URL via outbound link + web search cross-check (dev.events page preview error). First edition of BSides Tirol."
+    },
+    {
+      "id": "bsides-dresden-2026",
+      "name": "BSides Dresden 2026",
+      "event_url": "https://bsidesdresden.com",
+      "start_date": "2026-12-05",
+      "end_date": "2026-12-05",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devops",
+        "cloud-native"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Dresden",
+        "region": "Saxony",
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "City Center, Dresden (specific venue not yet named)"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 10,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Student EUR 10, Regular EUR 30, Supporter EUR 99 per Pretix ticket page."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/bsidesdresden2026/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-05",
+        "cfp_timezone": "Europe/Berlin",
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL resolved via web search (dev.events outbound link only pointed to Pretalx CFP tool, not a homepage)."
+    },
+    {
+      "id": "bsides-london-2026",
+      "name": "BSides London 2026",
+      "event_url": "https://bsides.london",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-12",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "Novotel London West"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing unconfirmed (Eventbrite timed releases, one aggregator flags 'Not Free' with no amount; historically free). Assumed free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/bsides-london-2026/cfp",
+        "cfp_open_date": "2026-08-01",
+        "cfp_close_date": "2026-09-30",
+        "cfp_timezone": "UTC",
+        "cfp_status": "closed"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "security-bsides-sofia-2027",
+      "name": "Security BSides Sofia 2027",
+      "event_url": "https://securitybsides.bg",
+      "start_date": "2027-03-26",
+      "end_date": "2027-03-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Sofia",
+        "region": null,
+        "country": "Bulgaria",
+        "country_code": "BG",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Pricing not yet published for 2027 edition. Assumed free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/security-bsides-sofia-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": "2027-01-31",
+        "cfp_timezone": "Europe/Sofia",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link; official site content not yet published for 2027 edition, cross-verified via Sessionize. Start date (2027-03-26) is within the 180-day window from run date 2026-10-23 (~154 days out)."
+    },
+    {
+      "id": "scale-2027",
+      "name": "SCaLE (Southern California Linux Expo) 24x",
+      "event_url": "https://www.socallinuxexpo.org/scale/24x",
+      "start_date": "2027-04-01",
+      "end_date": "2027-04-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "linux",
+        "open-source",
+        "cloud-native",
+        "sysadmin"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Pasadena",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Pasadena Convention Center"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 30,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Expo Pass $30; early-bird all-access SCALE Pass $80."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://www.socallinuxexpo.org/scale/24x/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-11-01",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "bsides-san-diego-2027",
+      "name": "BSides San Diego 2027",
+      "event_url": "https://www.bsidessd.org",
+      "start_date": "2027-03-27",
+      "end_date": "2027-03-27",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pay-what-you-can suggested donation model; no mandatory paid tier published."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-san-diego-2027/",
+        "cfp_open_date": "2026-10-01",
+        "cfp_close_date": "2026-12-20",
+        "cfp_timezone": "America/Los_Angeles",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link; cross-verified via Sessionize (2027 page not yet published on official site)."
+    },
+    {
+      "id": "open-source-securitycon-europe-2027",
+      "name": "Open Source SecurityCon Europe",
+      "event_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/open-source-securitycon",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "devsecops",
+        "cloud-native",
+        "kubernetes",
+        "open-source",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Barcelona",
+        "region": "Catalonia",
+        "country": "Spain",
+        "country_code": "ES",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cfp-colocated-events/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-10-18",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 250,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Requires KubeCon+CloudNativeCon All-Access pass; lowest Academic tier EUR 250."
+      },
+      "notes": "Canonical URL extracted via explicit outbound link. Co-located with KubeCon+CloudNativeCon Europe 2027; broad multi-project security track (CNCF/OpenSSF), not a single-project day."
+    },
+    {
+      "id": "bsides-berlin-2026",
+      "name": "BSides Berlin 2026",
+      "event_url": "https://bsides.berlin",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-13",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "country_code": "DE",
+        "is_online": false,
+        "venue": "CIC Berlin, Lohmühlenstraße 65, Berlin"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 49,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "Talks Day Student Pass EUR49, Self Payer EUR99, Business EUR175; separate Workshop day EUR179-249."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": null
+      },
+      "notes": "Canonical URL resolved via web search cross-reference (dev.events page server error)."
+    },
+    {
+      "id": "bsidessf-2027",
+      "name": "BSidesSF 2027",
+      "event_url": "https://bsidessf.org/",
+      "start_date": "2027-04-03",
+      "end_date": "2027-04-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "San Francisco",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://pretalx.com/bsidessf-2027/",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-11-09",
+        "cfp_timezone": null,
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Registration not yet open as of 2026-10-23; no pricing published."
+      },
+      "notes": "Canonical URL resolved via web search cross-reference (dev.events page had no usable outbound link)."
+    },
+    {
+      "id": "bsides-galway-2027",
+      "name": "BSides Galway 2027",
+      "event_url": "https://bsidesgalway.com",
+      "start_date": "2027-02-20",
+      "end_date": "2027-02-20",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "information-security",
+        "infosec"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Galway",
+        "region": "County Galway",
+        "country": "Ireland",
+        "country_code": "IE",
+        "is_online": false,
+        "venue": "University of Galway"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Free to attend per Sessionize CFP page."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-galway-2027",
+        "cfp_open_date": "2026-10-01",
+        "cfp_close_date": "2026-11-15",
+        "cfp_timezone": "Europe/London",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL resolved via web search cross-reference (dev.events page server error; official site itself 403'd to fetch)."
+    },
+    {
+      "id": "bsides-red-rocks-2027",
+      "name": "BSides Red Rocks 2027",
+      "event_url": "https://www.bsidesredrocks.org/",
+      "start_date": "2027-03-26",
+      "end_date": "2027-03-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "bsides"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Saint George",
+        "region": "Utah",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Kenneth N. Gardner Student Center, Utah Tech University"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No explicit ticket price found. Assumed free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-red-rocks-2027/",
+        "cfp_open_date": "2026-10-19",
+        "cfp_close_date": "2026-12-11",
+        "cfp_timezone": "America/Denver",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL resolved via web search cross-reference (dev.events page server error)."
+    },
+    {
+      "id": "nenug-fall-event-2026",
+      "name": "(NE)NUG - Fall Event 2026",
+      "event_url": "https://www.usnua.com/live/nenug-omaha-fall-event-2026",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-12",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "network-engineering",
+        "networking",
+        "community",
+        "meetup"
+      ],
+      "source": "usnua.com",
+      "location": {
+        "city": "La Vista",
+        "region": "Nebraska",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Smash Park, La Vista, NE (Omaha metro)"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "USNUA meetups are free by convention; no pricing published."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "URL already canonical (usnua.com own page)."
+    },
+    {
+      "id": "red-hat-summit-connect-2026-dallas",
+      "name": "Red Hat Summit: Connect 2026 Dallas",
+      "event_url": "https://www.redhat.com/en/summit/connects/na/dallas-tx-2026",
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-27",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "devops",
+        "platform",
+        "enterprise-it",
+        "cloud-native"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "Irving",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Irving Convention Center, Irving, TX (Dallas metro)"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "No fee found; Red Hat Summit Connect regional events are historically free."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Already canonical redhat.com page."
+    },
+    {
+      "id": "redhat-summit-connect-utrecht-2026",
+      "name": "Red Hat Summit: Connect 2026 Utrecht",
+      "event_url": "https://www.redhat.com/en/summit/connect/emea/utrecht-2026",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-11",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "devops",
+        "platform",
+        "cloud-native",
+        "hybrid-cloud",
+        "red-hat"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "Utrecht",
+        "region": null,
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": "NBC Nieuwegein (branded Utrecht)"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No fee published; assumed free, consistent with Red Hat Summit Connect pattern."
+      },
+      "notes": "Already canonical redhat.com page."
+    },
+    {
+      "id": "iacconf-connect-salt-lake-city-2026",
+      "name": "IaCConf Connect Salt Lake City",
+      "event_url": "https://luma.com/jemjhh0k",
+      "start_date": "2026-11-09",
+      "end_date": "2026-11-09",
+      "delivery": "in_person",
+      "event_type": "meetup",
+      "tags": [
+        "devops",
+        "infrastructure-as-code",
+        "platform-engineering",
+        "sre",
+        "cloud-native"
+      ],
+      "source": "iacconf.com",
+      "location": {
+        "city": "Salt Lake City",
+        "region": "Utah",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Bad Caddy Golf, Salt Lake City, UT"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Free registration gated by host approval."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Social networking mixer co-located with KubeCon plus CloudNativeCon NA 2026."
+    },
+    {
+      "id": "bsidesok-2027",
+      "name": "BSidesOK 2027",
+      "event_url": "https://sessionize.com/bsidesok-2027",
+      "start_date": "2027-04-05",
+      "end_date": "2027-04-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec",
+        "cybersecurity",
+        "blue-team"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Glenpool",
+        "region": "Oklahoma",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": null
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Historically free; no 2027 pricing page yet."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsidesok-2027",
+        "cfp_open_date": "2026-07-01",
+        "cfp_close_date": "2026-12-31",
+        "cfp_timezone": "America/Chicago",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL extracted via explicit outbound link."
+    },
+    {
+      "id": "bsides-groningen-2027",
+      "name": "BSides Groningen 2027",
+      "event_url": "https://bsidesgrunn.org",
+      "start_date": "2027-04-09",
+      "end_date": "2027-04-09",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "infosec",
+        "bsides"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Groningen",
+        "region": "Groningen",
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": "Kinepolis Groningen"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Pricing not yet published; prior edition had no attendee fee."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-groningen-2027/",
+        "cfp_open_date": "2026-09-01",
+        "cfp_close_date": "2027-01-31",
+        "cfp_timezone": "Europe/Amsterdam",
+        "cfp_status": "open"
+      },
+      "notes": "Canonical URL resolved via web search cross-reference."
+    },
+    {
+      "id": "sreday-london-2027-q1",
+      "name": "SREday London 2027 Q1",
+      "event_url": "https://sreday.com/2027-london-q1/",
+      "start_date": "2027-03-18",
+      "end_date": "2027-03-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "sre",
+        "site-reliability",
+        "observability",
+        "cloud-native"
+      ],
+      "source": "sreday.com",
+      "location": {
+        "city": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "country_code": "GB",
+        "is_online": false,
+        "venue": "Everyman Canary Wharf, London"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Paid ticket tiers exist but no numeric price published; free Community Hero tier by approval."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/sreday-2027-london-q1",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Already canonical, organizer own site."
+    },
+    {
+      "id": "devopsdays-zurich-2027",
+      "name": "DevOpsDays Zurich 2027",
+      "event_url": "https://devopsdays.org/events/2027-zurich/welcome/",
+      "start_date": "2027-04-14",
+      "end_date": "2027-04-15",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform-engineering",
+        "sre",
+        "observability",
+        "security",
+        "agile"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Winterthur",
+        "region": "Zurich",
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": "Alte Kaserne Winterthur"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No pricing published; only sponsorship tiers found."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/devopsdays-zurich-2027/",
+        "cfp_open_date": "2026-10-01",
+        "cfp_close_date": "2026-12-31",
+        "cfp_timezone": "CET",
+        "cfp_status": "open"
+      },
+      "notes": "Already canonical, devopsdays.org. Branded Zurich but venue is in Winterthur, Canton of Zurich, Switzerland (corrected from dev.events erroneous Germany listing)."
+    },
+    {
+      "id": "devopsdays-atlanta-2027",
+      "name": "devopsdays Atlanta 2027 dataSecOps",
+      "event_url": "https://devopsdays.org/events/2027-atlanta/welcome/",
+      "start_date": "2027-04-20",
+      "end_date": "2027-04-21",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "devopsdays",
+        "security",
+        "platform-engineering"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "The Historic Academy of Medicine, Atlanta, GA"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No pricing/ticket page published yet."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopsdays-atlanta-2027/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2027-01-19",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "notes": "Already canonical, devopsdays.org."
+    },
+    {
+      "id": "red-hat-summit-connect-2026-austin",
+      "name": "Red Hat Summit: Connect 2026 Austin",
+      "event_url": "https://www.redhat.com/en/summit/connects/na/austin-tx-2026",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-04",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "ansible",
+        "rhel",
+        "automation",
+        "security",
+        "ai",
+        "observability",
+        "platform-engineering"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "Austin",
+        "region": "Texas",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "AT&T Conference Center at UT Austin"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "No fee found; Red Hat Summit Connect regional events are free."
+      },
+      "notes": "Already canonical redhat.com page. MANUAL OVERRIDE: reconcile-events.py durable EXCLUDED_TOPIC_PATTERN regex (\"openshift\") matched the openshift tag and auto-skipped this record, but that keyword is intended to catch single-product OpenShift-only events (OpenShift Commons/Day style), not multi-topic Red Hat regional roadshows. Content-validator confirmed genuine DevOps/Ansible/platform-engineering relevance; openshift tag removed and record manually re-added as a candidate."
+    },
+    {
+      "id": "redhat-summit-connect-stockholm-2026",
+      "name": "Red Hat Summit: Connect 2026 Stockholm",
+      "event_url": "https://www.redhat.com/en/summit/connect/emea/stockholm-2026",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-11",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "devops",
+        "cloud-native",
+        "platform",
+        "red-hat",
+        "ansible",
+        "rhel",
+        "ai"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "Stockholm",
+        "region": null,
+        "country": "Sweden",
+        "country_code": "SE",
+        "is_online": false,
+        "venue": "Stockholm Waterfront"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": null
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "No fee published; free regional roadshow format."
+      },
+      "notes": "Already canonical redhat.com page. MANUAL OVERRIDE: reconcile-events.py durable EXCLUDED_TOPIC_PATTERN regex (\"openshift\") matched the openshift tag and auto-skipped this record, but that keyword is intended to catch single-product OpenShift-only events, not multi-topic Red Hat regional roadshows. Content-validator confirmed genuine DevOps/Ansible/platform relevance; openshift tag removed and record manually re-added as a candidate."
+    },
+    {
+      "id": "conf42-cloud-native-2027",
+      "name": "Conf42 Cloud Native 2027",
+      "event_url": "https://www.conf42.com/cloud2027",
+      "start_date": "2027-04-08",
+      "end_date": "2027-04-08",
+      "delivery": "online",
+      "event_type": "conference",
+      "tags": [
+        "cloud-native",
+        "devops",
+        "kubernetes",
+        "cloud"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": null,
+        "region": null,
+        "country": "Online",
+        "country_code": "XX",
+        "is_online": true,
+        "venue": "YouTube (Conf42 live stream)"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Explicitly free online conference per official page."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.ninja/e/conf42-cloud-2027",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL supplied directly by user. cfp.ninja is a JS SPA, close date unconfirmed."
+    },
+    {
+      "id": "devopscon-amsterdam-2027",
+      "name": "DevOpsCon Amsterdam",
+      "event_url": "https://devopscon.io/amsterdam/",
+      "start_date": "2027-04-19",
+      "end_date": "2027-04-23",
+      "delivery": "hybrid",
+      "event_type": "conference",
+      "tags": [
+        "devops",
+        "platform",
+        "cloud-native"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Amsterdam",
+        "region": "North Holland",
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": "Van der Valk Hotel Amsterdam - Amstel"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Ticket page shows stale 2026 pricing/TICKET SALES START SOON; unconfirmed for 2027, defaulted to free per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL supplied directly by user. PHASE5_FLAG: page shows mixed/stale content - banner/footer confirm 2027 dates but schedule/program/CFP sections still show 2026 edition (CFP link serves Berlin 2026 CFP). Recommend re-check closer to event once page is fully republished for 2027."
+    },
+    {
+      "id": "ape-xxl-2026",
+      "name": "APE XXL",
+      "event_url": "https://ai-ape.nl/",
+      "start_date": "2026-12-08",
+      "end_date": "2026-12-08",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "azure",
+        "platform-engineering",
+        "ai",
+        "cloud"
+      ],
+      "source": "ai-ape.nl",
+      "location": {
+        "city": "Apeldoorn",
+        "region": "Gelderland",
+        "country": "Netherlands",
+        "country_code": "NL",
+        "is_online": false,
+        "venue": "Dierenpark Apenheul"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Ticket price not published; tickets distributed via ti.to with limited capacity (300). Assumed free until confirmed otherwise per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "notes": "Canonical URL resolved to ai-ape.nl (azure-ape.nl redirects here); do NOT use the meetup.com/azure-platform-engineering group page or sessionize.com/ape-2026 as canonical. Sessionize still shows the CFP as open, but the event site already lists a full confirmed speaker lineup (keynote, sessions, workshop) with no CFP link - that listing appears stale/misconfigured, so has_cfp is set to false here rather than trusting Sessionize. Originally surfaced via the Azure Platform Engineering meetup CFP tracker; group/event has since rebranded from 'Azure Platform Engineering' to 'AI Platform Engineering' (APE), with this one-day flagship event called 'APE XXL'."
     }
   ]
 }
