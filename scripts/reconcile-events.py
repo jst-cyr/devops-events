@@ -46,6 +46,8 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     # Hypervisor/vendor project summits and single-project CNCF events
     r"|xen[\s-]summit|xenproject"
     r"|\bdapr[\s-]day\b|envoycon"
+    # Single-technology/single-topic conferences (narrow scope, not broad DevOps/SRE practice)
+    r"|ebpf[\s-]summit"
     # Single-platform (non-infra) vendor ecosystem events
     r"|devopsdreamin"
     # Community/municipal broadband networks, not IT/infra networking
