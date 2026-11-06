@@ -9962,15 +9962,16 @@
         "cfp_status": "closed"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Pricing not disclosed; unknown-pricing rule."
+        "is_free": false,
+        "lowest_price": 11.55,
+        "price_currency": "GBP",
+        "cost_level": "budget",
+        "notes": "Confirmed £11.55 GBP via live Eventbrite checkout (user purchased a ticket directly)."
       },
       "notes": null,
       "created_at": "2026-10-08T20:35:55.839Z",
-      "updated_at": "2026-10-08T20:35:55.839Z",
-      "last_verified_at": "2026-10-08T20:35:55.839Z"
+      "updated_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-06T00:00:00Z"
     },
     {
       "id": "bsides-charleston-2026-11-07",
