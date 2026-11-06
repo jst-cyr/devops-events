@@ -11473,6 +11473,44 @@
         "cfp_status": "unknown"
       },
       "notes": "Canonical URL resolved to ai-ape.nl (azure-ape.nl redirects here); do NOT use the meetup.com/azure-platform-engineering group page or sessionize.com/ape-2026 as canonical. Sessionize still shows the CFP as open, but the event site already lists a full confirmed speaker lineup (keynote, sessions, workshop) with no CFP link - that listing appears stale/misconfigured, so has_cfp is set to false here rather than trusting Sessionize. Originally surfaced via the Azure Platform Engineering meetup CFP tracker; group/event has since rebranded from 'Azure Platform Engineering' to 'AI Platform Engineering' (APE), with this one-day flagship event called 'APE XXL'."
+    },
+    {
+      "name": "BSides Limburg 2027",
+      "start_date": "2027-03-12",
+      "end_date": "2027-03-12",
+      "location": {
+        "city": "Hasselt",
+        "region": "Limburg",
+        "country": "Belgium",
+        "is_online": false,
+        "country_code": "BE"
+      },
+      "event_url": "https://www.bsides-limburg.be",
+      "notes": "Includes a CTF competition and two presentation tracks; talks in English. Ticket tiers (Early Bird / Normal / Late Decider) listed on site but no prices published as of 2026-11-06. Previous dev.events-listed canonical URL (bsides-limburg.be/2027-edition) 404s; site root used instead.",
+      "id": "bsides-limburg-2027",
+      "source": "dev.events",
+      "delivery": "in_person",
+      "tags": [
+        "security"
+      ],
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "notes": "Pricing not published for 2027 edition (ticket-info page lists Early Bird/Normal/Late Decider tiers but no amounts); assumed free until confirmed per unknown-pricing rule."
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "event_type": "conference",
+      "timezone": "Europe/Brussels",
+      "last_verified_at": "2026-11-06T00:00:00Z",
+      "created_at": "2026-11-06T00:00:00Z",
+      "updated_at": "2026-11-06T00:00:00Z"
     }
   ]
 }
