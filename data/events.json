@@ -1638,10 +1638,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 75,
+        "price_currency": "USD",
+        "cost_level": "budget",
+        "notes": "Two paid tiers: Starving Hacker $75/person (full access, no swag), Supporter $100/person (full access + swag). No free admission tier."
       },
       "cfp": {
         "has_cfp": false,
@@ -1652,8 +1653,9 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z",
-      "id": "texas-linux-fest-2026"
+      "last_verified_at": "2026-11-05T00:00:00Z",
+      "id": "texas-linux-fest-2026",
+      "updated_at": "2026-11-06T00:00:00Z"
     },
     {
       "name": "CloudCon SYD 2026",
@@ -1673,10 +1675,11 @@
         "venue": null
       },
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "lowest_price": null,
-        "notes": "Pricing not published yet; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 174.9,
+        "price_currency": "AUD",
+        "cost_level": "budget",
+        "notes": "FAQ states tickets are $174.90 AUD ($159 + GST). No free tier found. Caveat: registration buttons appeared non-functional and page showed a conflicting \"has concluded\" banner alongside \"registration is open\" text at time of check - recommend re-verifying event status closer to date."
       },
       "cfp": {
         "has_cfp": false,
@@ -1687,8 +1690,9 @@
         "cfp_status": "unknown"
       },
       "notes": null,
-      "last_verified_at": "2026-05-15T00:00:00Z",
-      "id": "cloudcon-syd-2026"
+      "last_verified_at": "2026-11-05T00:00:00Z",
+      "id": "cloudcon-syd-2026",
+      "updated_at": "2026-11-06T00:00:00Z"
     },
     {
       "name": "Open Source SecurityCon North America",
@@ -5767,7 +5771,7 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "OpenFest is historically a free community open-source festival. Assumed free until confirmed."
+        "notes": "No ticketing/registration system exists on the official 2026 site at all (no price, ticket, or admission mention anywhere). Prior edition (2025) listed on foss.events as \"Standard participation fee: 0 EUR\", consistent with OpenFest's long-standing free admission model."
       },
       "cfp": {
         "has_cfp": true,
@@ -5778,7 +5782,9 @@
         "cfp_status": "open"
       },
       "notes": "Canonical URL resolved via search to official site. CFP open, closes 2026-10-01.",
-      "id": "openfest-2026"
+      "id": "openfest-2026",
+      "updated_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-05T00:00:00Z"
     },
     {
       "name": "Code Europe 2026",
@@ -5905,7 +5911,7 @@
       "event_url": "https://techfieldday.com/event/kubecon26/",
       "start_date": "2026-11-10",
       "end_date": "2026-11-11",
-      "delivery": "in_person",
+      "delivery": "hybrid",
       "event_type": "other",
       "tags": [
         "cloud-native",
@@ -5933,7 +5939,9 @@
         "cfp_status": "unknown"
       },
       "notes": "Phase-4 techfieldday.com. Co-located w/ KubeCon NA 2026. FLAG: invite-only format.",
-      "id": "tech-field-day-at-kubecon-north-america-2026"
+      "id": "tech-field-day-at-kubecon-north-america-2026",
+      "updated_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-05T00:00:00Z"
     },
     {
       "name": "Linux Day Milano",
@@ -9282,12 +9290,12 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "No pricing disclosed on official event page or Luma registration page (JS-rendered, checked 2026-10-08); unknown-pricing rule applied pending manual confirmation."
+        "notes": "Confirmed free via Luma registration API (evt-1TVXI2HPW5Ah0pL): ticket type \"Free Ticket\", description \"the conference is free to attend, woohoo !!!\". Sibling PLATFORMday London 2027 Q2 listing shows a paid £49 badge, confirming this per-edition free status is specific and deliberate, not a template default."
       },
       "notes": "Platform engineering community conference (~9 confirmed speakers from Amazon, Faros, IBM, Kraken, PagerDuty, Sentry, Splunk/Cisco, Wipro); 2 tracks, 100+ attendees expected.",
-      "last_verified_at": "2026-10-08T20:23:39.912Z",
+      "last_verified_at": "2026-11-05T00:00:00Z",
       "created_at": "2026-10-08T20:23:39.912Z",
-      "updated_at": "2026-10-08T20:23:39.912Z"
+      "updated_at": "2026-11-06T00:00:00Z"
     },
     {
       "id": "maintainer-summit-kubecon-eu-2027",
@@ -10043,12 +10051,12 @@
         "is_free": true,
         "lowest_price": null,
         "cost_level": "free",
-        "notes": "Free main conference day; paid workshop day EUR19/workshop."
+        "notes": "Conference Day admission confirmed free via Community Ticket (\"BSides Munich is and always has been a free community event\"), registration required. Optional paid Business/Supporter Ticket at €595 (VAT incl.) to support the event, not required for entry. Separate paid Workshop Day tickets €19/workshop via Pretix."
       },
       "notes": null,
       "created_at": "2026-10-08T20:35:55.839Z",
-      "updated_at": "2026-10-08T20:35:55.839Z",
-      "last_verified_at": "2026-10-08T20:35:55.839Z"
+      "updated_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-05T00:00:00Z"
     },
     {
       "id": "bsides-sydney-2026-11-07",
@@ -10304,12 +10312,12 @@
         "is_free": true,
         "lowest_price": 0,
         "cost_level": "free",
-        "notes": "Explicitly free unconference."
+        "notes": "Confirmed free: official site states \"Free Cybersecurity Conference in Arlington, TX\" / \"a free unconference\". No ticket price or paid registration flow found. Optional PayPal donations are voluntary. Corroborated by infosec-conferences.com listing."
       },
       "notes": null,
       "created_at": "2026-10-08T20:36:17.745Z",
-      "updated_at": "2026-10-08T20:36:17.745Z",
-      "last_verified_at": "2026-10-08T20:36:17.745Z"
+      "updated_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-05T00:00:00Z"
     },
     {
       "id": "cloud-native-valencia-2026-11",
