@@ -51,7 +51,9 @@ EXCLUDED_TOPIC_PATTERN = re.compile(
     # Single-platform (non-infra) vendor ecosystem events
     r"|devopsdreamin"
     # Community/municipal broadband networks, not IT/infra networking
-    r"|cncon\.org",
+    r"|cncon\.org"
+    # Open call for user-group presenters (Azure Platform Engineering meetup), not a practitioner conference
+    r"|meetup\.com/azure-platform-engineering",
     re.IGNORECASE,
 )
 EXCLUDED_FORMAT_PATTERN = re.compile(
