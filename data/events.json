@@ -11743,6 +11743,89 @@
       "created_at": "2026-11-06T00:00:00Z",
       "updated_at": "2026-11-06T00:00:00Z",
       "last_verified_at": "2026-11-06T00:00:00Z"
+    },
+    {
+      "id": "infraiday-2027-pordenone",
+      "name": "InfrAIday 2027 Pordenone",
+      "event_url": "https://eventi.1nn0va.it/events/2027/infraiday2027pn",
+      "start_date": "2027-02-26",
+      "end_date": "2027-02-26",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "infrastructure",
+        "azure",
+        "windows",
+        "security",
+        "microsoft"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Pordenone",
+        "region": null,
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": "Consorzio Universitario di Pordenone, via Prasecco 3/a"
+      },
+      "cost": {
+        "is_free": true,
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Event page (Sessionize description) states the event is free thanks to sponsors (UniPordenone, Consortium Service); checked 2026-11-19."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/infraiday2027pn",
+        "cfp_open_date": "2026-09-29",
+        "cfp_close_date": "2026-11-28",
+        "cfp_timezone": "Europe/Rome",
+        "cfp_status": "open"
+      },
+      "notes": "Added from cfp-candidates.json after user review. Details from Sessionize CFP page. Microsoft-infrastructure focus (Windows/Intune, Azure IaaS, Entra, Purview, Defender). Italian-language organizer 1nn0va.",
+      "created_at": "2026-11-19T20:37:44.735Z"
+    },
+    {
+      "id": "code-and-compliance-2027-fosdem",
+      "name": "Code & Compliance 2027 – FOSDEM Edition",
+      "event_url": "https://codeandcompliance.orcwg.org",
+      "start_date": "2027-01-28",
+      "end_date": "2027-01-28",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "compliance",
+        "cyber-resilience-act",
+        "open-source",
+        "supply-chain",
+        "regulation"
+      ],
+      "source": "adatosystems-cfp-tracker",
+      "location": {
+        "city": "Brussels",
+        "region": null,
+        "country": "Belgium",
+        "country_code": "BE",
+        "is_online": false,
+        "venue": "Maison de la Poste, Rue Picard 7, 1000 Bruxelles"
+      },
+      "cost": {
+        "is_free": false,
+        "lowest_price": 120,
+        "price_currency": "EUR",
+        "cost_level": "standard",
+        "notes": "Regular ticket EUR 120 per idloom registration page (https://eclipse.idloom.events/code-compliance-jan2027/register), marked sold out as of 2026-11-19; speakers attend free. Official site states no price."
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/codeandcompliance_jan2027",
+        "cfp_open_date": "2026-10-26",
+        "cfp_close_date": "2026-12-07",
+        "cfp_timezone": "Europe/Brussels",
+        "cfp_status": "open"
+      },
+      "notes": "Added from cfp-candidates.json after user review. Organized by Eclipse ORC WG; day before FOSDEM. Topics: EU CRA and AI Act compliance, open source supply chain. Borderline DevOps relevance (compliance/supply chain). Delivery in_person implied by listed physical venue.",
+      "created_at": "2026-11-19T20:37:44.735Z"
     }
   ]
 }
