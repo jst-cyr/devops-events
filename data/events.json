@@ -3070,9 +3070,11 @@
         "aws"
       ],
       "cost": {
-        "is_free": true,
-        "cost_level": "free",
-        "notes": "Pricing not verified; assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 2499,
+        "price_currency": "USD",
+        "cost_level": "premium",
+        "notes": "Full in-person pass $2,499 (early bird ended Aug 25). Source: reinvent.awsevents.com, checked 2026-11-19."
       },
       "event_type": "conference"
     },
@@ -4356,11 +4358,11 @@
         "cfp_status": "open"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "price_currency": null,
-        "cost_level": "free",
-        "notes": "Ticket portal returned HTTP 403; no pricing found; unknown pricing rule applied."
+        "is_free": false,
+        "lowest_price": 999,
+        "price_currency": "EUR",
+        "cost_level": "premium",
+        "notes": "Regular ticket EUR 999 (lowest open individual ticket). Early Bird EUR 599 closed; Group Delegate Pass EUR 599/pass for groups of 4+. Source: apidays ticket portal, checked 2026-11-19."
       },
       "tags": [
         "api",
@@ -5532,11 +5534,11 @@
         "venue": "QUT Gardens Point"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
+        "is_free": false,
+        "lowest_price": 129,
         "price_currency": "AUD",
-        "cost_level": "free",
-        "notes": "Ticket tiers listed but prices TBC; unknown-pricing rule applied."
+        "cost_level": "budget",
+        "notes": "Prices in AUD incl. 10% GST. Tiers: Contributor 1,499; Professional 849; Hobbyist 399; Student 149; Single Day 249; Online Only 129 (shown without $ sign). Lowest in-person: Student 149 AUD. Early bird closed 2026-10-25. Source: 2027.everythingopen.au/attend/tickets, checked 2026-11-19. cost_level approximated at ~0.65 USD/AUD."
       },
       "cfp": {
         "has_cfp": true,
@@ -7157,10 +7159,11 @@
         "venue": "Santa Clara Convention Center"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Official registration page returned HTTP 403 to automated fetch; exact 2027 ticket pricing could not be confirmed from an official source. Third-party sources referenced unconfirmed historical tier ranges and a promotional free limited-access 'OPEN Pass'. Assumed free until confirmed."
+        "is_free": false,
+        "lowest_price": 195,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "OPEN Pass $195 (limited access Feb 9-11); PRO $995 and PREMIUM $1,295 base (rise by deadline). Source: developerweek.com/register, checked 2026-11-19."
       },
       "cfp": {
         "has_cfp": true,
@@ -8096,10 +8099,11 @@
         "venue": "Santa Clara Convention Center"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Registration pages 403-blocked; no verified pricing found."
+        "is_free": false,
+        "lowest_price": 195,
+        "price_currency": "USD",
+        "cost_level": "standard",
+        "notes": "OpsWorld page lists no prices; its REGISTER link goes to the shared DeveloperWeek 2027 register page (OPEN $195, PRO $995, PREMIUM $1,295). Price inferred from shared registration, checked 2026-11-19."
       },
       "cfp": {
         "has_cfp": true,
@@ -9047,9 +9051,9 @@
       },
       "cost": {
         "is_free": true,
-        "lowest_price": 0,
-        "price_currency": "USD",
-        "cost_level": "free"
+        "lowest_price": null,
+        "cost_level": "free",
+        "notes": "Official site: \"BSides Rocket City is free to attend\" (registration not yet open). Checked 2026-11-19."
       },
       "cfp": {
         "has_cfp": true,
@@ -9471,10 +9475,11 @@
       },
       "cfp": {
         "has_cfp": true,
-        "cfp_url": "https://www.socallinuxexpo.org/scale/24x/cfp",
-        "cfp_close_date": "2026-11-01",
-        "cfp_timezone": "America/Los_Angeles",
-        "cfp_status": "open"
+        "cfp_url": "https://devopsdays.org/events/2027-los-angeles/propose",
+        "cfp_open_date": "2026-09-01",
+        "cfp_close_date": "2026-10-31",
+        "cfp_timezone": null,
+        "cfp_status": "closed"
       },
       "cost": {
         "is_free": false,
@@ -10540,8 +10545,9 @@
       },
       "cost": {
         "is_free": true,
+        "lowest_price": null,
         "cost_level": "free",
-        "lowest_price": null
+        "notes": "Official site \"EINTRITT FREI\"; pretix page lists the Regular ticket at free. Checked 2026-11-19."
       },
       "notes": "Canonical URL via outbound link + web search cross-check (dev.events page preview error). First edition of BSides Tirol."
     },
@@ -10608,8 +10614,9 @@
       },
       "cost": {
         "is_free": true,
+        "lowest_price": null,
         "cost_level": "free",
-        "notes": "Pricing unconfirmed (Eventbrite timed releases, one aggregator flags 'Not Free' with no amount; historically free). Assumed free per unknown-pricing rule."
+        "notes": "Official FAQ: \"Tickets for BSides London are FREE\"; Eventbrite is the only ticket channel (optional GBP 100 Grass Roots Sponsorship is not a ticket price). Checked 2026-11-19."
       },
       "cfp": {
         "has_cfp": true,
@@ -11435,12 +11442,12 @@
         "notes": "Ticket page shows stale 2026 pricing/TICKET SALES START SOON; unconfirmed for 2027, defaulted to free per unknown-pricing rule."
       },
       "cfp": {
-        "has_cfp": false,
-        "cfp_url": null,
-        "cfp_open_date": null,
-        "cfp_close_date": null,
-        "cfp_timezone": null,
-        "cfp_status": "unknown"
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/devopscon-mlcon-ai-engineering-summit-2027",
+        "cfp_open_date": "2026-10-31",
+        "cfp_close_date": "2026-12-07",
+        "cfp_timezone": "Europe/Amsterdam",
+        "cfp_status": "open"
       },
       "notes": "Canonical URL supplied directly by user. PHASE5_FLAG: page shows mixed/stale content - banner/footer confirm 2027 dates but schedule/program/CFP sections still show 2026 edition (CFP link serves Berlin 2026 CFP). Recommend re-check closer to event once page is fully republished for 2027."
     },
@@ -11468,10 +11475,11 @@
         "venue": "Dierenpark Apenheul"
       },
       "cost": {
-        "is_free": true,
-        "lowest_price": null,
-        "cost_level": "free",
-        "notes": "Ticket price not published; tickets distributed via ti.to with limited capacity (300). Assumed free until confirmed otherwise per unknown-pricing rule."
+        "is_free": false,
+        "lowest_price": 99,
+        "price_currency": "EUR",
+        "cost_level": "budget",
+        "notes": "General ticket EUR 99 and Workshop ticket EUR 99 currently available (excl. VAT); Early bird EUR 79 sold out. Source: ai-ape.nl tickets page, checked 2026-11-19."
       },
       "cfp": {
         "has_cfp": false,
