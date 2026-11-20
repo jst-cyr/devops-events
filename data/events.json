@@ -11797,6 +11797,323 @@
       },
       "notes": "Added from cfp-candidates.json after user review. Organized by Eclipse ORC WG; day before FOSDEM. Topics: EU CRA and AI Act compliance, open source supply chain. Borderline DevOps relevance (compliance/supply chain). Delivery in_person implied by listed physical venue.",
       "created_at": "2026-11-19T20:37:44.735Z"
+    },
+    {
+      "id": "bsides-porto-2027",
+      "name": "BSides Porto 2027",
+      "event_url": "https://bsidesporto.org/",
+      "start_date": "2027-05-06",
+      "end_date": "2027-05-07",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Porto",
+        "region": null,
+        "country": "Portugal",
+        "country_code": "PT",
+        "is_online": false,
+        "venue": "Auditório Magno, ISEP"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://bsidesporto.org/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "upcoming"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Tickets \"coming soon\" on official site; Pricing not published; assumed free until confirmed (unknown-pricing rule)."
+      },
+      "notes": "Canonical URL via official site (dev.events outbound link was unrelated). CFP page says opening soon; no close date.",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "bsides-tampa-2027",
+      "name": "BSides Tampa 2027",
+      "event_url": "https://bsidestampa.net",
+      "start_date": "2027-04-16",
+      "end_date": "2027-04-17",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "infosec",
+        "bsides",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Tampa",
+        "region": "Florida",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "USF Marshall Student Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/bsides-tampa-2027",
+        "cfp_open_date": "2026-11-15",
+        "cfp_close_date": "2026-12-31",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "2027 pricing not published (2026 edition was $45 general); Pricing not published; assumed free until confirmed (unknown-pricing rule)."
+      },
+      "notes": "bsidestampa.net still shows 2026 content; 2027 dates/CFP confirmed on Sessionize page.",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "sunseccon-2027",
+      "name": "SunSecCon 2027",
+      "event_url": "https://www.sunseccon.org/2027",
+      "start_date": "2027-04-01",
+      "end_date": "2027-04-02",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "cloud-security",
+        "community"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Pasadena",
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "Pasadena Convention Center"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://cfp.pacifichackers.com/sunseccon-3/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2026-12-15",
+        "cfp_timezone": "UTC",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "No event-level pricing found (registration link is SCALE 24x); Pricing not published; assumed free until confirmed (unknown-pricing rule)."
+      },
+      "notes": "Co-located with SCaLE. Defensive practitioner security (cloud, detection & response). Validator confidence moderate - FLAG for review: security conf, not DevOps-branded.",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "devopsdays-baltimore-2027",
+      "name": "DevOpsDays Baltimore 2027",
+      "event_url": "https://devopsdays.org/events/2027-baltimore/welcome/",
+      "start_date": "2027-05-18",
+      "end_date": "2027-05-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "devops"
+      ],
+      "source": "devopsdays.org",
+      "location": {
+        "city": "Baltimore",
+        "region": "Maryland",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": false,
+        "venue": "The Garage at R. House"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://talks.devopsdays.org/devopsdays-baltimore-2027/cfp",
+        "cfp_open_date": null,
+        "cfp_close_date": "2027-02-05",
+        "cfp_timezone": "America/New_York",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Registration page is a placeholder; Pricing not published; assumed free until confirmed (unknown-pricing rule)."
+      },
+      "notes": "Canonical devopsdays.org page.",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "platmosphere-2027",
+      "name": "Platmosphere 2027: Beyond the Loop",
+      "event_url": "https://platmosphere.com",
+      "start_date": "2027-05-18",
+      "end_date": "2027-05-18",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "platform-engineering",
+        "devops"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Milan",
+        "region": null,
+        "country": "Italy",
+        "country_code": "IT",
+        "is_online": false,
+        "venue": "Talent Garden Calabiana"
+      },
+      "cfp": {
+        "has_cfp": true,
+        "cfp_url": "https://sessionize.com/platmosphere-chapter-2027-beyond-the-loop",
+        "cfp_open_date": "2026-10-15",
+        "cfp_close_date": "2027-01-24",
+        "cfp_timezone": "Europe/Rome",
+        "cfp_status": "open"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Registration page states \"Attendance is free\"."
+      },
+      "notes": "Canonical URL via explicit outbound link on dev.events. Validator moderate confidence (leans AI-agent governance).",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "open-source-summit-north-america-2027",
+      "name": "Open Source Summit North America 2027",
+      "event_url": "https://events.linuxfoundation.org/open-source-summit-north-america",
+      "start_date": "2027-05-17",
+      "end_date": "2027-05-19",
+      "delivery": "in_person",
+      "event_type": "conference",
+      "tags": [
+        "open-source",
+        "linux",
+        "cloud-native",
+        "infrastructure"
+      ],
+      "source": "dev.events",
+      "location": {
+        "city": "Vancouver",
+        "region": "British Columbia",
+        "country": "Canada",
+        "country_code": "CA",
+        "is_online": false,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Save-the-date page only; Pricing not published; assumed free until confirmed (unknown-pricing rule)."
+      },
+      "notes": "Save-the-Date page only; no 2027 CFP listed. Validator moderate confidence based on prior-edition tracks. Recheck when agenda published.",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "ai-infrastructure-field-day-7-2027",
+      "name": "AI Infrastructure Field Day 7",
+      "event_url": "https://techfieldday.com/event/aiifd7/",
+      "start_date": "2027-02-17",
+      "end_date": "2027-02-18",
+      "delivery": "hybrid",
+      "event_type": "other",
+      "tags": [
+        "ai-infrastructure",
+        "infrastructure",
+        "cloud"
+      ],
+      "source": "techfieldday.com",
+      "location": {
+        "city": null,
+        "region": "California",
+        "country": "United States",
+        "country_code": "US",
+        "is_online": true,
+        "venue": null
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "Invite-only delegate event, no attendee ticket; sessions livestreamed free."
+      },
+      "notes": "Phase-4 techfieldday.com. Location published only as \"Silicon Valley\" (AIFD6 used San Jose). FLAG: invite-only format; low-moderate relevance confidence.",
+      "created_at": "2026-11-19T20:08:31.007Z"
+    },
+    {
+      "id": "red-hat-summit-connect-2027-zurich",
+      "name": "Red Hat Summit: Connect 2027 Zurich",
+      "event_url": "https://www.redhat.com/en/summit/connect/emea/zurich-2027",
+      "start_date": "2027-02-03",
+      "end_date": "2027-02-03",
+      "delivery": "in_person",
+      "event_type": "summit",
+      "tags": [
+        "devops",
+        "platform",
+        "cloud-native",
+        "hybrid-cloud",
+        "red-hat"
+      ],
+      "source": "redhat.com",
+      "location": {
+        "city": "Zurich",
+        "region": null,
+        "country": "Switzerland",
+        "country_code": "CH",
+        "is_online": false,
+        "venue": "The Hall, Hoffnigstrasse 1, 8600 Dübendorf"
+      },
+      "cfp": {
+        "has_cfp": false,
+        "cfp_url": null,
+        "cfp_open_date": null,
+        "cfp_close_date": null,
+        "cfp_timezone": null,
+        "cfp_status": "unknown"
+      },
+      "cost": {
+        "is_free": true,
+        "cost_level": "free",
+        "lowest_price": null,
+        "notes": "No fee published; registration requires Red Hat SSO so pricing unverifiable. Pricing not published; assumed free until confirmed (unknown-pricing rule). Consistent with other Summit Connect records."
+      },
+      "notes": "Already canonical redhat.com page. Single-vendor; included on precedent of five tracked Summit: Connect 2026 events. FLAG for review. Tracks: Platform, AIOps & Automation, Security & Virtualization, Hands-on Labs.",
+      "created_at": "2026-11-19T20:08:31.007Z"
     }
   ]
 }
